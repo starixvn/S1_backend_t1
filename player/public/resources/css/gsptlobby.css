@@ -1,0 +1,51 @@
+body {
+    background-color: transparent;
+}
+
+.game-item {
+   /* display: none;*/
+    height: 240px;
+    margin-bottom: 20px;
+   /* overflow: hidden;*/
+}
+
+.game-details {
+  /*  overflow: hidden;*/
+    position: relative;
+}
+
+.game-name {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.game-image {
+    width: 100%;
+    height: 70%;
+}
+
+.game-ticker-wrapper {
+    /*display: none;*/
+    bottom: 0;
+    padding: 5px;
+    position: absolute;
+    width: 100%;
+}
+
+.game-ticker {
+    background: none repeat scroll 0 0 #232425;
+    border: 1px solid #ffb652;
+    color: #eaa74b;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.game-action {
+    margin-top: 5px;
+}
+
+#filter-1 {
+    display: none;
+}

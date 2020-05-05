@@ -1,0 +1,5 @@
+# /etc/cron.d/sync_entwine_ftp_cronjob: crontab fragment for sync_entwine_ftp
+#
+#
+
+*/5 *     * * *     root   /home/vagrant/Code/og/admin/shell/sync_entwine_ftp.sh >> /var/log/og/sync_entwine_ftp.log 2>&1

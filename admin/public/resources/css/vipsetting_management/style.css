@@ -1,0 +1,25 @@
+body{ background: #EDECEC; padding-top:50px}
+.editVipGroupSettingBtn{
+	cursor: pointer;
+}
+
+.actionVipGroup a:link{
+	color: #333;
+}
+
+.glyphicon-ok-sign,.glyphicon-remove-circle{
+	color: #206384; 
+}
+
+.glyphicon-trash{
+	color: #333536; 
+}
+
+.glyphicon-edit{
+	color: #5294b5; 
+}
+
+.add_vip_group_sec{
+
+}
+

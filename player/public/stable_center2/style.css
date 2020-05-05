@@ -1,0 +1,1998 @@
+@charset "UTF-8";
+/* ============================================================
+Theme Name: TripleOneTech
+Theme URI: http://tripleonetech.com
+Version: 1.0
+Author: Triple One Technology
+Author URI: http://tripleonetech.com
+Tags: Triple One Technology
+============================================================ */
+
+/* ============================================================
+Applied Style
+
+Table of Content
+00 Global
+01 Main Navigation
+02 Main Header
+03 Content
+04 Footer
+07 DataTable
+============================================================ */
+
+/* ========================================================================= */
+/* 00 Global <editor-fold>{{{ */
+/* ========================================================================= */
+/*
+@import "css/bootstrap.min.css";
+@import "css/font-awesome.min.css";
+ */
+@import "/common/css/common.css?v=7";
+@import "/common/css/responsive.css?v=7";
+@import "/common/css/c-icon.css?v=7";
+@import "/common/css/bank.css?v=7";
+
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url('./fonts/open_sans_web_font.woff2') format('woff2');
+  unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body{
+	background: #dddddd;
+	color: #1c1c1c;
+}
+
+body, p, h1, h2, h3, h4{
+	font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
+}
+
+h3{
+	font-size: 48px;
+	font-weight: 300;
+	line-height: 38px;
+	text-transform: uppercase;
+}
+
+a,
+a:hover,
+a:focus,
+a:links{
+	outline: none;
+}
+
+a{
+	color: #ff9600;
+	text-decoration: none !important;
+}
+
+a:hover{
+	color: #949494;
+}
+
+button:active
+ {
+  outline: 0;
+}
+
+/* Disable chrome built-in datepicker as we use bootstrap datepicker */
+input[type="date"]::-webkit-calendar-picker-indicator{
+	display:none;
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="date"]::-webkit-input-placeholder{
+	visibility: hidden;
+}
+
+
+.form-control:focus {
+	border-color: #ff9600;
+	outline: 0;
+	-webkit-box-shadow: inset 0 1px 1px #ff9600;
+	box-shadow: inset 0 1px 1px #ff9600;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.green{
+	color: #79ba1b;
+}
+
+.red{
+	color: #a80000;
+}
+
+select option:disabled {
+	color: silver;
+}
+
+.dropdown-menu li[disabled=disabled],
+.dropdown-menu li[disabled=disabled] a{
+	color: silver;
+	cursor: not-allowed;
+}
+
+.field_required {
+  position: relative;
+}
+
+.field_required .required_hint {
+  position: absolute;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* 01 Main Navigation <editor-fold>{{{ */
+/* ========================================================================= */
+.main-navigation .navbar.navbar-inverse .top-header{
+	background: #ff9600;
+	min-height: 30px;
+}
+
+.main-navigation .navbar.navbar-inverse .top-header p{
+	font-size: 11px;
+	line-height: 30px;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.main-navigation .navbar.navbar-inverse .top-header p span{
+	color: #fff;
+	font-weight: 700;
+}
+
+.main-navigation .navbar.navbar-inverse .top-header .login{
+	background: rgba(0,0,0,0.9);
+	margin-right: 10px;
+	color: #fff;
+	height: 20px;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0 10px;
+	border-radius: 3px;
+	-webkit-transition: all linear 0.3s; /* Safari */
+	transition: all linear 0.2s;
+}
+
+	.main-navigation .navbar.navbar-inverse .top-header .login:hover{
+		background: rgba(0,0,0,0.4);
+	}
+
+.main-navigation .navbar.navbar-inverse .top-header .registration{
+	background: rgba(255,255,255,0.2);
+	box-shadow: 0 0 10px rgba(0,0,0,0.6);
+	color: #000;
+	height: 20px;
+	display: inline-block;
+	line-height: 20px;
+	padding: 0 10px;
+	border-radius: 3px;
+	-webkit-transition: all linear 0.3s; /* Safari */
+	transition: all linear 0.2s;
+}
+
+	.main-navigation .navbar.navbar-inverse .top-header .registration:hover{
+		background: rgba(255,255,255,0.7);
+	}
+
+
+.main-navigation .navbar.navbar-inverse{
+	background: rgba(0,0,0,0.8);
+	border: 0;
+	border-radius: 0;
+	min-height: 70px;
+}
+
+
+.main-navigation .navbar-inverse .navbar-brand{
+	height: 70px;
+}
+
+.main-navigation .navbar-nav > li > a{
+	line-height: 40px;
+}
+
+.main-navigation .navbar-inverse .navbar-nav{
+	margin-right: -15px;
+}
+
+.main-navigation .navbar-inverse .navbar-nav > li > a{
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	padding: 15px;
+	-webkit-transition: all linear 0.3s; /* Safari */
+	transition: all linear 0.3s;
+}
+
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* 02 Main Header <editor-fold>{{{ */
+/* ========================================================================= */
+.main-header{}
+
+.main-header .carousel-inner > .item > a > img, .carousel-inner > .item > img{
+	text-align: center;
+	width: 100%;
+}
+
+	.main-header .carousel-control{
+		opacity: 1;
+	}
+
+	.main-header .carousel-control.left,
+	.main-header .carousel-control.right{
+		background-image: none;
+	}
+
+	.main-header .carousel-control span{
+		background: rgba(0,0,0,0.8);
+		display: block;
+		font-size: 12px;
+		height: 50px;
+		position: relative;
+		top: 40%;
+		width: 50px;
+	}
+
+	.main-header .carousel-control span i{
+		line-height: 45px;
+	}
+
+	.main-header .carousel-indicators {
+		bottom: 330px;
+		left: 0;
+		width: 100%;
+		margin-left: 0;
+	}
+
+	.main-header .carousel-indicators li{
+		background: rgba(0,0,0,0.7);
+		border: none;
+		height: 15px;
+		width: 15px;
+	}
+
+	.main-header .carousel-indicators .active{
+		background: #ff9600;
+		height: 17px;
+		width: 17px;
+	}
+
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* 03 Content <editor-fold>{{{ */
+/* ========================================================================= */
+.member-center>div>.panel {
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+/* Hape Page */
+.link01{
+	background: url("./img/thumbs/01.png") no-repeat;
+	display: block;
+	height: 390px;
+	text-align: center;
+	width: 100%;
+}
+
+.link02{
+	background: url("./img/thumbs/02.png") no-repeat;
+	display: block;
+	height: 390px;
+	text-align: center;
+	width: 387px;
+}
+
+.link03{
+	background: url("./img/thumbs/03.png") no-repeat;
+	display: block;
+	height: 390px;
+	text-align: center;
+	width: 387px;
+}
+
+.linked span{
+	background: rgba(0,0,0,0.7);
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 16px;
+	padding: 10px 25px;
+	position: relative;
+	text-transform: uppercase;
+	top: 40%;
+	-webkit-transition: all linear 0.3s; /* Safari */
+	transition: all linear 0.3s;
+}
+
+.linked span:hover{
+	background: #ff9600;
+	border: 1px solid #ff9600;
+}
+
+.link04{
+	background: url("./img/orangeCenter/obg.png") no-repeat;
+	background-size: contain;
+	display: block;
+	height: 190px;
+	margin-top: 20px;
+	width: 100%;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+.oTitle{
+	color: #311100;
+	font-size: 10px;
+}
+
+.oSub{
+	color: #fff;
+	font-size: 16px;
+    text-shadow: 0 1px 2px #000;
+    margin: -15px 0 20px;
+}
+
+.media1{
+	margin-left:30px;
+	padding-top: 60px;
+}
+
+.media2{
+	margin-left:30px;
+	padding-top: 10px;
+}
+
+.jackpot {
+    color: #321100;
+    font-size: 41px;
+	padding-top: 65px;
+    text-shadow: 0 1px 2px rgba(255,255,255,.9);
+    text-align: center;
+}
+
+.over{
+	position:absolute;
+	left:20px;
+	top:10px;
+	z-index:1;
+}
+
+.link05{
+	background: url("./img/blackCenter/liveCasino.png") no-repeat;
+	background-size: contain;
+	display: block;
+	height: 190px;
+	margin-bottom: 10px;
+	padding-top: 25px;
+	text-align: center;
+	width: 100%;
+
+}
+.link06{
+	background: url("./img/blackCenter/sports.png") no-repeat;
+	background-size: contain;
+	display: block;
+	height: 190px;
+	margin-bottom: 10px;
+	padding-top: 25px;
+	text-align: center;
+	width: 100%;
+
+
+}
+.link07{
+	background: url("./img/blackCenter/slot.png") no-repeat;
+	background-size: contain;
+	display: block;
+	height: 190px;
+	margin-bottom: 10px;
+	padding-top: 25px;
+	text-align: center;
+	width: 100%;
+
+}
+
+.imageVip{
+	background: url("/img/vip/vip.png") ;
+	background-position: center center;
+	color: #fff;
+	font-family: 'Open Sans';
+	height: 425px;
+	margin-top: 50px;
+	padding: 180px;
+	text-align: center;
+	width: 100%;
+}
+
+.vipTexts h5{
+	font-size: 16px;
+	color: #fff;
+}
+
+.link09{
+	display: block;
+	height: 75px;
+	max-width: 100%;
+}
+
+.gamesProviders{
+	background-color: #000;
+	display: block;
+	/*height: 100%;*/
+	width: 100%;
+	padding: 10px;
+}
+
+.contacts{
+	background-color: #fff;
+	height: 320px;
+}
+
+.contacts .container p{
+	font-size: 14px;
+	font-family: Open Sans;
+}
+
+.container h4{
+	color: #000;
+	/* font-family: 'Open Sans'; */
+	font-size: 20px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.hr hr {
+     color: #000;
+     background: #000;
+     width: 100%;
+     height: 1px;
+     margin-top: -5px;
+}
+
+.hrhr hr {
+     color: #000;
+     background: #000;
+     width: 100%;
+     height: 1px;
+     margin-top: 45px;
+     margin-bottom: 30px;
+}
+
+.copyright{
+	background-color: #ff9600;
+	height: 75px;
+	text-align: center;
+	color: #fff;
+	padding-top: 30px;
+}
+
+/*play now button*/
+
+.button {
+    background-color: #ff9600;
+	border: none;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+	height: 40px;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 5px 32px;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+}
+
+.button2 {
+	border-radius: 4px;
+}
+
+.buttonBlack{
+    background-color: #000;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 18px;
+	height: 40px;
+	margin: auto;
+	margin-bottom: 15px;
+	padding: 5px 32px;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+}
+
+
+.playTitle{
+	font-weight: bold;
+	color: #fff;
+	margin: 0 0 0 470px;
+	text-align: left;
+	font-family: 'Open Sans';
+	font-size: 20px;
+	padding-top: 3px;
+
+}
+
+.playText{
+	color: #fff;
+	margin: 20px 2px 10px 470px;
+	text-align: left;
+}
+
+/* Casino Page */
+
+.main-banner{
+	position: relative;
+}
+
+.main-banner img{
+	margin:auto;
+	padding:0px;
+	overflow-x: hidden;
+	width: 100%;
+}
+
+.main-banner .game-buttons{
+	position: absolute;
+	bottom: 10%;
+	left: 23%;
+
+}
+
+.game-buttons button{
+	width: 150px;
+	height: 60px;
+	background-color: rgba(40,202,242,0.8);
+	color: #176376;
+	border-radius: 20px;
+	margin: 10px 12px;
+	font-size: 1em;
+	font-weight: bold;
+	box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+.game-buttons button:hover{
+	color: #fff;
+	background-color: rgba(30,148,177,1);
+}
+
+.game-providers .col-sm-4{
+	margin: 50px 0;
+	text-align: center;
+	padding: 0;
+}
+
+
+
+.game-providers .col-sm-4 img{
+	border-radius: 15px;
+	margin: 30px 0;
+}
+
+
+.footer{
+	width: 100%;
+	height: 275px;
+}
+
+.vip{
+	overflow-x: hidden;
+}
+
+.vip img{
+	width: 100%;
+}
+
+
+/* Promotions */
+
+
+.page-title{
+	width: 100%;
+	background-color: #ffb100;
+	height: auto;
+}
+
+.promo h1{
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 70px;
+}
+
+.promo{
+	margin: 50px 20px;
+}
+
+.promo img{
+	border-radius: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+	width: 100%;
+}
+
+
+/* VIP */
+.vip{
+	position: relative;
+}
+
+.vip .footer-desc{
+	position: absolute;
+	bottom: 30%;
+	left: 364px;
+	max-width: 1272px;
+
+}
+
+.vip .footer-desc p{
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+
+}
+
+.vip-banner {
+	margin: 265px 0;
+}
+
+.vip-banner img{
+	width: 100%;
+	border-radius: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Lottery */
+
+.lottery-banner img{
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.lottery{
+	margin: 155px auto;
+}
+
+.lottery .col-sm-6{
+	text-align: center;
+}
+
+
+.lottery .col-sm-6 img{
+	border-radius: 30px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+
+
+/* Sports */
+
+
+.sports-game ul{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.sports-game ul li{
+	list-style-type: none;
+	display: inline;
+}
+
+.sports-game ul li img{
+	width: 49%;
+}
+
+.coming-soon{
+	background-color: #1b1b1d;
+	height: 730px;
+}
+
+.coming-soon h2{
+	text-align: center;
+	color: #fff;
+}
+
+
+/* Slot */
+
+.slot-banner img{
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.playtech-header{
+	margin-top: 40px;
+	height: 155px;
+	background-color: #010202;
+	padding: 10px;
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+}
+
+.playtech-nav .navbar{
+	background-color: #ff9600;
+	margin: 0;
+	border-radius: 0;
+	border: transparent;
+}
+
+
+
+.playtech-nav ul li{
+	color: #fff;
+}
+
+.playtech-games{
+	margin-bottom: 55px;
+	background-color: #363636;
+	height: 1036px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+.mc-content .tab-content .panel>.panel-heading {
+	display: none;
+}
+
+.mc-content .tab-content .panel>.panel-body {
+	padding: 0;
+}
+
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* 04 Footer <editor-fold>{{{ */
+/* ========================================================================= */
+.footer p{
+	color: #f9f9f9;
+}
+.footer .copyright{
+	background: #353535;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Registration <editor-fold>{{{ */
+/* ========================================================================= */
+.registration-mod{
+    margin: 20px auto;
+    max-width: 450px !important;
+}
+.cstm-mod .modal-content .modal-body .form-group.recaptcha {
+  margin-bottom: 30px;
+}
+.recaptcha input {
+  margin-top: 10px;
+}
+.recaptcha-images {
+  position: absolute;
+  right: 0;
+}
+.recaptcha-images .refresh {
+  max-width: 24px;
+}
+
+.cstm-mod .modal-body .contact-number input[type="text"].bstselect {
+    border-top: 0;
+    border-left: 0 !important;
+    border-right: 0;
+    box-shadow: none;
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    text-indent: 20px;
+    padding-left: 120px;
+}
+
+.cstm-mod .modal-body .contact-number label.bstselect {
+    color: #595959;
+    left: 10px;
+    margin: 0;
+    position: relative;
+    top: 2px;
+}
+
+.cstm-mod .modal-body div.btn-group.bootstrap-select {
+    margin-left:15px;
+}
+
+.cstm-mod .modal-body .send-sms {
+	background: #595959;
+	color: #fff;
+	border-radius: 3px;
+	font-size: 12px;
+	position: absolute;
+	z-index: 1;
+	padding: 5px;
+	right: 0;
+	top: 2px;
+	-webkit-transition: all linear 0.3s;
+	transition: all linear 0.3s;
+}
+.cstm-mod .modal-body .send-sms:hover {
+	background: #8c8c8c;
+	color: #fff;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Player Center <editor-fold>{{{ */
+/* ========================================================================= */
+.overview{
+    /*background: #fff;*/
+}
+.overview .profile{
+    /*background: #f5f5f5;*/
+    max-height: 100%;
+}
+.overview .points p {
+  font-size: 12px
+}
+.overview .points p:last-of-type {
+  margin-top: 10px;
+  max-width: 412px
+}
+.overview .points .pts-overview{
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.overview .points .pts-overview p{
+    line-height: 60px;
+}
+
+/*.overview .points .vip-status span{
+    color: #1c1c1c;
+    font-weight: normal;
+}*/
+
+.overview .privilege-icon i{
+    cursor: pointer;
+}
+
+.fmd-step1 .btn {
+	height: 35px;
+	line-height: 22px;
+	width: 140px;
+	display: block;
+	background: linear-gradient(to top, #0059B1 0%, #2693ff 100%);
+	color: #fff;
+	border: 0;
+	transition: all .3s ease;
+}
+
+.fmd-step1 .bank-accounts-list .b-icon {
+  width: 326px;
+}
+.fmd-step1 .bank-accounts-list .account-number {
+  float: right;
+}
+.close-rsb{
+	cursor: pointer;
+    color: white;
+    font-style: initial;
+    padding-top: 5px;
+    display: block;
+}
+
+.accountinfo .input_hint {
+	color: red;
+	letter-spacing: 1px;
+	font-style: oblique;
+	font-weight: bold;
+	font-size: 5px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Deposit <editor-fold>{{{ */
+/* ========================================================================= */
+.hide_deposit_form {
+	display: none; !important;
+}
+
+.see-deposit-btn {
+	border-radius: 90px;
+	cursor: pointer;
+	height: 34px;
+	line-height: 32px;
+	margin: auto;
+	max-width: 180px;
+	padding: 2px 5px;
+	width: 100%;
+	position: relative;
+	top: -10px;
+	font-size: 12px;
+	text-align: center;
+	text-transform: uppercase;
+	background: #b2b2b2;
+	color: #fff;
+	transition: all 0.3s ease-in-out
+}
+
+#submit-done-deposit .deposit-payment-account-detail {
+    position: relative;
+}
+
+.submit-deposit-modal .deposit-payment-account-detail div.row,
+.submit-deposit-modal .deposit-payment-account-detail p {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+.submit-deposit-modal deposit-payment-account-detail div.row:first-of-type strong,
+.submit-deposit-modal deposit-payment-account-detail p:first-of-type strong {
+    text-transform: uppercase;
+}
+.submit-deposit-modal deposit-payment-account-detail [class*="col-xs"] {
+    padding: 0;
+}
+
+#submit-done-deposit .deposit-payment-account-detail #modalAccountImage {
+    position: absolute;
+    top: 35px;
+    right: 15px;
+}
+
+#submit-done-deposit .deposit-payment-account-detail #modalAccountImage img {
+    width: 200px;
+}
+
+#submit-done-deposit .helper-content {
+    margin-top: 15px;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover,
+.deposit-process-mode-2.select-payment-account button.bank-entry:focus {
+    background-color: rgba(0.7, 0.7, 0.7, 0.6);
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry .active-payment-account-info {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry .active-payment-account-info span {
+    width: 210px;
+    vertical-align: baseline;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry i.fa-caret-down {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover i.fa-caret-down {
+    background-color: #ff9600;
+}
+
+.deposit-process-mode-2.select-payment-account .form-group {
+    position: relative;
+    display: inline-block;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list li {
+    padding: 0px;
+    width: 300px;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list li span {
+    width: 235px;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list.dropdown-show {
+    display:block;
+    background-color: #FFF;
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 300px;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail {
+    display: table;
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail>div{
+    display: table-cell;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail .btn.btn-copy {
+    margin: 0;
+    width: auto;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail p {
+    position: relative;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail .tooltip.top {
+    top: -30px !important;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail #active-payment-account-image img {
+    height: 150px;
+}
+
+.setup-deposit-secure_id input {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.setup-deposit-secure_id button.btn.btn-copy {
+    margin: 0px 0px 0px 15px;
+}
+
+.deposit-form .dropdown-menu {
+	width: 260px;
+	height: 260px;
+	overflow-y: auto;
+}
+
+.deposit-form .dropdown-menu.playerbank{
+	width: 360px;
+	height: 360px;
+	overflow-y: auto;
+}
+
+.deposit-form .dropdown-menu li {
+	position: relative;
+}
+
+.deposit-form .dropdown-menu li a {
+	padding: 5px 15px;
+	height: 30px;
+	line-height: 30px;
+
+	box-sizing: content-box;
+}
+
+.deposit-form .dropdown-menu li a.cur {
+	text-indent: 15px;
+}
+
+.deposit-form .dropdown-menu li a.cur::before {
+	position: absolute;
+	padding: 5px 15px;
+	height: 30px;
+	line-height: 30px;
+
+	content: "\e250";
+	font-family: 'Glyphicons Halflings';
+	display: block;
+	top: 0;
+	left: 0;
+	text-align: center;
+	color: rgba(0,0,0,0.5);
+	font-size: 12px;
+	box-sizing: content-box;
+	text-indent: 0;
+}
+
+.deposit-form input[type="text"],
+.deposit-form input[name="deposit_amount"],
+.deposit-form .dropdown .dropdown-toggle {
+	width: 260px;
+	font-size: 12px;
+	height: 40px;
+	border-radius: 2px;
+	line-height: 1.42857143;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	padding: 6px 12px;
+}
+
+.deposit-manual-notify-message-actions {
+	margin-top: 15px;
+}
+
+#deposit-manual-notify-message .title {
+    padding-top: 0;
+    margin-top: -10px;
+    text-align: center;
+}
+
+.step .step_hint {
+	color: red;
+	font-size: 5px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Withdraw <editor-fold>{{{ */
+/* ========================================================================= */
+.withdrawal-modal-body .row{
+	margin: 0 -15px;
+}
+
+.withdrawal-modal-body .row input[type="text"],
+.withdrawal-modal-body .row input[type="number"],
+.withdrawal-modal-body .row input[type="tel"],
+.withdrawal-modal-body .row select {
+	height: 40px;
+}
+
+.bank-list li a{
+	outline: none;
+}
+
+.row .top-buffer {
+	margin-top: 10px;
+}
+
+#submitBtn {
+	width: 140px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Bank Account <editor-fold>{{{ */
+/* ========================================================================= */
+.bank_account_tab_content .tab-pane.active {
+    display: inline-block;
+
+    width: 100%;
+}
+.bank_account_tab_content .bank_account_info {
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    border: 2px solid #e0e0e0;
+    box-shadow: 3px 3px 5px hsl(0,0%,85%);
+    border-radius: 5%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.bank_account_tab_content .bank_account_info .bank_name,
+.bank_account_tab_content .bank_account_info .bank_account_name,
+.bank_account_tab_content .bank_account_info .bank_account_number {
+    font-size: 0.9vw;
+    line-height: 200%;
+    text-shadow: 0 1px hsl(0,0%,95%), 0 2px hsl(0,0%,85%);
+}
+
+.bank_account_info.empty {
+    position: relative;
+}
+
+.bank_account_info.empty .btn-info {
+    visibility: hidden;
+}
+
+.bank_account_info.empty .add-bank-account {
+    position: absolute;
+    background-color: inherit;
+    border-width: 0;
+
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.bank_account_info.empty .add-bank-account:hover,
+.bank_account_info.empty .add-bank-account:active {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 10%);
+
+    outline: none;
+}
+
+#bank_account_deposit .bank_account_info.empty .add-bank-account,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account {
+    font-size: 1.5em;
+    line-height: 40px;
+    height: 33%;
+}
+#bank_account_deposit .bank_account_info.empty .add-bank-account .fa,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account .fa {
+    line-height: 40px;
+    vertical-align: top;
+}
+#bank_account_deposit .bank_account_info.empty .add-bank-account.alipay,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account.alipay{
+    top: 33%;
+}
+#bank_account_deposit .bank_account_info.empty .add-bank-account.wechat,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account.wechat{
+    top: 66%;
+}
+
+#view-bank-acc .bank-list,
+#edit-bank-acc .bank-list,
+#add-bank-acc .bank-list {
+	max-height: 30vh;
+	overflow-y: auto;
+}
+
+.player_bank_account_modal .fmd-step1.disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.player_bank_account_modal .fmd-step1.disabled * {
+	pointer-events: none;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Transfer <editor-fold>{{{ */
+/* ========================================================================= */
+.mc-content .sub-wallet-container h3{
+    font-size: 14px;
+    margin: 0;
+    text-indent: 5px;
+    font-weight: 600;
+}
+
+.wallet .wa-title{
+    border-bottom: 1px dotted #ddd !important;
+    border-radius: 0 !important;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Other <editor-fold>{{{ */
+/* ========================================================================= */
+.top_icon {
+    width: 31px;
+    height: 22px;
+    display: block;
+    margin: 0 auto;
+    background: url(/stable_center2/img/icons/top_icon_white.png) no-repeat 0 0;
+}
+.top_icon_bank {
+    background-position: -31px 0;
+}
+.top_icon_bank.verified {
+    background-position: 0 0;
+}
+.top_icon_player {
+    background-position: -31px -22px;
+}
+.top_icon_player.verified {
+    background-position: 0 -22px;
+}
+.top_icon_email {
+    background-position: -31px -44px;
+}
+.top_icon_email.verified {
+    background-position: 0 -44px;
+}
+.top_icon_phone {
+    margin-top: -5px;
+    height: 27px;
+    background-position: -31px -66px;
+}
+.top_icon_phone.verified {
+    background-position: 0 -66px;
+}
+
+.input-group .form-control.upload-depo {
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 60%;
+	margin-bottom: 0;
+}
+
+.input-group.col.col-xs-6.col-sm-6.col-md-6.upload-browse {
+	margin-bottom: 20px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Custom Dropdown <editor-fold>{{{ */
+/* ========================================================================= */
+.birthday-option .lr-padding{
+	padding: 0 10px;
+}
+
+.birthday-option select{
+  border-top: 0;
+  border-left: 0 !important;
+  border-right: 0;
+  box-shadow: none;
+  border-radius: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  background: transparent;
+  text-indent: 20px;
+}
+
+.custom-dropdown{
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	min-height: 34px;
+	width: 100%;
+}
+
+.custom-dropdown select{
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	text-indent: 0 !important;
+	padding: 6px 0;
+}
+
+.custom-dropdown::before {
+	content: "\e259";
+	font-family: 'Glyphicons Halflings';
+	position: absolute;
+	height: 34px;
+	width: 34px;
+	line-height: 34px;
+	display: block;
+	right: 0;
+	text-align: center;
+	color: rgba(0,0,0,0.5);
+	font-size: 12px;
+}
+
+.custom-label{
+	width: 100%;
+	display: block;
+	line-height: 34px;
+	color: #9b9b9b;
+	text-align: center;
+}
+
+.custom-inline-block {
+	display: inline-block;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Registration Complete <editor-fold>{{{ */
+/* ========================================================================= */
+#registered-modal{
+
+}
+#registered-modal .modal-dialog{
+	position: relative; top: 50%; transform: translateY(-50%);
+}
+#registered-modal .title{
+  position: relative;
+}
+#registered-modal .title h4{
+  margin-top: 50px;
+  font-size: 30px;
+}
+#registered-modal .title:after{
+  content: '';
+  background: url(../stable_center2/img/check-icon-2.png) no-repeat center center;
+  width: 445px;
+  height: 201px;
+  display: block;
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#registered-modal .deposit-info{
+  padding: 10px 0;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+#registered-modal .deposit-info a{
+  background: #333;
+  padding: 5px 30px;
+  border-radius: 3px;
+  color: #fff;
+}
+
+#registered-modal .redirect-link{
+  padding: 10px 0;
+  border-top: 1px dashed #ebebeb;
+  border-bottom: 1px dashed #ebebeb;
+  letter-spacing: 1px;
+}
+
+#registered-modal .redirect-link a{
+  background: #333;
+  padding: 5px 30px;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 5px;
+  width: 36%;
+  display: inline-block;
+}
+
+#registered-modal .promo-list{
+  letter-spacing: 1px;
+  padding: 10px 0;
+}
+#registered-modal .promo-list a{
+  background: #333;
+  padding: 5px 30px;
+  border-radius: 3px;
+  color: #fff;
+  margin: 0 0 10px 0;
+  width: 25%;
+  display: inline-block;
+}
+
+#registered-modal .modal-footer{
+  background: #B6B6B6;
+  border-radius: 0 0 5px 5px;
+  text-align: center;
+}
+#registered-modal .modal-footer button{
+  background: #333;
+  border: 0;
+  color: #fff;
+  width: 30%;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Message <editor-fold>{{{ */
+/* ========================================================================= */
+#messages-list .msg-title {
+	position: relative;
+	max-width: 150px;
+}
+
+#messages-list .msg-title .flags {
+	position: absolute;
+
+	top: 0;
+	right: 0;
+}
+
+#messages-list .msg-title .flags .flag-entry {
+	top: 5px;
+	right: 8px;
+	line-height: 16px;
+	font-size: 10px;
+	padding: 0 2px;
+}
+
+#messages-list .msg-title .flags .flag-entry.flag-new {
+	background: #6ab400;
+	color: #fff;
+}
+
+#messages-list .msg-title .flags .flag-entry.flag-unread {
+	background: lightcoral;
+	color: #fff;
+}
+
+#messages-list .msg-text {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Bank Account <editor-fold>{{{ */
+/* ========================================================================= */
+.add-bank-account {
+	text-align: left;
+}
+
+.add-bank-account .fa-plus {
+	margin: 0 10px;
+}
+
+.row .top-buffer {
+	margin-top: 10px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Custom Error Notification <editor-fold>{{{ */
+/* ========================================================================= */
+.custom-error-notif .panel-danger .modal-header.panel-heading{
+	text-align: center;
+	color: #fff;
+	background-color: #a94442;
+	border-color: #a94442;
+	position: relative;
+}
+.custom-error-notif .panel-danger .modal-header .close{
+	margin-top: -2px;
+	position: absolute;
+	right: 20px;
+	opacity: 1;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+	color: rgba(0,0,0,0.8);
+}
+.custom-error-notif .panel-danger .modal-body p{
+	text-align: center;
+}
+.custom-error-notif .panel-danger .modal-body a{
+	width: 200px;
+	display: block;
+	margin: 10px auto 10px auto;
+	text-align: center;
+	background: #a94442;
+	border-radius: 3px;
+	padding: 10px 0;
+	color: #fff;
+}
+.custom-error-notif .panel-danger .modal-body p.custom_err_msg{
+	color: #a94442;
+	font-size: 18px;
+}
+.custom-error-notif .panel-danger .modal-footer{
+	display: none;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Report <editor-fold>{{{ */
+/* ========================================================================= */
+#accountHistory #upload_deposit_receipt_modal .modal-dialog {
+	display: table;
+}
+
+#accountHistory #upload_deposit_receipt_modal .modal-dialog img {
+	max-width: 80vw;
+	max-height: 80vh;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Announcement <editor-fold>{{{ */
+/* ========================================================================= */
+.all_announcement .marquee {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+/* announce modal */
+.announcements_nav_list {
+	font-family: "Microsoft YaHei";
+}
+.announcements_nav_list .nav-tabs {
+	padding-bottom: 5px;
+}
+.announcements_nav_list .nav-tabs>li {
+	float: left;
+	margin-bottom: -1px;
+}
+.announcements_nav_list .nav-tabs>li>a {
+	display: block;
+	margin-right: 2px;
+	color: #000;
+	font-weight: 700;
+}
+.announcements_nav_list .nav-tabs>li>a:hover,
+.announcements_nav_list .nav-tabs>li.active>a,
+.announcements_nav_list .nav-tabs>li.active>a:hover,
+.announcements_nav_list .nav-tabs>li.active>a:focus {
+	background-color: #fd8e0b;
+	border: 1px solid #ddd;
+	border-bottom-color: transparent;
+	border-color: #eee #eee #ddd;
+	color: #FFF;
+}
+.announcements_nav_list .nav-tabs>li.active>a,
+.announcements_nav_list .nav-tabs>li.active>a:hover,
+.announcements_nav_list .nav-tabs>li.active>a:focus {
+	cursor: default;
+}
+.announcements_nav_list .Tabli {
+	width: 25%;
+	text-align: center;
+	font-size: 17px; /* PC版 */
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.announcements_nav_list .acontentUL {
+	list-style: none;
+	width: 96%;
+	margin: 10px auto;
+}
+.announcements_nav_list .acontentUL li {
+	padding: 20px 10px;
+	color: #000;
+	background: #FFF;
+	margin-bottom: 15px;
+}
+.announcements_nav_list .tab-content {
+	background: #f2f2f2;
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	padding-bottom: 60px;
+}
+.announcements_nav_list ul,
+li {
+	padding: 0px;
+	margin: 0px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Responsible Gaming <editor-fold>{{{ */
+/* ========================================================================= */
+.responsible_gaming.deposit_limit_acitvie_warning_text {
+	margin-bottom: 15px;
+	font-size: 2em;
+	text-align: center;
+	background: #F00;
+	color: #FFF;
+	line-height: 2em;
+}
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Login <editor-fold>{{{                     */
+/* ========================================== */
+#frm_login .remember-password-container {
+	float: left;
+}
+
+#frm_login .forgot-password-container {
+	float: right;
+}
+
+#frm_login #remember_me {
+	margin: 0;
+	height: 1em;
+	vertical-align: middle;
+}
+
+#frm_login .contact-customer-service-container {
+	float: left;
+}
+
+#frm_login .register-container {
+	float: right;
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+.title_currency {
+	font-size: 16px;
+}
+
+.profile-section .currency_list{
+	font-size: 16px;
+}
+
+._select_currecny_on_login, ._select_currecny_on_logged{
+    padding: 0px 5px;
+    line-height: normal;
+    border: 0;
+    color: #fff !important;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #000 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-position: 96% 54%;
+}
+
+._overlay_screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: #000;
+
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================================== */
+/* Login <editor-fold>{{{                     */
+/* ========================================== */
+#frm_login .remember-password-container {
+	float: left;
+}
+
+#frm_login .forgot-password-container {
+	float: right;
+}
+
+#frm_login #remember_me {
+	margin: 0;
+	height: 1em;
+	vertical-align: middle;
+}
+
+#frm_login .contact-customer-service-container {
+	float: left;
+}
+
+#frm_login .register-container {
+	float: right;
+}
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Password Recovery <editor-fold>{{{         */
+/* ========================================== */
+.password_recovery_email_wrapper {
+	margin: 0 auto;
+	width: 32%;
+}
+
+.password_recovery_email .panel-body #username {
+	margin-bottom: 5px;
+}
+
+.password_recovery_email .panel-body #email {
+	margin-bottom: 5px;
+}
+
+.password_recovery_email .panel-body #refreshCaptcha {
+	width:30px !important;
+}
+
+.password_recovery_email .panel-body #nextButton {
+	float:right;
+}
+
+.password_recovery_email .panel-body #ajaxError {
+	margin-top: 30px;
+	padding: 5px 10px;
+	display: none;
+}
+
+.password_recovery_email .panel-body .captcha-wrapper {
+	display: inline-block;
+	padding-top: 5px;
+}
+
+.password_recovery_email .panel-body #captcha {
+	margin-bottom: 5px;
+	width: 30%;
+	margin-right: 20px;
+	float: left;
+}
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Security <editor-fold>{{{         */
+/* ========================================== */
+#security-gamepassword{
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+#security-gamepassword .modal-body {
+	max-height: 60vh;
+	overflow-y: auto;
+}
+
+#security-withdrawal .withrawal_pass_notification {
+	color: red;
+	margin-top: -5px;
+}
+
+.image-upload-container {
+	position: relative;
+}
+.image-upload-entry > label {
+	border: 2px dashed #ccc;
+	width:100%;
+	height:400px
+}
+
+.image-upload-confirm.show-confirm {
+	position: absolute;
+	display: block !important;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background-color: #ffffff;
+	border: 2px dashed #ccc;
+}
+.image-upload-entry > label > .title {
+	text-align: center;
+	font-size: 20px;
+	margin-top: 100px;
+	color:#888888
+}
+
+.image-upload-entry > label > .confirm-error {
+	/* display: none; */
+	color: #ff0000;
+	text-align: center;
+	margin-top: 100px;
+}
+.image-upload-entry > label > .confirm-error ul{
+    display: inline-block;
+	text-align: left;
+	margin: auto 10px;
+}
+/* .image-upload-entry > label > .confirm-error.show-error {
+	display: block !important;
+} */
+
+.image-upload-entry > label > .upload-btn {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.image-confirm-display > img {
+	position: absolute;
+	top: 15px;
+	left: 10%;
+	width: 80%;
+	height: 300px;
+}
+
+.image-confirm-display > .confirm-check-btn{
+	top: 340px;
+	position: absolute;
+	left: 100px;
+	font-size: 15px !important;
+}
+
+.image-confirm-display > .confirm-cancel-btn{
+	top: 340px;
+	position: absolute;
+	right: 100px;
+	font-size: 15px !important;
+}
+
+.image-confirm-display > .compressing {
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    width: 80%;
+    height: 300px;
+    z-index: 9;
+    padding-top: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+.image-confirm-display > .compressing p{
+    font-weight: normal;
+}
+.image-confirm-display > .compressing .progress-num{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 182px;
+}
+.image-confirm-display > .compressing .progress-num span{
+    font-size: 26px;
+}
+
+.uploaded-file-container {
+	position: relative;
+	border:2px dashed #ccc;
+	width:100%;
+	height:400px;
+	overflow:scroll;
+}
+
+.uploaded-file-container > .overlay {
+	position: absolute;
+}
+
+.image-uploaded-file {
+	position: absolute;
+	width: 100%;
+}
+
+.image-uploaded-file > .img-area {
+	position: relative;
+	width: 20%;
+	height: 100px;
+	margin: 12px;
+	border: 1px solid #ccc;
+	float: left;
+}
+
+.image-uploaded-file > .img-area > .image-close {
+	position: absolute;
+	right: 7px;
+	font-weight: bold;
+	font-size:17px;
+}
+
+.image-uploaded-file > .img-area > .show-uploaded-image {
+	width: 100%;
+	height: 100%;
+}
+
+.image-uploaded-file-prompt {
+	padding: 10px 0px 2px 0px;
+	line-height: 12px;
+	font-size: 12px;
+}
+
+.image-uploaded-file-prompt .prompt_txt {
+	color: red;
+}
+
+.nav-tabs.image-upload > li > a {
+	border:2px dashed #ccc;
+	border-bottom: 0px;
+}
+
+.nav-tabs.image-upload > li > a:hover {
+	border:2px dashed #ccc;
+	border-bottom: 0px;
+}
+
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Account Information <editor-fold>{{{         */
+/* ========================================== */
+#accountInformation > h1 {
+	margin-bottom: 0;
+}
+
+#accountInformation > .row,
+#basicInfoTab > .row form {
+	overflow: hidden;
+}
+/* }}}</editor-fold> */

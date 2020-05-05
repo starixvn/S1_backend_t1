@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+  <xs:complexType name="ArrayOfQueueDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="QueueDataResponse" nillable="true" type="tns:QueueDataResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfQueueDataResponse" nillable="true" type="tns:ArrayOfQueueDataResponse" />
+  <xs:complexType name="QueueDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="ChangeAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactionCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowId" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactionNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="GameName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DateCreated" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MgsReferenceNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="MgsPayoutReferenceNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PayoutAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgressiveWin" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ProgressiveWinDesc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FreeGameOfferName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TournamentId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExtInfo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowIdLong" type="xs:long" />
+      <xs:element minOccurs="0" name="BetTicketId" nillable="true" type="xs:string">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="PunchTicketStatus" nillable="true" type="xs:boolean">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QueueDataResponse" nillable="true" type="tns:QueueDataResponse" />
+  <xs:complexType name="ArrayOfValidteBetRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ValidteBetRequest" nillable="true" type="tns:ValidteBetRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValidteBetRequest" nillable="true" type="tns:ArrayOfValidteBetRequest" />
+  <xs:complexType name="ValidteBetRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExternalReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RowId" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UnlockType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidteBetRequest" nillable="true" type="tns:ValidteBetRequest" />
+  <xs:complexType name="ValidateApiUserResponse">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Claims" nillable="true" type="q1:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValidServerIds" nillable="true" type="q2:ArrayOfint" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateApiUserResponse" nillable="true" type="tns:ValidateApiUserResponse" />
+  <xs:complexType name="ValidateApiUserExtendedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Casinos" nillable="true" type="tns:ArrayOfCasino" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Claims" nillable="true" type="q3:ArrayOfstring">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="IsValid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValidateApiUserExtendedResponse" nillable="true" type="tns:ValidateApiUserExtendedResponse" />
+  <xs:complexType name="ArrayOfCasino">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Casino" nillable="true" type="tns:Casino" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCasino" nillable="true" type="tns:ArrayOfCasino" />
+  <xs:complexType name="Casino">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Casino" nillable="true" type="tns:Casino" />
+  <xs:complexType name="ArrayOfGetVoidedFundsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetVoidedFundsResponse" nillable="true" type="tns:GetVoidedFundsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetVoidedFundsResponse" nillable="true" type="tns:ArrayOfGetVoidedFundsResponse" />
+  <xs:complexType name="GetVoidedFundsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BetAmount" type="xs:int" />
+      <xs:element minOccurs="0" name="BetDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="IsProcessed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LastUpdateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserTransNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetVoidedFundsResponse" nillable="true" type="tns:GetVoidedFundsResponse" />
+  <xs:complexType name="ArrayOfGetIsVoidedFundsEnabledResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetIsVoidedFundsEnabledResponse" nillable="true" type="tns:GetIsVoidedFundsEnabledResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetIsVoidedFundsEnabledResponse" nillable="true" type="tns:ArrayOfGetIsVoidedFundsEnabledResponse" />
+  <xs:complexType name="GetIsVoidedFundsEnabledResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetIsVoidedFundsEnabledResponse" nillable="true" type="tns:GetIsVoidedFundsEnabledResponse" />
+  <xs:complexType name="ArrayOfProcessVoidedFundsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcessVoidedFundsRequest" nillable="true" type="tns:ProcessVoidedFundsRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcessVoidedFundsRequest" nillable="true" type="tns:ArrayOfProcessVoidedFundsRequest" />
+  <xs:complexType name="ProcessVoidedFundsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserTransNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessVoidedFundsRequest" nillable="true" type="tns:ProcessVoidedFundsRequest" />
+  <xs:complexType name="ArrayOfProcessVoidedFundsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProcessVoidedFundsResponse" nillable="true" type="tns:ProcessVoidedFundsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProcessVoidedFundsResponse" nillable="true" type="tns:ArrayOfProcessVoidedFundsResponse" />
+  <xs:complexType name="ProcessVoidedFundsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserTransNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessVoidedFundsResponse" nillable="true" type="tns:ProcessVoidedFundsResponse" />
+  <xs:complexType name="ArrayOfGetGenericQueueDataRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetGenericQueueDataRequest" nillable="true" type="tns:GetGenericQueueDataRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetGenericQueueDataRequest" nillable="true" type="tns:ArrayOfGetGenericQueueDataRequest" />
+  <xs:complexType name="GetGenericQueueDataRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MaxNumRows" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerIdList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StatusId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGenericQueueDataRequest" nillable="true" type="tns:GetGenericQueueDataRequest" />
+  <xs:complexType name="ArrayOfGetGenericQueueDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetGenericQueueDataResponse" nillable="true" type="tns:GetGenericQueueDataResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetGenericQueueDataResponse" nillable="true" type="tns:ArrayOfGetGenericQueueDataResponse" />
+  <xs:complexType name="GetGenericQueueDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="QueueTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="RowId" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeAdded" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Xml" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetGenericQueueDataResponse" nillable="true" type="tns:GetGenericQueueDataResponse" />
+  <xs:complexType name="ArrayOfRetryGenericQueueDataRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetryGenericQueueDataRequest" nillable="true" type="tns:RetryGenericQueueDataRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetryGenericQueueDataRequest" nillable="true" type="tns:ArrayOfRetryGenericQueueDataRequest" />
+  <xs:complexType name="RetryGenericQueueDataRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RowId" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetryGenericQueueDataRequest" nillable="true" type="tns:RetryGenericQueueDataRequest" />
+  <xs:complexType name="ArrayOfRetryGenericQueueDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetryGenericQueueDataResponse" nillable="true" type="tns:RetryGenericQueueDataResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetryGenericQueueDataResponse" nillable="true" type="tns:ArrayOfRetryGenericQueueDataResponse" />
+  <xs:complexType name="RetryGenericQueueDataResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RowId" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetryGenericQueueDataResponse" nillable="true" type="tns:RetryGenericQueueDataResponse" />
+  <xs:complexType name="ArrayOfGetFailedGamesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetFailedGamesResponse" nillable="true" type="tns:GetFailedGamesResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetFailedGamesResponse" nillable="true" type="tns:ArrayOfGetFailedGamesResponse" />
+  <xs:complexType name="GetFailedGamesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="RowId" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeCompleted" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TimeCreated" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TournamentId" type="xs:int" />
+      <xs:element minOccurs="0" name="TransNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="UniqueId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetFailedGamesResponse" nillable="true" type="tns:GetFailedGamesResponse" />
+  <xs:complexType name="ArrayOfCompleteGameRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompleteGameRequest" nillable="true" type="tns:CompleteGameRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompleteGameRequest" nillable="true" type="tns:ArrayOfCompleteGameRequest" />
+  <xs:complexType name="CompleteGameRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RowId" type="xs:int" />
+      <xs:element minOccurs="0" name="RowIdLong" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompleteGameRequest" nillable="true" type="tns:CompleteGameRequest" />
+  <xs:complexType name="ArrayOfCompleteGameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CompleteGameResponse" nillable="true" type="tns:CompleteGameResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCompleteGameResponse" nillable="true" type="tns:ArrayOfCompleteGameResponse" />
+  <xs:complexType name="CompleteGameResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RowId" type="xs:long" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CompleteGameResponse" nillable="true" type="tns:CompleteGameResponse" />
+  <xs:complexType name="ArrayOfGetApiVersionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetApiVersionRequest" nillable="true" type="tns:GetApiVersionRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetApiVersionRequest" nillable="true" type="tns:ArrayOfGetApiVersionRequest" />
+  <xs:complexType name="GetApiVersionRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetApiVersionRequest" nillable="true" type="tns:GetApiVersionRequest" />
+  <xs:complexType name="ArrayOfGetApiVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetApiVersionResponse" nillable="true" type="tns:GetApiVersionResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetApiVersionResponse" nillable="true" type="tns:ArrayOfGetApiVersionResponse" />
+  <xs:complexType name="GetApiVersionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ApiVersion" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetApiVersionResponse" nillable="true" type="tns:GetApiVersionResponse" />
+  <xs:complexType name="ArrayOfFlushPendingCashinRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlushPendingCashinRequest" nillable="true" type="tns:FlushPendingCashinRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlushPendingCashinRequest" nillable="true" type="tns:ArrayOfFlushPendingCashinRequest" />
+  <xs:complexType name="FlushPendingCashinRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlushPendingCashinRequest" nillable="true" type="tns:FlushPendingCashinRequest" />
+  <xs:complexType name="ArrayOfFlushPendingCashinResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FlushPendingCashinResponse" nillable="true" type="tns:FlushPendingCashinResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFlushPendingCashinResponse" nillable="true" type="tns:ArrayOfFlushPendingCashinResponse" />
+  <xs:complexType name="FlushPendingCashinResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TransactionNumber" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FlushPendingCashinResponse" nillable="true" type="tns:FlushPendingCashinResponse" />
+  <xs:complexType name="ArrayOfProgressiveWinCashinReportRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProgressiveWinCashinReportRequest" nillable="true" type="tns:ProgressiveWinCashinReportRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProgressiveWinCashinReportRequest" nillable="true" type="tns:ArrayOfProgressiveWinCashinReportRequest" />
+  <xs:complexType name="ProgressiveWinCashinReportRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EndDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PendingCashinOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProgressiveWinCashinReportRequest" nillable="true" type="tns:ProgressiveWinCashinReportRequest" />
+  <xs:complexType name="ArrayOfProgressiveWinCashinReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProgressiveWinCashinReportResponse" nillable="true" type="tns:ProgressiveWinCashinReportResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProgressiveWinCashinReportResponse" nillable="true" type="tns:ArrayOfProgressiveWinCashinReportResponse" />
+  <xs:complexType name="ProgressiveWinCashinReportResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CashinAmount" type="xs:long" />
+      <xs:element minOccurs="0" name="CashinTime" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CashinTransNumber" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PendingCashinTransNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgressiveGame" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProgressiveTransNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ProgressiveWinDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProgressiveWinCashinReportResponse" nillable="true" type="tns:ProgressiveWinCashinReportResponse" />
+  <xs:complexType name="ArrayOfRetrieveGameResultAfterReconcileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetrieveGameResultAfterReconcileRequest" nillable="true" type="tns:RetrieveGameResultAfterReconcileRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetrieveGameResultAfterReconcileRequest" nillable="true" type="tns:ArrayOfRetrieveGameResultAfterReconcileRequest" />
+  <xs:complexType name="RetrieveGameResultAfterReconcileRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExternalReference" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameContext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameRoundId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameSessionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveGameResultAfterReconcileRequest" nillable="true" type="tns:RetrieveGameResultAfterReconcileRequest" />
+  <xs:complexType name="ArrayOfRetrieveGameResultAfterReconcileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RetrieveGameResultAfterReconcileResponse" nillable="true" type="tns:RetrieveGameResultAfterReconcileResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRetrieveGameResultAfterReconcileResponse" nillable="true" type="tns:ArrayOfRetrieveGameResultAfterReconcileResponse" />
+  <xs:complexType name="RetrieveGameResultAfterReconcileResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameContext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameRoundId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameSessionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GameState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="WinAmount" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RetrieveGameResultAfterReconcileResponse" nillable="true" type="tns:RetrieveGameResultAfterReconcileResponse" />
+</xs:schema>

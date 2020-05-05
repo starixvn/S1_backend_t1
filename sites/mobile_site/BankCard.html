@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>银行卡 - 新橙娱乐</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="pagetwo" class="left move">
+        <div class="header">
+            <div class="head_back">
+                <div class="back_btnPT" onclick="history.go(-1);"></div>
+            </div>
+            <div class="header_text"><a id="ht1">银行卡</a></div>
+        </div>
+       <div class="page">
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>
+
+</title>
+
+    <div class="home">
+        <div class="bankmenu">
+            <div class="emailbtn"><a>存款卡</a></div>
+            <div class="tkbtn btnshow"><a>提款卡</a></div>
+        </div>
+        <div id="ecard" style="display: none;">
+
+
+            <div class="addbankcard fourpage" onclick="document.location='EmailCard.html'" style="display: block;cursor:pointer;">
+                <li><a>添加存款卡</a></li>
+            </div>
+        </div>
+
+
+
+        <div id="tcard" style="display: block;">
+
+
+            <div class="addbankcard fourpage" onclick="document.location='WithdrawCard.html'" style="display: block;cursor:pointer;">
+                <li><a>添加提款银行卡</a></li>
+            </div>
+        </div>
+    </div>
+
+
+     <div class="quickButtonBar">
+            <a href="javascript:void(0);" onclick="document.location='http://m.xc33.com/'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/iframe_promos'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="http://player.xc33.com/pub/live_chat_link/chn" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center2/deposit'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/menu'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>
+      <script>
+        function sliaonow() {
+            var cookiename = "svidname";
+            var cookievalue = getCookie(cookiename);
+            if (cookievalue == "") {
+                cookievalue = randomString(22);
+                setCookie(cookiename, cookievalue, 365);
+            }
+            window.open('https://chat.bmwchat.net/?wgPortal=VONFpjLZtk', 'newwindow', 'height=auto,width=auto,top=0,left=0,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no');
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+        var btn = $(".user_btn,.menu_btn,.menu_btn_two");
+        var pageone = $("#pageone");
+        var pagetwo = $("#pagetwo");
+        var pagethree = $("#pagethree");
+        var pagefour = $("#pagefour");
+        var pagefive = $("#pagefive");
+        var menu = $(".menu_right,.menu_left");
+        var leftmove = "left_move";
+        var mmove = "menu_move";
+        var leftm = $(".menu_left");
+        var rightm = $(".menu_right");
+
+        $(".tkbtn").click(function() {
+            $("#tcard").show();
+            $("#ecard").hide();
+            $(this).addClass("btnshow");
+            $(".emailbtn").removeClass("btnshow");
+        });
+
+        $(".emailbtn").click(function() {
+            $("#tcard").hide();
+            $("#ecard").show();
+            $(this).addClass("btnshow");
+            $(".tkbtn").removeClass("btnshow");
+        });
+
+
+
+
+
+
+
+});
+    </script>
+
+</div>

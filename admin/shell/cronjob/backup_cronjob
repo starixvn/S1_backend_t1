@@ -1,0 +1,5 @@
+# /etc/cron.d/backup_cronjob: crontab fragment for backup
+#
+#
+
+#10 9     * * *     root   /home/vagrant/Code/og/admin/shell/backup_all.sh vagrant 127.0.0.1 /home/vagrant/Code/mysqldb /home/vagrant/Code/ >> /var/log/og/backup_all.log  2>&1

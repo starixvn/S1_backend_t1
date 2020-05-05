@@ -1,0 +1,254 @@
+/* =========================================================== */
+/* COLOR */
+/* =========================================================== */
+.fmd-step1 .btn,
+.btn-file,
+.tour-tour .popover-navigation .btn-default[data-role^="end"],
+.overview .points .vip-progress-circle-content .tip-top,
+.overview .privilege-icon .tip-bottom,
+.right-content .form-group .btn,
+.right-content .form-group .btn-cancel,
+.cstm-mod .modal-body .btn-primary,
+#vip-group-modal .modal-body .btn,
+#vip-group-modal .tip-bottom,
+#vip-group-modal .modal-footer button,
+.rst-page li span:after,
+.rst-page .page_number a:after,
+.mc-content .cashier-center-header a.btn, .mc-content .fund-management-header a.btn,
+.mc-content .sub-wallet-container .inner-content .btn,
+.mc-content .new-bank-da,
+.fmd-step1 button.btn,
+.fmd-step1 .btn,
+.submit-deposit-modal .modal-footer button,
+.inner-tab li.active a,
+.sub_btn,
+.info-left .btn,
+.circle,
+.shop-body .btn, .promotion-body .btn,
+.shop-modal .modal-footer .submit-btn, .promo-modal .modal-footer .submit-btn,
+.promotion-body .btn,
+.promotions-section .nav-pills a,
+.promotions-section .nav-pills .active a,
+.se-content button,
+.se-content.completed button,
+.se-content.completed .verified-btn,
+.security-modal .modal-footer .submit-btn,
+.security-modal .modal-footer button,
+.msg-tool-bar button.form-control,
+.msg-btn .tip-top,
+#messages > button.form-control,
+.message-modal .modal-body button,
+.message-modal .modal-body button.sendMsg,
+#accountHistory button.form-control,
+.vip-rewards-container a.btn,
+.friend-referral .btn,
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover i.fa-caret-down,
+.right-menu .tip-left,
+.bank-entry.active i,
+.fmd-step1 .bank-list li.active i,
+.shop-header .badge-new, .promotion-header .badge-new,
+.mainWallet .btn-info,
+.agency-center .panel > .panel-heading,
+.agency-center .btn-primary,
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.agency-center input.btn-sm.agent-oper,
+.agency-center input.btn-info{
+  background: #3c011b;
+}
+
+.wa-title,
+.cstm-mod .modal-body a,
+#vip-group-modal .tip-bottom:before,
+.mc-content .cashier-center-header h2.d-yen, .mc-content .fund-management-header h2.d-yen,
+.mc-content .bank-info-form .action-btns a,
+.fmd-step1 .current-deposit-bank a,
+.fmd-step1 .current-withdrawal-bank a,
+.fmd-step1 .other-deposit-bank a,
+.fmd-step1 .other-withdrawal-bank a,
+.submit-deposit-modal .modal-title,
+.circle .mask,
+.se-content .link-btn,
+.se-content .link-btn:focus,
+#security .title-text,
+.security-modal .modal-title,
+.loader-content,
+.message-modal .modal-title,
+#accountHistory > p,
+.vip-rewards-container .vip-group-name,
+.vip-rewards-container .available-rebate,
+.vip-rewards-container h2.d-yen,
+header a:hover,
+header a:focus,
+.system-navigation-container a:hover,
+.system-navigation-container a:focus{
+  color: #3c011b;
+}
+
+.agency-center .btn-primary,
+.form-control:focus,
+.agency-center input.btn-sm.agent-oper,
+.agency-center input.btn-info {
+  border-color: #3c011b;
+}
+.overview .privilege-icon .tip-bottom:before,
+.overview .points .vip-progress-circle-content .tip-top:before {
+  border-bottom-color: #3c011b;
+}
+.overview .points .vip-progress-circle-content .tip-top:before {
+  border-color: #3c011b transparent transparent transparent;
+}
+.right-menu a:hover .tip-left:before,
+.right-menu li.active a .tip-left:before {
+  border-left-color: #3c011b;
+}
+
+.msg-btn .tip-top:before {
+  border-top-color: #3c011b;
+}
+.btn-file:hover,
+.tour-tour .popover-navigation .btn-default:active,
+.tour-tour .popover-navigation .btn-default:focus,
+.tour-tour .popover-navigation .btn-default:hover,
+.right-content .form-group .btn:hover,
+.cstm-mod .modal-body .btn-primary:hover,
+#vip-group-modal .modal-body .btn:hover,
+#vip-group-modal .modal-footer button:hover,
+.mc-content .cashier-center-header a.btn:hover, .mc-content .fund-management-header a.btn:hover,
+.mc-content .sub-wallet-container .inner-content .btn:hover,
+.mc-content .new-bank-da:hover,
+.mc-content .bank-info-form button.btn:hover,
+.fmd-step1 button.btn:hover, .fmd-step1 button.btn:focus,
+.fmd-step1 button.btn.disabled, .fmd-step1 button.btn.disabled:hover,
+.fmd-step1 .btn:hover, .fmd-step1 .btn:focus,
+.fmd-step1 .btn.disabled, .fmd-step1 .btn.disabled:hover,
+.submit-deposit-modal .modal-footer button:hover,
+.sub_btn:hover, .sub_btn:focus,
+.shop-body .btn:hover, .promotion-body .btn:hover,
+.shop-modal .modal-footer .submit-btn:hover, .promo-modal .modal-footer .submit-btn:hover,
+.promotion-body .btn:hover,
+.promotions-section .nav-pills a:hover,
+.promotions-section .nav-pills a:focus,
+.promotions-section .nav-pills .active a:hover,
+.promotions-section .nav-pills .active a:focus,
+.se-content button:focus,
+.se-content button:hover,
+.security-modal .modal-footer .submit-btn:hover,
+.security-modal .modal-footer button:hover,
+.msg-tool-bar button.form-control:hover,
+#messages > button.form-control:hover,
+.message-modal .modal-body button:hover,
+#accountHistory button.form-control:hover,
+.vip-rewards-container a.btn:hover,
+.friend-referral .btn:hover,
+.mainWallet .btn-info:hover,
+.mainWallet .btn-info:focus,
+.overview .progress-bar-color,
+.agency-center .bootstrap-dialog.type-primary .modal-content .modal-header,
+.agency-center .btn-primary:hover,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus,
+.agency-center input.btn-sm.agent-oper:hover,
+.agency-center input.btn-sm.agent-oper:focus,
+.agency-center input.btn-info:hover,
+.agency-center input.btn-info:focus {
+  background: #c5216c;
+}
+
+.cstm-mod .modal-body a:hover {
+  color: #c5216c;
+}
+
+.agency-center .btn-primary:hover,
+.agency-center input.btn-sm.agent-oper:hover,
+.agency-center input.btn-sm.agent-oper:focus,
+.agency-center input.btn-info:hover,
+.agency-center input.btn-info:focus{
+  border-color: #c5216c;
+}
+/* =========================================================== */
+/* 00 Header Color */
+/* =========================================================== */
+header {
+  background-color: rgba(61,1,27, 0.8); /* #3c011b */
+}
+
+header, header a {
+  color: #FFF;
+}
+header a:hover,
+header a:focus{
+  color: #c5216c;
+}
+
+header .main-nav-toggle a:hover .main-nav-toggle-icon {
+  background-color: #c5216c;
+  background-image: none;
+  -webkit-mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iYmFja194NUZfaWNvbl8xXyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI0NnB4IiBoZWlnaHQ9IjQ2cHgiIHZpZXdCb3g9IjAgMCA0NiA0NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDYgNDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnIGlkPSJiYWNrX3g1Rl9pY29uIj48Zz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTIzLDBDMTAuMjk3LDAsMCwxMC4yOTcsMCwyM3MxMC4yOTcsMjMsMjMsMjNzMjMtMTAuMjk3LDIzLTIzUzM1LjcwMywwLDIzLDB6IE0yMyw0NEMxMS40MDIsNDQsMiwzNC41OTgsMiwyM1MxMS40MDIsMiwyMywyYzExLjU5OCwwLDIxLDkuNDAyLDIxLDIxUzM0LjU5OCw0NCwyMyw0NHogTTI4LDE0LjQyOUMyOCwxMy42NCwyNy4zODUsMTMsMjYuNjI1LDEzYy0wLjM2OSwwLTAuNzA0LDAuMTUxLTAuOTUxLDAuMzk3bC0wLjAwNC0wLjAwNGwtOC4yNSw4LjU3MWwwLDAuMDAxQzE3LjE2MiwyMi4yMjYsMTcsMjIuNTksMTcsMjIuOTk0VjIzYzAsMC40MDMsMC4xNjIsMC43NjksMC40MjEsMS4wMjhoMGw4LjI1LDguNTcxaDAuMDAxYzAuMjQ3LDAuMjQ4LDAuNTgzLDAuNCwwLjk1NCwwLjRDMjcuMzg1LDMzLDI4LDMyLjM2LDI4LDMxLjU3MWMwLTAuMzg1LTAuMTQ2LTAuNzM0LTAuMzg2LTAuOTkxbDAuMDAxLTAuMDAxbC03LjI5OS03LjU4Mmw3LjIwNC03LjQ4NUMyNy44MTQsMTUuMjUsMjgsMTQuODYyLDI4LDE0LjQyOXoiLz48L2c+PC9nPjwvc3ZnPg==);
+  -webkit-mask-size: 40px 40px;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-origin: content-box;
+  mask-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iYmFja194NUZfaWNvbl8xXyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI0NnB4IiBoZWlnaHQ9IjQ2cHgiIHZpZXdCb3g9IjAgMCA0NiA0NiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDYgNDYiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnIGlkPSJiYWNrX3g1Rl9pY29uIj48Zz48cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZmlsbD0iI0ZGRkZGRiIgZD0iTTIzLDBDMTAuMjk3LDAsMCwxMC4yOTcsMCwyM3MxMC4yOTcsMjMsMjMsMjNzMjMtMTAuMjk3LDIzLTIzUzM1LjcwMywwLDIzLDB6IE0yMyw0NEMxMS40MDIsNDQsMiwzNC41OTgsMiwyM1MxMS40MDIsMiwyMywyYzExLjU5OCwwLDIxLDkuNDAyLDIxLDIxUzM0LjU5OCw0NCwyMyw0NHogTTI4LDE0LjQyOUMyOCwxMy42NCwyNy4zODUsMTMsMjYuNjI1LDEzYy0wLjM2OSwwLTAuNzA0LDAuMTUxLTAuOTUxLDAuMzk3bC0wLjAwNC0wLjAwNGwtOC4yNSw4LjU3MWwwLDAuMDAxQzE3LjE2MiwyMi4yMjYsMTcsMjIuNTksMTcsMjIuOTk0VjIzYzAsMC40MDMsMC4xNjIsMC43NjksMC40MjEsMS4wMjhoMGw4LjI1LDguNTcxaDAuMDAxYzAuMjQ3LDAuMjQ4LDAuNTgzLDAuNCwwLjk1NCwwLjRDMjcuMzg1LDMzLDI4LDMyLjM2LDI4LDMxLjU3MWMwLTAuMzg1LTAuMTQ2LTAuNzM0LTAuMzg2LTAuOTkxbDAuMDAxLTAuMDAxbC03LjI5OS03LjU4Mmw3LjIwNC03LjQ4NUMyNy44MTQsMTUuMjUsMjgsMTQuODYyLDI4LDE0LjQyOXoiLz48L2c+PC9nPjwvc3ZnPg==);
+  mask-size: 40px 40px;
+  mask-repeat: no-repeat;
+  mask-origin: content-box;
+  transform: rotate(180deg);
+}
+
+header .main-action-buttons>.list-unstyled>li>a:hover,
+header .main-action-buttons>.list-unstyled>li>a:focus {
+  background-color: #c5216c;
+  color: #fff;
+}
+
+
+/* =========================================================== */
+/* 00 System Navigation Color */
+/* =========================================================== */
+.system-navigation-container, .system-navigation-container a {
+  color: #1c1c1c;
+}
+.system-navigation-container a:hover,
+.system-navigation-container a:focus {
+  color: #c5216c;
+}
+
+.player-stats-block .btn-login,
+.player-stats-block .btn-register,
+.player-stats-block .btn-logout{
+  background-color: #c5216c;
+  border-color: #c5216c;
+  color: #fff;
+}
+.player-stats-block .btn-login:hover,
+.player-stats-block .btn-login:focus,
+.player-stats-block .btn-register:hover,
+.player-stats-block .btn-register:focus,
+.player-stats-block .btn-logout:hover,
+.player-stats-block .btn-logout:focus{
+  background-color: #3c011b;
+  border-color: #3c011b;
+  color: #fff;
+}
+
+/* =========================================================== */
+/* 00 Main Navigation Color */
+/* =========================================================== */
+.main-navigation-container {
+  background-color: #3c011b;
+  color: #ccc;
+}
+
+.main-navigation-container .navigation-type-content>ul>li>a,
+.main-navigation-container .navigation-type-content>ul>li>.third-menu-item>a,
+.main-navigation-container .navigation-type-content>ul>li>.third-menu-content>ul>li>a {
+  color: #ccc;
+}
+
+.main-navigation-container .navigation-type-content>ul>li>a:hover,
+.main-navigation-container .navigation-type-content>ul>li>.third-menu-item>a:hover,
+.main-navigation-container .navigation-type-content>ul>li>.third-menu-content>ul>li>a:hover {
+  background: #c5216c;
+}

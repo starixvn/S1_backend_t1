@@ -1,0 +1,110 @@
+{
+  "name": "og-vue",
+  "version": "6.06.01",
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "dev": "vue-cli-service serve",
+    "lines": "cloc . --exclude-dir=node_modules --exclude-ext=json",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "element-ui": "^2.13.0",
+    "js-cookie": "^2.2.0",
+    "moment": "^2.24.0",
+    "svg-innerhtml": "^1.1.0",
+    "vue": "^2.6.11",
+    "vue-awesome": "^4.0.2",
+    "vue-i18n": "^8.15.2",
+    "vue-logger": "0.0.4",
+    "vue-moment": "^4.1.0",
+    "vue-router": "^3.1.5",
+    "vuex": "^3.1.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-plugin-eslint": "^3.2.1",
+    "@vue/cli-service": "^3.2.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "mocha": "^5.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "should": "^13.2.3",
+    "vue-cli-plugin-element": "^1.0.0",
+    "vue-cli-plugin-i18n": "^0.5.1",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true,
+      "mocha": true
+    },
+    "plugins": [
+      "mocha"
+    ],
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "linebreak-style": [
+        "error",
+        "unix"
+      ],
+      "quotes": [
+        "error",
+        "single"
+      ],
+      "semi": [
+        "error",
+        "always"
+      ],
+      "no-alert": [
+        "error"
+      ],
+      "camelcase": [
+        "error"
+      ],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always",
+          "objects": "always",
+          "imports": "never",
+          "exports": "never",
+          "functions": "never"
+        }
+      ],
+      "eqeqeq": [
+        "error",
+        "always"
+      ],
+      "prefer-template": "error",
+      "mocha/no-exclusive-tests": "error"
+    },
+    "parserOptions": {
+      "ecmaVersion": 2015,
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

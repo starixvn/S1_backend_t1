@@ -1,0 +1,2712 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ws.oxypite.com/" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://ws.oxypite.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://ws.oxypite.com/">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="GetBonusAvailablePlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:BonusAvailablePlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BonusAvailablePlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="DtLastDeposit" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseRequest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BrandId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APIKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlayerHostAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CFCId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locale" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBonusAvailablePlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBonusAvailablePlayerResult" type="tns:ArrayOfCouponInfoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCouponInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CouponInfoDTO" nillable="true" type="tns:CouponInfoDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CouponInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CouponId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Percentage" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxRedeemAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CouponAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WagerRequirement" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="CouponTypeId" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="AutoCancelAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponTypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TrickleBack" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreeConversionMultiplier" nillable="true" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinDepositAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerClassId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlayerClassName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtStart" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtExpire" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxBalanceAmount" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSignup" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRedeemedByPlayer" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreeSpinCount" nillable="true" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreeSpinValue" nillable="true" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxRedemptionsPerPlayer" nillable="true" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="ComplexConfig" type="tns:ArrayOfComplexDepositCouponInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="LockTillDeposit" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BlockRedeem" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlockMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="WagerLock" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsPrivate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsAdminUseOnly" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfComplexDepositCouponInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ComplexDepositCouponInfo" nillable="true" type="tns:ComplexDepositCouponInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ComplexDepositCouponInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Dep" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FS" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="Prc" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ApplyBonusToPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ApplyBonusToPlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ApplyBonusToPlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="VariableCouponAmount" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReplaceActiveCoupon" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ApplyBonusToPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="couponresponse" nillable="true" type="tns:CouponResponseMessage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CouponResponseMessage">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CouponId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsQueued" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusBalanceId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsException" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreeSpins" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Error" type="tns:InfoMessage" />
+          <s:element minOccurs="1" maxOccurs="1" name="SetToActive" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="InfoMessage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StackTrace" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Suppress" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="MessageCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBonusBalancesForPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:BonusGenericPlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BonusGenericPlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetBonusBalancesForPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBonusBalancesForPlayerResult" type="tns:ArrayOfBonusBalancesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBonusBalancesDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BonusBalancesDTO" nillable="true" type="tns:BonusBalancesDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="BonusBalancesDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BonusBalanceId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CouponTypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponTypeLangKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Freespins" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FreespinValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WagerRemaining" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalWagerRequired" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PercentageComplete" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtExpires" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFrozen" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameId" nillable="true" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="WagerLockUntil" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="WagerLock" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetPlayerBonusBalanceActive">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:SetBonusBalanceActiveRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SetBonusBalanceActiveRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BonusBalanceId" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SetPlayerBonusBalanceActiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetPlayerBonusBalanceActiveResult" type="tns:ToggleBonusBalanceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ToggleBonusBalanceResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BonusBalanceId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsActive" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlockingGameNames" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BlockingCount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="OverrideWagerLock" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeletePlayerBonusBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:DeleteBonusBalanceRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeleteBonusBalanceRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="BonusBalanceId" type="s1:guid" />
+              <s:element minOccurs="1" maxOccurs="1" name="ActivateNextBonus" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DeletePlayerBonusBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeletePlayerBonusBalanceResult" type="tns:ToggleBonusBalanceResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAndApplyBonus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:CreateBonusAndApplyRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateBonusAndApplyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CouponCodeToCreate" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ReplaceActiveCoupon" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="CouponTypeId" type="s:short" />
+              <s:element minOccurs="1" maxOccurs="1" name="ExpireAfterDays" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxRedemptionsPerPlayer" type="s:short" />
+              <s:element minOccurs="1" maxOccurs="1" name="WagerMultiplierRequirement" type="s:short" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxConversionToRealMultiplier" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="AutoCancelBonusBalanceAt" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="NumberOfFreeSpins" type="s:short" />
+              <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="FreeSpinValuePerSpin" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="CreateAndApplyBonusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateAndApplyBonusResult" type="tns:CreateAndApplyBonusResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CreateAndApplyBonusResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CoupondId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Created" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Redeemed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsQueued" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusBalanceId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="CouponCodeCreated" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGameTypes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:GameTypeRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GameTypeRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGameTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGameTypesResult" type="tns:GameTypeResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GameTypeResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GameTypes" type="tns:ArrayOfGameTypeClientDbDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseResponse" />
+      <s:complexType name="ArrayOfGameTypeClientDbDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GameTypeClientDbDTO" nillable="true" type="tns:GameTypeClientDbDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GameTypeClientDbDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="GameTypeId" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="LangKey" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranslatedNames" type="tns:ArrayOfGameTranslationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGameTranslationDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GameTranslationDTO" nillable="true" type="tns:GameTranslationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GameTranslationDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="Locale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Translation" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGames">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:GameRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GameRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGamesResult" type="tns:GameResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GameResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="HostedLaunchUrl" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Games" type="tns:ArrayOfGameClientDbDTO" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfGameClientDbDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GameClientDbDTO" nillable="true" type="tns:GameClientDbDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GameClientDbDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BrandGameId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="KeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsNew" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtAdded" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtUpdated" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameTypeId" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReleaseStatusId" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameTypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MobileCapable" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MobiPlatformId" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="WebPlatformId" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameTypeDisplayName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BaseGameTypeId" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExProv" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GroupName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LineDesc" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsFeat" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RTP" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TranslatedNames" type="tns:ArrayOfGameTranslationDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGamesInMenuOnly">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:GameRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGamesInMenuOnlyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGamesInMenuOnlyResult" type="tns:GameResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGameDisplay">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:GameDisplayRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GameDisplayRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetGameDisplayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGameDisplayResult" type="tns:GameDisplayResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GameDisplayResponse">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseResponse">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="GameDisplay" type="tns:ArrayOfDisplayNode" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfDisplayNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DisplayNode" nillable="true" type="tns:DisplayNode" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DisplayNode">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Game" type="tns:Game" />
+        </s:sequence>
+        <s:attribute name="id" type="s1:guid" use="required" />
+        <s:attribute name="parentid" type="s:string" />
+        <s:attribute name="displayname" type="s:string" />
+        <s:attribute name="langkey" type="s:string" />
+      </s:complexType>
+      <s:complexType name="Game">
+        <s:attribute name="brandgameid" type="s1:guid" use="required" />
+        <s:attribute name="displayname" type="s:string" />
+        <s:attribute name="webplatformid" type="s:int" use="required" />
+        <s:attribute name="mobiplatformid" type="s:int" use="required" />
+        <s:attribute name="keyname" type="s:string" />
+        <s:attribute name="dtadded" type="s:dateTime" use="required" />
+        <s:attribute name="langkey" type="s:string" />
+      </s:complexType>
+      <s:element name="GetJackpots">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:JackpotInfoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="JackpotInfoRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetJackpotsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJackpotsResult" type="tns:ArrayOfJackpotInfoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfJackpotInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JackpotInfoDTO" nillable="true" type="tns:JackpotInfoDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JackpotInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BrandId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotGroupId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="JackpotTypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotTypeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrencyId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrencyExponent" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrentValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Increment" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BetTotal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClawTotal" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="StartingValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConsumePerc" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RandFreqPerc" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="MarkupPerc" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BlockUntilFunded" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Conversions" type="tns:ArrayOfJackpotValueDTO" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandsGroupId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="CoinSizeJackpot" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfJackpotValueDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JackpotValueDTO" nillable="true" type="tns:JackpotValueDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JackpotValueDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrencyExponent" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedValue" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExRate" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Increment" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetJackpotGameLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:JackpotInfoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJackpotGameLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJackpotGameLinkResult" type="tns:ArrayOfJackpotGameLinkInfoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfJackpotGameLinkInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JackpotGameLinkInfoDTO" nillable="true" type="tns:JackpotGameLinkInfoDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JackpotGameLinkInfoDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotGroupId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandGameIds" type="tns:ArrayOfGuid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Keynames" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGuid">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="guid" type="s1:guid" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetAllJackpotsInAllBrands">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:JackpotInfoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAllJackpotsInAllBrandsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAllJackpotsInAllBrandsResult" type="tns:ArrayOfJackpotInfoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJackpotGameLinkInAllBrands">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:JackpotInfoRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetJackpotGameLinkInAllBrandsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetJackpotGameLinkInAllBrandsResult" type="tns:ArrayOfJackpotGameLinkInfoDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportPlayerStakePayout">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReportRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DtStartUTC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DtEndUTC" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ReportPlayerStakePayoutResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportPlayerStakePayoutResult" type="tns:ArrayOfPlayerStakePayoutDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayerStakePayoutDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlayerStakePayoutDTO" nillable="true" type="tns:PlayerStakePayoutDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlayerStakePayoutDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Payout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Nett" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPlayerGameTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PlayerReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlayerReportRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DtStartUTC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DtEndUTC" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetPlayerGameTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayerGameTransactionsResult" type="tns:ArrayOfPlayerGameTransactionsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayerGameTransactionsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlayerGameTransactionsDTO" nillable="true" type="tns:PlayerGameTransactionsDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlayerGameTransactionsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandGameId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameInstanceId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="FriendlyGameInstanceId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionTypeId" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionTypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceAfter" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromoAmount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromoBalanceAfter" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtTx" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetPlayerTransferTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PlayerReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerTransferTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayerTransferTransactionsResult" type="tns:ArrayOfPlayerTransferTransactionsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayerTransferTransactionsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlayerTransferTransactionsDTO" nillable="true" type="tns:PlayerTransferTransactionsDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlayerTransferTransactionsDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" nillable="true" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="RequestId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtTx" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionTypeId" type="s:short" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionTypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceAfter" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBrandTransferTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBrandTransferTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBrandTransferTransactionsResult" type="tns:ArrayOfPlayerTransferTransactionsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupTransferTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupTransferTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupTransferTransactionsResult" type="tns:ArrayOfPlayerTransferTransactionsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerGameResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PlayerReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerGameResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayerGameResultsResult" type="tns:ArrayOfPlayerGameResultsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayerGameResultsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlayerGameResultsDTO" nillable="true" type="tns:PlayerGameResultsDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlayerGameResultsDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandGameId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameInstanceId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="FriendlyGameInstanceId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Payout" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotWin" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotContribution" nillable="true" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtStart" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtCompleted" nillable="true" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameStateName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameStateId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameTypeId" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBrandGameResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBrandGameResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBrandGameResultsResult" type="tns:ArrayOfPlayerGameResultsDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBrandCompletedGameResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBrandCompletedGameResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBrandCompletedGameResultsResult" type="tns:ArrayOfPlayerCompletedGamesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayerCompletedGamesDTO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlayerCompletedGamesDTO" nillable="true" type="tns:PlayerCompletedGamesDTO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlayerCompletedGamesDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandGameId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameTypeId" type="s:short" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtStarted" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtCompleted" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FriendlyGameInstanceId" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameInstanceId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Payout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotWin" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotContribution" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ChannelTypeId" type="s:short" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetGroupCompletedGameResults">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGroupCompletedGameResultsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGroupCompletedGameResultsResult" type="tns:ArrayOfPlayerCompletedGamesDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerStakePayoutSummary">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PlayerReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerStakePayoutSummaryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayerStakePayoutSummaryResult" type="tns:PlayerStakePayoutSummaryDTO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PlayerStakePayoutSummaryDTO">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Stake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="Payout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotWin" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotContribution" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportJackpotWinner">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportJackpotWinnerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportJackpotWinnerResult" type="tns:ArrayOfJackpotWinnerRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfJackpotWinnerRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JackpotWinnerRecord" nillable="true" type="tns:JackpotWinnerRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JackpotWinnerRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BrandId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="JackpotName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotTypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlayerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlayerCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="AmountWon" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtWon" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameInstanceId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="FriendlyGameInstanceId" type="s:long" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportJackpotContribution">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportJackpotContributionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportJackpotContributionResult" type="tns:ArrayOfJackpotContributionRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfJackpotContributionRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JackpotContributionRecord" nillable="true" type="tns:JackpotContributionRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JackpotContributionRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BrandId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="JackpotName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotTypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FundedCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FundedIncrement" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FundedClaw" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConvertedCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedIncrement" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedClaw" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportJackpotContributionPerGame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportJackpotContributionPerGameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportJackpotContributionPerGameResult" type="tns:ArrayOfJackpotContributionPerGameRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfJackpotContributionPerGameRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="JackpotContributionPerGameRecord" nillable="true" type="tns:JackpotContributionPerGameRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="JackpotContributionPerGameRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BrandId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandGameId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="JackpotName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotTypeId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FundedCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FundedIncrement" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="FundedClaw" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="ConvertedCurrency" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedIncrement" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ConvertedClaw" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportDynamic">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:DynamicReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DynamicReportRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DtStartUTC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DtEndUTC" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DynamicReportId" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="ReportDynamicResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportDynamicResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportGameOverviewBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportGameOverviewBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportGameOverviewBrandResult" type="tns:ArrayOfGameOverviewRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGameOverviewRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GameOverviewRecord" nillable="true" type="tns:GameOverviewRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GameOverviewRecord">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BrandGameId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPlayers" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalGames" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GamePayout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotPayout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPayout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameNett" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalNett" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpectedRTP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameRTP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRTP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvgWagerPerPlayer" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AveragesGamesPerPlayer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AverageBetPerGame" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportGameOverviewPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:PlayerReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportGameOverviewPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportGameOverviewPlayerResult" type="tns:ArrayOfPlayerGameOverviewRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPlayerGameOverviewRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PlayerGameOverviewRecord" nillable="true" type="tns:PlayerGameOverviewRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PlayerGameOverviewRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BrandGameId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameKeyName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameTypeName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalGames" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalStake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPayout" type="s:decimal" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ReportGameOverviewPerLocation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:ReportRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReportGameOverviewPerLocationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReportGameOverviewPerLocationResult" type="tns:ArrayOfGameOverviewPerLocationRecord" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfGameOverviewPerLocationRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GameOverviewPerLocationRecord" nillable="true" type="tns:GameOverviewPerLocationRecord" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GameOverviewPerLocationRecord">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="LocationName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameTypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPlayers" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalGames" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Stake" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GamePayout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="JackpotPayout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPayout" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameNett" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalNett" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpectedRTP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="GameRTP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRTP" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvgWagerPerPlayer" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="AveragesGamesPerPlayer" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AverageBetPerGame" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandLocationId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdatePlayerPassword">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:UpdatePlayerPasswordRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdatePlayerPasswordRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NewPassword" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="UpdatePlayerPasswordResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdatePlayerPasswordResult" type="tns:UpdatePlayerPasswordResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="UpdatePlayerPasswordResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LoginOrCreatePlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:LoginOrCreatePlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginOrCreatePlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="SegmentKey" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IdentityNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="DOB" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address1" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Address2" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PostalCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CountryCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Gender" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="EmailAddress" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="TelNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="UserAgent" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="PlayerRank" nillable="true" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="KeepExistingToken" nillable="true" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LoginOrCreatePlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginOrCreatePlayerResult" type="tns:LoginUserResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LoginUserResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Authenticated" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RealBalance" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerCreated" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasBonus" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusBalance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusSpins" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusGameId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusPercentage" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusWagerRemaining" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BonusGameKeyName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryTransfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:QueryTransferRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryTransferRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="RequestId" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="QueryTransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryTransferResult" type="tns:QueryTransferResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryTransferResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BalanceAfter" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="DtAdded" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="QueryPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:QueryPlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryPlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="QueryPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryPlayerResult" type="tns:QueryPlayerResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="QueryPlayerResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Found" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PlayerId" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="BrandId" type="s1:guid" />
+          <s:element minOccurs="0" maxOccurs="1" name="BrandName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RealBalance" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="HasBonus" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusBalance" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusSpins" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusGameId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BonusGameKeyName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusPercentage" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="BonusWagerRemaining" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LogoutPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:LogoutPlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LogoutPlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LogoutPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoutPlayerResult" type="tns:LogoutPlayerResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LogoutPlayerResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LogoutThirdPartyPlayer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:LogoutThirdPartyPlayerRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LogoutThirdPartyPlayerRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountId" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="ForceLogout" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LogoutThirdPartyPlayerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoutThirdPartyPlayerResult" type="tns:ThirdPartyPlayerLogoutResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ThirdPartyPlayerLogoutResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Authenticated" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DepositPlayerMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:DepositPlayerMoneyRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DepositPlayerMoneyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="RequestId" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="DepositPlayerMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepositPlayerMoneyResult" type="tns:MoneyResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MoneyResponse">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Success" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RealBalance" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransactionId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencySymbol" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WithdrawPlayerMoney">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:WithdrawPlayerMoneyRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="WithdrawPlayerMoneyRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Username" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="WithdrawAll" nillable="true" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="RequestId" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="WithdrawPlayerMoneyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WithdrawPlayerMoneyResult" type="tns:MoneyResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LogoutAllPlayersInBrand">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:LogoutAllPlayersInBrandRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LogoutAllPlayersInBrandRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest" />
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="LogoutAllPlayersInBrandResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LogoutAllPlayersInBrandResult" type="tns:LogoutAllPlayersInBrandResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="LogoutAllPlayersInBrandResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SetMaintenanceMode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="req" type="tns:MaintenanceModeRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MaintenanceModeRequest">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseRequest">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="Enabled" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="SetMaintenanceModeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetMaintenanceModeResult" type="tns:MaintenanceModeResponse" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MaintenanceModeResponse">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBonusAvailablePlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBonusAvailablePlayer" />
+  </wsdl:message>
+  <wsdl:message name="GetBonusAvailablePlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBonusAvailablePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ApplyBonusToPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:ApplyBonusToPlayer" />
+  </wsdl:message>
+  <wsdl:message name="ApplyBonusToPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:ApplyBonusToPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBonusBalancesForPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBonusBalancesForPlayer" />
+  </wsdl:message>
+  <wsdl:message name="GetBonusBalancesForPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBonusBalancesForPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerBonusBalanceActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:SetPlayerBonusBalanceActive" />
+  </wsdl:message>
+  <wsdl:message name="SetPlayerBonusBalanceActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:SetPlayerBonusBalanceActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlayerBonusBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:DeletePlayerBonusBalance" />
+  </wsdl:message>
+  <wsdl:message name="DeletePlayerBonusBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:DeletePlayerBonusBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndApplyBonusSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAndApplyBonus" />
+  </wsdl:message>
+  <wsdl:message name="CreateAndApplyBonusSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAndApplyBonusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGameTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGameTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetGameTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGameTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGames" />
+  </wsdl:message>
+  <wsdl:message name="GetGamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGamesInMenuOnlySoapIn">
+    <wsdl:part name="parameters" element="tns:GetGamesInMenuOnly" />
+  </wsdl:message>
+  <wsdl:message name="GetGamesInMenuOnlySoapOut">
+    <wsdl:part name="parameters" element="tns:GetGamesInMenuOnlyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGameDisplaySoapIn">
+    <wsdl:part name="parameters" element="tns:GetGameDisplay" />
+  </wsdl:message>
+  <wsdl:message name="GetGameDisplaySoapOut">
+    <wsdl:part name="parameters" element="tns:GetGameDisplayResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJackpotsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJackpots" />
+  </wsdl:message>
+  <wsdl:message name="GetJackpotsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJackpotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJackpotGameLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJackpotGameLink" />
+  </wsdl:message>
+  <wsdl:message name="GetJackpotGameLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJackpotGameLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAllJackpotsInAllBrandsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAllJackpotsInAllBrands" />
+  </wsdl:message>
+  <wsdl:message name="GetAllJackpotsInAllBrandsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAllJackpotsInAllBrandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetJackpotGameLinkInAllBrandsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetJackpotGameLinkInAllBrands" />
+  </wsdl:message>
+  <wsdl:message name="GetJackpotGameLinkInAllBrandsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetJackpotGameLinkInAllBrandsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportPlayerStakePayoutSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportPlayerStakePayout" />
+  </wsdl:message>
+  <wsdl:message name="ReportPlayerStakePayoutSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportPlayerStakePayoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerGameTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayerGameTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerGameTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayerGameTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerTransferTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayerTransferTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerTransferTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayerTransferTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBrandTransferTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBrandTransferTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetBrandTransferTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBrandTransferTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupTransferTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupTransferTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupTransferTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupTransferTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerGameResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayerGameResults" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerGameResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayerGameResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBrandGameResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBrandGameResults" />
+  </wsdl:message>
+  <wsdl:message name="GetBrandGameResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBrandGameResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBrandCompletedGameResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBrandCompletedGameResults" />
+  </wsdl:message>
+  <wsdl:message name="GetBrandCompletedGameResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBrandCompletedGameResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCompletedGameResultsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGroupCompletedGameResults" />
+  </wsdl:message>
+  <wsdl:message name="GetGroupCompletedGameResultsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGroupCompletedGameResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerStakePayoutSummarySoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayerStakePayoutSummary" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerStakePayoutSummarySoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayerStakePayoutSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportJackpotWinnerSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportJackpotWinner" />
+  </wsdl:message>
+  <wsdl:message name="ReportJackpotWinnerSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportJackpotWinnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportJackpotContributionSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportJackpotContribution" />
+  </wsdl:message>
+  <wsdl:message name="ReportJackpotContributionSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportJackpotContributionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportJackpotContributionPerGameSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportJackpotContributionPerGame" />
+  </wsdl:message>
+  <wsdl:message name="ReportJackpotContributionPerGameSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportJackpotContributionPerGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportDynamicSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportDynamic" />
+  </wsdl:message>
+  <wsdl:message name="ReportDynamicSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportDynamicResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportGameOverviewBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportGameOverviewBrand" />
+  </wsdl:message>
+  <wsdl:message name="ReportGameOverviewBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportGameOverviewBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportGameOverviewPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportGameOverviewPlayer" />
+  </wsdl:message>
+  <wsdl:message name="ReportGameOverviewPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportGameOverviewPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReportGameOverviewPerLocationSoapIn">
+    <wsdl:part name="parameters" element="tns:ReportGameOverviewPerLocation" />
+  </wsdl:message>
+  <wsdl:message name="ReportGameOverviewPerLocationSoapOut">
+    <wsdl:part name="parameters" element="tns:ReportGameOverviewPerLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePlayerPasswordSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerPassword" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePlayerPasswordSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePlayerPasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginOrCreatePlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:LoginOrCreatePlayer" />
+  </wsdl:message>
+  <wsdl:message name="LoginOrCreatePlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginOrCreatePlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryTransferSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryTransfer" />
+  </wsdl:message>
+  <wsdl:message name="QueryTransferSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryTransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryPlayer" />
+  </wsdl:message>
+  <wsdl:message name="QueryPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:LogoutPlayer" />
+  </wsdl:message>
+  <wsdl:message name="LogoutPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutThirdPartyPlayerSoapIn">
+    <wsdl:part name="parameters" element="tns:LogoutThirdPartyPlayer" />
+  </wsdl:message>
+  <wsdl:message name="LogoutThirdPartyPlayerSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutThirdPartyPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="DepositPlayerMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:DepositPlayerMoney" />
+  </wsdl:message>
+  <wsdl:message name="DepositPlayerMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:DepositPlayerMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawPlayerMoneySoapIn">
+    <wsdl:part name="parameters" element="tns:WithdrawPlayerMoney" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawPlayerMoneySoapOut">
+    <wsdl:part name="parameters" element="tns:WithdrawPlayerMoneyResponse" />
+  </wsdl:message>
+  <wsdl:message name="LogoutAllPlayersInBrandSoapIn">
+    <wsdl:part name="parameters" element="tns:LogoutAllPlayersInBrand" />
+  </wsdl:message>
+  <wsdl:message name="LogoutAllPlayersInBrandSoapOut">
+    <wsdl:part name="parameters" element="tns:LogoutAllPlayersInBrandResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetMaintenanceModeSoapIn">
+    <wsdl:part name="parameters" element="tns:SetMaintenanceMode" />
+  </wsdl:message>
+  <wsdl:message name="SetMaintenanceModeSoapOut">
+    <wsdl:part name="parameters" element="tns:SetMaintenanceModeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="HostedSoap">
+    <wsdl:operation name="GetBonusAvailablePlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of Coupons/Bonuses available to a player for redemption</wsdl:documentation>
+      <wsdl:input message="tns:GetBonusAvailablePlayerSoapIn" />
+      <wsdl:output message="tns:GetBonusAvailablePlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplyBonusToPlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Apply a bonus coupon to a player</wsdl:documentation>
+      <wsdl:input message="tns:ApplyBonusToPlayerSoapIn" />
+      <wsdl:output message="tns:ApplyBonusToPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBonusBalancesForPlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of the players bonus balances (these are coupons which have been activated on players account and are ready to use)</wsdl:documentation>
+      <wsdl:input message="tns:GetBonusBalancesForPlayerSoapIn" />
+      <wsdl:output message="tns:GetBonusBalancesForPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerBonusBalanceActive">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Toggle the provided BonusBalanceId active status.</wsdl:documentation>
+      <wsdl:input message="tns:SetPlayerBonusBalanceActiveSoapIn" />
+      <wsdl:output message="tns:SetPlayerBonusBalanceActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerBonusBalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deletes a Bonus Balance</wsdl:documentation>
+      <wsdl:input message="tns:DeletePlayerBonusBalanceSoapIn" />
+      <wsdl:output message="tns:DeletePlayerBonusBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndApplyBonus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create a new Coupon and optionally redeeme it for specified username</wsdl:documentation>
+      <wsdl:input message="tns:CreateAndApplyBonusSoapIn" />
+      <wsdl:output message="tns:CreateAndApplyBonusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameTypes">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of Game Types</wsdl:documentation>
+      <wsdl:input message="tns:GetGameTypesSoapIn" />
+      <wsdl:output message="tns:GetGameTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all available Games for the Brand.</wsdl:documentation>
+      <wsdl:input message="tns:GetGamesSoapIn" />
+      <wsdl:output message="tns:GetGamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGamesInMenuOnly">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all available Games for the Brand but only if they appear in the Backoffice Game Menu Display [same format as GetGames()] </wsdl:documentation>
+      <wsdl:input message="tns:GetGamesInMenuOnlySoapIn" />
+      <wsdl:output message="tns:GetGamesInMenuOnlySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGameDisplay">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all Games for the Brand in hierarchical menu format structure as per Backoffice Game Menu Display</wsdl:documentation>
+      <wsdl:input message="tns:GetGameDisplaySoapIn" />
+      <wsdl:output message="tns:GetGameDisplaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpots">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a detailed list of all Jackpots in the Brand</wsdl:documentation>
+      <wsdl:input message="tns:GetJackpotsSoapIn" />
+      <wsdl:output message="tns:GetJackpotsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpotGameLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all Jackpots id's in the Brand with a list of linked BrandGameIds. This shows you which Jackpots a specific Game is using.</wsdl:documentation>
+      <wsdl:input message="tns:GetJackpotGameLinkSoapIn" />
+      <wsdl:output message="tns:GetJackpotGameLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJackpotsInAllBrands">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a detailed list of all Jackpots in all the Brands in same Group]</wsdl:documentation>
+      <wsdl:input message="tns:GetAllJackpotsInAllBrandsSoapIn" />
+      <wsdl:output message="tns:GetAllJackpotsInAllBrandsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpotGameLinkInAllBrands">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a list of all Jackpots id's for all Brands in a Group with a list of linked BrandGameIds</wsdl:documentation>
+      <wsdl:input message="tns:GetJackpotGameLinkInAllBrandsSoapIn" />
+      <wsdl:output message="tns:GetJackpotGameLinkInAllBrandsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportPlayerStakePayout">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the summarised Total stakes and payouts per player for a Brand during the date range. Winners/Losers report. ONLY completed games. Hours granularity</wsdl:documentation>
+      <wsdl:input message="tns:ReportPlayerStakePayoutSoapIn" />
+      <wsdl:output message="tns:ReportPlayerStakePayoutSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerGameTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get individual debit and credit transactions per game for a player in a date range. Seconds granularity.</wsdl:documentation>
+      <wsdl:input message="tns:GetPlayerGameTransactionsSoapIn" />
+      <wsdl:output message="tns:GetPlayerGameTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTransferTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get individual money transfers in and out for a player in a date range. Same result format as GetBrandTransferTransactions(). Seconds granularity.</wsdl:documentation>
+      <wsdl:input message="tns:GetPlayerTransferTransactionsSoapIn" />
+      <wsdl:output message="tns:GetPlayerTransferTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandTransferTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all individual money transfers in and out for the brand in a date range. Same result format as GetPlayerTransferTransactions(). Seconds granularity.</wsdl:documentation>
+      <wsdl:input message="tns:GetBrandTransferTransactionsSoapIn" />
+      <wsdl:output message="tns:GetBrandTransferTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupTransferTransactions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get all individual money transfers in and out for the GROUP in a date range. Same result format as GetPlayerTransferTransactions(). Seconds granularity.</wsdl:documentation>
+      <wsdl:input message="tns:GetGroupTransferTransactionsSoapIn" />
+      <wsdl:output message="tns:GetGroupTransferTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerGameResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get individual game instance results for a player in a date range. INCLUDES incomplete games. Seconds granularity</wsdl:documentation>
+      <wsdl:input message="tns:GetPlayerGameResultsSoapIn" />
+      <wsdl:output message="tns:GetPlayerGameResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandGameResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">NOTE: Please Use GetBrandCompletedGameResults(). Get up to 10000 records, up to 7 days ago, of individual game instance results for players in a brand in the date range. Includes incomplete games. Seconds granularity</wsdl:documentation>
+      <wsdl:input message="tns:GetBrandGameResultsSoapIn" />
+      <wsdl:output message="tns:GetBrandGameResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandCompletedGameResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get completed game instance results for players in a brand where the Completed Date of the game is in the date range. Seconds granularity</wsdl:documentation>
+      <wsdl:input message="tns:GetBrandCompletedGameResultsSoapIn" />
+      <wsdl:output message="tns:GetBrandCompletedGameResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCompletedGameResults">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get completed game instance results for players in GROUP Wide where the Completed Date of the game is in the date range. The Group will be determined by the brandId requested. Seconds granularity</wsdl:documentation>
+      <wsdl:input message="tns:GetGroupCompletedGameResultsSoapIn" />
+      <wsdl:output message="tns:GetGroupCompletedGameResultsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStakePayoutSummary">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get a single players summed Stake, Payout, Jackpot win (portion of the Payout), Jackpot Contributions in 1 row. INCLUDES incomplete games. Seconds granularity</wsdl:documentation>
+      <wsdl:input message="tns:GetPlayerStakePayoutSummarySoapIn" />
+      <wsdl:output message="tns:GetPlayerStakePayoutSummarySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotWinner">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Jackpot winners for the brand in a date range. Seconds Granularity.</wsdl:documentation>
+      <wsdl:input message="tns:ReportJackpotWinnerSoapIn" />
+      <wsdl:output message="tns:ReportJackpotWinnerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotContribution">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get overall contributions report for each Jackpot in a Brand in the individual funding currency. Hours granularity</wsdl:documentation>
+      <wsdl:input message="tns:ReportJackpotContributionSoapIn" />
+      <wsdl:output message="tns:ReportJackpotContributionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotContributionPerGame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get overall contributions per Game for each Jackpot in a Brand. Hours granularity</wsdl:documentation>
+      <wsdl:input message="tns:ReportJackpotContributionPerGameSoapIn" />
+      <wsdl:output message="tns:ReportJackpotContributionPerGameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportDynamic">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the results from a Dynamic Report configured in the Back Office</wsdl:documentation>
+      <wsdl:input message="tns:ReportDynamicSoapIn" />
+      <wsdl:output message="tns:ReportDynamicSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewBrand">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get game overview/summary report for each Game in a Brand. ONLY completed games. Hour granularity.</wsdl:documentation>
+      <wsdl:input message="tns:ReportGameOverviewBrandSoapIn" />
+      <wsdl:output message="tns:ReportGameOverviewBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewPlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get game overview/summary report for games played by Player in date range. ONLY completed games. Hour granularity.</wsdl:documentation>
+      <wsdl:input message="tns:ReportGameOverviewPlayerSoapIn" />
+      <wsdl:output message="tns:ReportGameOverviewPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewPerLocation">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get game overview report for each Game in a POS/Kiosk Location in a Brand [For Terminals/Kiosk usage only], Hour granularity.</wsdl:documentation>
+      <wsdl:input message="tns:ReportGameOverviewPerLocationSoapIn" />
+      <wsdl:output message="tns:ReportGameOverviewPerLocationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerPassword">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Update player password.</wsdl:documentation>
+      <wsdl:input message="tns:UpdatePlayerPasswordSoapIn" />
+      <wsdl:output message="tns:UpdatePlayerPasswordSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginOrCreatePlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logs in player and creates/updates Player using provided details. On creation the wallet is created using the currency code provided. This cannot be changed. Returns the Session Token used to launch game.</wsdl:documentation>
+      <wsdl:input message="tns:LoginOrCreatePlayerSoapIn" />
+      <wsdl:output message="tns:LoginOrCreatePlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransfer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query a Deposit or Withdraw RequestId to get the status</wsdl:documentation>
+      <wsdl:input message="tns:QueryTransferSoapIn" />
+      <wsdl:output message="tns:QueryTransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Query player record for current balance</wsdl:documentation>
+      <wsdl:input message="tns:QueryPlayerSoapIn" />
+      <wsdl:output message="tns:QueryPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoutPlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logout a Habanero Wallet Player (Note this will not work for Single/Seamless wallet)</wsdl:documentation>
+      <wsdl:input message="tns:LogoutPlayerSoapIn" />
+      <wsdl:output message="tns:LogoutPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoutThirdPartyPlayer">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logout a Player using external token for single wallet.</wsdl:documentation>
+      <wsdl:input message="tns:LogoutThirdPartyPlayerSoapIn" />
+      <wsdl:output message="tns:LogoutThirdPartyPlayerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DepositPlayerMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Deposit money into player wallet. If player exists the currency code must match. Otherwise a new player will be created.</wsdl:documentation>
+      <wsdl:input message="tns:DepositPlayerMoneySoapIn" />
+      <wsdl:output message="tns:DepositPlayerMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawPlayerMoney">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Withdraw money from player wallet.</wsdl:documentation>
+      <wsdl:input message="tns:WithdrawPlayerMoneySoapIn" />
+      <wsdl:output message="tns:WithdrawPlayerMoneySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LogoutAllPlayersInBrand">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Logouts out all Thirdparty players in a Brand.</wsdl:documentation>
+      <wsdl:input message="tns:LogoutAllPlayersInBrandSoapIn" />
+      <wsdl:output message="tns:LogoutAllPlayersInBrandSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetMaintenanceMode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Set Maintenance mode ON or OFF for a Group.</wsdl:documentation>
+      <wsdl:input message="tns:SetMaintenanceModeSoapIn" />
+      <wsdl:output message="tns:SetMaintenanceModeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HostedSoap" type="tns:HostedSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBonusAvailablePlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/GetBonusAvailablePlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyBonusToPlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/ApplyBonusToPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBonusBalancesForPlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/GetBonusBalancesForPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerBonusBalanceActive">
+      <soap:operation soapAction="http://ws.oxypite.com/SetPlayerBonusBalanceActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerBonusBalance">
+      <soap:operation soapAction="http://ws.oxypite.com/DeletePlayerBonusBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndApplyBonus">
+      <soap:operation soapAction="http://ws.oxypite.com/CreateAndApplyBonus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameTypes">
+      <soap:operation soapAction="http://ws.oxypite.com/GetGameTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <soap:operation soapAction="http://ws.oxypite.com/GetGames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGamesInMenuOnly">
+      <soap:operation soapAction="http://ws.oxypite.com/GetGamesInMenuOnly" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameDisplay">
+      <soap:operation soapAction="http://ws.oxypite.com/GetGameDisplay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpots">
+      <soap:operation soapAction="http://ws.oxypite.com/GetJackpots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpotGameLink">
+      <soap:operation soapAction="http://ws.oxypite.com/GetJackpotGameLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJackpotsInAllBrands">
+      <soap:operation soapAction="http://ws.oxypite.com/GetAllJackpotsInAllBrands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpotGameLinkInAllBrands">
+      <soap:operation soapAction="http://ws.oxypite.com/GetJackpotGameLinkInAllBrands" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportPlayerStakePayout">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportPlayerStakePayout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerGameTransactions">
+      <soap:operation soapAction="http://ws.oxypite.com/GetPlayerGameTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTransferTransactions">
+      <soap:operation soapAction="http://ws.oxypite.com/GetPlayerTransferTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandTransferTransactions">
+      <soap:operation soapAction="http://ws.oxypite.com/GetBrandTransferTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupTransferTransactions">
+      <soap:operation soapAction="http://ws.oxypite.com/GetGroupTransferTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerGameResults">
+      <soap:operation soapAction="http://ws.oxypite.com/GetPlayerGameResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandGameResults">
+      <soap:operation soapAction="http://ws.oxypite.com/GetBrandGameResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandCompletedGameResults">
+      <soap:operation soapAction="http://ws.oxypite.com/GetBrandCompletedGameResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCompletedGameResults">
+      <soap:operation soapAction="http://ws.oxypite.com/GetGroupCompletedGameResults" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStakePayoutSummary">
+      <soap:operation soapAction="http://ws.oxypite.com/GetPlayerStakePayoutSummary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotWinner">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportJackpotWinner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotContribution">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportJackpotContribution" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotContributionPerGame">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportJackpotContributionPerGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportDynamic">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportDynamic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewBrand">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportGameOverviewBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewPlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportGameOverviewPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewPerLocation">
+      <soap:operation soapAction="http://ws.oxypite.com/ReportGameOverviewPerLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerPassword">
+      <soap:operation soapAction="http://ws.oxypite.com/UpdatePlayerPassword" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginOrCreatePlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/LoginOrCreatePlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransfer">
+      <soap:operation soapAction="http://ws.oxypite.com/QueryTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/QueryPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutPlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/LogoutPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutThirdPartyPlayer">
+      <soap:operation soapAction="http://ws.oxypite.com/LogoutThirdPartyPlayer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositPlayerMoney">
+      <soap:operation soapAction="http://ws.oxypite.com/DepositPlayerMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawPlayerMoney">
+      <soap:operation soapAction="http://ws.oxypite.com/WithdrawPlayerMoney" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutAllPlayersInBrand">
+      <soap:operation soapAction="http://ws.oxypite.com/LogoutAllPlayersInBrand" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMaintenanceMode">
+      <soap:operation soapAction="http://ws.oxypite.com/SetMaintenanceMode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="HostedSoap12" type="tns:HostedSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetBonusAvailablePlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetBonusAvailablePlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyBonusToPlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/ApplyBonusToPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBonusBalancesForPlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetBonusBalancesForPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerBonusBalanceActive">
+      <soap12:operation soapAction="http://ws.oxypite.com/SetPlayerBonusBalanceActive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlayerBonusBalance">
+      <soap12:operation soapAction="http://ws.oxypite.com/DeletePlayerBonusBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAndApplyBonus">
+      <soap12:operation soapAction="http://ws.oxypite.com/CreateAndApplyBonus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameTypes">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetGameTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGames">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetGames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGamesInMenuOnly">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetGamesInMenuOnly" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGameDisplay">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetGameDisplay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpots">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetJackpots" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpotGameLink">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetJackpotGameLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJackpotsInAllBrands">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetAllJackpotsInAllBrands" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetJackpotGameLinkInAllBrands">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetJackpotGameLinkInAllBrands" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportPlayerStakePayout">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportPlayerStakePayout" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerGameTransactions">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetPlayerGameTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerTransferTransactions">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetPlayerTransferTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandTransferTransactions">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetBrandTransferTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupTransferTransactions">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetGroupTransferTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerGameResults">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetPlayerGameResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandGameResults">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetBrandGameResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBrandCompletedGameResults">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetBrandCompletedGameResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGroupCompletedGameResults">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetGroupCompletedGameResults" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerStakePayoutSummary">
+      <soap12:operation soapAction="http://ws.oxypite.com/GetPlayerStakePayoutSummary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotWinner">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportJackpotWinner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotContribution">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportJackpotContribution" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportJackpotContributionPerGame">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportJackpotContributionPerGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportDynamic">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportDynamic" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewBrand">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportGameOverviewBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewPlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportGameOverviewPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReportGameOverviewPerLocation">
+      <soap12:operation soapAction="http://ws.oxypite.com/ReportGameOverviewPerLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlayerPassword">
+      <soap12:operation soapAction="http://ws.oxypite.com/UpdatePlayerPassword" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LoginOrCreatePlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/LoginOrCreatePlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryTransfer">
+      <soap12:operation soapAction="http://ws.oxypite.com/QueryTransfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryPlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/QueryPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutPlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/LogoutPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutThirdPartyPlayer">
+      <soap12:operation soapAction="http://ws.oxypite.com/LogoutThirdPartyPlayer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DepositPlayerMoney">
+      <soap12:operation soapAction="http://ws.oxypite.com/DepositPlayerMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawPlayerMoney">
+      <soap12:operation soapAction="http://ws.oxypite.com/WithdrawPlayerMoney" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LogoutAllPlayersInBrand">
+      <soap12:operation soapAction="http://ws.oxypite.com/LogoutAllPlayersInBrand" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetMaintenanceMode">
+      <soap12:operation soapAction="http://ws.oxypite.com/SetMaintenanceMode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Hosted">
+    <wsdl:port name="HostedSoap" binding="tns:HostedSoap">
+      <soap:address location="http://ws-a.insvr.com/hosted.asmx" />
+    </wsdl:port>
+    <wsdl:port name="HostedSoap12" binding="tns:HostedSoap12">
+      <soap12:address location="http://ws-a.insvr.com/hosted.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

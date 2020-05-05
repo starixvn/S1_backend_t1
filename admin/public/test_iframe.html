@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>test iframe</title>
+
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+
+<style type="text/css">
+	.red_box{
+		border: 1px solid #ff0000;
+	}
+</style>
+</head>
+<body>
+<div id="_player_login_area" class="red_box"></div>
+
+<div id="_player_info_area" class="red_box"></div>
+
+<div><button data-callapi='query_balance' data-callapi-params='{"systemId":2}' data-callapi-state='{"show":"._async_balance_2"}'>async query balance for AG</button>
+<div class="_async_balance_2"></div>
+</div>
+<div id='_pt_ticker_pba_sb1'></div>
+<div id='_pt_ticker_sum'></div>
+<script type="text/javascript">
+	window['autostart']={
+		'initTicker': ['pba_sb1']
+	};
+
+</script>
+<script data-main="//og.local/pub/default/player_main" src="//og.local/resources/player/require.js" async='true'></script>
+</body>
+</html>

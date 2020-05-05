@@ -1,0 +1,100 @@
+// Colors
+$alto: #d8d8d8;
+$black: #000;
+$ebony-clay: #242537;
+$burnt-sienna: #ee5d48;
+$limeade: #6E9200;
+$mercury: #e6e6e6;
+$mine-shaft: #323232;
+$red-orange: #ff343b;
+$silver-chalice: #b2b2b2;
+$tundora: #464646;
+$white: #fff;
+
+$primary-color: $ebony-clay;
+$secondary-color: $burnt-sienna;
+
+$primary-gradient: linear-gradient(to right, rgba(237,78,70,1) 0%, rgba(237,123,71,1) 100%);
+$alt-primary-gradient: linear-gradient(to top, rgba(237,78,70,1) 0%, rgba(237,123,71,1) 100%);
+$secondary-gradient: linear-gradient(to bottom, rgba(67,68,88,1) 0%, rgba(22,21,37,1) 100%);
+$alt-secondary-gradient: linear-gradient(to bottom, rgba(127,134,150,1) 0%, rgba(69,73,82,1) 100%);
+
+//Global
+$upload-file-button-bg: $alt-secondary-gradient;
+$upload-file-button-bg-hover: $secondary-gradient;
+// Progress bar
+$progress-bar-bg: $mine-shaft;
+$vip-progress-bar-bg: $alto;
+
+//borders
+$border-color: $mercury;
+
+//buttons
+$button-bg: $secondary-gradient;
+$button-bg-hover: $alt-secondary-gradient;
+$alt-button-bg: $alt-secondary-gradient;
+$alt-button-bg-hover: $secondary-gradient;
+// Top header
+$top-header-bg: darken($primary-color, 6);
+$navigation-header-bg: rgba($primary-color,1);
+
+// Right Side Menu
+$right-side-bg: $primary-gradient;
+$right-side-h1-color: $white;
+$right-side-hr-border-top-color: darken($border-color,65);
+$right-side-hr-border-bottom-color: darken($border-color,25);
+$right-side-p-color: $white;
+$right-side-wa-title-color: $secondary-color;
+
+//Fund Management
+$fund-management-selected-bank-bg: $secondary-color;
+$fund-management-show-bank-button-bg: $silver-chalice;
+$fund-management-show-bank-text-color: $white;
+$fund-management-deposit-button: $secondary-gradient;
+$fund-management-link-color: $secondary-color;
+$fund-management-active-tab: $alt-primary-gradient;
+$fund-management-active-tab-border: $secondary-color;
+// shop
+$shop-avail-btn: $alt-secondary-gradient;
+$shop-badge-new-bg: $tundora;
+$amount-bg: $red-orange;
+$modal-button-bg: $secondary-gradient;
+
+//Promotions
+$promotion-text-color: $tundora;
+$promotion-navigation-tab-pill-bg: $alt-secondary-gradient;
+$promotion-navigation-tab-pill-active-bg: $secondary-gradient;
+
+// security
+$security-button-bg: $alt-secondary-gradient;
+$security-button-bg-hover: $secondary-gradient;
+$security-completed-button-bg: $alt-primary-gradient;
+$security-verified-button-bg: $alt-primary-gradient;
+$security-progress-bar: $limeade;
+$security-check-bg: $limeade;
+$security-link-color: $secondary-color;
+$security-text-color: $secondary-color;
+$security-modal-text-color: $secondary-color;
+$security-modal-button-bg: $alt-secondary-gradient;
+$security-modal-submit-button-bg: $alt-primary-gradient;
+
+// customer support
+$customer-support-btn: $alt-secondary-gradient;
+$customer-support-btn-hover: $secondary-gradient;
+$customer-support-mesage-btn: $alt-secondary-gradient;
+$customer-support-mesage-btn-hover: $secondary-gradient;
+$customer-support-mesage-tooltip-bg: $primary-gradient;
+$customer-support-mesage-tooltip-arrow-bg: $secondary-color;
+$customer-support-modal-title: $secondary-color;
+$customer-support-modal-btn-bg: $alt-secondary-gradient;
+$customer-support-modal-btn-bg-hover: $secondary-gradient;
+$customer-support-message-send-button-bg: $alt-primary-gradient;
+
+// account history
+$account-history-button-bg: $alt-secondary-gradient;
+$account-history-button-bg-hover: $secondary-gradient;
+
+// account information
+$account-information-info-bg: $secondary-color;
+$account-information-button-bg: $alt-secondary-gradient;
+$account-information-button-bg-hover: $secondary-gradient;

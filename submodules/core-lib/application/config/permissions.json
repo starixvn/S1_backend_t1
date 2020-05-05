@@ -1,0 +1,2685 @@
+[
+	{
+		"funcId": 1,
+		"funcName": "System Management",
+		"parentId": 0,
+		"funcCode": "system"
+	},
+	{
+		"funcId": 2,
+		"funcName": "Role Management",
+		"parentId": 1,
+		"funcCode": "role"
+	},
+	{
+		"funcId": 3,
+		"funcName": "Delete Users",
+		"parentId": 1,
+		"funcCode": "delete_user"
+	},
+	{
+		"funcId": 4,
+		"funcName": "Lock/Unlock Users",
+		"parentId": 1,
+		"funcCode": "lock_user"
+	},
+	{
+		"funcId": 5,
+		"funcName": "Reset Password",
+		"parentId": 1,
+		"funcCode": "reset_password"
+	},
+	{
+		"funcId": 6,
+		"funcName": "IP Rules",
+		"parentId": 1,
+		"funcCode": "ip"
+	},
+	{
+		"funcId": 8,
+		"funcName": "Currency Setting",
+		"parentId": 1,
+		"funcCode": "currency_setting"
+	},
+	{
+		"funcId": 9,
+		"funcName": "User Logs Report",
+		"parentId": 1,
+		"funcCode": "user_logs_report"
+	},
+	{
+		"funcId": 10,
+		"funcName": "Affliliate Domain Setting",
+		"parentId": 48,
+		"funcCode": "aff_domain_setting"
+	},
+	{
+		"funcId": 11,
+		"funcName": "Duplicate Account Setting",
+		"parentId": 1,
+		"funcCode": "duplicate_account_setting"
+	},
+	{
+		"funcId": 12,
+		"funcName": "Game Description",
+		"parentId": 1,
+		"funcCode": "game_description"
+	},
+	{
+		"funcId": 13,
+		"funcName": "Game API",
+		"parentId": 1,
+		"funcCode": "game_api"
+	},
+	{
+		"funcId": 14,
+		"funcName": "Payment API",
+		"parentId": 1,
+		"funcCode": "payment_api"
+	},
+	{
+		"funcId": 15,
+		"funcName": "Player Management",
+		"parentId": 0,
+		"funcCode": "player"
+	},
+	{
+		"funcId": 16,
+		"funcName": "All Members",
+		"parentId": 15,
+		"funcCode": "player_list"
+	},
+	{
+		"funcId": 17,
+		"funcName": "VIP Setting",
+		"parentId": 15,
+		"funcCode": "vip_group_setting"
+	},
+	{
+		"funcId": 18,
+		"funcName": "Tagged Members",
+		"parentId": 15,
+		"funcCode": "tag_player"
+	},
+	{
+		"funcId": 19,
+		"funcName": "Tag Management",
+		"parentId": 15,
+		"funcCode": "taggedlist"
+	},
+	{
+		"funcId": 20,
+		"funcName": "Batch Create",
+		"parentId": 15,
+		"funcCode": "account_process"
+	},
+	{
+		"funcId": 21,
+		"funcName": "Friend Referral",
+		"parentId": 15,
+		"funcCode": "friend_referral_player"
+	},
+	{
+		"funcId": 22,
+		"funcName": "Registration Setting",
+		"parentId": 15,
+		"funcCode": "registration_setting"
+	},
+	{
+		"funcId": 23,
+		"funcName": "Reset Player Login Password",
+		"parentId": 15,
+		"funcCode": "reset_player_login_password"
+	},
+	{
+		"funcId": 24,
+		"funcName": "Edit Player VIP Level",
+		"parentId": 15,
+		"funcCode": "edit_player_vip_level"
+	},
+	{
+		"funcId": 25,
+		"funcName": "Lock/Unlock Member in Website",
+		"parentId": 15,
+		"funcCode": "lock_player"
+	},
+	{
+		"funcId": 26,
+		"funcName": "Block/Unblock Member in Game",
+		"parentId": 15,
+		"funcCode": "block_player"
+	},
+	{
+		"funcId": 27,
+		"funcName": "Force Player Logout",
+		"parentId": 15,
+		"funcCode": "force_player_logout"
+	},
+	{
+		"funcId": 28,
+		"funcName": "Player Contact Information: Email",
+		"parentId": 15,
+		"funcCode": "player_contact_information_email"
+	},
+	{
+		"funcId": 29,
+		"funcName": "Player Contact Information: IM Accounts",
+		"parentId": 15,
+		"funcCode": "player_contact_information_im_accounts"
+	},
+	{
+		"funcId": 30,
+		"funcName": "Player Contact Information: Contact No.",
+		"parentId": 15,
+		"funcCode": "player_contact_information_contact_number"
+	},
+	{
+		"funcId": 31,
+		"funcName": "Player Verification Question",
+		"parentId": 15,
+		"funcCode": "player_verification_question"
+	},
+	{
+		"funcId": 32,
+		"funcName": "Player Verification Question's Answer",
+		"parentId": 15,
+		"funcCode": "player_verification_questions_answer"
+	},
+	{
+		"funcId": 33,
+		"funcName": "Add/Edit/Delete/Enable/Disable Member Bank Info",
+		"parentId": 15,
+		"funcCode": "player_bank_info_control"
+	},
+	{
+		"funcId": 34,
+		"funcName": "Edit Player Personal Information",
+		"parentId": 15,
+		"funcCode": "edit_player_personal_information"
+	},
+	{
+		"funcId": 35,
+		"funcName": "Player Basic Info",
+		"parentId": 15,
+		"funcCode": "player_basic_info"
+	},
+	{
+		"funcId": 36,
+		"funcName": "Assign Player Under Affiliate",
+		"parentId": 15,
+		"funcCode": "assign_player_under_affiliate"
+	},
+	{
+		"funcId": 37,
+		"funcName": "CS Management",
+		"parentId": 0,
+		"funcCode": "cs"
+	},
+	{
+		"funcId": 38,
+		"funcName": "Messages",
+		"parentId": 37,
+		"funcCode": "chat"
+	},
+	{
+		"funcId": 39,
+		"funcName": "Message History",
+		"parentId": 37,
+		"funcCode": "message_history"
+	},
+	{
+		"funcId": 40,
+		"funcName": "Report Management",
+		"parentId": 0,
+		"funcCode": "report"
+	},
+	{
+		"funcId": 41,
+		"funcName": "Summary Report",
+		"parentId": 40,
+		"funcCode": "summary_report"
+	},
+	{
+		"funcId": 42,
+		"funcName": "Member Report",
+		"parentId": 40,
+		"funcCode": "player_report"
+	},
+	{
+		"funcId": 43,
+		"funcName": "Games Report",
+		"parentId": 40,
+		"funcCode": "game_report"
+	},
+	{
+		"funcId": 44,
+		"funcName": "API Issue Report",
+		"parentId": 40,
+		"funcCode": "api_report"
+	},
+	{
+		"funcId": 45,
+		"funcName": "Payment Report",
+		"parentId": 40,
+		"funcCode": "payment_report"
+	},
+	{
+		"funcId": 46,
+		"funcName": "Promotion Report",
+		"parentId": 40,
+		"funcCode": "promotion_report"
+	},
+	{
+		"funcId": 48,
+		"funcName": "Affiliate Management",
+		"parentId": 0,
+		"funcCode": "affiliate"
+	},
+	{
+		"funcId": 49,
+		"funcName": "Affiliate List",
+		"parentId": 48,
+		"funcCode": "view_affiliates"
+	},
+	{
+		"funcId": 50,
+		"funcName": "Affiliate List (Edit Affiliate Information)",
+		"parentId": 48,
+		"funcCode": "edit_affiliate_info"
+	},
+	{
+		"funcId": 51,
+		"funcName": "Affiliate List (Edit Affiliate Term)",
+		"parentId": 48,
+		"funcCode": "edit_affiliate_term"
+	},
+	{
+		"funcId": 52,
+		"funcName": "Affiliate List (Create Affiliate Tracking Code)",
+		"parentId": 48,
+		"funcCode": "add_affiliate_code"
+	},
+	{
+		"funcId": 53,
+		"funcName": "Affiliate Monthly Earnings",
+		"parentId": 48,
+		"funcCode": "affiliate_earnings"
+	},
+	{
+		"funcId": 54,
+		"funcName": "Affiliate Payment",
+		"parentId": 48,
+		"funcCode": "affiliate_payments"
+	},
+	{
+		"funcId": 55,
+		"funcName": "Affiliate Banner",
+		"parentId": 48,
+		"funcCode": "banner_settings"
+	},
+	{
+		"funcId": 56,
+		"funcName": "Affiliate Tag",
+		"parentId": 48,
+		"funcCode": "affiliate_tag"
+	},
+	{
+		"funcId": 57,
+		"funcName": "Affiliate Statistics",
+		"parentId": 48,
+		"funcCode": "affiliate_statistics"
+	},
+	{
+		"funcId": 58,
+		"funcName": "Affiliate Terms Default Setup",
+		"parentId": 48,
+		"funcCode": "affiliate_terms"
+	},
+	{
+		"funcId": 59,
+		"funcName": "Marketing Management",
+		"parentId": 0,
+		"funcCode": "marketing"
+	},
+	{
+		"funcId": 60,
+		"funcName": "Promo Rules Settings",
+		"parentId": 59,
+		"funcCode": "promo_rules_setting"
+	},
+	{
+		"funcId": 61,
+		"funcName": "Promo Manager",
+		"parentId": 59,
+		"funcCode": "promocms"
+	},
+	{
+		"funcId": 62,
+		"funcName": "Promo Request List (Application)",
+		"parentId": 59,
+		"funcCode": "promoapp_list"
+	},
+	{
+		"funcId": 63,
+		"funcName": "Promo Request List (Cancellation)",
+		"parentId": 59,
+		"funcCode": "promocancel_list"
+	},
+	{
+		"funcId": 64,
+		"funcName": "Member List With Active Promo",
+		"parentId": 59,
+		"funcCode": "promoplayer_list"
+	},
+	{
+		"funcId": 65,
+		"funcName": "Game Logs",
+		"parentId": 15,
+		"funcCode": "gamelogs"
+	},
+	{
+		"funcId": 66,
+		"funcName": "Marketing Setting",
+		"parentId": 59,
+		"funcCode": "marketing_setting"
+	},
+	{
+		"funcId": 67,
+		"funcName": "Friend Referral Settings",
+		"parentId": 59,
+		"funcCode": "friend_referral_setting"
+	},
+	{
+		"funcId": 68,
+		"funcName": "Cashback Settings",
+		"parentId": 59,
+		"funcCode": "cashback_setting"
+	},
+	{
+		"funcId": 69,
+		"funcName": "Promo Category Settings",
+		"parentId": 59,
+		"funcCode": "promo_category_setting"
+	},
+	{
+		"funcId": 70,
+		"funcName": "Promo Cancellation Settings",
+		"parentId": 59,
+		"funcCode": "promo_cancellation_setting"
+	},
+	{
+		"funcId": 71,
+		"funcName": "Duplicate Account Checker Settings",
+		"parentId": 59,
+		"funcCode": "duplicate_account_checker_setting"
+	},
+	{
+		"funcId": 72,
+		"funcName": "Payment Management",
+		"parentId": 0,
+		"funcCode": "payment"
+	},
+	{
+		"funcId": 73,
+		"funcName": "Transactions",
+		"parentId": 15,
+		"funcCode": "transaction_report"
+	},
+	{
+		"funcId": 74,
+		"funcName": "Deposit List",
+		"parentId": 72,
+		"funcCode": "deposit_list"
+	},
+	{
+		"funcId": 75,
+		"funcName": "Auto 3rd Party Deposit List",
+		"parentId": 72,
+		"funcCode": "payment_auto3rdparty_deposit_list"
+	},
+	{
+		"funcId": 76,
+		"funcName": "Manual 3rd Party Deposit List",
+		"parentId": 72,
+		"funcCode": "payment_manual3rdparty_deposit_list"
+	},
+	{
+		"funcId": 77,
+		"funcName": "Withdrawal List",
+		"parentId": 72,
+		"funcCode": "payment_withdrawal_list"
+	},
+	{
+		"funcId": 78,
+		"funcName": "Member Adjust Balance",
+		"parentId": 72,
+		"funcCode": "payment_player_adjustbalance"
+	},
+	{
+		"funcId": 79,
+		"funcName": "Payment Settings",
+		"parentId": 1,
+		"funcCode": "payment_settings"
+	},
+	{
+		"funcId": 80,
+		"funcName": "Collection Account",
+		"parentId": 1,
+		"funcCode": "collection_account"
+	},
+	{
+		"funcId": 81,
+		"funcName": "Compensation Setting",
+		"parentId": 72,
+		"funcCode": "compensation_setting"
+	},
+	{
+		"funcId": 82,
+		"funcName": "Previous Balances Checking Setting",
+		"parentId": 1,
+		"funcCode": "previous_balances_checking_setting"
+	},
+	{
+		"funcId": 83,
+		"funcName": "Non-promo Withdraw Setting",
+		"parentId": 1,
+		"funcCode": "nonpromo_withdraw_setting"
+	},
+	{
+		"funcId": 84,
+		"funcName": "CMS Management",
+		"parentId": 0,
+		"funcCode": "cms"
+	},
+	{
+		"funcId": 85,
+		"funcName": "News/Announcements Manager",
+		"parentId": 84,
+		"funcCode": "view_news"
+	},
+	{
+		"funcId": 86,
+		"funcName": "Email Template Management",
+		"parentId": 84,
+		"funcCode": "emailcms"
+	},
+	{
+		"funcId": 87,
+		"funcName": "Generate Sites",
+		"parentId": 84,
+		"funcCode": "generate_sites"
+	},
+	{
+		"funcId": 88,
+		"funcName": "SMTP Setting",
+		"parentId": 84,
+		"funcCode": "smtp_setting"
+	},
+	{
+		"funcId": 89,
+		"funcName": "New Deposit",
+		"parentId": 72,
+		"funcCode": "new_deposit"
+	},
+	{
+		"funcId": 90,
+		"funcName": "New Withdrawal",
+		"parentId": 72,
+		"funcCode": "new_withdrawal"
+	},
+	{
+		"funcId": 91,
+		"funcName": "Transactions Report",
+		"parentId": 40,
+		"funcCode": "transactions_report"
+	},
+	{
+		"funcId": 93,
+		"funcName": "Edit Player Tag",
+		"parentId": 15,
+		"funcCode": "edit_player_tag"
+	},
+	{
+		"funcId": 94,
+		"funcName": "Send Message/SMS",
+		"parentId": 37,
+		"funcCode": "send_message_sms"
+	},
+	{
+		"funcId": 95,
+		"funcName": "Cancel member withdraw condition",
+		"parentId": 15,
+		"funcCode": "cancel_member_withdaw_condition"
+	},
+	{
+		"funcId": 96,
+		"funcName": "Batch adjust balance",
+		"parentId": 59,
+		"funcCode": "batch_adjust_balance"
+	},
+	{
+		"funcId": 97,
+		"funcName": "Live Chat",
+		"parentId": 37,
+		"funcCode": "live_chat"
+	},
+	{
+		"funcId": 98,
+		"funcName": "Edit Affiliate Domain Name",
+		"parentId": 48,
+		"funcCode": "edit_affiliate_domain_name"
+	},
+	{
+		"funcId": 100,
+		"funcName": "Game Type",
+		"parentId": 1,
+		"funcCode": "game_type"
+	},
+	{
+		"funcId": 101,
+		"funcName": "Edit Game Type",
+		"parentId": 1,
+		"funcCode": "edit_game_type"
+	},
+	{
+		"funcId": 102,
+		"funcName": "Affiliate Contact Information",
+		"parentId": 48,
+		"funcCode": "affiliate_contact_info"
+	},
+	{
+		"funcId": 103,
+		"funcName": "Affiliate Admin Action",
+		"parentId": 48,
+		"funcCode": "affiliate_admin_action"
+	},
+	{
+		"funcId": 104,
+		"funcName": "Cashback Report",
+		"parentId": 40,
+		"funcCode": "cashback_report"
+	},
+	{
+		"funcId": 105,
+		"funcName": "Approve/Decline Deposit",
+		"parentId": 72,
+		"funcCode": "approve_decline_deposit"
+	},
+	{
+		"funcId": 106,
+		"funcName": "Approve/Decline Withdraw",
+		"parentId": 72,
+		"funcCode": "approve_decline_withdraw"
+	},
+	{
+		"funcId": 107,
+		"funcName": "Duplicate Account Report",
+		"parentId": 40,
+		"funcCode": "duplicate_account_report"
+	},
+	{
+		"funcId": 108,
+		"funcName": "Deposit Affiliate",
+		"parentId": 48,
+		"funcCode": "affiliate_deposit"
+	},
+	{
+		"funcId": 109,
+		"funcName": "Affiliate Withdraw",
+		"parentId": 48,
+		"funcCode": "affiliate_withdraw"
+	},
+	{
+		"funcId": 110,
+		"funcName": "Login as Player",
+		"parentId": 15,
+		"funcCode": "login_as_player"
+	},
+	{
+		"funcId": 111,
+		"funcName": "Login as Affiliate",
+		"parentId": 48,
+		"funcCode": "login_as_aff"
+	},
+	{
+		"funcId": 112,
+		"funcName": "Set Withdraw Status to Paid",
+		"parentId": 72,
+		"funcCode": "set_withdraw_status_to_paid"
+	},
+	{
+		"funcId": 113,
+		"funcName": "Static Sites",
+		"parentId": 84,
+		"funcCode": "staticSites"
+	},
+	{
+		"funcId": 114,
+		"funcName": "Export All Username",
+		"parentId": 15,
+		"funcCode": "export_all_username"
+	},
+	{
+		"funcId": 115,
+		"funcName": "Transfer Request",
+		"parentId": 72,
+		"funcCode": "transfer_request"
+	},
+	{
+		"funcId": 116,
+		"funcName": "Agency",
+		"parentId": 0,
+		"funcCode": "agency"
+	},
+	{
+		"funcId": 117,
+		"funcName": "Credit Transactions",
+		"parentId": 116,
+		"funcCode": "credit_transactions"
+	},
+	{
+		"funcId": 118,
+		"funcName": "Settlement",
+		"parentId": 116,
+		"funcCode": "settlement"
+	},
+	{
+		"funcId": 119,
+		"funcName": "Agency Logs",
+		"parentId": 116,
+		"funcCode": "agency_logs"
+	},
+	{
+		"funcId": 120,
+		"funcName": "Agency Setting",
+		"parentId": 116,
+		"funcCode": "agency_setting"
+	},
+	{
+		"funcId": 121,
+		"funcName": "Edit Agent Info",
+		"parentId": 116,
+		"funcCode": "edit_agent_info"
+	},
+	{
+		"funcId": 122,
+		"funcName": "Agent Admin Action",
+		"parentId": 116,
+		"funcCode": "agent_admin_action"
+	},
+	{
+		"funcId": 123,
+		"funcName": "Login As Agent",
+		"parentId": 116,
+		"funcCode": "login_as_agent"
+	},
+	{
+		"funcId": 124,
+		"funcName": "Agent Contact Info",
+		"parentId": 116,
+		"funcCode": "agent_contact_info"
+	},
+	{
+		"funcId": 125,
+		"funcName": "Agent Deposit",
+		"parentId": 116,
+		"funcCode": "agent_deposit"
+	},
+	{
+		"funcId": 126,
+		"funcName": "Agent Withdraw",
+		"parentId": 116,
+		"funcCode": "agent_withdraw"
+	},
+	{
+		"funcId": 127,
+		"funcName": "Edit Agent Term",
+		"parentId": 116,
+		"funcCode": "edit_agent_term"
+	},
+	{
+		"funcId": 128,
+		"funcName": "Agent Earnings",
+		"parentId": 116,
+		"funcCode": "agent_earnings"
+	},
+	{
+		"funcId": 129,
+		"funcName": "Structure List",
+		"parentId": 116,
+		"funcCode": "structure_list"
+	},
+	{
+		"funcId": 130,
+		"funcName": "Agent List",
+		"parentId": 116,
+		"funcCode": "agent_list"
+	},
+	{
+		"funcId": 131,
+		"funcName": "View Agent",
+		"parentId": 116,
+		"funcCode": "view_agent"
+	},
+	{
+		"funcId": 132,
+		"funcName": "Edit Agency Settings",
+		"parentId": 116,
+		"funcCode": "edit_agency_settings"
+	},
+	{
+		"funcId": 133,
+		"funcName": "Make up transfer record",
+		"parentId": 72,
+		"funcCode": "make_up_transfer_record"
+	},
+	{
+		"funcId": 134,
+		"funcName": "Deposit to balance wallet",
+		"parentId": 48,
+		"funcCode": "affiliate_deposit_to_hold"
+	},
+	{
+		"funcId": 135,
+		"funcName": "Withdraw from balance wallet",
+		"parentId": 48,
+		"funcCode": "affiliate_withdraw_from_hold"
+	},
+	{
+		"funcId": 136,
+		"funcName": "System Settings",
+		"parentId": 1,
+		"funcCode": "system_settings"
+	},
+	{
+		"funcId": 137,
+		"funcName": "Force Create Game Account",
+		"parentId": 15,
+		"funcCode": "force_create_game_account"
+	},
+	{
+		"funcId": 138,
+		"funcName": "Agency Player Report",
+		"parentId": 116,
+		"funcCode": "agency_player_report"
+	},
+	{
+		"funcId": 139,
+		"funcName": "Agency Game Report",
+		"parentId": 116,
+		"funcCode": "agency_game_report"
+	},
+	{
+		"funcId": 140,
+		"funcName": "Assign Player Under Agent",
+		"parentId": 15,
+		"funcCode": "assign_player_under_agent"
+	},
+	{
+		"funcId": 141,
+		"funcName": "Agency Player Deposit",
+		"parentId": 116,
+		"funcCode": "agency_player_deposit"
+	},
+	{
+		"funcId": 142,
+		"funcName": "Agency Player Withdraw",
+		"parentId": 116,
+		"funcCode": "agency_player_withdraw"
+	},
+	{
+		"funcId": 143,
+		"funcName": "Available Payment Account for Player",
+		"parentId": 15,
+		"funcCode": "available_payment_account_for_player"
+	},
+	{
+		"funcId": 144,
+		"funcName": "Responsible Gaming Info",
+		"parentId": 15,
+		"funcCode": "responsible_gaming_info"
+	},
+	{
+		"funcId": 145,
+		"funcName": "Responsible Gaming Setting",
+		"parentId": 15,
+		"funcCode": "responsible_gaming_setting"
+	},
+	{
+		"funcId": 146,
+		"funcName": "Manage API withdrawal status",
+		"parentId": 72,
+		"funcCode": "manage_API_withdrawal_status"
+	},
+	{
+		"funcId": 147,
+		"funcName": "Player live chat link",
+		"parentId": 37,
+		"funcCode": "player_live_chat_link"
+	},
+	{
+		"funcId": 148,
+		"funcName": "Approve withdrawal to Custom Stage 1",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_CS0"
+	},
+	{
+		"funcId": 149,
+		"funcName": "Approve withdrawal to Custom Stage 2",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_CS1"
+	},
+	{
+		"funcId": 150,
+		"funcName": "Approve withdrawal to Custom Stage 3",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_CS2"
+	},
+	{
+		"funcId": 151,
+		"funcName": "Approve withdrawal to Custom Stage 4",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_CS3"
+	},
+	{
+		"funcId": 152,
+		"funcName": "Approve withdrawal to Custom Stage 5",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_CS4"
+	},
+	{
+		"funcId": 153,
+		"funcName": "Approve withdrawal to Custom Stage 6",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_CS5"
+	},
+	{
+		"funcId": 154,
+		"funcName": "Approve withdrawal to Payment Processing stage",
+		"parentId": 72,
+		"funcCode": "approve_withdrawal_to_payProc"
+	},
+	{
+		"funcId": 155,
+		"funcName": "Transaction List",
+		"parentId": 40,
+		"funcCode": "report_transactions"
+	},
+	{
+		"funcId": 156,
+		"funcName": "Transfer List",
+		"parentId": 40,
+		"funcCode": "report_transfer_request"
+	},
+	{
+		"funcId": 157,
+		"funcName": "Game Log List",
+		"parentId": 40,
+		"funcCode": "report_gamelogs"
+	},
+	{
+		"funcId": 158,
+		"funcName": "Verified Phone and Email Info",
+		"parentId": 15,
+		"funcCode": "verified_phone_and_email_info"
+	},
+	{
+		"funcId": 160,
+		"funcName": "Set settled on new deposit",
+		"parentId": 72,
+		"funcCode": "set_settled_on_new_deposit"
+	},
+	{
+		"funcId": 161,
+		"funcName": "Adjust manually wallet",
+		"parentId": 72,
+		"funcCode": "adjust_manually_wallet"
+	},
+	{
+		"funcId": 162,
+		"funcName": "Admin Support Live Chat",
+		"parentId": 1,
+		"funcCode": "admin_support_live_chat"
+	},
+	{
+		"funcId": 163,
+		"funcName": "Enabled Move All Wallet To Real",
+		"parentId": 59,
+		"funcCode": "enabled_move_all_to_real"
+	},
+	{
+		"funcId": 164,
+		"funcName": "Allow to declined forever promotion",
+		"parentId": 59,
+		"funcCode": "allow_to_delete_declined_promotion"
+	},
+	{
+		"funcId": 165,
+		"funcName": "Support Ticket",
+		"parentId": 37,
+		"funcCode": "support_ticket"
+	},
+	{
+		"funcId": 166,
+		"funcName": "Adjustment History",
+		"parentId": 40,
+		"funcCode": "report_adjustment_history"
+	},
+	{
+		"funcId": 167,
+		"funcName": "Disable player cashback",
+		"parentId": 15,
+		"funcCode": "disable_cashback"
+	},
+	{
+		"funcId": 168,
+		"funcName": "Disable player promotion",
+		"parentId": 15,
+		"funcCode": "disable_promotion"
+	},
+	{
+		"funcId": 169,
+		"funcName": "Country Rules",
+		"parentId": 1,
+		"funcCode": "country_rules"
+	},
+	{
+		"funcId": 170,
+		"funcName": "Manually Pay Cashback",
+		"parentId": 72,
+		"funcCode": "manually_pay_cashback"
+	},
+	{
+		"funcId": 171,
+		"funcName": "Notification Management",
+		"parentId": 1,
+		"funcCode": "notification"
+	},
+	{
+		"funcId": 172,
+		"funcName": "Manually Add Bonus",
+		"parentId": 59,
+		"funcCode": "manually_add_bonus"
+	},
+	{
+		"funcId": 173,
+		"funcName": "Export All Player",
+		"parentId": 15,
+		"funcCode": "export_player_lists"
+	},
+	{
+		"funcId": 174,
+		"funcName": "Export Deposit List",
+		"parentId": 72,
+		"funcCode": "export_deposit_lists"
+	},
+	{
+		"funcId": 175,
+		"funcName": "Export Payment Transactions",
+		"parentId": 72,
+		"funcCode": "export_payment_transactions"
+	},
+	{
+		"funcId": 176,
+		"funcName": "Export Withdrawal List",
+		"parentId": 72,
+		"funcCode": "export_withdrawal_lists"
+	},
+	{
+		"funcId": 177,
+		"funcName": "Export Promo Request List",
+		"parentId": 59,
+		"funcCode": "export_promo_request_list"
+	},
+	{
+		"funcId": 178,
+		"funcName": "Export Player Report",
+		"parentId": 40,
+		"funcCode": "export_player_report"
+	},
+	{
+		"funcId": 179,
+		"funcName": "Export Game Description",
+		"parentId": 1,
+		"funcCode": "export_game_description"
+	},
+	{
+		"funcId": 180,
+		"funcName": "Export Report Transactions",
+		"parentId": 40,
+		"funcCode": "export_report_transactions"
+	},
+	{
+		"funcId": 181,
+		"funcName": "Manually Calculate Cashback",
+		"parentId": 59,
+		"funcCode": "manually_calculate_cashback"
+	},
+	{
+		"funcId": 182,
+		"funcName": "SMS Verification Codes",
+		"parentId": 40,
+		"funcCode": "sms_report"
+	},
+	{
+		"funcId": 183,
+		"funcName": "Export Affiliate Tag",
+		"parentId": 48,
+		"funcCode": "export_affiliate_tag"
+	},
+	{
+		"funcId": 184,
+		"funcName": "Export Affiliate Payment",
+		"parentId": 48,
+		"funcCode": "export_affiliate_payment"
+	},
+	{
+		"funcId": 185,
+		"funcName": "Export Game Logs",
+		"parentId": 72,
+		"funcCode": "export_game_logs"
+	},
+	{
+		"funcId": 186,
+		"funcName": "Export Tagged Players",
+		"parentId": 15,
+		"funcCode": "export_tagged_players"
+	},
+	{
+		"funcId": 187,
+		"funcName": "Export Tag Management List",
+		"parentId": 15,
+		"funcCode": "export_tag_list"
+	},
+	{
+		"funcId": 188,
+		"funcName": "Export Batch Create List",
+		"parentId": 15,
+		"funcCode": "export_batch_create"
+	},
+	{
+		"funcId": 189,
+		"funcName": "Export Friend Referral",
+		"parentId": 15,
+		"funcCode": "export_friend_referral"
+	},
+	{
+		"funcId": 190,
+		"funcName": "Export Bank Payment",
+		"parentId": 72,
+		"funcCode": "export_bank_payment"
+	},
+	{
+		"funcId": 191,
+		"funcName": "Export Transfer Request",
+		"parentId": 40,
+		"funcCode": "export_transfer_request"
+	},
+	{
+		"funcId": 192,
+		"funcName": "Export Agency Logs",
+		"parentId": 116,
+		"funcCode": "export_agency_logs"
+	},
+	{
+		"funcId": 193,
+		"funcName": "Export Credit Transaction",
+		"parentId": 116,
+		"funcCode": "export_credit_transaction"
+	},
+	{
+		"funcId": 194,
+		"funcName": "Export Agent List",
+		"parentId": 116,
+		"funcCode": "export_agent_list"
+	},
+	{
+		"funcId": 195,
+		"funcName": "Export Agent Template List",
+		"parentId": 116,
+		"funcCode": "export_agent_template_list"
+	},
+	{
+		"funcId": 196,
+		"funcName": "Export Payment API",
+		"parentId": 1,
+		"funcCode": "export_payment_api"
+	},
+	{
+		"funcId": 197,
+		"funcName": "Export Game Type",
+		"parentId": 1,
+		"funcCode": "export_game_type"
+	},
+	{
+		"funcId": 198,
+		"funcName": "Export User Logs",
+		"parentId": 1,
+		"funcCode": "export_user_logs"
+	},
+	{
+		"funcId": 199,
+		"funcName": "Export View Roles",
+		"parentId": 1,
+		"funcCode": "export_view_roles"
+	},
+	{
+		"funcId": 200,
+		"funcName": "Export Country Rules",
+		"parentId": 1,
+		"funcCode": "export_country_rules"
+	},
+	{
+		"funcId": 201,
+		"funcName": "Bank/3rd payment list",
+		"parentId": 1,
+		"funcCode": "bank/3rd_payment_list"
+	},
+	{
+		"funcId": 202,
+		"funcName": "Minimum withdraw settings",
+		"parentId": 1,
+		"funcCode": "minimum_withdraw_settings"
+	},
+	{
+		"funcId": 203,
+		"funcName": "Default Collection Account",
+		"parentId": 1,
+		"funcCode": "default_collection_account"
+	},
+	{
+		"funcId": 204,
+		"funcName": "Withdrawal workflow",
+		"parentId": 1,
+		"funcCode": "withdrawal_workflow"
+	},
+	{
+		"funcId": 205,
+		"funcName": "Active Player Report",
+		"parentId": 40,
+		"funcCode": "active_player_report"
+	},
+	{
+		"funcId": 206,
+		"funcName": "Manual Trigger Check VIP Conditions",
+		"parentId": 15,
+		"funcCode": "manual_trigger_check_vip_conditions"
+	},
+	{
+		"funcId": 207,
+		"funcName": "Pending Request",
+		"parentId": 72,
+		"funcCode": "pending_request"
+	},
+	{
+		"funcId": 208,
+		"funcName": "System Features",
+		"parentId": 1,
+		"funcCode": "system_features"
+	},
+	{
+		"funcId": 209,
+		"funcName": "Telesales Call",
+		"parentId": 15,
+		"funcCode": "telesales_call"
+	},
+	{
+		"funcId": 210,
+		"funcName": "Deposit Count List",
+		"parentId": 72,
+		"funcCode": "deposit_count_list"
+	},
+	{
+		"funcId": 211,
+		"funcName": "Dashboard",
+		"parentId": 1,
+		"funcCode": "dashboard",
+		"default_enabled": true
+	},
+	{
+		"funcId": 212,
+		"funcName": "Exception Order List",
+		"parentId": 72,
+		"funcCode": "exception_order_list"
+	},
+	{
+		"funcId": 213,
+		"funcName": "Export Exception Order",
+		"parentId": 72,
+		"funcCode": "export_exception_order"
+	},
+	{
+		"funcId": 214,
+		"funcName": "Search Player Phone Number",
+		"parentId": 15,
+		"funcCode": "allow_search_player_phone_number_no_view"
+	},
+	{
+		"funcId": 215,
+		"funcName": "Manually Add Bonus with Settled Option",
+		"parentId": 59,
+		"funcCode": "manually_add_bonus_with_settled_option"
+	},
+	{
+		"funcId": 216,
+		"funcName": "Delete Collection Account",
+		"parentId": 72,
+		"funcCode": "delete_collection_account"
+	},
+	{
+		"funcId": 217,
+		"funcName": "Search Player Email",
+		"parentId": 15,
+		"funcCode": "allow_search_player_email_no_view"
+	},
+	{
+		"funcId": 218,
+		"funcName": "Search Player IM",
+		"parentId": 15,
+		"funcCode": "allow_search_player_im_no_view"
+	},
+	{
+		"funcId": 219,
+		"funcName": "Locked Deposit List",
+		"parentId": 72,
+		"funcCode": "lock_deposit_list"
+	},
+	{
+		"funcId": 220,
+		"funcName": "Locked Withdrawal List",
+		"parentId": 72,
+		"funcCode": "lock_withdrawal_list"
+	},
+	{
+		"funcId": 221,
+		"funcName": "Batch Deposit",
+		"parentId": 72,
+		"funcCode": "batch_deposit"
+	},
+	{
+		"funcId": 222,
+		"funcName": "Delete Affiliate",
+		"parentId": 48,
+		"funcCode": "delete_affiliate"
+	},
+	{
+		"funcId": 223,
+		"funcName": "Super Report",
+		"parentId": 0,
+		"funcCode": "super_report"
+	},
+	{
+		"funcId": 224,
+		"funcName": "Summary Report",
+		"parentId": 223,
+		"funcCode": "super_summary_report"
+	},
+	{
+		"funcId": 225,
+		"funcName": "Player Report",
+		"parentId": 223,
+		"funcCode": "super_player_report"
+	},
+	{
+		"funcId": 226,
+		"funcName": "Game Report",
+		"parentId": 223,
+		"funcCode": "super_game_report"
+	},
+	{
+		"funcId": 227,
+		"funcName": "Payment Report",
+		"parentId": 223,
+		"funcCode": "super_payment_report"
+	},
+	{
+		"funcId": 228,
+		"funcName": "Promotion Report",
+		"parentId": 223,
+		"funcCode": "super_promotion_report"
+	},
+	{
+		"funcId": 229,
+		"funcName": "Cashback Report",
+		"parentId": 223,
+		"funcCode": "super_cashback_report"
+	},
+	{
+		"funcId": 230,
+		"funcName": "Manually Subtract Bonus",
+		"parentId": 59,
+		"funcCode": "manually_subtract_bonus"
+	},
+	{
+		"funcId": 231,
+		"funcName": "Force Change Affiliate of Player",
+		"parentId": 48,
+		"funcCode": "force_change_affiliate_of_player"
+	},
+	{
+		"funcId": 232,
+		"funcName": "Daily Player Balance Report",
+		"parentId": 40,
+		"funcCode": "daily_player_balance_report"
+	},
+	{
+		"funcId": 233,
+		"funcName": "Summary Report 2",
+		"parentId": 40,
+		"funcCode": "summary_report_2"
+	},
+	{
+		"funcId": 237,
+		"funcName": "KYC Attached Documents",
+		"parentId": 15,
+		"funcCode": "kyc_attached_documents"
+	},
+	{
+		"funcId": 238,
+		"funcName": "Update Attached Documents",
+		"parentId": 15,
+		"funcCode": "update_attached_documents"
+	},
+	{
+		"funcId": 239,
+		"funcName": "Cashback Request",
+		"parentId": 59,
+		"funcCode": "cashback_request"
+	},
+	{
+		"funcId": 240,
+		"funcName": "Update KYC Status",
+		"parentId": 15,
+		"funcCode": "update_kyc_status"
+	},
+	{
+		"funcId": 241,
+		"funcName": "Shop Manager",
+		"parentId": 59,
+		"funcCode": "shopping_center_manager"
+	},
+	{
+		"funcId": 242,
+		"funcName": "Upload SBE Logo",
+		"parentId": 1,
+		"funcCode": "upload_sbe_logo"
+	},
+	{
+		"funcId": 243,
+		"funcName": "Shopping Claim Request List",
+		"parentId": 59,
+		"funcCode": "shopping_claim_request_list"
+	},
+	{
+		"funcId": 244,
+		"funcName": "Allow to declined shopping request",
+		"parentId": 59,
+		"funcCode": "allow_to_declined_shopper_request"
+	},
+	{
+		"funcId": 245,
+		"funcName": "Allow to Approve shopping request",
+		"parentId": 59,
+		"funcCode": "allow_to_approve_shopper_request"
+	},
+	{
+		"funcId": 246,
+		"funcName": "Shopping Request List",
+		"parentId": 59,
+		"funcCode": "shopper_list"
+	},
+	{
+		"funcId": 247,
+		"funcName": "Theme Management",
+		"parentId": 1,
+		"funcCode": "theme_management"
+	},
+	{
+		"funcId": 248,
+		"funcName": "Add Theme",
+		"parentId": 1,
+		"funcCode": "add_theme"
+	},
+	{
+		"funcId": 249,
+		"funcName": "Batch Add Bonus",
+		"parentId": 59,
+		"funcCode": "manually_batch_bonus"
+	},
+	{
+		"funcId": 250,
+		"funcName": "Add Header Template",
+		"parentId": 1,
+		"funcCode": "add_header_template"
+	},
+	{
+		"funcId": 251,
+		"funcName": "Edit Affiliate Bank Account",
+		"parentId": 48,
+		"funcCode": "edit_affiliate_bank_account"
+	},
+	{
+		"funcId": 252,
+		"funcName": "Delete Header Template",
+		"parentId": 1,
+		"funcCode": "delete_header_template"
+	},
+	{
+		"funcId": 253,
+		"funcName": "Add Footer Template",
+		"parentId": 1,
+		"funcCode": "add_footer_template"
+	},
+	{
+		"funcId": 254,
+		"funcName": "Delete Footer Template",
+		"parentId": 1,
+		"funcCode": "delete_footer_template"
+	},
+	{
+		"funcId": 255,
+		"funcName": "Generate Header to Site",
+		"parentId": 1,
+		"funcCode": "generate_to_site_header"
+	},
+	{
+		"funcId": 256,
+		"funcName": "Generate Footer to Site",
+		"parentId": 1,
+		"funcCode": "generate_to_site_footer"
+	},
+	{
+		"funcId": 257,
+		"funcName": "Update PEP Status",
+		"parentId": 15,
+		"funcCode": "update_pep_status"
+	},
+	{
+		"funcId": 258,
+		"funcName": "Send Message",
+		"parentId": 84,
+		"funcCode": "send_message"
+	},
+	{
+		"funcId": 259,
+		"funcName": "Player Balance Report",
+		"parentId": 40,
+		"funcCode": "player_balance_report"
+	},
+	{
+		"funcId": 260,
+		"funcName": "Replacement Transfer Order",
+		"parentId": 72,
+		"funcCode": "replacement_transfer_order"
+	},
+	{
+		"funcId": 261,
+		"funcName": "New Internal Withdrawal",
+		"parentId": 72,
+		"funcCode": "new_internal_withdrawal"
+	},
+	{
+		"funcId": 262,
+		"funcName": "Disable player withdrawal",
+		"parentId": 15,
+		"funcCode": "disable_player_withdrawal"
+	},
+	{
+		"funcId": 263,
+		"funcName": "Affiliate Player Report",
+		"parentId": 48,
+		"funcCode": "affiliate_player_report"
+	},
+	{
+		"funcId": 264,
+		"funcName": "Agency Win / Loss Report",
+		"parentId": 116,
+		"funcCode": "agency_wl_report"
+	},
+	{
+		"funcId": 265,
+		"funcName": "Settlement",
+		"parentId": 116,
+		"funcCode": "settlement_wl"
+	},
+	{
+		"funcId": 266,
+		"funcName": "Sync Game Logs",
+		"parentId": 1,
+		"funcCode": "sync_game_logs"
+	},
+	{
+		"funcId": 267,
+		"funcName": "Add Javascript Template",
+		"parentId": 1,
+		"funcCode": "add_javascript_template"
+	},
+	{
+		"funcId": 268,
+		"funcName": "Delete Javascript Template",
+		"parentId": 1,
+		"funcCode": "delete_javascript_template"
+	},
+	{
+		"funcId": 269,
+		"funcName": "Player Center Settings",
+		"parentId": 84,
+		"funcCode": "player_center_settings"
+	},
+	{
+		"funcId": 270,
+		"funcName": "View Task List",
+		"parentId": 1,
+		"funcCode": "view_task_list"
+	},
+	{
+		"funcId": 271,
+		"funcName": "Manual Subtract Balance Tag Management",
+		"parentId": 15,
+		"funcCode": "manual_subtract_balance_tag"
+	},
+	{
+		"funcId": 272,
+		"funcName": "View Player Update History",
+		"parentId": 15,
+		"funcCode": "view_player_update_history"
+	},
+	{
+		"funcId": 273,
+		"funcName": "Manually update promotion bonus",
+		"parentId": 59,
+		"funcCode": "manaully_update_promotion_bonus"
+	},
+	{
+		"funcId": 274,
+		"funcName": "Edit agency domain",
+		"parentId": 116,
+		"funcCode": "edit_agency_domain"
+	},
+	{
+		"funcId": 275,
+		"funcName": "Edit agency tracking code",
+		"parentId": 116,
+		"funcCode": "edit_agency_tracking_code"
+	},
+	{
+		"funcId": 276,
+		"funcName": "Edit agency source code",
+		"parentId": 116,
+		"funcCode": "edit_agency_source_code"
+	},
+	{
+		"funcId": 277,
+		"funcName": "Edit Agent",
+		"parentId": 116,
+		"funcCode": "edit_agent"
+	},
+	{
+		"funcId": 278,
+		"funcName": "Agent Domain List",
+		"parentId": 116,
+		"funcCode": "agent_domain_list"
+	},
+	{
+		"funcId": 279,
+		"funcName": "Edit Agent Domain",
+		"parentId": 116,
+		"funcCode": "edit_agent_domain"
+	},
+	{
+		"funcId": 280,
+		"funcName": "View/Add Player Remarks",
+		"parentId": 15,
+		"funcCode": "player_notes"
+	},
+	{
+		"funcId": 281,
+		"funcName": "Approve/Decline 3rdParty Deposit",
+		"parentId": 72,
+		"funcCode": "approve_declient_3rdparty_deposit"
+	},
+	{
+		"funcId": 282,
+		"funcName": "Activate/Deactivate Affiliate",
+		"parentId": 48,
+		"funcCode": "activate_deactivate_affiliate"
+	},
+	{
+		"funcId": 283,
+		"funcName": "View Response Result",
+		"parentId": 1,
+		"funcCode": "view_resp_result"
+	},
+	{
+		"funcId": 284,
+		"funcName": "View Member Detail Contact Information (Email)",
+		"parentId": 15,
+		"funcCode": "view_player_detail_contactinfo_em"
+	},
+	{
+		"funcId": 285,
+		"funcName": "View Member Detail Contact Information (IM)",
+		"parentId": 15,
+		"funcCode": "view_player_detail_contactinfo_im"
+	},
+	{
+		"funcId": 286,
+		"funcName": "View Member Detail Contact Information (Contact #)",
+		"parentId": 15,
+		"funcCode": "view_player_detail_contactinfo_cn"
+	},
+	{
+		"funcId": 287,
+		"funcName": "Risk Score Settings",
+		"parentId": 1,
+		"funcCode": "risk_score_settings"
+	},
+	{
+		"funcId": 288,
+		"funcName": "KYC Settings",
+		"parentId": 1,
+		"funcCode": "kyc_settings"
+	},
+	{
+		"funcId": 289,
+		"funcName": "News Category Manager",
+		"parentId": 84,
+		"funcCode": "view_news_category"
+	},
+	{
+		"funcId": 290,
+		"funcName": "Show PEP Authentication",
+		"parentId": 15,
+		"funcCode": "show_pep_authentication"
+	},
+	{
+		"funcId": 291,
+		"funcName": "Manual Generate PEP Authentication",
+		"parentId": 15,
+		"funcCode": "manual_generate_pep_authentication"
+	},
+	{
+		"funcId": 292,
+		"funcName": "Linked Account",
+		"parentId": 15,
+		"funcCode": "linked_account"
+	},
+	{
+		"funcId": 293,
+		"funcName": "SMS Manager",
+		"parentId": 84,
+		"funcCode": "sms_manager"
+	},
+	{
+		"funcId": 294,
+		"funcName": "Agency Payment",
+		"parentId": 116,
+		"funcCode": "agency_payment"
+	},
+	{
+		"funcId": 295,
+		"funcName": "Edit Agent Bank Account",
+		"parentId": 116,
+		"funcCode": "edit_agent_bank_account"
+	},
+	{
+		"funcId": 296,
+		"funcName": "Agent Balance Transfer",
+		"parentId": 116,
+		"funcCode": "agent_balance_transfer"
+	},
+	{
+		"funcId": 297,
+		"funcName": "Tier Commission Patterns",
+		"parentId": 116,
+		"funcCode": "tier_comm_patterns"
+	},
+	{
+		"funcId": 298,
+		"funcName": "Edit Tier Commission Pattern",
+		"parentId": 116,
+		"funcCode": "edit_tier_comm_pattern"
+	},
+	{
+		"funcId": 299,
+		"funcName": "Agent Binding Player",
+		"parentId": 116,
+		"funcCode": "agent_binding_player"
+	},
+	{
+		"funcId": 300,
+		"funcName": "Admin Role Management",
+		"parentId": 1,
+		"funcCode": "admin_manage_user_roles"
+	},
+	{
+		"funcId": 301,
+		"funcName": "Withdrawal Declined Category",
+		"parentId": 1,
+		"funcCode": "view_withdrawal_declined_category"
+	},
+	{
+		"funcId": 302,
+		"funcName": "Modified Withdrawal Declined Category",
+		"parentId": 1,
+		"funcCode": "modified_withdrawal_declined_category"
+	},
+	{
+		"funcId": 303,
+		"funcName": "Adjustment Category",
+		"parentId": 1,
+		"funcCode": "view_adjustment_category"
+	},
+	{
+		"funcId": 304,
+		"funcName": "Modified Adjustment Category",
+		"parentId": 1,
+		"funcCode": "modified_adjustment_category"
+	},
+	{
+		"funcId": 305,
+		"funcName": "Responsible Gaming Report",
+		"parentId": 40,
+		"funcCode": "responsible_gaming_report"
+	},
+	{
+		"funcId": 306,
+		"funcName": "Allow to enable edit promo rules",
+		"parentId": 59,
+		"funcCode": "allow_to_enable_edit_promo_rules"
+	},
+	{
+		"funcId": 307,
+		"funcName": "Allow to perform do settlement action in agency settlement list",
+		"parentId": 116,
+		"funcCode": "allow_to_do_settlement"
+	},
+	{
+		"funcId": 308,
+		"funcName": "Update Deposit Attachment",
+		"parentId": 72,
+		"funcCode": "update_deposit_attachment"
+	},
+	{
+		"funcId": 309,
+		"funcName": "Bonus Game Settings",
+		"parentId": 59,
+		"funcCode": "bonus_game_settings"
+	},
+	{
+		"funcId": 310,
+		"funcName": "Dev Functions",
+		"parentId": 1,
+		"funcCode": "dev_functions"
+	},
+	{
+		"funcId": 311,
+		"funcName": "Lottery Backoffice",
+		"parentId": 1,
+		"funcCode": "t1lottery_bo"
+	},
+	{
+		"funcId": 312,
+		"funcName": "Bonus Games Report",
+		"parentId": 40,
+		"funcCode": "bonus_games_report"
+	},
+	{
+		"funcId": 313,
+		"funcName": "VIP Management",
+		"parentId": 0,
+		"funcCode": "vip"
+	},
+	{
+		"funcId": 314,
+		"funcName": "VIP Settings",
+		"parentId": 313,
+		"funcCode": "vip_settings"
+	},
+	{
+		"funcId": 315,
+		"funcName": "VIP Settings Group Add",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_add"
+	},
+	{
+		"funcId": 316,
+		"funcName": "VIP Settings Group Edit",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_edit"
+	},
+	{
+		"funcId": 317,
+		"funcName": "VIP Settings Group Delete",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_delete"
+	},
+	{
+		"funcId": 318,
+		"funcName": "VIP Settings Group Preview",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_preview"
+	},
+	{
+		"funcId": 319,
+		"funcName": "VIP Settings Group Export",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_export"
+	},
+	{
+		"funcId": 320,
+		"funcName": "VIP Settings Level Increase Decrease",
+		"parentId": 314,
+		"funcCode": "vip_settings_level_increase_decrease"
+	},
+	{
+		"funcId": 321,
+		"funcName": "VIP Settings Level Edit",
+		"parentId": 314,
+		"funcCode": "vip_settings_level_edit"
+	},
+	{
+		"funcId": 322,
+		"funcName": "VIP Settings Level Export",
+		"parentId": 314,
+		"funcCode": "vip_settings_level_export"
+	},
+	{
+		"funcId": 323,
+		"funcName": "VIP Rebate Rules Template",
+		"parentId": 313,
+		"funcCode": "vip_rebate_rules_template"
+	},
+	{
+		"funcId": 324,
+		"funcName": "VIP Rebate Rules Template Add",
+		"parentId": 323,
+		"funcCode": "vip_rebate_rules_template_add"
+	},
+	{
+		"funcId": 325,
+		"funcName": "VIP Rebate Rules Template Edit",
+		"parentId": 323,
+		"funcCode": "vip_rebate_rules_template_edit"
+	},
+	{
+		"funcId": 326,
+		"funcName": "VIP Rebate Rules Template Delete",
+		"parentId": 323,
+		"funcCode": "vip_rebate_rules_template_delete"
+	},
+	{
+		"funcId": 327,
+		"funcName": "VIP Rebate Rules Template Active",
+		"parentId": 323,
+		"funcCode": "vip_rebate_rules_template_active"
+	},
+	{
+		"funcId": 328,
+		"funcName": "VIP Rebate Rules Template Export",
+		"parentId": 323,
+		"funcCode": "vip_rebate_rules_template_export"
+	},
+	{
+		"funcId": 329,
+		"funcName": "VIP Rebate Values",
+		"parentId": 323,
+		"funcCode": "vip_rebate_values"
+	},
+	{
+		"funcId": 330,
+		"funcName": "VIP Rebate Values Export",
+		"parentId": 329,
+		"funcCode": "vip_rebate_values_export"
+	},
+	{
+		"funcId": 331,
+		"funcName": "VIP Request List",
+		"parentId": 313,
+		"funcCode": "vip_request_list"
+	},
+	{
+		"funcId": 332,
+		"funcName": "VIP Request List Export",
+		"parentId": 331,
+		"funcCode": "vip_request_list_export"
+	},
+	{
+		"funcId": 333,
+		"funcName": "VIP Request List Approve",
+		"parentId": 331,
+		"funcCode": "vip_request_list_approve"
+	},
+	{
+		"funcId": 334,
+		"funcName": "VIP Request List Reject",
+		"parentId": 331,
+		"funcCode": "vip_request_list_reject"
+	},
+	{
+		"funcId": 335,
+		"funcName": "Cancel Member Withdrawal Condition",
+		"parentId": 15,
+		"funcCode": "cancel_member_withdraw_condition"
+	},
+	{
+		"funcId": 336,
+		"funcName": "Withdraw Pending Review List",
+		"parentId": 72,
+		"funcCode": "withdraw_pending_review_list"
+	},
+	{
+		"funcId": 337,
+		"funcName": "Player Analysis Report",
+		"parentId": 40,
+		"funcCode": "player_analysis_report"
+	},
+	{
+		"funcId": 338,
+		"funcName": "Export Collection Account",
+		"parentId": 72,
+		"funcCode": "export_collection_account"
+	},
+	{
+		"funcId": 339,
+		"funcName": "Recover Member Withdrawal Condition",
+		"parentId": 15,
+		"funcCode": "recover_withdraw_condition"
+	},
+	{
+		"funcId": 340,
+		"funcName": "Player Center Notification Management",
+		"parentId": 84,
+		"funcCode": "playercenter_notif_mngmt"
+	},
+	{
+		"funcId": 341,
+		"funcName": "Banners / Promotions Manager",
+		"parentId": 1,
+		"funcCode": "bannerPromotion"
+	},
+	{
+		"funcId": 342,
+		"funcName": "View Admin Users",
+		"parentId": 1,
+		"funcCode": "view_admin_users"
+	},
+	{
+		"funcId": 343,
+		"funcName": "Approve/Decline Withdraw (Pending Request)",
+		"parentId": 72,
+		"funcCode": "approve_decline_withdraw_pending_request"
+	},
+	{
+		"funcId": 344,
+		"funcName": "Approve/Decline Withdraw (Pending Review)",
+		"parentId": 72,
+		"funcCode": "approve_decline_withdraw_pending_review"
+	},
+	{
+		"funcId": 345,
+		"funcName": "Upload Deposit Slip",
+		"parentId": 72,
+		"funcCode": "upload_deposit_slip"
+	},
+	{
+		"funcId": 346,
+		"funcName": "Export Cashback Request",
+		"parentId": 59,
+		"funcCode": "export_cashback_request"
+	},
+	{
+		"funcId": 347,
+		"funcName": "Add Player Bank Info",
+		"parentId": 15,
+		"funcCode": "add_player_bank_info"
+	},
+	{
+		"funcId": 348,
+		"funcName": "Edit Player Bank Info",
+		"parentId": 15,
+		"funcCode": "edit_player_bank_info"
+	},
+	{
+		"funcId": 349,
+		"funcName": "Delete Player Bank Info",
+		"parentId": 15,
+		"funcCode": "delete_player_bank_info"
+	},
+	{
+		"funcId": 350,
+		"funcName": "Enable/Disable Player Bank Info",
+		"parentId": 15,
+		"funcCode": "enable_disable_player_bank_info"
+	},
+	{
+		"funcId": 351,
+		"funcName": "Export Summary Report",
+		"parentId": 223,
+		"funcCode": "export_super_summary_report"
+	},
+	{
+		"funcId": 352,
+		"funcName": "Export Player Report",
+		"parentId": 223,
+		"funcCode": "export_super_player_report"
+	},
+	{
+		"funcId": 353,
+		"funcName": "Export Game Report",
+		"parentId": 223,
+		"funcCode": "export_super_game_report"
+	},
+	{
+		"funcId": 354,
+		"funcName": "Export Payment Report",
+		"parentId": 223,
+		"funcCode": "export_super_payment_report"
+	},
+	{
+		"funcId": 355,
+		"funcName": "Export Promotion Report",
+		"parentId": 223,
+		"funcCode": "export_super_promotion_report"
+	},
+	{
+		"funcId": 356,
+		"funcName": "Export Cashback Report",
+		"parentId": 223,
+		"funcCode": "export_super_cashback_report"
+	},
+	{
+		"funcId": 357,
+		"funcName": "Lottery Backoffice Role Binding",
+		"parentId": 1,
+		"funcCode": "lottery_bo_role_binding"
+	},
+	{
+		"funcId": 358,
+		"funcName": "Grade Report",
+		"parentId": 40,
+		"funcCode": "grade_report"
+	},
+	{
+		"funcId": 359,
+		"funcName": "VIP Settings Group Level Save",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_level_save"
+	},
+	{
+		"funcId": 360,
+		"funcName": "VIP Settings Group Save",
+		"parentId": 314,
+		"funcCode": "vip_settings_group_save"
+	},
+	{
+		"funcId": 361,
+		"funcName": "Meta Data Manager",
+		"parentId": 84,
+		"funcCode": "metadata_manager"
+	},
+	{
+		"funcId": 362,
+		"funcName": "Game API Maintenance",
+		"parentId": 1,
+		"funcCode": "game_api_maintenance"
+	},
+	{
+		"funcId": 363,
+		"funcName": "Export Responsible Gaming Report",
+		"parentId": 40,
+		"funcCode": "export_responsible_gaming_report"
+	},
+	{
+		"funcId": 364,
+		"funcName": "Import Game Logs",
+		"parentId": 59,
+		"funcCode": "import_game_logs"
+	},
+	{
+		"funcId": 365,
+		"funcName": "Upload Batch Create",
+		"parentId": 15,
+		"funcCode": "upload_batch_player"
+	},
+	{
+		"funcId": 366,
+		"funcName": "Banner Management",
+		"parentId": 84,
+		"funcCode": "bannercms"
+	},
+	{
+		"funcId": 367,
+		"funcName": "Send Game Logs API",
+		"parentId": 59,
+		"funcCode": "send_gamelogs_api"
+	},
+	{
+		"funcId": 368,
+		"funcName": "View Player List Summary Information",
+		"parentId": 15,
+		"funcCode": "view_player_list_summary_info"
+	},
+	{
+		"funcId": 369,
+		"funcName": "Set player bet limit for api",
+		"parentId": 15,
+		"funcCode": "set_player_bet_limit_for_api"
+	},
+	{
+		"funcId": 370,
+		"funcName": "Payment Status History Report",
+		"parentId": 40,
+		"funcCode": "payment_status_history_report"
+	},
+	{
+		"funcId": 371,
+		"funcName": "Player Communication Preference",
+		"parentId": 15,
+		"funcCode": "player_communication_preference"
+	},
+	{
+		"funcId": 372,
+		"funcName": "Edit Player Communication Preference",
+		"parentId": 15,
+		"funcCode": "edit_player_communication_preference"
+	},
+	{
+		"funcId": 373,
+		"funcName": "View Communication Preference Report",
+		"parentId": 40,
+		"funcCode": "view_communication_preference_report"
+	},
+	{
+		"funcId": 374,
+		"funcName": "Export Communication Preference Report",
+		"parentId": 40,
+		"funcCode": "export_communication_preference_report"
+	},
+	{
+		"funcId": 375,
+		"funcName": "View KYC History",
+		"parentId": 15,
+		"funcCode": "view_kyc_history"
+	},
+	{
+		"funcId": 376,
+		"funcName": "Verify Player Email",
+		"parentId": 15,
+		"funcCode": "verify_player_email"
+	},
+	{
+		"funcId": 377,
+		"funcName": "Verify Player Contact No.",
+		"parentId": 15,
+		"funcCode": "verify_player_contact_number"
+	},
+	{
+		"funcId": 378,
+		"funcName": "View SMS Report",
+		"parentId": 1,
+		"funcCode": "view_sms_report"
+	},
+	{
+		"funcId": 379,
+		"funcName": "Live Chat Settings",
+		"parentId": 1,
+		"funcCode": "live_chat_settings"
+	},
+	{
+		"funcId": 380,
+		"funcName": "View Income Access Signup Report",
+		"parentId": 40,
+		"funcCode": "view_income_access_signup_report"
+	},
+	{
+		"funcId": 381,
+		"funcName": "View Income Access Sales Report",
+		"parentId": 40,
+		"funcCode": "view_income_access_sales_report"
+	},
+	{
+		"funcId": 382,
+		"funcName": "Export Income Access Signup Report",
+		"parentId": 40,
+		"funcCode": "export_income_access_signup_report"
+	},
+	{
+		"funcId": 383,
+		"funcName": "Export Income Access Sales Report",
+		"parentId": 40,
+		"funcCode": "export_income_access_sales_report"
+	},
+	{
+		"funcId": 384,
+		"funcName": "View SMTP API Reports",
+		"parentId": 1,
+		"funcCode": "view_smtp_api_report"
+	},
+	{
+		"funcId": 385,
+		"funcName": "Cancel Responsible Gaming Request",
+		"parentId": 15,
+		"funcCode": "cancel_responsible_gaming_request"
+	},
+	{
+		"funcId": 386,
+		"funcName": "Ole777 Wager Sync",
+		"parentId": 59,
+		"funcCode": "ole777_wager_sync"
+	},
+	{
+		"funcId": 387,
+		"funcName": "Game Description History",
+		"parentId": 1,
+		"funcCode": "game_description_history"
+	},
+	{
+		"funcId": 388,
+		"funcName": "Game Type History",
+		"parentId": 1,
+		"funcCode": "game_type_history"
+	},
+	{
+		"funcId": 389,
+		"funcName": "Game Maintenance Schedule",
+		"parentId": 1,
+		"funcCode": "game_maintenance_schedule"
+	},
+	{
+		"funcId": 390,
+		"funcName": "Delete Messages",
+		"parentId": 37,
+		"funcCode": "delete_messages"
+	},
+	{
+		"funcId": 391,
+		"funcName": "Dispatch Account",
+		"parentId": 1,
+		"funcCode": "dispatch_account"
+	},
+	{
+		"funcId": 392,
+		"funcName": "Edit Player Dispatch Account Level",
+		"parentId": 15,
+		"funcCode": "edit_player_dispatch_account_level"
+	},
+	{
+		"funcId": 393,
+		"funcName": "Game Wallet Settings",
+		"parentId": 1,
+		"funcCode": "game_wallet_settings"
+	},
+	{
+		"funcId": 394,
+		"funcName": "Manage Currency",
+		"parentId": 1,
+		"funcCode": "manage_currency"
+	},
+	{
+		"funcId": 395,
+		"funcName": "Game Setting",
+		"parentId": 1,
+		"funcCode": "game_setting"
+	},
+	{
+		"funcId": 396,
+		"funcName": "Edit Player Contact Information",
+		"parentId": 15,
+		"funcCode": "edit_player_contact_information"
+	},
+	{
+		"funcId": 397,
+		"funcName": "Add/Edit/Cancel Maintenance Schedule",
+		"parentId": 1,
+		"funcCode": "maintenance_schedule_control"
+	},
+	{
+		"funcId": 398,
+		"funcName": "Reset Player's Withdrawal Password",
+		"parentId": 15,
+		"funcCode": "reset_players_withdrawal_password"
+	},
+	{
+		"funcId": 399,
+		"funcName": "Send Message To All",
+		"parentId": 37,
+		"funcCode": "send_message_to_all"
+	},
+	{
+		"funcId": 400,
+		"funcName": "Close Message",
+		"parentId": 37,
+		"funcCode": "mark_as_closed_message"
+	},
+	{
+		"funcId": 401,
+		"funcName": "Ignore VIP Daily Withdrawal Maximum Amount Settings When Approve",
+		"parentId": 72,
+		"funcCode": "ignore_vip_daily_withdrawal_maximum_amount_settings_when_approve"
+	},
+	{
+		"funcId": 402,
+		"funcName": "Ignore VIP Daily Withdrawal Maximum Times Settings When Approve",
+		"parentId": 72,
+		"funcCode": "ignore_vip_daily_withdrawal_maximum_times_settings_when_approve"
+	},
+	{
+		"funcId": 403,
+		"funcName": "Deposit Count Setting",
+		"parentId": 1,
+		"funcCode": "deposit_count_setting"
+	},
+	{
+		"funcId": 404,
+		"funcName": "Attached File List",
+		"parentId": 40,
+		"funcCode": "attached_file_list"
+	},
+	{
+		"funcId": 405,
+		"funcName": "Cancel Member Transfer Condition",
+		"parentId": 15,
+		"funcCode": "cancel_member_transfer_condition"
+	},
+	{
+		"funcId": 406,
+		"funcName": "Transfer All Back To Main Wallet",
+		"parentId": 15,
+		"funcCode": "transfer_all_back_to_main_wallet"
+	},
+	{
+		"funcId": 407,
+		"funcName": "Export Affiliate Earnings",
+		"parentId": 48,
+		"funcCode": "export_affiliate_earnings"
+	},
+	{
+		"funcId": 408,
+		"funcName": "Export VIP Group Manager",
+		"parentId": 313,
+		"funcCode": "export_vip_group_manager"
+	},
+	{
+		"funcId": 409,
+		"funcName": "Export Affiliate List",
+		"parentId": 48,
+		"funcCode": "export_affiliate_list"
+	},
+	{
+		"funcId": 410,
+		"funcName": "Export Affiliate Statistics",
+		"parentId": 48,
+		"funcCode": "export_affiliate_statistics"
+	},
+	{
+		"funcId": 411,
+		"funcName": "Export Summary Report",
+		"parentId": 40,
+		"funcCode": "export_summary_report"
+	},
+	{
+		"funcId": 412,
+		"funcName": "Export Summary Report 2",
+		"parentId": 40,
+		"funcCode": "export_summary_report_2"
+	},
+	{
+		"funcId": 413,
+		"funcName": "Export Games Report",
+		"parentId": 40,
+		"funcCode": "export_games_report"
+	},
+	{
+		"funcId": 414,
+		"funcName": "Export Payment Report",
+		"parentId": 40,
+		"funcCode": "export_payment_report"
+	},
+	{
+		"funcId": 415,
+		"funcName": "Export Promotion Report",
+		"parentId": 40,
+		"funcCode": "export_promotion_report"
+	},
+	{
+		"funcId": 416,
+		"funcName": "Export Cashback Report",
+		"parentId": 40,
+		"funcCode": "export_cashback_report"
+	},
+	{
+		"funcId": 417,
+		"funcName": "Export Duplicate Account Report",
+		"parentId": 40,
+		"funcCode": "export_duplicate_account_report"
+	},
+	{
+		"funcId": 418,
+		"funcName": "Export Active Player Report",
+		"parentId": 40,
+		"funcCode": "export_active_player_report"
+	},
+	{
+		"funcId": 419,
+		"funcName": "Export Daily Player Balance Report",
+		"parentId": 40,
+		"funcCode": "export_daily_player_balance_report"
+	},
+	{
+		"funcId": 420,
+		"funcName": "Export Bonus Games Report",
+		"parentId": 40,
+		"funcCode": "export_bonus_games_report"
+	},
+	{
+		"funcId": 421,
+		"funcName": "Export Player Analysis Report",
+		"parentId": 40,
+		"funcCode": "export_player_analysis_report"
+	},
+	{
+		"funcId": 422,
+		"funcName": "Export Grade Report",
+		"parentId": 40,
+		"funcCode": "export_grade_report"
+	},
+	{
+		"funcId": 423,
+		"funcName": "Export Payment Status History Report",
+		"parentId": 40,
+		"funcCode": "export_payment_status_history_report"
+	},
+	{
+		"funcId": 424,
+		"funcName": "Export Deposit Report",
+		"parentId": 40,
+		"funcCode": "export_deposit_report"
+	},
+	{
+		"funcId": 425,
+		"funcName": "Export Task List Report",
+		"parentId": 1,
+		"funcCode": "export_task_list_report"
+	},
+	{
+		"funcId": 426,
+		"funcName": "Export View Users Report",
+		"parentId": 1,
+		"funcCode": "export_view_users_report"
+	},
+	{
+		"funcId": 427,
+		"funcName": "Edit/Delete Player Remarks",
+		"parentId": 15,
+		"funcCode": "control_edit_delete_note"
+	},
+	{
+		"funcId": 428,
+		"funcName": "Adjust Player Account Verify Status",
+		"parentId": 15,
+		"funcCode": "adjust_player_account_verify_status"
+	},
+	{
+		"funcId": 429,
+		"funcName": "CS Message Settings",
+		"parentId": 37,
+		"funcCode": "cs_message_settings"
+	},
+	{
+		"funcId": 430,
+		"funcName": "Player Financial Account Rules Setting",
+		"parentId": 1,
+		"funcCode": "player_financial_account_rules_setting"
+	},
+	{
+		"funcId": 431,
+		"funcName": "Dev Manual Sync Game List Page",
+		"parentId": 12,
+		"funcCode": "dev_manual_sync_gamelist"
+	},
+	{
+		"funcId": 432,
+		"funcName": "Reset Admin User 2FA",
+		"parentId": 1,
+		"funcCode": "reset_otp_secret_for_adminusers"
+	},
+	{
+		"funcId": 433,
+		"funcName": "Currency Permissions for Admin User",
+		"parentId": 1,
+		"funcCode": "currency_permissions_for_admin_user"
+	},
+	{
+		"funcId": 434,
+		"funcName": "Currency Permissions for Agency",
+		"parentId": 1,
+		"funcCode": "currency_permissions_for_agency"
+	},
+	{
+		"funcId": 435,
+		"funcName": "Kingrich View Data Scheduler",
+		"parentId": 59,
+		"funcCode": "view_kingrich_data_scheduler"
+	},
+	{
+		"funcId": 436,
+		"funcName": "Kingrich Add Data Scheduler",
+		"parentId": 59,
+		"funcCode": "add_kingrich_data_scheduler"
+	},
+	{
+		"funcId": 437,
+		"funcName": "Kingrich Edit Data Scheduler",
+		"parentId": 59,
+		"funcCode": "edit_kingrich_data_scheduler"
+	},
+	{
+		"funcId": 438,
+		"funcName": "Sync System Feature To Other Currency",
+		"parentId": 1,
+		"funcCode": "sync_system_feature_to_other_currency"
+	},
+	{
+		"funcId": 439,
+		"funcName": "Show C6 Authentication",
+		"parentId": 15,
+		"funcCode": "show_c6_authentication"
+	},
+	{
+		"funcId": 440,
+		"funcName": "Manual Generate C6 Authentication",
+		"parentId": 15,
+		"funcCode": "manual_generate_c6_authentication"
+	},
+	{
+		"funcId": 441,
+		"funcName": "Update C6 Status",
+		"parentId": 15,
+		"funcCode": "update_c6_status"
+	},
+	{
+		"funcId": 442,
+		"funcName": "View Risk Score History",
+		"parentId": 15,
+		"funcCode": "view_risk_score_history"
+	},
+	{
+		"funcId": 443,
+		"funcName": "Set financial account to verified",
+		"parentId": 15,
+		"funcCode": "set_financial_account_to_verified"
+	},
+	{
+		"funcId"   : 444,
+		"funcName" : "Manage read only agency account",
+		"parentId" : 116,
+		"funcCode" : "manage_readonly_agency_account"
+	},
+	{
+		"funcId" : 445,
+		"funcName" : "Conversion Rate Report",
+		"parentId" : 40,
+		"funcCode" : "conversion_rate_report"
+	},
+	{
+		"funcId" : 446,
+		"funcName" : "Export Conversion Rate Report",
+		"parentId" : 40,
+		"funcCode" : "export_conversion_rate_report"
+	},
+	{
+		"funcId": 447,
+		"funcName": "Export Player Balance Report",
+		"parentId": 40,
+		"funcCode": "export_player_balance_report"
+	},
+	{
+		"funcId" : 448,
+		"funcName" : "Adjust Newsletter Subscription Status",
+		"parentId" : 15,
+		"funcCode" : "adjust_newsletter_subscription_status"
+	},
+	{
+		"funcId" : 449,
+		"funcName" : "Game API History",
+		"parentId" : 1,
+		"funcCode" : "game_api_history"
+	},
+	{
+		"funcId": 450,
+		"funcName": "Adjust manually seamless wallet",
+		"parentId": 72,
+		"funcCode": "adjust_manually_seamless_wallet"
+	},
+	{
+		"funcId": 451,
+		"funcName": "View game provider auth accounts",
+		"parentId": 1,
+		"funcCode": "view_game_provider_auth_accounts"
+	},
+	{
+		"funcId": 452,
+		"funcName": "System Settings: Smart Backend",
+		"parentId": 1,
+		"funcCode": "system_settings_smart_backend"
+	},
+	{
+		"funcId": 453,
+		"funcName": "System Settings: Player Center",
+		"parentId": 1,
+		"funcCode": "system_settings_player_center"
+	},
+	{
+		"funcId": 454,
+		"funcName": "View Backend API Keys",
+		"parentId": 1,
+		"funcCode": "view_backendapi_keys"
+	},
+	{
+		"funcId": 455,
+		"funcName": "Regenerate Backend API Keys",
+		"parentId": 1,
+		"funcCode": "regenerate_backendapi_keys"
+	}
+]

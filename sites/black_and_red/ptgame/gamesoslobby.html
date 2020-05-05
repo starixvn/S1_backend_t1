@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <link rel="stylesheet" href="/assets/css/styles.css">
+
+    <script src="/resources/js/jquery-2.1.4.min.js"></script>
+    <script src="/resources/js/bootstrap.min.js"></script>
+    <script src="/resources/js/underscore-min.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+    <!-- mglobby -->
+    <!-- <script src="/resources/js/gamesoslobby.js"></script> -->
+    <script src="http://player.og.local/resources/js/gamesoslobby.js"></script>
+</head>
+
+<body>
+    <div class="page ">
+      <h1>Hello</h1>
+
+        <main class="main-content" role="main">
+            <div class="flexslider slider">
+                <ul class="slides">
+                    <li class="hero">
+                        <a href="/promo-view.html" class="hero__linkCover">
+                            <span class="hero__bg media--hidden@mobile" style="background-image: url('assets/images/games/hero.jpg');"></span>
+                            <span class="hero__bg media--available@mobile" style="background-image: url('assets/images/games/hero--small.jpg');"></span>
+                        </a>
+                    </li>
+                    <li class="hero">
+                        <a href="/promo-view.html" class="hero__linkCover">
+                            <span class="hero__bg media--hidden@mobile" style="background-image: url('assets/images/games/hero.jpg');"></span>
+                            <span class="hero__bg media--available@mobile" style="background-image: url('assets/images/games/hero--small.jpg');"></span>
+                        </a>
+                    </li>
+                </ul>
+                <nav class="slider__controls container">
+                    <a href="#" class="slider__controller slider__controller--prev flex-prev">
+                        <span class="wbIcon-prev"></span>
+                    </a>
+
+                    <a href="#" class="slider__controller slider__controller--next flex-next">
+                        <span class="wbIcon-next"></span>
+                    </a>
+                </nav>
+            </div>
+            <section class="news-ticker">
+                <!--#include file="_notice.shtml" -->
+            </section>
+
+
+            <section class="container container--wide" id="games">
+                <div class="page__content" data-tab-group>
+                    <!-------------------------------------------------------->
+
+                    <!-- <iframe src="ptgame/mglobby.html" scrolling="no" border="0" id="main-iframe" style="margin:0; width:100%;  border:0px solid yellow; overflow-x:hidden;position:relative;top:0px;left:0px;"></iframe> -->
+
+                    <div class="page__content" data-tab-group>
+                        <nav class="content-nav">
+                            <ul class="content-nav__tabs">
+                                <li class="content-nav__tabs__item">
+                                    <a href="#popular" class="content-nav__link is-active" data-tab-trigger>Popular</a>
+                                </li>
+                                <li class="content-nav__tabs__item">
+                                    <a href="#arcades" class="content-nav__link" data-tab-trigger>Arcades</a>
+                                </li>
+                                <li class="content-nav__tabs__item">
+                                    <a href="#card-games" class="content-nav__link" data-tab-trigger>Card Games</a>
+                                </li>
+                                <li class="content-nav__tabs__item">
+                                    <a href="#video-pokers" class="content-nav__link" data-tab-trigger>Video Pokers</a>
+                                </li>
+                                <li class="content-nav__tabs__item">
+                                    <a href="#table-games" class="content-nav__link" data-tab-trigger>Table Games</a>
+                                </li>
+                                <li class="content-nav__tabs__item">
+                                    <a href="#others" class="content-nav__link" data-tab-trigger>Others</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <section id="popular" class="content-nav__content is-active" data-tab-content>
+                            <ul class="games-list"></ul>
+                        </section>
+                        <section id="arcades" class="content-nav__content" data-tab-content>
+                            <ul class="games-list"></ul>
+                        </section>
+                        <section id="card-games" class="content-nav__content" data-tab-content>
+                            <ul class="games-list"></ul>
+                        </section>
+                        <section id="video-pokers" class="content-nav__content" data-tab-content>
+                            <ul class="games-list"></ul>
+                        </section>
+                        <section id="table-games" class="content-nav__content" data-tab-content>
+                            <ul class="games-list"></ul>
+                        </section>
+                        <section id="others" class="content-nav__content" data-tab-content>
+                            <ul class="games-list"></ul>
+                        </section>
+                    </div>
+
+                    <script type="text/template" id="game-template">
+                        <% _.each( l, function(value) { %>
+                            <li class="games-list__item">
+                                <div class="game-card">
+                                    <header class="game-card__header">
+                                        <h3 class="game-card__title"><%= value.n %></h3>
+                                    </header>
+                                    <figure class="game-card__figure">
+                                        <img src="<%- p %>/<%- value.i %>" onError="this.src='<%- p %>/50.jpg';" target="_blank" class="game-card__img" style="max-height:150px;" />
+                                        <figcaption class="game-card__caption game-card__caption--accented">
+                                            <ul class="game-card__action-list">
+                                                <li class="game-card__action">
+                                                    <a href="https://player.og.local/iframe_module/goto_gamesosgame/<%- value.c%>/real"  class="btn btn--small btn--primary" data-reveal="game-modal">
+                                                        <span class="btn-icon wbIcon-arrow-right"></span> Play For Cash
+                                                    </a>
+                                                </li>
+                                                <li class="game-card__action">
+                                                    <a href="https://player.og.local/iframe_module/goto_gamesosgame/<%- value.c%>/fun" class="btn btn--small" data-reveal="game-modal">
+                                                        <span class="btn-icon wbIcon-arrow-right"></span> Play For Fun
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+
+                                </div>
+                            </li>
+                            <% }); %>
+                    </script>
+
+                    <!-------------------------------------------------------->
+                </div>
+                <a href="#games" class="page__anchor media--hidden@mobile">Back to Top <span class="wbIcon-arrow-up"></span></a>
+            </section>
+
+
+
+            <aside class="modal card" id="game-modal">
+                <div class="modal__dialog">
+                    <a href="#" class="card__close" data-dismiss-element>
+                        <span class="wbIcon-close"></span>
+                    </a>
+                    <header class="card__header">
+                        <h3 class="card__title">
+                    <span class="card__icon wbIcon-edit"></span>
+                    Archipelago
+                </h3>
+                    </header>
+                    <div class="modal__content modal__content--simple">
+                        <img src="assets/images/casino/casino.jpg" alt="Phoenix Club" class="game-card__img" />
+                    </div>
+                </div>
+            </aside>
+
+          <!--# include file="_footer.shtml" -->
+
+        </main>
+        <aside class="chatbox card" id="chatbox">
+            <a href="#" class="card__close" data-dismiss-element>
+                <span class="wbIcon-minus"></span>
+            </a>
+            <header class="card__header">
+                <h3 class="card__title">
+                    <span class="card__icon wbIcon-edit"></span>Support
+                </h3>
+            </header>
+            <div class="chatbox__content">
+                <p class="chatbox__system-message">Sorry, we aren't online at the moment. Leave a message and we’ll get bact to you.</p>
+
+                <form class="chatbox__form">
+                    <fieldset>
+                        <ol>
+                            <li class="chatbox__form__step">
+                                <label for="" class="chatbox__label">Hello there!</label>
+                                <div class="chatbox__user">
+                                    <span class="chatbox__user__icon wbIcon-user-circled"></span>
+                                    <div class="chatbox__user__content">
+                                        <span class="chatbox__user__detail">
+                                            Peter Pan
+                                            <a href="#" class="chatbox__user__action" data-chatbox="edit">
+                                                <span class="wbIcon-edit"></span>
+                                        </a>
+                                        </span>
+                                        <span class="chatbox__user__detail">
+                                            p.pan@yahoo.com
+                                            <a href="#" class="chatbox__user__action" data-chatbox="delete">
+                                                <span class="wbIcon-delete"></span>
+                                        </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="chatbox__form__step">
+                                <label for="chat-user-name" class="chatbox__label">Introduce yourself</label>
+                                <div class="chatbox__input-container">
+                                    <input type="text" class="chatbox__input is-error" placeholder="name" id="chat-user-name">
+                                    <p class="form__error">please provide a valid email</p>
+                                </div>
+                                <div class="chatbox__input-container">
+                                    <input type="text" class="chatbox__input" placeholder="email" id="chat-user-email">
+                                </div>
+                            </li>
+                            <li class="chatbox__form__step">
+                                <label for="chat-message-input" class="chatbox__label">Message*</label>
+                                <textarea class="chatbox__textarea" id="chat-message-input" rows="7"></textarea>
+                            </li>
+                            <li class="chatbox__form__step">
+                                <button class="chatbox__btn btn btn--primary">Send Message</button>
+                            </li>
+                        </ol>
+                    </fieldset>
+                </form>
+            </div>
+            <footer class="chatbox__footer">
+                <ul class="chatbox__contact-list">
+                    <li class="chatbox__contact-item">
+                        <span class="wbIcon-email"></span>
+                        <a href="mailto:cs@webet88.com">cs@webet88.com</a>
+                    </li>
+                    <li class="chatbox__contact-item">
+                        <span class="wbIcon-phone"></span> 111 111 111
+                    </li>
+                </ul>
+            </footer>
+        </aside>
+    </div>
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar__inner">
+            <ul class="sidebar__list">
+                <li class="sidebar__item sidebar__item--exclusive media--available@tablet">
+                    <a href="#" class="sidebar__link icon-btn">
+                        <span class="wbIcon-exit"></span>
+                        <span class="icon-btn__text">Logout</span>
+                    </a>
+                </li>
+                <li class="sidebar__item sidebar__item--gapped">
+                    <a href="#" class="sidebar__link icon-btn">
+                        <span class="language-selector">
+                            <span class="language-selector-icon"></span>
+                        </span>
+                        <span class="icon-btn__text">Language</span>
+                    </a>
+                </li>
+                <li class="sidebar__item" data-popover-trigger>
+                    <a href="/balances.html" class="sidebar__link icon-btn">
+                        <span class="wbIcon-money-bag-yen"></span>
+                        <span class="icon-btn__text">Balance</span>
+                        <aside class="sidebar__item__popover" data-popover-content>
+                            <ul>
+                                <li class="sidebar__popover__content"><strong>Central Wallet:</strong> 80,450.00</li>
+                                <li class="sidebar__popover__content"><strong>Phoenix Club:</strong> 310,050.00</li>
+                            </ul>
+                        </aside>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="/edit-account.html" class="sidebar__link icon-btn">
+                        <span class="wbIcon-cog"></span>
+                        <span class="icon-btn__text">Settings</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="/deposit.html" class="sidebar__link icon-btn">
+                        <span class="wbIcon-deposit"></span>
+                        <span class="icon-btn__text">Deposit</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="/transfer.html" class="sidebar__link icon-btn">
+                        <span class="wbIcon-transfer"></span>
+                        <span class="icon-btn__text">Transfer</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="/withdraw.html" class="sidebar__link icon-btn">
+                        <span class="wbIcon-withdraw"></span>
+                        <span class="icon-btn__text">WithDraw</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#" class="sidebar__link icon-btn" data-reveal="chatbox">
+                        <span class="wbIcon-chatbox"></span>
+                        <span class="icon-btn__text">Live Chat</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="/contact-us.html" class="sidebar__link icon-btn">
+                        <span class="wbIcon-phone"></span>
+                        <span class="icon-btn__text">Contact Us</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="sidebar__close">
+            <a href="#" class="sidebar__close__btn" data-dismiss-element>
+                X
+            </a>
+        </div>
+    </aside>
+    <script src="assets/js/libs/jquery.1.10.1.js"></script>
+    <script src="assets/js/libs/picturefill.js"></script>
+    <script src="assets/js/libs/jquery.flexslider.js"></script>
+    <script src="assets/js/libs/jquery.li-scroller.1.0.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            weBet.utilities.revealer();
+            weBet.utilities.accordion();
+            weBet.utilities.tabs();
+            weBet.utilities.dropdown();
+            weBet.utilities.sidebarPopover();
+
+            $('.flexslider').flexslider({
+                animation: "slide",
+                slideshow: true,
+                slideshowSpeed: 3000,
+                customDirectionNav: $(".slider__controls a")
+            });
+
+            // $(function(){
+            //     $('#news-ticker').liScroll();
+            // });
+        });
+    </script>
+    <!--# include file="_smartbackend_plugin.shtml" -->
+</body>
+
+</html>

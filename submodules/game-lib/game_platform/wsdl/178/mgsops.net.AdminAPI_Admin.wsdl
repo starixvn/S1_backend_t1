@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://mgsops.net/AdminAPI_Admin" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://mgsops.net/AdminAPI_Admin" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mgsops.net/AdminAPI_Admin/Imports">
+      <xsd:import namespace="http://mgsops.net/AdminAPI_Admin" schemaLocation="mgsops.net.AdminAPI_Admin.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Common" schemaLocation="Orion.Common.xsd" />
+      <xsd:import namespace="http://tempuri.org/" schemaLocation="tempuri.org.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" schemaLocation="schemas.microsoft.com.2003.10.Serialization.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" schemaLocation="Orion.Contracts.VanguardAdmin.DataStructures.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVanguardAdmin2_GetCommitQueueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommitQueueData" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetCommitQueueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommitQueueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetCommitQueueData_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q1:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetRollbackQueueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRollbackQueueData" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetRollbackQueueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRollbackQueueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetRollbackQueueData_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q2:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ManuallyValidateBet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManuallyValidateBet" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ManuallyValidateBet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManuallyValidateBetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ManuallyValidateBet_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q3:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ValidateApiUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUser" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ValidateApiUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ValidateApiUser_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q4:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ValidateApiUserExtended_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUserExtended" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ValidateApiUserExtended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUserExtendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ValidateApiUserExtended_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q5:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetVoidedFundsInPlay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVoidedFundsInPlay" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetVoidedFundsInPlay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVoidedFundsInPlayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetVoidedFundsInPlay_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q6:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetIsVoidedFundsEnabled_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsVoidedFundsEnabled" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetIsVoidedFundsEnabled_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsVoidedFundsEnabledResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetIsVoidedFundsEnabled_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q7:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ProcessVoidedFundsInPlay_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessVoidedFundsInPlay" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ProcessVoidedFundsInPlay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessVoidedFundsInPlayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ProcessVoidedFundsInPlay_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q8:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetGenericQueueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenericQueueData" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetGenericQueueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGenericQueueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetGenericQueueData_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q9:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_RetryGenericQueueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetryGenericQueueData" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_RetryGenericQueueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetryGenericQueueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_RetryGenericQueueData_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q10:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetFailedEndGameQueue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFailedEndGameQueue" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetFailedEndGameQueue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFailedEndGameQueueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetFailedEndGameQueue_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q11:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ManuallyCompleteGame_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManuallyCompleteGame" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ManuallyCompleteGame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManuallyCompleteGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_ManuallyCompleteGame_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q12:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetApiVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApiVersion" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetApiVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApiVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetApiVersion_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q13:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_FlushPendingCashin_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlushPendingCashin" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_FlushPendingCashin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlushPendingCashinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_FlushPendingCashin_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q14:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetProgressiveWinCashinReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgressiveWinCashinReport" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetProgressiveWinCashinReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProgressiveWinCashinReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_GetProgressiveWinCashinReport_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q15:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_RetrieveGameResultAfterReconcile_InputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveGameResultAfterReconcile" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_RetrieveGameResultAfterReconcile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RetrieveGameResultAfterReconcileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin2_RetrieveGameResultAfterReconcile_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q16:CustomFault" />
+  </wsdl:message>
+  <wsdl:portType name="IVanguardAdmin2">
+    <wsdl:operation name="GetCommitQueueData">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetCommitQueueData" message="tns:IVanguardAdmin2_GetCommitQueueData_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetCommitQueueDataResponse" message="tns:IVanguardAdmin2_GetCommitQueueData_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetCommitQueueDataCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetCommitQueueData_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRollbackQueueData">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetRollbackQueueData" message="tns:IVanguardAdmin2_GetRollbackQueueData_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetRollbackQueueDataResponse" message="tns:IVanguardAdmin2_GetRollbackQueueData_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetRollbackQueueDataCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetRollbackQueueData_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManuallyValidateBet">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyValidateBet" message="tns:IVanguardAdmin2_ManuallyValidateBet_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyValidateBetResponse" message="tns:IVanguardAdmin2_ManuallyValidateBet_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyValidateBetCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_ManuallyValidateBet_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApiUser">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUser" message="tns:IVanguardAdmin2_ValidateApiUser_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUserResponse" message="tns:IVanguardAdmin2_ValidateApiUser_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUserCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_ValidateApiUser_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApiUserExtended">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUserExtended" message="tns:IVanguardAdmin2_ValidateApiUserExtended_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUserExtendedResponse" message="tns:IVanguardAdmin2_ValidateApiUserExtended_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUserExtendedCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_ValidateApiUserExtended_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVoidedFundsInPlay">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetVoidedFundsInPlay" message="tns:IVanguardAdmin2_GetVoidedFundsInPlay_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetVoidedFundsInPlayResponse" message="tns:IVanguardAdmin2_GetVoidedFundsInPlay_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetVoidedFundsInPlayCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetVoidedFundsInPlay_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsVoidedFundsEnabled">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetIsVoidedFundsEnabled" message="tns:IVanguardAdmin2_GetIsVoidedFundsEnabled_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetIsVoidedFundsEnabledResponse" message="tns:IVanguardAdmin2_GetIsVoidedFundsEnabled_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetIsVoidedFundsEnabledCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetIsVoidedFundsEnabled_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVoidedFundsInPlay">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ProcessVoidedFundsInPlay" message="tns:IVanguardAdmin2_ProcessVoidedFundsInPlay_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ProcessVoidedFundsInPlayResponse" message="tns:IVanguardAdmin2_ProcessVoidedFundsInPlay_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ProcessVoidedFundsInPlayCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_ProcessVoidedFundsInPlay_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericQueueData">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetGenericQueueData" message="tns:IVanguardAdmin2_GetGenericQueueData_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetGenericQueueDataResponse" message="tns:IVanguardAdmin2_GetGenericQueueData_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetGenericQueueDataCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetGenericQueueData_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetryGenericQueueData">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetryGenericQueueData" message="tns:IVanguardAdmin2_RetryGenericQueueData_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetryGenericQueueDataResponse" message="tns:IVanguardAdmin2_RetryGenericQueueData_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetryGenericQueueDataCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_RetryGenericQueueData_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFailedEndGameQueue">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetFailedEndGameQueue" message="tns:IVanguardAdmin2_GetFailedEndGameQueue_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetFailedEndGameQueueResponse" message="tns:IVanguardAdmin2_GetFailedEndGameQueue_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetFailedEndGameQueueCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetFailedEndGameQueue_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManuallyCompleteGame">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyCompleteGame" message="tns:IVanguardAdmin2_ManuallyCompleteGame_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyCompleteGameResponse" message="tns:IVanguardAdmin2_ManuallyCompleteGame_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyCompleteGameCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_ManuallyCompleteGame_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApiVersion">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetApiVersion" message="tns:IVanguardAdmin2_GetApiVersion_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetApiVersionResponse" message="tns:IVanguardAdmin2_GetApiVersion_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetApiVersionCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetApiVersion_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FlushPendingCashin">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/FlushPendingCashin" message="tns:IVanguardAdmin2_FlushPendingCashin_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/FlushPendingCashinResponse" message="tns:IVanguardAdmin2_FlushPendingCashin_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/FlushPendingCashinCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_FlushPendingCashin_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgressiveWinCashinReport">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetProgressiveWinCashinReport" message="tns:IVanguardAdmin2_GetProgressiveWinCashinReport_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetProgressiveWinCashinReportResponse" message="tns:IVanguardAdmin2_GetProgressiveWinCashinReport_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetProgressiveWinCashinReportCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_GetProgressiveWinCashinReport_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveGameResultAfterReconcile">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetrieveGameResultAfterReconcile" message="tns:IVanguardAdmin2_RetrieveGameResultAfterReconcile_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetrieveGameResultAfterReconcileResponse" message="tns:IVanguardAdmin2_RetrieveGameResultAfterReconcile_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetrieveGameResultAfterReconcileCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin2_RetrieveGameResultAfterReconcile_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

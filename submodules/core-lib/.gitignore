@@ -1,0 +1,6 @@
+.DS_Store
+*.code-workspace
+application/logs
+application/models/base_model.php
+application/libraries/vendor/bin
+

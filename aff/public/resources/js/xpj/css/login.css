@@ -1,0 +1,168 @@
+#top-login-box {
+    position: relative;
+    margin: 38px 0;
+}
+
+#top-login-box form {
+    margin: 0;
+}
+
+#main-content .content-inner {
+    min-height: 285px;
+}
+
+.top-login .login-top {
+    width: 243px;
+    height: 108px;
+}
+
+#main-content .content-inner .index-inner-list {
+    float: left;
+    position: relative;
+    background: url(/xpj/images/shared/roombg.png) 0 0 no-repeat;
+    width: 252px;
+    height: 292px;
+}
+
+.top-login .login-top #btn-top-register {
+    width: 120px;
+    height: 107px;
+    background: url(/xpj/images/cn/loginbox/btn_joinus.png) center center no-repeat;
+}
+
+.top-login .login-top #btn-top-try {
+    width: 123px;
+    height: 108px;
+    background: url(/xpj/images/cn/loginbox/btn_freedemo.png) center center no-repeat;
+}
+
+.top-login .inlogin {
+    margin: -1px 0 0 0;
+    float: left;
+    width: 243px;
+    height: 319px;
+    background: url(/xpj/images/cn/loginbox/loginBG1.png) center center no-repeat;
+}
+
+.top-login #loginbox-title {
+    background: url(/xpj/images/cn/loginbox/loginTITLE.png) 0 0 no-repeat;
+    width: 110px;
+    height: 18px;
+    margin: 15px 0px 5px 15px;
+}
+
+.top-login #top-btn a {
+    width: 221px;
+    height: 48px;
+    margin: 0 5px 0 0;
+    box-shadow: none;
+    border-radius: 0;
+    display: block;
+}
+
+.top-login #top-btn .btn-login {
+    background: url(/xpj/images/cn/loginbox/btn_login.png) center center no-repeat;
+}
+
+.top-login #top-btn .btn-register {
+    background: url(/xpj/images/cn/loginbox/btn_register.png) center center no-repeat;
+    margin-top: 5px;
+}
+
+.top-login .inlogin .forgot-password {
+    margin: 13px 13px 0 0;
+    font-size: 13px;
+    color: #2a180e;
+    line-height: 22px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.top-login #top-btn a {
+    width: 221px;
+    height: 48px;
+    margin: 0 5px 0 0;
+    box-shadow: none;
+    border-radius: 0;
+    display: block;
+}
+
+.top-login .inlogin .meta {
+    margin: 0 0 0 10px;
+    position: relative;
+}
+
+.top-login input[type='text'], .top-login input[type='password'] {
+    background: url(/xpj/images/textbg.png) 0 4px no-repeat;
+    width: 219px;
+    height: 40px;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    margin: 1px 0 0 2px;
+    color: #2a180e;
+}
+
+.top-login #top-btn {
+    float: left;
+    margin: 10px 0 0 11px;
+}
+
+#main-content .content-inner .index-inner-list .gameroom-image {
+    margin: 24px auto 13px 17px;
+}
+
+#main-content .content-inner .index-inner-list .gameroom-title {
+    width: 120px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+#main-content .content-inner .index-inner-list .gameroom-line {
+    border-bottom: 1px solid #4d220c;
+    width: 204px;
+    margin: 6px auto 17px;
+}
+
+#main-content .content-inner .live-01 .gameroom-title {
+    background: url(/xpj/images/cn/roomT01.png) 0 0 no-repeat;
+}
+
+#main-content .content-inner .live-02 .gameroom-title {
+    background: url(/xpj/images/cn/roomT01-07.png) 0 0 no-repeat;
+}
+
+#main-content .content-inner .bbin .gameroom-title {
+    background: url(/xpj/images/cn/roomT03.png) 0 0 no-repeat;
+    width: 136px;
+}
+
+#main-content .content-inner .micg .gameroom-title {
+    background: url(/xpj/images/cn/roomT04.png) 0 0 no-repeat;
+}
+
+#main-content .content-inner .index-inner-list ol {
+    position: relative;
+    width: 210px;
+    margin: 0 auto;
+}
+
+#main-content .content-inner .index-inner-list ol li {
+    float: left;
+}
+
+#main-content .content-inner .index-inner-list ol li a {
+    height: 40px;
+    width: 101px;
+    display: inline-block;
+}
+
+#main-content .content-inner .btn-game-rule {
+    background: url(/xpj/images/cn/btn_rule.png) center center no-repeat;
+    margin: 0 8px 0 0;
+}
+
+#main-content .content-inner .btn-game-start {
+    background: url(/xpj/images/cn/btn_enter.png) center center no-repeat;
+}
+

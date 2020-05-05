@@ -1,0 +1,43 @@
+body {
+    background-color: transparent;
+}
+
+.game-item {
+    height: 240px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    width: 220px;
+    margin-left: 0px;
+    margin-right: -20px;
+    margin-bottom: -25px
+}
+
+.game-details {
+    overflow: hidden;
+    position: relative;
+    background-color: #282D36;
+    color: white;
+}
+
+.game-name {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.game-image {
+    height: 160px;
+    width: 100%;
+}
+
+.game-action {
+    margin-top: 5px;
+}
+
+#filter-1 {
+    display: none;
+}
+
+.hbcontainer {
+  padding-right: 15px;
+  padding-left: 15px;
+}

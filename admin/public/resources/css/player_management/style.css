@@ -1,0 +1,408 @@
+    .modal-attach-proof .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 3;
+        left: 0;
+        top: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgb(0,0,0,0.96);
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+
+    .modal-attach-proof .overlay .img-info{
+        margin-top: 10%;
+        padding: 20px 20px 0 20px;
+    }
+    .modal-attach-proof .overlay .img-info label{
+        color: #c5c5c5;
+        font-size: 14px;
+    }
+    .modal-attach-proof .overlay .img-info span{
+        color: #fff;
+        margin-left: 10px;
+    }
+    .modal-attach-proof .overlay a {
+        padding: 5px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+    }
+    .modal-attach-proof .overlay a:hover, .overlay a:focus {
+        color: #f1f1f1;
+    }
+    .modal-attach-proof .overlay .closebtn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 40px;
+        height: 40px;
+        width: 40px;
+        padding: 0;
+        text-align: center;
+        line-height: 40px;
+    }
+    .modal-attach-proof .overlay .img_container{
+        position: relative;
+        height: 400px;
+        text-align: center;
+        padding: 15px 0;
+        background: rgba(0,0,0,1);
+        margin-bottom: 15px;
+    }
+    .modal-attach-proof .overlay .img_container img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .modal-attach-proof .modal-header{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    .modal-attach-proof .modal-footer{
+        display: none;
+    }
+
+    .modal-attach-proof .attach-docu{
+        margin: 0;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body{
+        padding: 10px;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-container{
+        width: 40%;
+        float: left;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-container .multi-img{
+        float: left;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        background: #e8e8e8;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .multi-img img{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .single-img{
+        width: 150px;
+        height: 104px;
+        position: relative;
+        margin: 0 auto;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .single-img img{
+        width: 150px;
+        height: 104px;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .single-img .add-image-btn{
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #fff;
+        font-size: 20px;
+        color: #c0c0c0;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-container .multi-img .add-image-btn{
+        width: 100%;
+        height: 100%;
+        border: 0;
+        color: #b2b2b2;
+        background: transparent;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-container .single-img .add-image-btn span{
+        width: 100%;
+        display: block;
+        font-size: 12px;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-container .multi-img:hover .image-on-hover,
+    .modal-attach-proof .attach-docu .panel-body .image-container .single-img:hover .image-on-hover{
+        display: block;
+        background: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .image-on-hover{
+        display: none;
+        transition: all 1s ease;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        height: 100%;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .delete-btn{
+        background: #f04124;
+        border: 0;
+        color: #fff;
+        width: 20px;
+        padding: 0;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-container .zoom-btn{
+        background: #008cba;
+        border: 0;
+        color: #fff;
+        width: 20px;
+        padding: 0;
+        font-weight: normal;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-description{
+        width: 60%;
+        float: left;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-description input[type="file"] {
+        display: none;
+    }
+    .modal-attach-proof .attach-docu .panel-body .image-description .custom-file-upload {
+        border: 1px solid #5bc0de;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        border-radius: 3px;
+        background: #5bc0de;
+        font-size: 10px;
+        color: #fff;
+        width: 40%;
+        text-align: center;
+        float: left;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-description select{
+        width: 58%;
+        float: left;
+        margin-left: 2%;
+        border: 1px solid #d5d5d5;
+        font-size: 12px;
+        height: 29px;
+        border-radius: 3px;
+    }
+
+    .modal-attach-proof .attach-docu .panel-body .image-description textarea{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        float: left;
+        margin-top: 5px;
+        height: 64px;
+        border: none;
+        background: #e8e8e8;
+        border-radius: 3px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .modal-attach-proof .title-docu{
+        margin-bottom: 0;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: normal;
+        color: #686868;
+        margin-top: 10px;
+    }
+
+    .modal-attach-proof .save-btn{
+        background: #43ac6a;
+        border: 0;
+        color: #fff;
+        font-size: 12px;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        display: block;
+        margin-top: 5px;
+        border-radius: 3px;
+    }
+
+    .modal-attach-proof .view-kyc-btn,
+    .modal-attach-proof .view-kyc-btn:hover{
+        background: #f04124;
+        border: 0;
+        color: #f1f1f1;
+        font-size: 10px;
+        text-transform: uppercase;
+        padding: 5px 10px;
+        display: block;
+        margin-top: 5px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        text-decoration: none;
+        width: auto;
+        position: absolute;
+        top: 0;
+        right: 20px;
+    }
+
+    .image-on-hover{
+        padding: 0 15px;
+    }
+
+    .image-on-hover button{
+        border: 1px solid rgba(255,255,255,0.3);
+        color: #919191;
+        background: transparent;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .image-on-hover button.active{
+        border: 1px solid rgba(255,255,255,0.3);
+        color: #fff;
+        background: transparent;
+        padding: 5px 10px;
+        border-radius: 5px;
+    }
+
+    .tooltip{
+        min-width: 90px;
+    }
+
+    .footer th.total-cell {
+        border-bottom: 1px solid #70404040;
+    }
+
+    .footer th.total-cell span.total-none {
+        color: #70404040;
+    }
+
+    /* OGP-13367 "All Player" search function need to allow search DOB without year */
+    .input-group-affix {
+        margin: auto 20px;
+    }
+    .input-group-affix:first-child {
+        margin: auto;
+    }
+
+    /* for OGP-15214, hide "^" icon of daterangepicker's container. */
+    .field_search_dob_container.daterangepicker.opensright:before,.field_search_dob_container.daterangepicker.opensright:after {
+        display: none;
+    }
+
+    .dataTables_wrapper .dataTable-instance {
+        width: 99%; /* display the right border while 100% width as screen. */
+    }
+
+    /* OGP-14711 Modify new layout of the "Player List": SBE_Player > All Player */
+    .btn-group.open > .dropdown-menu > .active > a {  /* for me update to "Exclude players with selected tags". */
+        background-color: #C9C9C9;/* Pls make sure Dont affect "Column visibility" */
+    }
+    label.control-label { /* Patch, to adjust height of DOB for dynamic layout inputs. */
+        margin-bottom: 0px;
+    }
+
+    /* DFE-5460 */
+    .collapse-btn{
+        background: #fff;
+        outline: 0 !important;
+        box-shadow: none !important;
+        position: relative;
+        /* padding: 0 0 20px; Disable/Patch for too close btn, OGP-15373   */
+    }
+    .collapse-btn:after{
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 30px;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\f0d8';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 42px;
+        background: #fff;
+        padding-left: 10px;
+    }
+    .collapse-btn.collapsed:after{
+        content: '\f0d7';
+    }
+    .btn-conditions{
+        background: #fff;
+        border-radius: 5px;
+        border-color: #ccc;
+        margin-bottom: 15px;
+        font-size: 12px;
+        position: relative;
+    }
+    .btn-conditions:focus { /* @todo for Designer update. Ref. to https://stackoverflow.com/a/21092084*/
+        outline:0 !important;
+    }
+    .btn-conditions:hover,
+    /* .btn-conditions:focus, @todo for Designer update disable. */
+    .btn-conditions.active{
+        background: #6f6f6f;
+        color: #fff;
+        box-shadow: none;
+    }
+    .btn-conditions.active:after{
+        font: normal normal normal 14px/1 FontAwesome;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: '\f057';
+        font-size: 19px;
+        display: block;
+        position: absolute;
+        right: 6px;
+        top: 0;
+        line-height: 34px;
+    }
+
+    /* Patch for DFE-6036:Adjust Player search list layout: SBE_Player List(New layout) */
+    .row{
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+    }
+    .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12{
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+    .btn-conditions{
+        text-align: left;
+    }
+
+    /* Patch for too close btn, OGP-15373  */
+    .collapse-btn {
+        padding-bottom: 0;
+    }
+    #advancedConditions {
+        padding-top: 30px;
+    }
+    .collapse-btn hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .collapse-btn:after{
+        height: 100%;
+    }
+    .advanced-conditions-panel .text-center {
+        padding-top: 30px;
+    }
+
+    /* Patch for applied new_sbe_color, check "General Conditions" height. */
+    #search-form_new .panel-heading {
+        height: unset;
+    }
+    /* Patch for OGP-15574 */
+    .advanced-conditions-panel .col-total_balance {
+        border: #ccc solid 1px;
+    }
+    .col-dob .form-group {
+        margin-bottom: 13px; /* Patch for OGP-15574, the inputs layout of "Advanced Conditions" while disable previous input of DOB  on windows OS. */
+    }

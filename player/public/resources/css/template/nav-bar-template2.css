@@ -1,0 +1,25 @@
+.navbar-inverse .navbar-nav > li > a {  
+  padding: 5px 50px 5px 50px;
+  color: #fff;
+  border:1px solid #f93740;
+  border-top: 0px;
+  border-bottom: 0px;
+  height: 30px;
+  background-color: #b30e15;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: #980108;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  font-weight: bolder;
+  background-color: #980108;
+}
+
+.player-header-info-item{
+  text-align: left;
+}

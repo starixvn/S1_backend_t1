@@ -1,0 +1,1926 @@
+/**
+ * Don't let the designer change this file. Designer only need to modify www to apply new style.
+ *
+ * @authr Elvis Chen<elvis.php.tw@tripleonetech.net>
+ */
+@charset "utf-8";
+
+@import "/common/css/common.css?v=7";
+@import "/common/css/bank.css?v=7";
+@import "/common/css/c-icon.css?v=7";
+
+/* ========================================== */
+/* HTML Layout <editor-fold>{{{               */
+/* ========================================== */
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: "Microsoft YaHei", Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select option:disabled {
+    color: silver;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+a, p {
+    text-decoration: none;
+    color: inherit;
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Common Layout <editor-fold>{{{             */
+/* ========================================== */
+.container-fluid {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+}
+
+.panel {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    border: 0;
+    margin-bottom: 0;
+}
+
+.panel-title,
+.panel-heading span,
+.panel-heading a {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    line-height: 18px;
+    color: inherit;
+    font-weight: bold;
+    padding: 10px 0 10px 0;
+    text-align: center;
+}
+
+.panel-body {
+    padding: 0 0 50px;
+    /* height: 830px; */
+}
+
+.modal-body .row,
+.panel-body .row {
+    margin: 0px;
+}
+
+.modal-content * {
+    box-sizing: border-box;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.message-box.in .modal-dialog .modal-content,
+#waiting-modal .modal-dialog .modal-content,
+#summaryModal .modal-dialog .modal-content,
+#alertModal .modal-dialog .modal-content,
+#deposit-confirmation.submit-deposit-modal.in .modal-dialog .modal-content {
+    padding: 0;
+}
+
+.dropdown-menu li[disabled=disabled],
+.dropdown-menu li[disabled=disabled] a {
+    color: silver;
+    cursor: not-allowed;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Player Center Layout <editor-fold>{{{      */
+/* ========================================== */
+.container .header,
+.container-fluid .header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 99;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+
+    background-color: #e83989;
+    border-bottom: 1px solid #e83989;
+}
+
+.container .quickButtonBar,
+.container-fluid .quickButtonBar {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 99;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+.container.kbactive .quickButtonBar,
+.container-fluid.kbactive .quickButtonBar {
+    bottom: -55px;
+}
+
+.container-fluid .row.content {
+    box-sizing: border-box;
+
+    padding-top: 60px;
+    padding-bottom: 55px;
+}
+
+.container .act_menu th,
+.container .act_menu td,
+.container-fluid .act_menu th,
+.container-fluid .act_menu td {
+    border: 1px solid #e5e5e5;
+}
+
+.container-fluid .row.content {
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 55px;
+    height: 100%;
+}
+
+.container-fluid .row.content > .panel {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.quickButtonBar a {
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    width: 25%;
+    height: 60px;
+    display: block;
+    float: left;
+    background: #c5216c;
+    padding: 7px 0;
+    border-left: 0;
+    box-sizing: border-box;
+}
+
+.quickButtonBar a p {
+    margin: 2px 0 0;
+}
+
+.quickButtonBar img {
+    height: 30px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Buttons <editor-fold>{{{                   */
+/* ========================================== */
+.head_back {
+    padding: 15px;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.head_back .back_btnPT {
+    width: 30px;
+    height: 30px;
+    background: url(../img/icons/back_icon.svg) no-repeat;
+    background-size: 100%;
+    /*margin-left: -296px;*/
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Modal, Dialog <editor-fold>{{{             */
+/* ========================================== */
+.modal .modal-dialog {
+    box-sizing: border-box;
+    margin: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#modal_confirmation .modal-dialog {
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#modal_confirmation .modal-dialog .modal-content {
+    border-radius: 0;
+    height: 100%;
+    background: #eee;
+}
+
+#modal_confirmation .modal-dialog .modal-content .modal-footer {
+    border: 0;
+    background: rgba(0, 0, 0, 0.1);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    padding: 0;
+}
+
+#modal_confirmation .modal-content .modal-body {
+    position: relative;
+}
+
+#modal_confirmation .modal-content .modal-body:after {
+    content: "\f1c5";
+    font-family: Font Awesome\ 5 Free;
+    font-size: 110px;
+
+    position: absolute;
+    color: #c1c1c1;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    top: 130px;
+}
+
+#modal_confirmation .modal-content .modal-body:before {
+    content: "\f071";
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    font-size: 30px;
+
+    position: absolute;
+    color: #ffa200;
+    width: 100%;
+    left: 40px;
+    text-align: center;
+    top: 140px;
+    z-index: 1;
+}
+
+#modal_confirmation .modal-content .modal-body center {
+    color: #333 !important;
+    position: absolute;
+    top: 270px;
+    font-size: 18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#modal_confirmation .modal-content .modal-footer .confirmation_btn {
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #6E9200;
+    color: #fff !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#modal_confirmation .modal-content .modal-footer .confirmation_btn.no {
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #8B8B8B;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: none !important;
+}
+
+#alertModal .modal-dialog .modal-content .modal-header .close {
+    width: 20px;
+    height: 20px;
+    float: right;
+    background: url(../mobile/images/x-icon.png) no-repeat;
+    background-size: 100%;
+    margin-top: 14px;
+    margin-right: 0;
+    display: block;
+    overflow: hidden;
+    text-indent: 50px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Player Center Menu <editor-fold>{{{        */
+/* ========================================== */
+.actmain {
+    width: 100%;
+    height: auto;
+    background: #c5216c;
+    margin-top: 0;
+}
+
+.actmain .username {
+    padding-top: 20px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.actmain .username p {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    padding-left: 15px;
+    font-size: 12px;
+}
+
+.actmain .user_msg {
+    padding-right: 40px;
+}
+
+.actmain .user_msg #usermessage {
+    text-align: center;
+    float: right;
+    margin-bottom: 10px;
+    margin-top: -2px;
+    color: #fff;
+}
+
+.actmain .user_msg #usermessage img {
+    height: 20px;
+    width: auto;
+}
+
+.actmain .user_msg #usermessage a,
+.actmain .user_msg #usermessage span {
+    color: inherit;
+}
+
+table.act_menu {
+    width: 100%;
+    height: 200px;
+    border-collapse: collapse;
+}
+
+table.act_menu td {
+    width: 25%;
+    height: 100px;
+    text-align: center;
+    font-size: 14px;
+    color: #282828;
+}
+
+table.act_menu td li {
+    width: 35px;
+    height: 25px;
+    margin: 0 auto;
+    margin-bottom: 5px;
+}
+
+table.act_menu td li img {
+    height: 100%;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Player Center Dashboard <editor-fold>{{{   */
+/* ========================================== */
+.dashboard .banner {
+    height: 20vh;
+}
+
+.dashboard .news {
+    background: #eee;
+    height: 30px;
+}
+
+.dashboard .news span {
+    float: left;
+    background: #e83989;
+    color: #fff;
+    line-height: 30px;
+    font-size: 20px;
+    width: 10%;
+
+    text-align: center;
+}
+
+.dashboard .news .marquee {
+    float: left;
+    width: 90%;
+    height: 30px;
+    border: 0;
+}
+
+.dashboard .fastbet {
+    width: 100%;
+    height: 180px;
+}
+
+.dashboard .fastbet iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.dashboard .widget-banner {
+    height: 50vw; /* aspect ratio 16:8 */
+}
+
+.dashboard .widget-myfavorite .panel-heading {
+    line-height: 35px;
+    text-align: center;
+    background: #461622;
+    font-size: 16px;
+    color: #fff;
+}
+
+.dashboard .widget-myfavorite .panel-body .third-menu-item a {
+    display: block;
+    margin: 10px 2% 0;
+    width: 96%;
+    padding: 0 10px;
+    border-bottom: 1px solid #461622;
+    color: #461622;
+}
+
+.dashboard .widget-myfavorite .panel-body {
+    margin: 0 2%;
+    width: 96%;
+    border-left: 1px solid #eee;
+    border-top: 1px solid #eee;
+}
+
+.dashboard .widget-myfavorite .panel-body:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+.dashboard .widget-myfavorite .panel-body li {
+    width: 33.333333333%;
+    display: block;
+    float: left;
+    padding: 10px 0;
+    text-align: center;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard .widget-myfavorite .panel-body li a {
+    display: block;
+}
+
+.dashboard .widget-myfavorite .panel-body li:nth-child(3n) a {
+    border-color: transparent;
+}
+
+.dashboard .widget-myfavorite .panel-body li a img {
+    border: 1px solid #461622;
+    border-radius: 100%;
+    width: 80%;
+    margin: 5px auto 15px;
+}
+
+.dashboard .widget-myfavorite .panel-body li a .text {
+    display: block;
+    background: #461622;
+    color: #fff;
+    margin: 0 10px;
+    line-height: 2;
+}
+
+.dashboard .widget-myfavorite .panel-body li a .hint {
+    display: block;
+    color: #f00;
+    padding-top: 5px;
+    font-size: 10px;
+}
+
+@media (max-width: 330px) {
+    .dashboard .widget-myfavorite .panel-body li a .text {
+        font-size: 10px;
+    }
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Login <editor-fold>{{{                     */
+/* ========================================== */
+#frm_login .login-banner {
+    height: 80px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Bank <editor-fold>{{{                      */
+/* ========================================== */
+.step .step-icon {
+    background: #737373;
+    padding: 0;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.select-payment-account .bank-list,
+.fmd-step1 .bank-list {
+    height: 15vh;
+    overflow: hidden;
+}
+
+#player-deposit-banks .bank-list {
+    height: 40vh;
+}
+
+.hide-btn,
+.show-btn {
+    border-radius: 90px;
+    cursor: pointer;
+    height: 34px;
+    line-height: 32px;
+    margin: auto;
+    max-width: 180px;
+    padding: 2px 5px;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #b2b2b2;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hide-btn:hover,
+.show-btn:hover {
+    background: #8c8c8c;
+}
+
+#view-bank-acc .bank-list,
+#edit-bank-acc .bank-list,
+#add-bank-acc .bank-list {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Deposit <editor-fold>{{{                   */
+/* ========================================== */
+.hide_deposit_form {
+    display: none; !important;
+}
+
+.see-deposit-btn {
+    border-radius: 90px;
+    cursor: pointer;
+    height: 34px;
+    line-height: 32px;
+    margin: auto;
+    max-width: 180px;
+    padding: 2px 5px;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #b2b2b2;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+#deposit-tab-content-manual .panel {
+    text-align: left;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover,
+.deposit-process-mode-2.select-payment-account button.bank-entry:focus {
+    background-color: rgba(0.7, 0.7, 0.7, 0.6);
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry .active-payment-account-info {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry .active-payment-account-info span {
+    width: 210px;
+    vertical-align: baseline;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry i.fa-caret-down {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover i.fa-caret-down {
+    background-color: #ff9600;
+}
+
+.deposit-process-mode-2.select-payment-account .form-group {
+    position: relative;
+    display: inline-block;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list li {
+    padding: 0px;
+    width: 300px;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list li span {
+    width: 235px;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list.dropdown-show {
+    display: block;
+    background-color: #FFF;
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 300px;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail {
+    display: table;
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail > div {
+    display: table-cell;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail .btn.btn-copy {
+    margin: 0;
+    width: auto;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail p {
+    position: relative;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail .tooltip.top {
+    top: -30px !important;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail #active-payment-account-image {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail #active-payment-account-image img {
+    width: 150px;
+}
+
+.setup-deposit-secure_id input {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.setup-deposit-secure_id button.btn.btn-copy {
+    margin: 0px 0px 0px 15px;
+    float: right;
+}
+
+.setup-deposit-secure_id button.btn.btn-copy:after {
+    clear: both;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content {
+    display: table;
+    width: 100%;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content .other-deposit-bank {
+    display: table-header-group;
+    float: none;
+    text-align: center;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content .other-deposit-bank .btn-container {
+    display: inline;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content .current-deposit-bank {
+    display: table-footer-group;
+    float: none;
+}
+
+.submit-deposit-order {
+    text-align: center;
+}
+
+#submit-done-deposit .deposit-payment-account-detail {
+    position: relative;
+}
+
+.submit-deposit-modal .deposit-payment-account-detail div.row,
+.submit-deposit-modal .deposit-payment-account-detail p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.submit-deposit-modal deposit-payment-account-detail div.row:first-of-type strong,
+.submit-deposit-modal deposit-payment-account-detail p:first-of-type strong {
+    text-transform: uppercase;
+}
+
+.submit-deposit-modal deposit-payment-account-detail [class*="col-xs"] {
+    padding: 0;
+}
+
+#submit-done-deposit .deposit-payment-account-detail .account-image {
+    text-align: center;
+}
+
+#submit-done-deposit .deposit-payment-account-detail .account-image img {
+    width: 200px;
+}
+
+#submit-done-deposit .helper-content {
+    margin-top: 15px;
+}
+
+#form-deposit .dropdown-toggle {
+    width: 260px;
+    font-size: 12px;
+    height: 40px;
+    border-radius: 2px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+}
+
+#form-deposit .dropdown-toggle span {
+    color: #000;
+}
+
+#form-deposit .dropdown-menu {
+    width: 260px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Bank Account <editor-fold>{{{              */
+/* ========================================== */
+.bank_account_container {
+    box-sizing: border-box;
+}
+
+.bank_account_tab_content .tab-pane.active {
+    display: inline-block;
+
+    width: 100%;
+}
+
+.bank_account_tab_content .bank_account_info {
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    border: 2px solid #e0e0e0;
+    box-shadow: 3px 3px 5px hsl(0, 0%, 85%);
+    border-radius: 5%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.bank_account_tab_content .bank_account_info .bank_name,
+.bank_account_tab_content .bank_account_info .bank_account_name,
+.bank_account_tab_content .bank_account_info .bank_account_number {
+    font-size: 100%;
+    line-height: 200%;
+    text-shadow: 0 1px hsl(0, 0%, 95%), 0 2px hsl(0, 0%, 85%);
+}
+
+.bank_account_info.empty {
+    position: relative;
+}
+
+.bank_account_info.empty .btn-info {
+    visibility: hidden;
+}
+
+.bank_account_info.empty .add-bank-account {
+    position: absolute;
+    background-color: inherit;
+    border-width: 0;
+
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.bank_account_info.empty .add-bank-account:hover,
+.bank_account_info.empty .add-bank-account:active {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 10%);
+
+    outline: none;
+}
+
+#bank_account_deposit .bank_account_info.empty .add-bank-account,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account {
+    font-size: 150%;
+    line-height: 40px;
+    height: 33%;
+}
+
+#bank_account_deposit .bank_account_info.empty .add-bank-account .fa,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account .fa {
+    line-height: 40px;
+    vertical-align: top;
+}
+
+#bank_account_deposit .bank_account_info.empty .add-bank-account.alipay,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account.alipay {
+    top: 33%;
+}
+
+#bank_account_deposit .bank_account_info.empty .add-bank-account.wechat,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account.wechat {
+    top: 66%;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Report Layout <editor-fold>{{{             */
+/* ========================================== */
+.report .report_nav {
+    position: static; /* override in the m site defined. */
+
+    margin-bottom: 15px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Attach Document Style <editor-fold>{{{     */
+/* ========================================== */
+.mm_main.attach-docu-modal {
+    width: 100% !important;
+}
+
+.attach-docu ul {
+    width: 95%;
+    margin: 0 2.5%;
+}
+
+.attach-docu ul li {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    margin: 2.5% 0;
+}
+
+.attach-docu ul li .se-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    background-position: center right;
+}
+
+.attach-docu ul li .se-content {
+    position: absolute;
+    z-index: 2;
+    width: 90%;
+    height: 65%;
+    padding: 5%;
+}
+
+.attach-docu ul li .se-content p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+}
+
+.attach-docu ul li .se-content button {
+    background: #505050;
+    color: #fff;
+}
+
+.attach-docu ul li .se-content button.success {
+    background: #6E9200;
+}
+
+.attach-docu ul li .se-content .fa {
+    font-size: 24px;
+    position: relative;
+    top: 6px;
+    color: #c8c8c8;
+}
+
+.attach-docu ul li .se-content .fa.success {
+    color: #6E9200;
+}
+
+.mm_main.attach-docu-modal .file {
+    width: 22.2%;
+    float: left;
+    margin: 1%;
+    height: 80px;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.attach-docu-modal .show_id_docs {
+
+}
+
+.attach-docu-modal .overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #202020;
+    z-index: 9;
+}
+
+.attach-docu-modal .overlay .close-container {
+    width: 100%;
+    height: 48px;
+    background: #ACAEB0;
+}
+
+.attach-docu-modal .overlay .close-container .closebtn {
+    width: 20px;
+    height: 20px;
+    float: right;
+    background: url(../mobile/images/x-icon.png) no-repeat;
+    background-size: 100%;
+    margin-top: 14px;
+    margin-right: 10px;
+    display: block;
+}
+
+.attach-docu-modal .file {
+    position: relative;
+}
+
+.attach-docu-modal .file .unsaved {
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+}
+
+.attach-docu-modal .file .unsaved p {
+    margin-bottom: 0;
+    line-height: 80px;
+    color: #eee;
+}
+
+.attach-docu-modal .file .image-container {
+    cursor: pointer;
+}
+
+.attach-docu-modal .overlay .image-container {
+    height: 250px;
+    width: 100%;
+    padding: 30% 0 50% 0;
+    text-align: center;
+}
+
+.attach-docu-modal .overlay .image-container img {
+    height: 100%;
+    width: auto;
+}
+
+.upload-container {
+    width: 22.2%;
+    float: left;
+    margin: 1%;
+    height: 80px;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #cacaca;
+}
+
+.upload-container .btn-file {
+    text-align: center;
+}
+
+.upload-container .btn-file p {
+    margin-bottom: 0;
+}
+
+.upload-container .custom-file-upload {
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 50px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    float: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: normal;
+    height: 78px;
+}
+
+.upload-container .custom-file-upload i {
+    background-image: url(../mobile/images/x-icon.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    display: block;
+    height: 83px;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-size: 40%;
+    background-position: center center;
+}
+
+.upload-container .custom-file-upload input[type="file"] {
+    display: none;
+}
+
+.attach-docu-modal .submit-container {
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.attach-docu-modal .submit-container .submit-btn {
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #6E9200;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.attach-docu-modal .submit-container .btn-cancel {
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #8B8B8B;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.attach-docu-modal .submit-container .delete-btn {
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #c00000;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.attach-docu-modal .note {
+    color: #c00000;
+    font-size: 14px;
+    font-weight: normal;
+    text-align: left;
+    display: block;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    font-style: italic;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Media Screen <editor-fold>{{{              */
+/* ========================================== */
+@media screen and (max-width: 414px) {
+    .mm_main.attach-docu-modal .file {
+        height: 92px;
+    }
+
+    .upload-container {
+        height: 92px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .mm_main.attach-docu-modal .file {
+        height: 86px;
+    }
+
+    .upload-container {
+        height: 86px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .mm_main.attach-docu-modal .file {
+        height: 82px;
+    }
+
+    .upload-container {
+        height: 82px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mm_main.attach-docu-modal .file {
+        height: 71px;
+    }
+
+    .upload-container {
+        height: 71px;
+    }
+
+    .upload-container .custom-file-upload i {
+        height: 72px;
+    }
+}
+
+.wallet {
+    padding: 10px 10px;
+    border-top: 1px solid #888;
+}
+
+.wallet .text {
+    font-size: 12px;
+    margin-bottom: 0;
+    color: #fff;
+    line-height: 30px;
+}
+
+.wallet .money {
+    font-size: 20px;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.wallet .btn {
+    background: rgba(255, 255, 255, 0.8);
+    border-color: #fff;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Register page <editor-fold>{{{             */
+/* ========================================== */
+#registration_form label {
+    display: none;
+}
+
+#send_sms_verification {
+    border-radius: 0 5px 5px 0;
+    right: 16px;
+    z-index: 1000;
+    width: 40%;
+    height: 40px;
+    top: 0px;
+}
+
+.cstm-mod .modal-body .contact-number.show-dialing-code div:first-child {
+}
+
+.cstm-mod .modal-body .contact-number.show-dialing-code #dialing_code {
+    width: 40%;
+    padding-left: 15px;
+    display: inline-block;
+    float: left;
+}
+
+.cstm-mod .modal-body .contact-number.show-dialing-code #contactNumber {
+    width: 58%;
+    padding-right: 15px;
+    display: inline-block;
+    float: right;
+}
+
+.cstm-mod .modal-body #registration_form .sms-verification-code input[name="sms_verification_code"] {
+    width: 40%;
+    padding-left: 15px;
+    display: inline-block;
+    float: left;
+}
+
+.cstm-mod .modal-body #registration_form .sms-verification-code #send_sms_verification {
+    width: 58%;
+    padding-right: 15px;
+    display: inline-block;
+    float: right;
+}
+
+.red {
+    color: #a80000;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Cashback <editor-fold>{{{                  */
+/* ========================================== */
+
+.cb-mob .leading {
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    border-bottom-left-radius: 50% 6%;
+    border-bottom-right-radius: 50% 6%;
+}
+
+.cb-mob .leading .avail-cb.figure {
+    font-size: 58px;
+    padding-top: 16px;
+    padding-bottom: 5px;
+    text-align: center;
+    color: #fff;
+}
+
+.cb-mob .leading .avail-cb.title {
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+}
+
+.cb-mob .bets-frame {
+    position: relative;
+    width: 285px;
+    height: 65px;
+    top: 25px;
+    margin: 0 auto;
+    z-index: 100;
+    padding: 25px;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: #9999992a 3px 3px 15px 15px;
+}
+
+.cb-mob .bets-frame .bets {
+    display: inline-block;
+    width: 137px;
+    text-align: center;
+}
+
+.cb-mob .bets-frame .bets:last-child {
+    border-left: 1px solid #777;
+}
+
+.cb-mob .bets .figure {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cb-mob .bets .title {
+    font-size: 14px;
+    color: #555;
+}
+
+.cb-mob .following {
+    position: relative;
+    padding-top: 75px;
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.cb-mob .following .cb-period {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 2px 0;
+    color: #555;
+}
+
+.cb-mob .following .cb-period .req-row {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.cb-mob .following .cb-period .req {
+    display: inline-block;
+}
+
+.following .cb-period .req.title {
+    width: 25%;
+}
+
+.cb-mob .following .cb-button {
+    margin: -24px 0 -24px 0;
+}
+
+.cb-mob .following .cb-hist-frame {
+    width: 295px;
+    height: 370px;
+    margin: 10px auto 0 auto;
+    padding: 15px 20px;
+    font-size: 14px;
+    text-align: left;
+    background-color: #fff;
+    color: #555;
+    box-shadow: #9999992a 3px 3px 15px 15px;
+}
+
+.following .cb-button button.disabled {
+    background-color: #ccc;
+    border: none;
+    pointer-events: none;
+}
+
+.following .cb-hist-frame .title {
+    margin: 5px 0 10px 0;
+    font-size: 13px;
+}
+
+.cb-hist-frame .entries .row {
+    height: 50px;
+}
+
+.cb-hist-frame .entries .row.empty {
+    color: #111;
+    text-align: center;
+}
+
+.cb-hist-frame .entries .row div {
+    display: inline-block;
+    font-size: 18px;
+}
+
+.cb-hist-frame .entries .row .vline {
+    position: relative;
+    height: 42px;
+    top: 16px;
+    left: 17px;
+    z-index: 100;
+    border-right: 2px dotted #f6b410;
+}
+
+.cb-hist-frame .entries .row:last-child .vline {
+    border-right: 2px dotted #ffffff00;
+}
+
+.cb-hist-frame .entries .row .dot {
+    position: relative;
+    top: -2px;
+    left: 8px;
+    font-size: 14px;
+    color: #f6b410;
+}
+
+.cb-hist-frame .entries .row .symbols {
+    width: 36px;
+    text-align: right;
+}
+
+.cb-hist-frame .entries .row .amount {
+    width: 80px;
+    text-align: right;
+}
+
+.cb-hist-frame .entries .row .stat {
+    font-size: 13px;
+    margin-right: 40px;
+    float: right;
+}
+
+.cb-hist-frame .entries .row .recv {
+    display: block;
+    font-size: 13px;
+    position: relative;
+    top: -20px;
+    left: 50px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Promotion <editor-fold>{{{                 */
+/* ========================================== */
+.select-promo-category-dropdown {
+    float: right;
+
+    margin: 10px 15px;
+}
+
+.select-promo-category-dropdown .dropdown-toggle {
+    width: 200px;
+}
+
+.select-promo-category-dropdown .dropdown-menu {
+    width: 200px;
+
+    left: auto;
+    right: 0;
+    float: right;
+}
+
+.select-promo-category-dropdown:after {
+    clear: both;
+}
+
+.promotions .pr_show {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 0
+}
+
+.promotions .pr_show .primage {
+    width: 25%;
+}
+
+.promotions .pr_show .primage img {
+    width: 71px;
+    min-height: 53px;
+}
+
+.promotions .pr_show .title {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+    width: 65%;
+    text-indent: 10px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0 5px;
+
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.promotions .pr_show .description {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-indent: 10px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0 5px;
+
+    width: 65%;
+    color: #e50000;
+    font-size: 14px;
+}
+
+.promotions .collapse {
+    background-color: #fff;
+}
+
+.promotions .collapse .panel-body {
+    border-top: 1px solid #ddd;
+}
+
+.promotions .collapse .panel-body .action {
+    padding-top: 10px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Player Center iframe <editor-fold>{{{      */
+/* ========================================== */
+iframe.iframe-container {
+    border: none;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Widget - My Favorite Game <editor-fold>{{{ */
+/* ========================================== */
+.panel-heading .show_player_favorite_modal {
+    padding: 5px;
+    font-size: 200%;
+}
+
+#myfavoriteModal.modal {
+    top: 0;
+}
+
+#myfavoriteModal .modal-content {
+    padding: 0;
+}
+
+#myfavoriteModal .modal-dialog {
+    margin: 0;
+    padding: 0;
+
+    overflow-y: initial !important;
+
+    border: 0 solid rgba(0, 0, 0, .2);
+}
+
+#myfavoriteModal .player-myfavorite-count-hint-text {
+    padding-left: 15px;
+}
+
+#myfavoriteModal .modal-body {
+    background-color: #eee;
+    padding: 0px;
+    overflow-y: auto;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry {
+    position: relative;
+
+    padding: 0;
+
+    float: left;
+
+    text-align: center;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+    width: 33%;
+    height: 35vw;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry.active {
+    background-color: #d9edf7;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry .game-icon {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    text-align: center;
+    width: 100%;
+    height: 28vw;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry .game-icon img {
+    padding-top: 5%;
+    height: 85%;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry .game-text {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    text-align: center;
+    width: 100%;
+    height: 7vw;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry .game-text span {
+    display: inline-block;
+    width: 90%;
+    overflow: hidden;
+    background: #461622;
+    color: #fff;
+    line-height: 6vw;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry .game-flag-favorite {
+    position: absolute;
+
+    top: 1vw;
+    left: 1vw;
+
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+
+    font-size: 6vw;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry.active .game-flag-favorite {
+    color: #fb0;
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry .game-flag-favorite::before {
+    content: "\f006";
+}
+
+#myfavoriteModal .modal-body .game-list .game-entry.active .game-flag-favorite::before {
+    content: "\f005";
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Security <editor-fold>{{{                  */
+/* ========================================== */
+#security .title-text {
+    margin-top: 5px;
+    color: #db374f;
+}
+
+#security .progress-bar {
+    background: #6E9200;
+}
+
+#security .security-list > div {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+#security .security-list > div > .se-bg {
+    background-position: right;
+    background-size: cover;
+    border-color: #fff;
+    height: 100px;
+}
+
+#security .security-list > div > .se-content {
+    height: 100px;
+    margin-top: -100px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#security .security-list > div > .se-content.completed {
+    background: none;
+}
+
+#security .se-content p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+
+    color: #000;
+}
+
+#security .se-content i {
+    color: #cecece;
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#security .se-content.completed i {
+    color: #6E9200;
+}
+
+#security .se-content button,
+#security .se-content button:focus {
+    border: 0;
+    width: 144px;
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+    color: #fff;
+    font-size: 12px;
+    outline: 0;
+    transition: all .3s ease;
+}
+
+#security .se-content.completed button {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+}
+
+#security .se-content button:hover {
+    background: linear-gradient(to top, #ce4858 0%, #f96175 100%);
+    color: #fff;
+}
+
+#security .se-content.completed .verified-btn {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+    border: 0;
+    width: 120px;
+    font-size: 12px;
+    outline: 0;
+    padding: 6px 12px;
+    cursor: default;
+}
+
+#security .se-content .link-btn {
+    color: #db374f;
+    font-size: 12px;
+    border-left: 1px solid #cecece;
+    padding-left: 8px;
+    margin-left: 5px;
+}
+
+#security .se-content .link-btn:focus {
+    outline: 0;
+    color: #ff9600;
+}
+
+.security-modal,
+.security-modal p,
+.security-modal span {
+    color: #000;
+}
+
+.security-modal .btn-file {
+    margin-top: 15px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+    color: #fff;
+}
+
+.security-modal .btn-file:hover {
+    background: linear-gradient(to top, #ce4858 0%, #f96175 100%);
+    color: #fff;
+}
+
+.security-modal .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.security-modal label {
+    font-weight: 400;
+}
+
+.security-modal input {
+    margin-bottom: 15px;
+}
+
+.security-modal select {
+    margin-bottom: 15px;
+}
+
+.security-modal .modal-title {
+    color: #db374f;
+}
+
+.security-modal .modal-footer {
+    text-align: left;
+}
+
+.security-modal .modal-footer .submit-btn {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.security-modal .modal-footer .submit-btn:hover {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+}
+
+.security-modal .modal-footer button {
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+    color: #fff;
+    border: 0;
+    max-width: 150px;
+    transition: all .3s ease;
+}
+.security-modal .modal-footer button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.security-modal .modal-footer button:hover {
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Message <editor-fold>{{{                   */
+/* ========================================== */
+#messages {
+    box-sizing: content-box;
+}
+
+#messages>.panel-heading {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#messages .msg-tool-bar button.form-control {
+    width: 10vw;
+    height: 10vw;
+    background: linear-gradient(to top, #212121 0%, #6b6b6b 100%);
+    color: #fff;
+    padding: 0;
+    margin-left: 5px;
+    border: 0;
+}
+#messages .msg-tool-bar button.form-control:hover {
+    background: linear-gradient(to top, #0059B1 0%, #2693ff 100%);
+}
+
+#messages .msg-tool-bar .form-control img {
+    max-width: 26px;
+}
+
+#messages form.form-inline {
+    display: flex;
+}
+
+#messages form.form-inline > div:first-child {
+    display: flex;
+    flex: 80%;
+}
+
+#messages form.form-inline .form-group input.form-control {
+    flex: 80%;
+}
+
+#messages form.form-inline .form-group button.scarch-btn {
+    height: 40px;
+}
+
+#messages form.form-inline .form-group button.msg-btn {
+    height: 40px;
+}
+
+#messages .msg-btn {
+    position: relative;
+}
+
+#messages .msg-btn .tip-top {
+    display: none;
+}
+
+#messages .msg-btn:hover .tip-top {
+    display: block;
+}
+
+/* }}}</editor-fold> */

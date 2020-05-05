@@ -1,0 +1,162 @@
+/*-- Security --*/
+#security .progress-bar{
+	background-color: $security-progress-bar;
+}
+.progress-num{
+	font-size: 12px;
+	margin-bottom: 0;
+	font-weight: 600;
+}
+.row.security-list{
+	margin: 0 -15px;
+}
+.security-list>div{
+	height: 100px;
+	margin-bottom: 20px
+}
+.security-list>div>.se-bg{
+	background-position: right;
+	background-size: cover;
+	border-color: #fff;
+	height: 100px;
+}
+.security-list>div>.se-content{
+	height: 100px;
+	margin-top: -100px;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.5);
+}
+.security-list>div>.se-content.completed{
+	background: none;
+}
+.se-content p{
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+.se-content button,
+.se-content button:focus{
+  border: 0;
+  width: 144px;
+	background: $security-button-bg;
+	color: $white;
+	font-size: 12px;
+	outline: 0;
+}
+.se-content.completed button{
+	background: $security-completed-button-bg;
+	color: $white;
+}
+.se-content button:hover{
+	background: $security-button-bg-hover;
+	color: $white;
+}
+.se-content.completed .verified-btn {
+	background: $security-verified-button-bg;
+	color: $white;
+  border: 0;
+	width: 120px;
+  font-size: 12px;
+  outline: 0;
+  padding: 6px 12px;
+	cursor: default;
+}
+.se-content .link-btn {
+  color: $security-link-color;
+	font-size: 12px;
+	border-left: 1px solid #cecece;
+	padding-left: 8px;
+	margin-left: 5px;
+}
+.se-content .link-btn:focus {
+	outline: 0;
+	color: #ff9600;
+}
+#security .title-text {
+  color: $security-text-color;
+}
+.se-content i{
+	color: #cecece;
+	font-size: 30px;
+	vertical-align: middle;
+	margin-left: 5px;
+}
+.se-content.completed i{
+	color: $security-check-bg;
+}
+
+.security-modal .btn-file {
+	margin-top: 15px;
+}
+.security-modal label {
+	font-weight: 400;
+}
+.security-modal input {
+	margin-bottom: 15px;
+}
+.security-modal select {
+	margin-bottom: 15px;
+}
+.security-modal .modal-title {
+  color: $security-modal-text-color;
+}
+.security-modal .modal-footer {
+	text-align: left;
+}
+.security-modal .modal-footer .submit-btn {
+  background: $security-modal-submit-button-bg;
+}
+.security-modal .modal-footer button {
+  background: $security-modal-button-bg;
+	color: $white;
+  border: 0;
+	max-width: 150px;
+  &:focus {
+    outline: 0;
+    box-shadow: none;
+  }
+}
+.files-uploaded {
+	margin-top: 15px;
+}
+.files-uploaded .file {
+	height: 60px;
+	margin-right: 10px;
+	width: 60px;
+	display: inline-block;
+	position: relative;
+}
+.files-uploaded .file button {
+	position: absolute;
+  right: -8px;
+  border: 0;
+  border-radius: 100%;
+  background: #fff;
+  height: 18px;
+  width: 18px;
+  padding: 0;
+  line-height: 16px;
+  text-align: center;
+}
+.files-uploaded .file img {
+	max-width: 60px;
+}
+
+#security-loginpassword .collapse {
+	margin-top:20px;
+}
+#security-withdrawal .panel {
+	box-shadow: none;
+}
+#security-withdrawal .panel-default {
+	border: 0;
+}
+#security-withdrawal .panel-default .panel-body {
+  border-top: 1px solid #ddd;
+	margin-top: 15px;
+}
+#security-withdrawal .panel-default>.panel-heading {
+	background-color: #fff;
+	border: 0;
+	padding: 0 15px;
+}

@@ -1,0 +1,5 @@
+# Ensure shell script uses LF
+*.conf  eol=lf
+*.sh    eol=lf
+*.yml   eol=lf
+Dockfile* eol=lf

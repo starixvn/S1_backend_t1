@@ -1,0 +1,48 @@
+/* table heading */
+.tbl-heading{
+	color: #969696;
+	font-size: 15px;
+}
+
+.tbl-gamename{
+	color: #2f3943;
+	font-size: 18px;
+}
+
+.tbl-gameearningsdata{
+	color: #333;
+	font-size: 12px;
+}
+
+.tbl-heading-title{
+	color: #333;
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 20px;
+	margin-top: 30px;
+}
+
+.tab-pane{
+	margin: 20px;
+}
+
+/* button */
+.reportActionBtn{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.reportActionBtn:link{
+	text-decoration: none;
+}
+
+.table-td{
+	word-break:break-all;
+}
+
+.monthly-report-box{
+	line-height: 82px;
+	height: 64px;
+}
+
+

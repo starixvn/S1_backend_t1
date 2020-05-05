@@ -1,0 +1,11 @@
+span.errors {
+    padding: 0;
+    margin: 0;
+    float: left;
+    font-size: 11px;
+    color: red;
+}
+
+.nopadding {
+    padding: 0 !important;
+}

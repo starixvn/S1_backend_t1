@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mgsops.net/AdminAPI_Achievements" elementFormDefault="qualified" targetNamespace="http://mgsops.net/AdminAPI_Achievements" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.Achievements.DataStructures" schemaLocation="Orion.Contracts.Achievements.DataStructures.xsd" />
+  <xs:element name="GetServerAchievements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Contracts.Achievements.DataStructures" minOccurs="0" name="request" nillable="true" type="q1:GetServerAchievementsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerAchievementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Contracts.Achievements.DataStructures" minOccurs="0" name="GetServerAchievementsResult" nillable="true" type="q2:ArrayOfGetAchievementsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,139 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>Login Page</title>
+<script type="text/javascript">
+function dopageloaded(){
+    window.location.href='htcmd:pageloaded'; 
+}
+</script>
+<script type="text/javascript">
+
+function login(){
+
+window.location.href='htcmd:login?username=' + 'dw' + document.getElementById('username').value + '&password=' + document.getElementById('password').value + '';
+
+return false;
+}
+</script><style type="text/css"></style>
+<style>
+html, body { overflow: hidden!important; color: #DFB978; background:url(casino-background.jpg);background-size:cover;}
+.nr{ width: 470px; height: auto; margin-top: 19%;margin-left:auto; margin-right:auto;background:rgba(0,0,0,0.6);padding:25px;padding-bottom:10px;overflow:auto;border-radius:5pt;}
+.logo { background:url(logo-2.png) no-repeat; width: 150px; height: 150px; float:left;background-size:100% 100%;}
+.logo2{width: 270px; height: 50px; background: url(logo2.png) no-repeat; float: left; margin-bottom: 10px; margin-left: 15px; margin-top:15px;}
+.login_list{width: 300px; height: 40px; line-height: 40px; margin-top:5px; float:right;  }        
+#username{ border:none; width:200px; height:30px; text-align:left; background:#2d0f0f;  color:#a3a1a1; float:left;margin-left:5px; border:1px #532422 solid; background:#240c0d;}
+#password{ border:none; width:200px; height:30px; text-align:left; background:#2d0f0f;  color:#a3a1a1; float:left;margin-left:5px; border:1px #532422 solid; background:#240c0d;}
+.usenametext{width:60px; line-height: 25px; font-size: 18px; color: white; float: left;  white-space:nowrap;}
+.passwordtext{width:60px; line-height: 25px; font-size: 18px; color: white; float: left;}
+.button1{height:40px;width:140px;font-size: 100%; float: left;  margin-top: 100px; margin-left: -235px; background: #ffa800; color:#3c1515; font-size:18px; font-weight: bold; text-align:center; display: inline-block; appearance: none; cursor: pointer; border: none; border-radius:0.4em;}
+.button1:hover{ background:#d28807;}
+.gg_bg{width: 100%; height: 25px; background:rgba(0, 0, 0, 0.2);  float: left;}
+.gg{width: 70%; height: 25px; float: left; margin-left: 12%;  }
+.gg_text{width: 60%; height: 25px; float: left; margin-left:7%; margin-top: 3px; position: absolute; }
+.gg_text li{list-style: none; float: left; font-size: 14px;}
+.ggicon{float: left; margin-top: 6px;}
+#annoceli{
+        width:100%;
+        float:left;
+        overflow:hidden;
+        line-height: 25px;
+    }
+        #annoceli ul{
+            width:10000px;
+            margin:0;
+            padding:0;
+            list-style:none;
+
+            animation: myfirst 100s infinite;
+            -moz-animation: myfirst 100s infinite;  /* Firefox */
+            -webkit-animation: myfirst 100s infinite;   /* Safari 和 Chrome */
+            -o-animation: myfirst 100s infinite;    /* Opera */
+        }
+
+        #annoceli ul:hover{
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+
+        #annoceli ul li {
+            float:left;
+            margin-right:50px;
+            padding:0;
+        }
+        #annoceli ul li a{
+            color:#ffffff;
+        }
+        #annoceli ul li a:hover{
+            text-decoration:none;
+        }
+
+
+
+
+@keyframes myfirst
+{
+from {margin-left:0;}
+to {margin-left:-4070px;}
+}
+
+@-moz-keyframes myfirst /* Firefox */
+{
+from {margin-left:0;}
+to {margin-left:-4070px;}
+}
+
+@-webkit-keyframes myfirst /* Safari 和 Chrome */
+{
+from {margin-left:0;}
+to {margin-left:-4070px;}
+}
+
+@-o-keyframes myfirst /* Opera */
+{
+from {margin-left:0;}
+to {margin-left:-4070px;}
+}
+
+input[type="password"]
+{
+  -webkit-text-security: disc;
+}
+</style>
+<style type="text/css"></style></head>
+<body oncontextmenu="return false" onload="dopageloaded()">
+<div class="gg">
+<div class="ggicon"><img align="middle" src="gg.png"></div>
+<div class="gg_text">
+<div id="annoceli">
+<iframe src="http://player.dwyl777.com/pub/announcement" frameborder=0 scrolling=no width="100%" height="18px"></iframe>
+</div>
+</div>
+</div>
+<a href="https://secure.livechatinc.com/licence/8134471/open_chat.cgi" target="_blank">
+<img src="kfbutten.png"></a>
+<div class="nr">
+<div class="logo"></div>
+<div style="width:320px; height:160px;float:left;">
+<!--<div class="logo2"></div>-->
+<form onsubmit='return login();'>
+<div class="login_list">
+<span class="usenametext">用户名: </span>
+<input name="username" align="middle" id="username">
+</div>
+<div class="login_list">
+<span class="passwordtext">密码:</span>
+<input type="password" name="password" align="middle" id="password">
+</div>
+</form></div>
+<input class="button1" type="submit" value="进入游戏" onclick="login()"/>
+
+</div>
+<script>
+document.onkeydown=function(){
+    if(window.event.keyCode=='13'){
+        login();
+    }
+}
+</script>
+</body></html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <script type="text/javascript" src="http://cache.download.banner.greatfortune88.com/integrationjs.php"></script>
+    <!-- <script type="text/javascript" src="https://login.luckydragon88.com/jswrapper/integration.js.php?casino=greatfortune88"></script> -->
+
+    <script type="text/javascript" src="/resources/player/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+<div>正在载入... <a href="javascript:window.location.reload();" class='retry_link' style='display:none'>重试</a> </div>
+<script type="text/javascript">
+
+
+function getParam(val) {
+    var result = "Not found",
+        tmp = [];
+    var items = location.search.substr(1).split("&");
+    for (var index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === val) result = decodeURIComponent(tmp[1]);
+    }
+    return result;
+}
+
+var gameCode=getParam('game_code');
+var lang=getParam('lang');
+var api_play_pt=getParam('api_play_pt');
+var player_url=getParam('player_url');
+var mobile=getParam('mobile');
+
+var ptjs = document.createElement('script');
+ptjs.setAttribute("type","text/javascript");
+ptjs.setAttribute("src", player_url+"/resources/player/pt.js");
+document.body.appendChild(ptjs);
+
+</script>
+
+
+
+</body>
+</html>

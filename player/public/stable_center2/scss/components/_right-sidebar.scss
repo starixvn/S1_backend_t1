@@ -1,0 +1,283 @@
+/*-------------------
+  right side menu
+---------------------*/
+.right-side {
+  position: fixed;
+  right: -275px;
+  top: 150px;
+  z-index: 10;
+  transition: .5s right ease;
+  &.active{
+    right: 0;
+  }
+}
+.right-menu {
+  position: relative;
+  top:240px;
+  float: left;
+  list-style: none;
+  li{
+  	position: relative;
+    height: 42px;
+    width: 40px;
+    a {
+      color: $white;
+      border-radius: 4px 0 0 4px;
+    	display: block;
+    	background: $primary-color;
+    	width: 40px;
+    	height: 40px;
+    	padding: 5px;
+    	margin-bottom: 1px;
+      overflow: hidden;
+      position: absolute;
+      transition: all .6s ease;
+      span {
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.6s ease-in-out;
+      }//end of > span
+    }//end of > a
+  }//end of > li
+}//end of > right-menu
+
+
+.right-menu li.active a span,
+.right-menu li a:hover span {
+  opacity: 1;
+  visibility: visible;
+}
+.right-menu li.active a,
+.right-menu li a:hover{
+  color: $white;
+  background: $primary-color;
+  box-shadow: -3px 0px 3px rgba(150, 150, 150, 0.5);
+  width: 180px;
+  right: 0;
+}
+.right-menu a:hover .tip-left{
+  display: block;
+}
+.right-menu a:hover .tip-left:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -7px;
+  margin-top: -8px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #FF7200;
+  border-width: 8px 0px 8px 7px;
+}
+
+.right-menu .tip-left{
+  display: none;
+  position: absolute;
+  top:0;
+  right: 51px;
+  background-color: #FF7200;
+  color: #fff;
+  height: 40px;
+  line-height: 40px;
+  box-shadow: 2px 2px 2px #d6d6d6;
+  width: 150px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.right-menu li.active .tip-left,
+.right-menu li.active a .tip-left{
+  display: block;
+}
+
+.right-menu li.active a .tip-left:before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -7px;
+  margin-top: -8px;
+  border-style: solid;
+  border-color: transparent;
+  border-left-color: #FF7200;
+  border-width: 8px 0px 8px 7px;
+}
+.right-menu li:nth-last-of-type(-n+2) img {
+  max-width: 24px;
+  margin: 3px;
+}
+
+/*-------------------
+  right side content
+---------------------*/
+
+.right-side.active .right-content{
+  box-shadow: -3px 0px 20px rgba(0, 0, 0, 0.3);
+}
+.right-content{
+  float: left;
+  width: 275px;
+  height: 730px;
+  background: $right-side-bg;
+  padding: 0 17px;
+  z-index: 2;
+  position: relative;
+}
+.right-content h1{
+  color: $right-side-h1-color;
+  font-size: 22px;
+}
+.right-content hr{
+  border-top: 1px solid $right-side-hr-border-top-color;
+  border-bottom: 1px solid $right-side-hr-border-bottom-color;
+  margin: 16px 0;
+}
+.right-content .form-group{
+  position: relative;
+}
+.right-content .form-group p{
+  color: $right-side-p-color;
+  margin-bottom: 5px;
+}
+.right-content {
+  .form-control {
+    border: 0;
+    height: 40px;
+    box-shadow: none;
+    margin-bottom: 10px;
+    &:focus {
+      border: 0;
+    }
+  }
+}
+
+.right-content textarea.form-control{
+  height: 100px;
+}
+
+.right-content select.form-control{
+  padding: 6px 8px;
+}
+.right-content .form-group .btn{
+  box-shadow: 0 2px 2px lighten($black,25);
+  background: $secondary-gradient;
+  color: #fff;
+}
+
+
+/*-------------------
+  Quick Transfer
+---------------------*/
+.qt-arrow{
+  position: absolute;
+  top: 44px;
+  left: -8px;
+}
+
+.wallet{
+  background: #fff;
+  margin: 0 -17px;
+  height: 413px;
+  overflow-y: scroll;
+}
+.wa-title{
+  color: $right-side-wa-title-color;
+  font-weight: bold;
+}
+.mainWallet{
+  background: #eaeaea;
+  padding: 18px 17px;
+}
+.mainWallet p{
+  margin: 0;
+}
+.mainWallet .mw-yen{
+  font-size: 18px;
+  font-weight: bold;
+  color: #353535;
+}
+.subWallet{
+  padding: 0 17px;
+}
+.subWallet th{
+  border: 0 !important;
+  padding-top: 15px !important;
+}
+.subWallet td{
+  border: 0 !important;
+  color: #353535;
+  font-size: 12px;
+}
+.subWallet td:nth-child(2){
+  text-align: right;
+}
+
+
+/*-------------------
+  Fund Management
+---------------------*/
+.info-tip>p{
+  font-size: 12px;
+  font-style: italic;
+  color: #fff;
+}
+.info-tip .form-group{
+  font-size: 12px;
+}
+.info-tip .form-control{
+  font-size: 12px;
+  margin-bottom: 17px;
+}
+.info-tip .row{
+  margin: 0 -5px;
+}
+.birth.col-md-3{
+  width: 30%;
+  padding: 0 5px;
+}
+.birth.col-md-6{
+  width: 40%;
+  padding: 0 5px;
+}
+
+.verifide-tip .qw{
+  margin-top: 150px;
+}
+
+
+.quick-dw .bank-list{
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 19px;
+}
+.quick-dw .qd-row{
+  margin: 5px 0 10px;
+}
+.quick-dw a{
+  font-size: 12px;
+  color: #353535;
+  border-bottom: 1px dotted #353535;
+}
+.quick-dw a:hover{
+  color: #fff;
+  border-color: #fff;
+}
+.quick-dw a.qd-ca{
+  float: left;
+}
+.quick-dw a.qd-aa{
+  float: right;
+}
+.quick-dw p,
+.quick-dw .form-control{
+  font-size: 12px;
+}
+.quick-dw .qw{
+  margin-top: 80px;
+}
+
+.right-content .quick-dw .form-group p.qw-yen{
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

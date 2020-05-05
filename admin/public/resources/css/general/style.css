@@ -1,0 +1,849 @@
+body {
+    /* background: #EDECEC;  */
+    padding-top: 110px;
+}
+
+/**********************************************************************************************
+ * Common
+ **********************************************************************************************/
+input[type="radio"][readonly],
+input[type="radio"][readonly]+label,
+label+input[type="radio"][readonly],
+input[type="checkbox"][readonly],
+input[type="checkbox"][readonly]+label,
+label+input[type="checkbox"][readonly] {
+    pointer-events: none;
+}
+
+.bg-muted {
+    background-color: #ccc;
+}
+
+.disabled, .disabled * {
+    cursor: not-allowed;
+}
+
+.nopadding {
+    padding: 0 !important;
+}
+
+/**********************************************************************************************
+ * Modal
+ **********************************************************************************************/
+.modal-header {
+    color: #fff;
+    padding: 9px 15px;
+    border-bottom: 1px solid #eee;
+    background-color: #428bca;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/**********************************************************************************************
+ * Navigation tabs
+ **********************************************************************************************/
+
+.nav-tabs {
+    border-bottom: 2px solid #DDD;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border-width: 0;
+}
+
+.nav-tabs > li > a {
+    border: none;
+    color: #666;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li > a:hover {
+    border: none;
+    color: #4285F4 !important;
+    background: transparent;
+}
+
+.nav-tabs > li > a::after {
+    content: "";
+    background: #4285F4;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+
+.nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after {
+    transform: scale(1);
+}
+
+.tab-nav > li > a::after {
+    background: #21527d none repeat scroll 0% 0%;
+    color: #fff;
+}
+
+.tab-pane {
+    padding: 15px 0;
+}
+
+.tab-content {
+    padding: 20px
+}
+
+/**********************************************************************************************
+ * Card
+ **********************************************************************************************/
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
+}
+
+/**********************************************************************************************
+ * Bonus games settings
+ **********************************************************************************************/
+.bonus-games .prize.row {
+    padding: 0.1em 0;
+}
+
+.bonus-games .prize.row .field {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+.bonus-games .prize.row .num {
+    width: 2%;
+}
+
+.bonus-games .prize.row .sort {
+    width: 6%;
+}
+
+.bonus-games .prize.row .type {
+    width: 14%;
+}
+
+.bonus-games .prize.row .title {
+    width: 18%;
+}
+
+.bonus-games .prize.row .numbers {
+    width: 10%;
+}
+
+.bonus-games .prize.row .message {
+    width: 30%;
+}
+
+.bonus-games .prize.row .ops {
+    width: 3%;
+}
+
+.bonus-games .prize.row .fa {
+    font-size: 14pt;
+}
+
+.bonus-games .prize.row .field input[type="text"] {
+    width: 90%;
+}
+
+.bonus-games .prize.row .field textarea {
+    width: 100%;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+
+.bonus-games .prize.row .field input[type="number"] {
+    width: 80%;
+    text-align: right;
+}
+
+.bonus-games .prize.row .field select {
+    width: 90%;
+}
+
+.bonus-games .prize.row.to_remove {
+    color: #ccc;
+}
+
+.bonus-games .prize.row.to_remove input {
+    text-decoration: line-through;
+}
+
+.bonus-games .prize.row .numbers.prob input.error {
+    background-color: rgba(199, 61, 54, 0.3);
+    border-style: ridge;
+}
+
+.bonus-games .prize.row.footer {
+    border-top: 1px solid rgba(127, 127, 127, 0.4);
+}
+
+.bonus-games .prize.row.footer .numbers.prob {
+    text-align: right;
+}
+
+.bonus-games .prize.row.footer .numbers.prob .error {
+    color: red;
+}
+
+.bonus-games .prize.row.footer .numbers.prob input {
+    border: none;
+    width: 50%;
+    text-align: right;
+}
+
+.bonus-games .game_ops.enable {
+    color: green;
+}
+
+.bonus-games .game_ops.disable {
+    color: red;
+}
+
+.bonus-games .game_ops.disallowed {
+    color: gray;
+    pointer-events: none;
+}
+
+.bonus-games .game-list-main .status.enabled {
+    color: #669829;
+}
+
+.bonus-games .game-list-main .status.disabled {
+    color: red; /* color: #b7310f; */
+}
+
+#bonus_game .field-error {
+    color: red;
+    font-size: 9pt;
+}
+
+/**********************************************************************************************
+ * Common Cash back
+ **********************************************************************************************/
+.common_cashback_multiple_range_raules_loader {
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(1, 1, 1, 0.6);
+
+    cursor: wait;
+}
+
+.common_cashback_multiple_range_raules_loader .loader_instance {
+    margin: 60px auto;
+
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-bottom: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: common_cashback_rules_by_multiple_range_spin 2s linear infinite;
+}
+
+@keyframes common_cashback_rules_by_multiple_range_spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.common_cashback_rules_by_multiple_range .warning_logical_problem {
+    -webkit-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Safari 4+ */
+    -moz-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Fx 5+ */
+    -o-animation: NAME-YOUR-ANIMATION 1s infinite;  /* Opera 12+ */
+    animation: NAME-YOUR-ANIMATION 1s infinite;  /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes NAME-YOUR-ANIMATION {
+    0% {
+        background-color: rgba(255, 160, 138, 1);
+    }
+    50% {
+        background-color: rgba(255, 160, 138, 0.5);
+    }
+    100% {
+        background-color: rgba(255, 160, 138, 1);
+    }
+}
+
+.common_cashback_rules_by_multiple_range .disabled,
+.common_cashback_rules_by_multiple_range .radio-group .disabled,
+.common_cashback_rules_by_multiple_range .radio-group .disabled * {
+    cursor: not-allowed;
+}
+
+.common_cashback_rules_by_multiple_range .radio-group label {
+    margin: 0;
+    padding: 0;
+}
+
+.common_cashback_rules_by_multiple_range .radio-group label > input[type=radio] {
+    position: relative;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+
+.common_cashback_rules_by_multiple_range .radio-group label,
+.common_cashback_rules_by_multiple_range .radio-group input{
+    cursor: pointer;
+}
+
+.common_cashback_rules_by_multiple_range .entry {
+    display: inline-block;
+
+    color: #999;
+}
+
+.common_cashback_rules_by_multiple_range .entry {
+    margin-right: 15px;
+}
+
+.common_cashback_rules_by_multiple_range .entry:first-child {
+    margin-left: 15px;
+}
+
+.common_cashback_rules_by_multiple_range .entry:last-child {
+    margin-right: 0px;
+}
+
+.common_cashback_rules_by_multiple_range .entry span:nth-child(1){
+    margin-right: 5px;
+}
+
+.common_cashback_rules_by_multiple_range .entry span.active {
+    color: green;
+}
+
+.common_cashback_rules_by_multiple_range .entry span.inactive {
+    color: red;
+}
+
+.common_cashback_rules_by_multiple_range .entry span.childs_active {
+    padding: 0 5px;
+
+    color: #FFF;
+    background-color: green;
+}
+
+.common_cashback_rules_by_multiple_range {
+    font-size: 1em;
+    line-height: 1.5em;
+
+    position: relative;
+
+    min-height: 180px;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body,
+.common_cashback_rules_by_multiple_range .game_type_entry_body,
+.common_cashback_rules_by_multiple_range .game_description_entry_body {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body:hover,
+.common_cashback_rules_by_multiple_range .game_type_entry_body:hover,
+.common_cashback_rules_by_multiple_range .game_description_entry_body:hover {
+    background-color: #EEE;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body::after,
+.common_cashback_rules_by_multiple_range .game_type_entry_body::after,
+.common_cashback_rules_by_multiple_range .game_description_entry_body::after {
+    content: ' ';
+    clear: both;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body .game_platform_details_toggle,
+.common_cashback_rules_by_multiple_range .game_type_entry_body .game_type_details_toggle,
+.common_cashback_rules_by_multiple_range .game_description_entry_body .game_details_toggle{
+    float: left;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body .game_platform_details_toggle button,
+.common_cashback_rules_by_multiple_range .game_type_entry_body .game_type_details_toggle button,
+.common_cashback_rules_by_multiple_range .game_description_entry_body .game_details_toggle button{
+    background-color: unset;
+    border: unset;
+    outline: unset;
+    padding: 0;
+    width: 2em;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body .game_platform_entry_content,
+.common_cashback_rules_by_multiple_range .game_type_entry_body .game_type_entry_content,
+.common_cashback_rules_by_multiple_range .game_description_entry_body .game_description_entry_content {
+    white-space: nowrap;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_body .game_platform_entry_title,
+.common_cashback_rules_by_multiple_range .game_type_entry_body .game_type_entry_title,
+.common_cashback_rules_by_multiple_range .game_description_entry_body .game_description_entry_title,
+.common_cashback_rules_by_multiple_range .game_platform_entry_body .game_platform_entry_summary,
+.common_cashback_rules_by_multiple_range .game_type_entry_body .game_type_entry_summary,
+.common_cashback_rules_by_multiple_range .game_description_entry_body .game_description_entry_summary {
+    display: inline-block;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_details,
+.common_cashback_rules_by_multiple_range .game_type_entry_details {
+    padding-left: 2em;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_settings_container,
+.common_cashback_rules_by_multiple_range .game_platform_entry_rules_container,
+.common_cashback_rules_by_multiple_range .game_platform_types_container,
+.common_cashback_rules_by_multiple_range .game_type_entry_settings_container,
+.common_cashback_rules_by_multiple_range .game_type_entry_rules_container,
+.common_cashback_rules_by_multiple_range .game_list_container,
+.common_cashback_rules_by_multiple_range .game_description_entry_settings_container,
+.common_cashback_rules_by_multiple_range .game_description_entry_rules_container {
+    display: table;
+    width: 100%;
+
+    border-top: #EEE solid 1px;
+    border-left: #EEE solid 1px;
+    border-right: #EEE solid 1px;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_types_container,
+.common_cashback_rules_by_multiple_range .game_list_container,
+.common_cashback_rules_by_multiple_range .game_description_entry_rules_container{
+    border-bottom: #EEE solid 1px;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_settings_container>.title,
+.common_cashback_rules_by_multiple_range .game_platform_entry_rules_container>.title,
+.common_cashback_rules_by_multiple_range .game_platform_types_container>.title,
+.common_cashback_rules_by_multiple_range .game_type_entry_settings_container>.title,
+.common_cashback_rules_by_multiple_range .game_type_entry_rules_container>.title,
+.common_cashback_rules_by_multiple_range .game_list_container>.title,
+.common_cashback_rules_by_multiple_range .game_description_entry_settings_container>.title,
+.common_cashback_rules_by_multiple_range .game_description_entry_rules_container>.title {
+    display: table-cell;
+    width: 8em;
+    text-align: right;
+    padding: 15px 15px;
+
+    border-right: #EEE solid 1px;
+}
+
+.common_cashback_rules_by_multiple_range .game_platform_entry_settings_container>.settings_body,
+.common_cashback_rules_by_multiple_range .game_platform_entry_rules_container>.rules_body,
+.common_cashback_rules_by_multiple_range .game_platform_types_container>.game_platform_types_body,
+.common_cashback_rules_by_multiple_range .game_type_entry_settings_container>.settings_body,
+.common_cashback_rules_by_multiple_range .game_type_entry_rules_container>.rules_body,
+.common_cashback_rules_by_multiple_range .game_list_container>.game_list_body,
+.common_cashback_rules_by_multiple_range .game_description_entry_settings_container>.settings_body,
+.common_cashback_rules_by_multiple_range .game_description_entry_rules_container>.rules_body {
+    display: table-cell;
+    padding: 15px 15px;
+}
+
+.common_cashback_rules_by_multiple_range .rules_actions {
+    margin-bottom: 5px;
+}
+
+.common_cashback_rules_by_multiple_range .rules_list,
+.common_cashback_rules_by_multiple_range .rules_list th,
+.common_cashback_rules_by_multiple_range .rules_list td {
+    border: #EEE solid 1px;
+}
+
+.common_cashback_rules_by_multiple_range .rules_list th,
+.common_cashback_rules_by_multiple_range .rules_list td {
+    padding: 5px;
+}
+
+.common_cashback_rules_by_multiple_range .rules_list .min_bet_amount,
+.common_cashback_rules_by_multiple_range .rules_list .max_bet_amount,
+.common_cashback_rules_by_multiple_range .rules_list .cashback_percentage,
+.common_cashback_rules_by_multiple_range .rules_list .max_cashback_amount {
+    text-align: right;
+}
+
+.common_cashback_rules_by_multiple_range .rule_entry_actions button {
+    background: unset;
+    border: unset;
+    outline: unset;
+}
+
+.common_cashback_rules_by_multiple_range .rule_entry_actions button:hover {
+    background-color: #EEE;
+}
+
+/**********************************************************************************************/
+/* Messages <editor-fold desc="Message">{{{ */
+/**********************************************************************************************/
+#messages_send_messages .modal-dialog {
+    max-height: 90vh;
+    height: 90vh;
+    position: relative;
+}
+
+#messages_send_messages .modal-content {
+    height: 100%;
+}
+
+#messages_send_messages .modal-header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+#messages_send_messages .modal-body {
+    position: absolute;
+    padding-top: 55px;
+    padding-bottom: 80px;
+
+    width: 100%;
+    height: 100%;
+
+    overflow-y: auto;
+}
+
+#messages_send_messages .modal-footer {
+    background-color: inherit;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+#messages_send_messages .select2-hidden-accessible {
+    top: 66px;
+}
+#messages_send_messages .select2-selection__rendered {  color: #008CBA; }
+
+#messages_send_messages .input-group > .select2-container {
+    display: table;
+    table-layout: fixed;
+    position: relative;
+    z-index: 2;
+    width: 100% !important;
+    margin-bottom: 0;
+}
+
+#messages_send_messages textarea {
+    max-width: 100%;
+}
+
+#messages_view_message .modal-dialog {
+    max-height: 90vh;
+    height: 90vh;
+    position: relative;
+}
+
+#messages_view_message .modal-content {
+    height: 100%;
+}
+
+#messages_view_message .modal-header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    word-break: break-all;
+}
+
+#messages_view_message .modal-body {
+    position: absolute;
+    padding-top: 40px;
+    padding-bottom: 80px;
+    padding-right: 0;
+    padding-left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+#messages_view_message .message_details {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: relative;
+
+    margin: 0;
+    padding: 15px;
+}
+
+#messages_view_message .message-entry {
+    width: 100%;
+}
+
+#messages_view_message .message-entry:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#messages_view_message .message-entry .message-detail {
+    background-color: lightgreen;
+    position: relative;
+    border-radius: 15px;
+
+    padding: 5px 10px;
+
+    display: inline-block;
+
+    clear: both;
+
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+#messages_view_message .message-author-admin {
+}
+
+#messages_view_message .message-author-admin .message-author {
+    float: right;
+    clear: both;
+}
+
+#messages_view_message .message-author-admin .message-datetime {
+    float: right;
+}
+
+#messages_view_message .message-author-admin .message-datetime:after {
+    content: '@';
+    margin: 0 5px;
+}
+
+#messages_view_message .message-author-admin .message-detail {
+    text-align: left;
+    float: right;
+}
+
+#messages_view_message .message-author-player {
+}
+
+#messages_view_message .message-author-player .message-author {
+    float: left;
+    clear: both;
+}
+
+#messages_view_message .message-author-player .message-datetime {
+    float: left;
+}
+
+#messages_view_message .message-author-player .message-datetime:before {
+    content: '@';
+    margin: 0 5px;
+}
+
+#messages_view_message .message-author-player .message-detail {
+    text-align: left;
+    float: left;
+}
+
+#messages_view_message .modal-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#messages_view_message .reply-content-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    height: 30%;
+}
+
+#messages_view_message .reply-content-container textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+#messages_reply_message .modal-header {
+    word-break: break-all;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Notification <editor-fold>{{{ */
+/* ========================================================================= */
+.show_notification_data .notification_count {
+    font-size:15px;
+}
+/* }}}</editor-fold> */
+
+
+/* ========================================================================= */
+/* Marketing Management <editor-fold>{{{ */
+/* ========================================================================= */
+[data-lang="1"] .wopt6-tooltip + .tooltip .tooltip-inner {
+    /* en */
+    min-width: 690px;
+    text-align: left;
+}
+
+[data-lang="2"] .wopt6-tooltip + .tooltip .tooltip-inner {
+    /* cn */
+    min-width: 440px;
+    text-align: left;
+}
+
+tfoot .ft-table th { padding: 0 0.3em; }
+
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Player Management <editor-fold>{{{ */
+/* ========================================================================= */
+#comm_pref_panel_body {
+    margin-bottom: 0px;
+    position: relative;
+}
+
+#communication_preferences_form .comm-pref-text {
+    color: #f35858;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+#communication_preferences_form .panel-footer {
+    padding: 0px 15px;
+}
+
+
+/* ========================================================================= */
+/* Player Management <C6 Acuris>{{{                                          */
+/* ========================================================================= */
+.data-info-overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    margin-top: 45px;
+}
+
+.data-info-container{
+    background: #fff;
+    height: auto;
+    padding: 30px;
+    width: 90%;
+    margin: 5%;
+    position: relative;
+}
+.data-info-container .closebtn{
+    position: absolute;
+    right: 0;
+    background: #428bca;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    top: 0;
+    font-size: 40px;
+    text-decoration: none;
+    outline: none;
+}
+.data-info-container .col-md-3 p,
+.data-info-container .col-md-4 p{
+    margin-bottom: 5px;
+}
+
+.data-info-container .data-info-accordion{
+    padding-top: 20px;
+}
+.data-info-container .data-info-accordion .panel-group .panel{
+    border: 0;
+}
+.data-info-container .data-info-accordion .panel-default > .panel-heading{
+    background-color: #428bca;
+    color: #fff;
+    font-size: 14px;
+    padding: 0;
+}
+.data-info-container .data-info .basic_info_elements .col-md-2 img{
+    width: 100%;
+}
+.data-info-container .data-info-accordion .panel-default > .panel-heading h4 a{
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 10px !important;
+    display: block;
+    font-size: 16px;
+    text-decoration: none;
+    outline: none !important;
+    position: relative;
+}
+.data-info-container .data-info-accordion .panel-default > .panel-heading h4 a.collapsed:after{
+    content: '';
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    background:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAB+CAYAAAAa75w6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI1MjhFRDNEOEIxNDExRTk4RjUyOTMzQ0UzQ0E0RTZEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI1MjhFRDNFOEIxNDExRTk4RjUyOTMzQ0UzQ0E0RTZEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjUyOEVEM0I4QjE0MTFFOThGNTI5MzNDRTNDQTRFNkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjUyOEVEM0M4QjE0MTFFOThGNTI5MzNDRTNDQTRFNkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4fmaREAAAKvElEQVR42uydbYhV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');
+    right: 0;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+}
+
+.data-info-container .data-info-accordion .panel-default > .panel-heading h4 a:after{
+    content: '';
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    background:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAB+CAYAAAAa75w6AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyNpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQwIDc5LjE2MDQ1MSwgMjAxNy8wNS8wNi0wMTowODoyMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI1MjhFRDQxOEIxNDExRTk4RjUyOTMzQ0UzQ0E0RTZEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI1MjhFRDQyOEIxNDExRTk4RjUyOTMzQ0UzQ0E0RTZEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjUyOEVEM0Y4QjE0MTFFOThGNTI5MzNDRTNDQTRFNkQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjUyOEVENDA4QjE0MTFFOThGNTI5MzNDRTNDQTRFNkQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz43MfoDAAALZklEQVR42uxdf4hd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');
+    right: 0;
+    background-size: 40%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 0;
+}
+.data-info-container .data-info-accordion .panel-default .panel-body{
+    line-height: 20px;
+    border: 1px solid #428bca;
+}
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Affiliate Management <editor-fold>{{{ */
+/* ========================================================================= */
+.diling-code-field>.btn-default{
+    background: transparent;
+    font-size: 13px;
+}
+
+.mobile_dialing_code, .phone_dialing_code{
+    width: 30%;
+    padding: 0px 5px;
+    float: left;
+}
+
+.mobile_num, .phone_num{
+    width: 70%;
+    float: right;
+}
+
+/* }}}</editor-fold> */
+
+/* ========================================================================= */
+/* Payment Management <editor-fold>{{{ */
+/* ========================================================================= */
+.i_required .hint {
+    color: red;
+}
+/* }}}</editor-fold> */
+
+table.devfunc { margin-left: 1em; }
+table.devfunc td { padding: 0 1em; }

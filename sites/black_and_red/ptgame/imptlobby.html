@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/resources/js/jquery-2.1.4.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/underscore-min.js"></script>
+
+        <!-- ptlobby -->
+        <script src="/resources/js/ptlobby.js"></script>
+        <link href="/resources/css/ptlobby.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div id="container">
+
+            <ul class="nav nav-tabs nav-justified" id="category-list">
+                <li class="category active" id="1"><a href="javascript:void(0);">热门游戏</a></li>
+                <li class="category" id="2"><a href="javascript:void(0);">最新游戏</a></li>
+                <li class="category" id="3"><a href="javascript:void(0);">特色游戏</a></li>
+                <li class="category" id="4"><a href="javascript:void(0);">累计奖金池</a></li>
+                <li class="category" id="5"><a href="javascript:void(0);">街机游戏</a></li>
+                <li class="category" id="6"><a href="javascript:void(0);">刮刮乐</a></li>
+                <li class="category" id="7"><a href="javascript:void(0);">老虎机</a></li>
+                <li class="category" id="8"><a href="javascript:void(0);">桌面&amp;卡牌</a></li>
+                <li class="category" id="9"><a href="javascript:void(0);">视频扑克</a></li>
+            </ul>
+
+            <br/>
+
+            <div class="container">
+
+                <div class="form-horizontal" id="filter-1">
+                    <div class="form-group" id="groupA">
+                        <label class="form-label col-xs-2">赔付线</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="1"> 1线-9线
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="2"> 15
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="3"> 20
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="4"> 25
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="5"> 30
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="6"> 40
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="7"> 50
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="8"> 100
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="9"> 1024
+                        </label>
+                    </div>
+
+                    <div class="form-group" id="groupB">
+                        <label class="form-label col-xs-2">彩金游戏</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="1"> 支持
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="0"> 不支持
+                        </label>
+                    </div>
+
+                    <div class="form-group" id="groupC">
+                        <label class="form-label col-xs-2">赌博功能</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="1"> 支持
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="0"> 不支持
+                        </label>
+                    </div>
+
+                    <div class="form-group" id="groupD">
+                        <label class="form-label col-xs-2">手机下住</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="1"> 支持
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="0"> 不支持
+                        </label>
+                    </div>
+
+                    <div class="form-group" id="groupE">
+                        <label class="form-label col-xs-2">品牌类游戏</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="1"> 漫威英雄
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" value="2"> 其他品牌类游戏
+                        </label>
+                    </div>
+
+                </div>
+
+                <div class="row" id="game-list"></div>
+
+            </div>
+
+        </div>
+
+        <!-- TEMPLATES -->
+        <script type="text/template" id="game-template">
+            <% _.each( l, function(value) { %>
+                <div class="game-item col-lg-2 col-md-3 col-sm-4 col-xs-6" <%= value.g %>
+                    <% _.map( value.a, function(attributeKey, attributeValue) { %>
+                        data-<%- attributeValue %>="[<%- attributeKey %>]"
+                    <% }); %>
+                >
+
+                    <div class="game-details">
+                        <div class="game-name"><%= value.n %></div>
+                        <img class="game-image" src="<%- p %>/<%- value.i %>" onError="this.src='<%- p %>/default.jpg';"/>
+                    </div>
+
+                    <div class="game-action text-center">
+                        <a class="btn btn-xs btn-block btn-primary" href="/iframe_module/goto_imptgame/real/<%- value.c%>" target='_blank'>进入游戏</a>
+                    </div>
+
+                </div>
+            <% }); %>
+        </script>
+
+    </body>
+</html>

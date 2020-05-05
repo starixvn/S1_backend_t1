@@ -1,0 +1,42 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:	  sync_game_records_service
+# Required-Start:    $local_fs $remote_fs $network $syslog $named
+# Required-Stop:     $local_fs $remote_fs $network $syslog $named
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: starts the sync game records service
+# Description:       starts sync game records
+### END INIT INFO
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+OG_HOME=/home/vagrant/Code/og/admin
+PHP=/usr/bin/php
+NAME=sync_game_records
+DESC=sync_game_records
+
+# test -x $OG_HOME/shell/ci_cli.php || exit 0
+
+# . /lib/init/vars.sh
+. /lib/lsb/init-functions
+
+
+case "$1" in
+	start)
+		nohup $PHP $OG_HOME/shell/ci_cli.php cli/sync_game_records/sync_start 2>&1 >> $OG_HOME/application/logs/sync_game_records_service.log &
+		ps -ef|grep sync_game_records
+		;;
+	stop)
+		$PHP $OG_HOME/shell/ci_cli.php cli/sync_game_records/sync_safe_stop
+		ps -ef|grep sync_game_records
+		;;
+	status)
+		ps -ef|grep sync_game_records
+		# status_of_proc -p $PID "$DAEMON" "$NAME" && exit 0 || exit $?
+		;;
+	*)
+		echo "Usage: $NAME {start|stop|status}" >&2
+		exit 3
+		;;
+esac

@@ -1,0 +1,168 @@
+@charset "UTF-8";
+
+.bank-list li {
+    box-sizing: border-box;
+    display: inline-block;
+    
+    padding: 5px;
+}
+
+.bank-entry,
+.bank-list li a {
+    display: inline-block;
+    color: #b4b4b4;
+}
+
+.bank-list li.active a {
+    color: #949494;
+}
+
+.bank-list li.active i {
+    background-color: #ee5d48;
+    color: #fff;
+}
+
+bank-entry:hover,
+.bank-list li a:hover {
+    color: #949494;
+}
+
+.selected-bank span {
+    margin-right: 5px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+.bank-entry i,
+.bank-list li a i {
+    background: #e6e6e6;
+    padding: 0;
+    vertical-align: top;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    transition: all .3s ease;
+}
+
+.b-icon,
+.b-icon-custom {
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    
+    width: 190px;
+    height: 40px;
+    line-height: 40px;
+    
+    border: 1px solid #ddd;
+    background-color: #efefef;
+    
+    color: #505050;
+    
+    vertical-align: bottom;
+    
+    padding-right: 10px;
+    
+    text-align: left;
+    text-indent: 50px;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.b-icon:before {
+    content: '';
+    background-image: url(./bank/bank.jpg);
+    background-position: -165px -214px;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+}
+
+.b-icon img,
+.b-icon-custom img {
+    top: 0;
+	left: 0;
+	background: #fff;
+    border: 0px;
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: absolute;
+}
+.b-icon label {
+    margin-left: 20px;
+    margin-top: 15px;
+    display: block;
+}
+.b-icon.bank_1:before {
+    background-position: -15px -4px;
+}
+.b-icon.bank_2:before {
+    background-position: -16px -58px;
+}
+.b-icon.bank_3:before {
+    background-position: -116px -6px;
+}
+.b-icon.bank_4:before {
+    background-position: -165px -6px;
+}
+.b-icon.bank_5:before {
+    background-position: -211px -107px;
+}
+.b-icon.bank_6:before {
+    background-position: -67px -6px;
+}
+.b-icon.bank_7:before {
+    background-position: -67px -162px;
+}
+.b-icon.bank_8:before {
+    background-position: -117px -56px;
+}
+.b-icon.bank_9:before {
+    background-position: -168px -259px;
+}
+.b-icon.bank_10:before {
+    background-position: -67px -108px;
+}
+.b-icon.bank_11:before {
+    background-position: -68px -215px;
+}
+.b-icon.bank_12:before {
+    background-position: -212px -6px;
+}
+.b-icon.bank_13:before {
+    background-position: -69px -57px;
+}
+.b-icon.bank_14:before {
+    background-position: -117px -109px;
+}
+.b-icon.bank_15:before {
+    background-position: -167px -58px;
+}
+.b-icon.bank_16:before {
+    background-position: -68px -258px;
+}
+.b-icon.bank_17:before {
+    background-position: -117px -259px;
+}
+.b-icon.bank_18:before {
+    background-position: -16px -213px;
+}
+.b-icon.bank_19:before {
+    background-position: -16px -259px;
+}
+.b-icon.bank_20:before {
+    background-position: -218px -164px;
+}
+.b-icon.bank_21:before {
+    background-position: -167px -160px;
+}
+.b-icon.bank_22:before {
+    background-position: -213px -214px;
+}

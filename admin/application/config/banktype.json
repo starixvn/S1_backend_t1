@@ -1,0 +1,166 @@
+[
+	{
+		"bankName" : "_json:{\"1\":\"Industrial and Commercial Bank\",\"2\":\"工商银行\"}",
+		"bank_code" : "ICBC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"China Merchant Bank\",\"2\":\"招商银行\"}",
+		"bank_code" : "CMB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"China Construction Bank\",\"2\":\"建设银行\"}",
+		"bank_code" : "CCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Argicultural Bank of China\",\"2\":\"农业银行\"}",
+		"bank_code" : "ABC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Bank of Communications\",\"2\":\"交通银行\"}",
+		"bank_code" : "BCM"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Bank of China\",\"2\":\"中国银行\"}",
+		"bank_code" : "BOC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Shenzhen Development Bank\",\"2\":\"深圳发展银行\"}",
+		"bank_code" : "SDB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Guangdong Development Bank\",\"2\":\"广发银行\"}",
+		"bank_code" : "GDB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Dongguan Rural Commercial Bank\",\"2\":\"东莞农商银行\"}",
+		"bank_code" : "DRCBANK"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"China Citic Bank\",\"2\":\"中信银行\"}",
+		"bank_code" : "CNCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"China Minsheng Banking Corp Ltd\",\"2\":\"民生银行\"}",
+		"bank_code" : "CMBC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Postal Savings Bank of China\",\"2\":\"邮储银行\"}",
+		"bank_code" : "PSBC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Industrial Bank Co.Ltd\",\"2\":\"兴业银行\"}",
+		"bank_code" : "CIB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Huaxia Bank\",\"2\":\"华夏银行\"}",
+		"bank_code" : "HXB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Ping An Bank\",\"2\":\"平安银行\"}",
+		"bank_code" : "PAB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Guangxi rural credit cooperative\",\"2\":\"广西农村信用社\"}",
+		"bank_code" : "GX966888"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Bank Of Guangzhou\",\"2\":\"广州银行\"}",
+		"bank_code" : "GZCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Bank OF Nanjing\",\"2\":\"南京银行\"}",
+		"bank_code" : "NJCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Guangzhou Rural Commercial Bank\",\"2\":\"广州农商银行\"}",
+		"bank_code" : "GRCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"China Everbright Bank\",\"2\":\"中国光大银行\"}",
+		"bank_code" : "CEB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"Alipay\",\"2\":\"支付宝\"}",
+		"bank_code" : "ALIPAY"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"WeChat\",\"2\":\"微信\"}",
+		"bank_code" : "WECHAT"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"SPK Bank\",\"2\":\"浦发银行\"}",
+		"bank_code" : "SPDB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"ADBC\",\"2\":\"农业发展银行\"}",
+		"bank_code" : "ADBC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"RCC\",\"2\":\"农村信用社\"}",
+		"bank_code" : "RCC"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"CB\",\"2\":\"商业银行\"}",
+		"bank_code" : "CB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"RCB\",\"2\":\"农村商业银行\"}",
+		"bank_code" : "RCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"SHB\",\"2\":\"上海银行\"}",
+		"bank_code" : "SHB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"BOB\",\"2\":\"北京银行\"}",
+		"bank_code" : "BOB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"JSB\",\"2\":\"江苏银行\"}",
+		"bank_code" : "JSB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"BOCD\",\"2\":\"成都银行\"}",
+		"bank_code" : "BOCD"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"NJCB\",\"2\":\"南京银行\"}",
+		"bank_code" : "NJCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"HZB\",\"2\":\"杭州银行\"}",
+		"bank_code" : "HZB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"EGB\",\"2\":\"恒丰银行\"}",
+		"bank_code" : "EGB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"QDCCB\",\"2\":\"青岛银行\"}",
+		"bank_code" : "QDCCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"BODL\",\"2\":\"大连银行\"}",
+		"bank_code" : "BODL"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"GZCB\",\"2\":\"广州银行\"}",
+		"bank_code" : "GZCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"CZB\",\"2\":\"浙商银行\"}",
+		"bank_code" : "CZB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"CQCB\",\"2\":\"重庆银行\"}",
+		"bank_code" : "CQCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"CQCB\",\"2\":\"重庆银行\"}",
+		"bank_code" : "CQCB"
+	},
+	{
+		"bankName" : "_json:{\"1\":\"TCCB\",\"2\":\"天津银行\"}",
+		"bank_code" : "TCCB"
+	}
+]

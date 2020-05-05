@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>新橙娱乐手机版官网</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.index.js?v=1.0"></script>
+    <style type="text/css">
+        .ismobile{
+            display: block !important;
+        }
+
+        .isweb{
+            display: none !important;
+        }
+        /*.loginbox{
+            display: none !important;
+        }*/
+    </style>
+
+    <script type="text/javascript">
+        // $(window).load(function(){
+        //     $('.loginbox').css('display' : '');
+        // });
+        $(function(){
+            $('#logoutxx').on('click', function(e){
+                e.preventDefault();
+                $.get('http://player.og.local/player_center/player_center_logout', function(){
+                    window.location = 'http://m.og.local/';
+                });
+            });
+
+            var cookiename = "showmovieonce";
+            var cookievalue = getCookie(cookiename);
+            if (cookievalue.length==0) {
+                $("#startmovie").show();
+                setCookie(cookiename, 'y',24*3600);
+            }else{
+                $("#startmovie").hide();
+            }
+        });
+    </script>
+</head>
+<body>
+    <!--starmovie-->
+    <div id="startmovie" style="display: none;">
+        <div class="startmain">
+            <div class="startlogo">
+                <div class="startlogotwo"></div>
+                <svg version="1.1" id="logo_1_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="96px" height="96px" viewBox="0 0 96 96" enable-background="new 0 0 96 96" xml:space="preserve">
+                    <g>
+                        <path fill="none" stroke="#fff" stroke-miterlimit="10" d="M48.189,0c23.875,0,43.786,17.516,47.546,40.355l-15.724-0.56
+    l-11.32-31.03l-11.32,31.03l-33.009,1.176l26.013,20.354l-9.081,31.758l27.396-18.451l12.622,8.501
+    c-8.646,8.202-20.315,13.245-33.124,13.245C21.647,96.377,0,74.73,0,48.189C0,21.647,21.647,0,48.189,0L48.189,0z M95.99,54.295
+    c-0.811,6.367-2.875,12.353-5.933,17.702l-3.052-10.672L95.99,54.295L95.99,54.295z"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="starttext01"></div>
+            <div class="starttext02"></div>
+        </div>
+    </div>
+    <!--uesr-->
+
+    <!--menu-->
+    <div class="menu_right">
+        <div class="menu_blank"></div>
+        <div class="menu_main">
+            <div class="menu_header"><a>网站导航</a></div>
+            <ul>
+                <li id="homepage">
+                    <a class="menuhover"><div class="menu_home_icon_02"></div>
+                    网站首页</a></li>
+            </ul>
+            <ul>
+                <li class="mm btn-kf">
+                    <a class="menukf btn-kf" href="javascript:;" onclick="window.open('http://player.og.local/pub/live_chat_link/chn','_blank', 'width=750,height=750,top=0,left=0,toolbar=no,scrollbars=no,menubar=no,status=no,resizable=yes,location=no')">x<div class="menu_service_icon_02"></div>
+                    在线客服</a></li>
+                <li class="twopage mm"><a class="menuyh" href="/promotions.html"><div class="menu_promotions_icon_02"></div>优惠活动</a></li>
+            </ul>
+            <div class="menu_02"></div>
+        </div>
+    </div>
+    <!--pageone-->
+    <div id="pageone" url="home.aspx">
+        <div class="header">
+            <div id="_player_login_area" class="action loginbox fn-right">
+                <a href="" style="display:none;">直接登录</a>
+            </div>
+            <div class="menu">
+                <div class="menu_btn"></div>
+            </div>
+            <div class="logo_bg">
+                <div class="logo"></div>
+            </div>
+        </div>
+        <div class="page">
+
+
+<div class="pop_lb">
+        <div class="pop_bg"></div>
+        <div class="pop_main">
+            <span><a>LB快乐彩游戏</a>
+                <p>选择游戏方式</p>
+            </span>
+            <li><a style="display: block;" href="/service/LoginToLBKeno.aspx" target="_blank">网页版</a></li>
+            <li style="border-left: 1px solid #cccccc;"><a href="download/lb_keno_download.html" target="_blank">手机客户端</a></li>
+        </div>
+    </div>
+    <div class="pop_ag">
+        <div class="pop_bg"></div>
+        <div class="pop_main">
+            <span><a>AG真人游戏</a>
+                <p>请先下载手机客户端</p>
+            </span>
+            <li><a href="download/ag_download.html" target="_blank">手机客户端</a></li>
+            <li style="border-left: 1px solid #cccccc;">取消</li>
+        </div>
+    </div>
+    <div class="pop_qp">
+        <div class="pop_bg"></div>
+        <div class="pop_main">
+            <span><a>棋牌游戏</a>
+                <p>仅支持安卓手机游戏</p>
+            </span>
+            <li><a href="download/qp_download.html" target="_blank">下载客户端</a></li>
+            <li style="border-left: 1px solid #cccccc;">取消</li>
+        </div>
+    </div>
+    <div class="home">
+        <!--banner-->
+        <div class="swiper-container swiper-container-horizontal" style="height: 225px;">
+            <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1125px, 0px, 0px);">
+
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="2" style="width: 375px;">
+                    <li class="banner_01"></li>
+                </div>
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="3" style="width: 375px;">
+                    <li class="banner_02"></li>
+                </div>
+                <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="4" style="width: 375px;">
+                    <li class="banner_03"></li>
+                </div>
+</div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination swiper-pagination-clickable"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span></div>
+        </div>
+        <!--notice-->
+        <div class="notice">
+            <div class="notice_icon_bg">
+                <div class="notice_icon"></div>
+            </div>
+            <div class="notice_text">
+                <ul style="margin-top: -0.166426px; display: none">
+                    <li id="nl94">《注册送18元彩金》活动下线通知<!-- li --></li><li id="nl93">eBET网页版全新上线，电脑、手机游戏两不误！<!-- li --></li><li id="nl92">PT老虎机一大波优惠来袭，快来参加吧！<!-- li -->
+                </li></ul>
+                <div class="announcement">
+                <!-- announcement start -->
+                <iframe src="/pub/announcement" style="border: none; width: 100%;height: 44px;margin: 4px 0 0 0; padding: 0; position: relative; z-index: 999;" scrolling="no" seamless="seamless"></iframe>
+              </div>
+            </div>
+
+            <div class="nt_main" id="cnl94"><span>《注册送18元彩金》活动下线通知</span><li>时间：09月12日<i></i></li><p>《注册送18元彩金》活动将于2016年9月14日（星期三）下线。更多给力优惠请在官网优惠活动查看。</p></div><div class="nt_main" id="cnl93"><span>eBET网页版全新上线，电脑、手机游戏两不误！</span><li>时间：09月07日<i></i></li><p>eBET网页版全新上线，电脑、手机游戏两不误！</p></div><div class="nt_main" id="cnl92"><span>PT老虎机一大波优惠来袭，快来参加吧！</span><li>时间：08月25日<i></i></li><p>PT老虎机一大波优惠来袭，快来参加吧！</p></div>
+        </div>
+
+        <!--index menu-->
+
+
+
+
+        <div class="blank"></div>
+
+
+        <div class="blank"></div>
+        <div class="blank"></div>
+        <!--game menu-->
+
+        <div class="main_game_text_bg">
+            <div class="main_game_text"></div>
+        </div>
+
+         <div class="main_game_bg">
+            <div class="main_game_line">
+                <p class="title-menu">老虎机</p>
+                <div class="main_game_right twopage" onclick="document.location='hbAll.html'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_hb_icon"></div>
+                    </div>
+                    <div class="game_text"><a>HABANERO老虎机</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='ptAll.html'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_pt_icon"></div>
+                    </div>
+                    <div class="game_text"><a>PT老虎机</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='mgAll.html'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_mg_icon"></div>
+                    </div>
+                    <div class="game_text"><a>MG老虎机</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='ttgAll.html'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_ttg_icon"></div>
+                    </div>
+                    <div class="game_text"><a>TTG老虎机</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='qtAll.html'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_qt_icon"></div>
+                    </div>
+                    <div class="game_text"><a>QT老虎机</a></div>
+                </div>
+                <div style="clear: both;"></div>
+
+
+
+                <p class="title-menu" style="margin-top:30px;">捕鱼</p>
+                <div class="main_game_right twopage" onclick="document.location='/iframe_module/goto_agingame/default/6'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_ag_icon"></div>
+                    </div>
+                    <div class="game_text"><a>AG捕鱼王</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='/iframe_module/goto_fishinggame/61/101'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_gg_icon"></div>
+                    </div>
+                    <div class="game_text"><a href="#" target="_blank"></a><a>GG捕鱼天下</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='#'" style="cursor:pointer;">
+                </div>
+                <div style="clear: both;"></div>
+
+
+
+                <p class="title-menu" style="margin-top:30px;">真人娱乐</p>
+                <div class="main_game_right twopage" onclick="document.location='/iframe_module/goto_agingame/default/0'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_ag_icon"></div>
+                    </div>
+                    <div class="game_text"><a>AG娱乐场</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='/player_center/goto_ebetgame'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_ebet_icon"></div>
+                    </div>
+                    <div class="game_text"><a href="#" target="_blank"></a><a>eBET娱乐场</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='/iframe_module/goto_bbingame/36'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_bbin_icon"></div>
+                    </div>
+                    <div class="game_text"><a>BBIN娱乐场</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='/player_center/goto_abgame/true'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_ab_icon"></div>
+                    </div>
+                    <div class="game_text"><a>ALLBET娱乐场</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='#'" style="cursor:pointer;">
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='#'" style="cursor:pointer;">
+                </div>
+                <div style="clear: both;"></div>
+
+
+                <p class="title-menu" style="margin-top:30px;">体育</p>
+                <div class="main_game_right twopage" onclick="document.location='/iframe_module/goto_bbingame/34'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_bbin_icon"></div>
+                    </div>
+                    <div class="game_text"><a>BBIN体育</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='/iframe_module/goto_kenogamegame'" style="cursor:pointer;">
+                    <div class="round_icon">
+                        <div class="game_keno_icon"></div>
+                    </div>
+                    <div class="game_text"><a href="#" target="_blank"></a><a>KENO体育</a></div>
+                </div>
+                <div class="main_game_right twopage" onclick="document.location='#'" style="cursor:pointer;">
+                </div>
+                <div style="clear: both;"></div>
+
+                <div class="bottom">
+                    <div class="bottom_icon">
+                        <ul>
+                            <li>
+                                <img src="images/zx_logo.png"></li>
+                            <li>
+                                <img src="images/gicc_logo.png"></li>
+                            <li style="margin-right: 0px;">
+                                <img src="images/18_logo.png"></li>
+                        </ul>
+                    </div>
+                    <li>新橙娱乐由菲律宾牌照委员会GICC颁发合法执照</li>
+                    <li>在进行注册前，请确保您已年满18周岁并遵循当地法律法规</li>
+                    <div class="bottom_text">
+                        <ul>
+                            <a href="http://www.og.local" target="_blank">访问电脑版</a>
+                        </ul>
+                    </div>
+                    <p>© 2014-2016 www.xc10.com All Rights Reserved</p>
+                </div>
+
+            </div>
+
+            <!-- bottom-->
+        </div>
+
+		<div class="quickButtonBar">
+            <a href="javascript:void(0);" onclick="document.location='http://m.og.local/'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="promotions.html">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="http://player.og.local/pub/live_chat_link/chn" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.og.local/player_center2/deposit'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.og.local/player_center/menu'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>
+
+        <script type="text/javascript" src="js/swiper.min.js"></script>
+        <script type="text/javascript" src="js/jquery.home.js"></script>
+
+             </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!--# include file="_analytics.shtml" -->
+    </body>
+<!--# include file="_smartbackend_plugin.shtml" -->
+</html>

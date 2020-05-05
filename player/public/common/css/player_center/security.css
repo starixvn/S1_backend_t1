@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.security-list {
+    margin: 0 -15px;
+}
+
+.security-list > div {
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+.security-list > div > .se-bg {
+    background-position: right;
+    background-size: cover;
+    border-color: #fff;
+    height: 100px;
+}
+
+.security-block-player-realname .se-bg {
+    background-image: url('./img/security-name.png');
+}
+
+.security-block-player-address .se-bg {
+    background-image: url('./img/security-name.png');
+}
+
+.security-block-player-income .se-bg {
+    background-image: url('./img/security-name.png');
+}
+
+.security-block-player-deposit-withdrawal .se-bg {
+    background-image: url('./img/security-name.png');
+}
+
+.security-block-player-contact-number .se-bg {
+    background-image: url('./img/security-mobile.png');
+}
+
+.security-block-player-email .se-bg {
+    background-image: url('./img/security-email.png');
+}
+
+.security-block-player-withdrawal-password .se-bg {
+    background-image: url('./img/security-pw.png');
+}
+
+.security-block-player-question .se-bg {
+    background-image: url('./img/security-qus.png');
+}
+
+.security-block-player-password .se-bg {
+    background-image: url('./img/security-pw2.png');
+}
+
+.se-content i.fa.fa-info-circle{
+    color: #c00;
+    font-size: 20px;
+    position: relative;
+    top: -2px;
+}

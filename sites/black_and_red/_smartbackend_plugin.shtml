@@ -1,0 +1,19 @@
+
+<script type="text/javascript">
+(function() {
+    var urlName=document.location.hostname;
+    var prefix= window.location.protocol+'//player.';
+    var urlArr=urlName.split('.');
+    if(urlArr.length>2){
+        //remove first
+        urlArr.shift();
+        urlName=urlArr.join('.');
+    }
+
+    var player_js_url=prefix+urlName+'/pub/preprocess_js/'+(''+Math.random()).substr(2,16);
+    var html = "<script src=\"" + player_js_url + "\"><\/script>";
+    // document.writeln(html);
+})();
+</script>
+
+<script src="/resources/player/built_in/default_all.min.js?v=5.02.02.001-1.00.00.116"></script>

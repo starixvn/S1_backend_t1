@@ -1,0 +1,1 @@
+<?php include VIEWPATH . '/stable_center2/cashier/deposit/auto.php' ?>

@@ -1,0 +1,549 @@
+.custom-container {
+	width: auto;
+	margin: auto;
+}
+
+.alert{
+	/*margin-top:120px;
+	position: fixed;
+	top: -11%;
+	left: 33%;
+	z-index: 9999;*/
+	/*position: absolute;*/
+	position: fixed;
+	z-index: 9999;
+    float: left;
+    top: 20%;
+    left: 32.5%;
+    width: 35%;
+}
+
+.alert .alert-title{
+    float: left;
+    border-bottom: 1px solid green;
+    width: 100%;
+    height: auto;
+    margin: 0 0 20px 0;
+}
+
+.form-inline .dateInput[data-time='true'] {
+	width: 300px !important;
+}
+
+/************************* NAVBAR *****************************/
+
+.custom-navbar-inverse {
+	border-color: #080808;
+	background: rgba(41,41,41,1);
+	background: -moz-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(18,18,18,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(41,41,41,1)), color-stop(100%, rgba(18,18,18,1)));
+	background: -webkit-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(18,18,18,1) 100%);
+	background: -o-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(18,18,18,1) 100%);
+	background: -ms-linear-gradient(top, rgba(41,41,41,1) 0%, rgba(18,18,18,1) 100%);
+	background: linear-gradient(to bottom, rgba(41,41,41,1) 0%, rgba(18,18,18,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#121212', GradientType=0 );
+	height: 118px;
+	overflow-y: visible;
+	border: none;
+}
+.navbar-header {
+	padding-top: 25px;
+}
+.navbar-brand {
+	padding-top: 0;
+	margin-left: 65px;
+}
+.bottom-wrapper {
+	position: relative;
+	width: 1170px;
+	height: 15px;
+	top: 116px;
+	background-color: #0f0f0f;
+	border-radius: 0px 0px 20px 20px;
+	-webkit-border-radius: 0px 0px 20px 20px;
+	border: 0px solid #000000;
+	border-bottom: 7px solid #478804;
+	box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.75);
+}
+.custom-pullright {
+	position: absolute;
+	width: 100%;
+}
+.language-switcher {
+	float: left;
+	padding-right: 15px;
+}
+.login-information .btn-og {
+	font-family: Euphemia;
+}
+.btn-og {
+	font-weight: bold;
+	color: #fff;
+	background-color: #386a08;
+	border-color: #447712;
+	padding: 3px 15px 3px 15px;
+	font-size: 10px;
+	font-family: Ebrima;
+	font-weight: normal;
+	text-transform: uppercase;
+	border-radius: 0;
+	height: 25px;
+}
+.btn-og:hover {
+	color: #fff;
+	background-color: #659E2F;
+}
+.btn-og:focus {
+	color: #fff;
+}
+.language-wrapper, .form-input-wrapper1 {
+	float: right;
+	padding-top: 25px;
+	padding-right: 20px;
+}
+.form-input-wrapper2 {
+	float: right;
+	width: 25.642%;
+	padding-top: 8px;
+}
+.form-inputs {
+	font-size: 10px;
+	line-height: 10px;
+	height: 25px;
+	width: 99px;
+	border-radius: 0;
+	border: 1px solid #468605;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 8px 7px 6px 5px;
+}
+.pass-reg-label {
+	font-family: Gautami;
+	font-size: 11px;
+	margin-top: 10px;
+	color: #fff;
+	text-transform: uppercase;
+	text-align: right;
+}
+.pass-reg-label a {
+	color: #fff;
+}
+.menu-wrapper {
+	float: right;
+	margin-top: -1.2%;
+	margin-right: 15px;
+}
+.main-menu1 {
+	padding-left: 0;
+}
+.main-menu1 li {
+	text-transform: uppercase;
+	text-align: right;
+	display: inline-block;
+	padding: 0px
+}
+.main-menu1 li a {
+	color: #fff;
+	font-weight: bold;
+	padding: 0px 6px;
+}
+#user-information,
+.btn-information2,
+.btn-logout,
+.btn-memcenter {
+	padding: 2px;
+}
+#field_username {
+	width: 100%;
+}
+.field_mainwallet, .btn-memcenter {
+	width: 50%;
+	float: left;
+}
+#btn-information .btn-deposit,
+#btn-information .btn-withdrawal {
+	width: 25%;
+	float: left;
+	padding: 2px;
+}
+.btn-deposit .btn-og,
+.btn-withdrawal .btn-og,
+.btn-information2 .btn-og,
+.btn-logout .btn-og,
+.btn-memcenter .btn-og {
+	text-transform: none;
+	height: 22px;
+	overflow: hidden;
+}
+.btn-withdrawal .btn-og,
+.btn-information2 .btn-og {
+	padding-left: 9.5px;
+}
+.btn-information2, .btn-logout  {
+	width: 25%;
+	float: left;
+}
+
+
+/************************* MAIN CONTENT **************************/
+
+.main-container-wrapper {
+	padding-top: 40px;
+/*	background-color: #fff;*/
+	padding-left: 40px;
+	padding-right: 40px;
+}
+#user-information .field {
+	padding: 0;
+	font-size: 10px;
+	margin-bottom: 0;
+	color: #191919;
+	background-color: #fff;
+	display: block;
+	line-height: 10px;
+	height: 22px;
+	padding: 5px;
+	border-radius: 0;
+	border: 1px solid #468605;
+}
+
+/************************ CONTENT FOOTER *************************/
+
+.content-wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 50px;
+	background-color: #215601;
+	border-color: #215601;
+	border-radius: 0;
+	border: 1px solid transparent;
+}
+.content-wrapper ul {
+	width: 90%;
+	margin: 0 auto;
+	padding-left: 0;
+	margin-bottom: 0;
+	text-align: center;
+}
+.content-wrapper ul li {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 12px;
+	padding: 15px 20px;
+}
+.content-wrapper ul li.active {
+	background-color: #000;
+}
+.content-wrapper ul li a {
+	font-weight: bold;
+	color: #fff !important;
+}
+.payment-info-wrapper {
+	width: 66.66666667%;
+	margin: auto;
+	padding: 30px 0;
+	text-align: center;
+	font-size: 13px;
+	color: #767676;
+}
+.footer_copyright {
+	text-align: center;
+	font-size: 13px;
+	color: #fff;
+}
+
+/************************* WELCOME PAGE **************************/
+
+.bn-wrapper,
+.games-wrapper,
+.hotgames-wrapper,
+.jackpots-wrapper {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.slider-wrapper {
+	width: 75%;
+}
+.news-wrapper,
+.games-wrapper {
+	width: 25%;
+}
+.slider-wrapper,
+.games-wrapper,
+.hotgames-wrapper {
+	float: left;
+}
+.news-wrapper,
+.jackpots-wrapper {
+	float: right;
+}
+.hotgames-wrapper {
+	width: 66.66666667%;
+}
+.jackpots-wrapper {
+	width: 33.33333333%;
+}
+
+/************************** CASINO GAMES *************************/
+
+.panel-game-wrapper {
+	margin-top: 40px;
+	height: 336px;
+}
+.panel-games {
+	float: left;
+	padding: 0px 48px;
+}
+
+/**************************** CASHIER *****************************/
+
+.wallet-balance-wrapper {
+	width: 30%;
+	padding: 0 15px;
+	float: left;
+}
+.btn-option-wrapper {
+	width: 100%;
+}
+.btn-options1 {
+	float: left;
+}
+.btn-options2 {
+	float: right;
+}
+.btn-options1,
+.btn-options2 {
+	width: 43.43%;
+	padding-bottom: 20px;
+}
+.wallet-transfer-wrapper {
+	width: 70%;
+	padding: 0 15px;
+	float: right;
+}
+.input-option-wrapper1,
+.input-option-wrapper3  {
+	float: left;
+}
+.input-option-wrapper2{
+	float: right;
+}
+.input-option-wrapper3 {
+	width: 25%;
+	padding-top: 25px;
+	padding-left: 28px;
+}
+.input-option-wrapper1,
+.input-option-wrapper2 {
+	width: 48%;
+}
+.report-option-wrapper {
+	width: 100%;
+}
+.report-options1 {
+	width: 90%;
+	float: left;
+}
+.report-options2 {
+	width: 10%;
+	float: right;
+	text-align: right;
+}
+
+/************************* PROMOTION **************************/
+
+.btn-promodtl-wrapper {
+	width: 46%;
+	margin: auto;
+}
+.btn-promo-details1 {
+	float: left;
+}
+.btn-promo-details2 {
+	float: right;
+}
+.btn-promo-details1,
+.btn-promo-details2 {
+	width: 47%;
+}
+
+/***************************** DEPOSIT ****************************/
+
+.deposit-wrapper {
+	width: 100%;
+}
+.deposit-list {
+	width: 25%;
+	float: left;
+	padding-top: 7px;
+	margin-bottom: 0;
+}
+.deposit-content {
+	width: 75%;
+	float: right;
+}
+.deposit-list,
+.deposit-content,
+.custom-pdl-15 {
+	padding-left: 15px;
+}
+.custom-group {
+	width: 100%;
+}
+.custom-leftside {
+	float: left;
+}
+.custom-rightside {
+	float: right;
+}
+.custom-sm-1 {
+	width: 8.33333333%;
+	padding-top: 7px;
+	margin-bottom: 0;
+}
+.custom-sm-2 {
+	width: 16.66666667%;
+	padding-top: 7px;
+	margin-bottom: 0;
+}
+.custom-sm-3 {
+	width: 25%;
+	padding-top: 7px;
+	margin-bottom: 0;
+}
+.custom-sm-4 {
+	width: 33.33333333%
+}
+.custom-sm-6 {
+	width: 50%;
+}
+.custom-sm-7 {
+	width: 58.33333333%
+}
+.custom-sm-8 {
+	width: 66.66666667%;
+}
+.custom-sm-9 {
+	width: 75%;
+}
+.custom-sm-10 {
+	width: 83.33333333%;
+}
+.custom-offset-1 {
+	margin-left: 8.33333333%
+}
+.custom-offset-2 {
+	margin-left: 16.66666667%;
+}
+.custom-offset-3 {
+	margin-left: 25%;
+}
+.custom-offset-4 {
+	margin-left: 33.33333333%;
+}
+.custom-pdl-20 {
+	padding-left: 20px;
+}
+.custom-pdl-30 {
+	padding-left: 30px;
+}
+
+.to_right{
+    text-align:right;
+}
+
+.to_center{
+    text-align:center;
+}
+table td {
+    border-top: none;
+}
+
+.table th, .table td {
+     border-top: none;
+ }
+
+ .table>tbody>tr>th, .table>tbody>tr>td {
+    border-top: none;
+}
+
+.tooltip-inner {
+    /* If max-width does not work, try using width instead */
+    width: 350px;
+}
+
+.popover {
+    width: 250px;
+}
+
+.popover-footer {
+  margin: 0;
+  padding: 1px 14px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+/*  background-color: #F7F7F7;
+  border-bottom: 1px solid #EBEBEB;
+*/  border-radius: 5px 5px 0 0;
+}
+
+hr.style-one {
+	border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(128, 128, 128, 1), rgba(136, 136, 136, 1), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(86, 86, 86, 0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
+/************************* MEDIA QUERIES **************************/
+
+@media (max-width:1188px) {
+    .custom-navbar-inverse {
+    	position: absolute;
+    }
+    .main-container-wrapper {
+    	padding-top: 158px;
+    }
+    .footer-copyright-wrapper {
+		width: 1170px;
+    	margin: 0 auto;
+	}
+
+@media (max-width: 393px) {
+	.btnPhoneCenter {
+	    margin-left: -45px;
+	}
+	.custom-offset-2{
+		margin-left: 0% !important; 
+	}
+	.custom-sm-8{
+		width: 100% !important;
+	}
+	.panel-primary {
+	    border-color: rgba(255,255,255,0) !important;
+	}
+	input#reportrange {
+	    width: 323px !important;
+	    margin-bottom: 10px;
+	}
+	.navbar-brand {
+	    float: left;
+	    padding: 15px 15px;
+	    font-size: 18px;
+	    line-height: 20px;
+	    height: 50px;
+	    margin-left: 0px !important;
+	}
+}

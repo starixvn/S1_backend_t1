@@ -1,0 +1,16 @@
+span.errors {
+    padding: 0;
+    margin: 0;
+    float: left;
+    font-size: 11px;
+    color: red;
+}
+
+.reset-password {
+	line-height: 27px;
+}
+
+.random_password_span_lbl {
+	display: inline;
+	padding-right: 10px;
+}

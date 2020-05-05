@@ -1,0 +1,97 @@
+version: '3'
+
+networks:
+  app-tier:
+    driver: bridge
+
+services:
+  og:
+    hostname: default_og
+    image: tripleonetech/og_local:dev-php7
+    volumes:
+      - .:/home/vagrant/Code/og
+      - ./sites/black_and_red:/home/vagrant/site/live
+      - ./sites/mobile_site:/home/vagrant/site/mobile_live
+      - ./local_dev_docker/data/pub:/home/vagrant/Code/pub
+      - ./local_dev_docker/data/var/game_data:/var/game_platform
+      - ./local_dev_docker/data/var/game_log:/var/log/response_results
+      - ./local_dev_docker/data/var/GeoIP:/usr/share/GeoIP
+      - ./local_dev_docker/data/config/ssh:/home/vagrant/.ssh
+      - ./local_dev_docker/data/config/nginx:/usr/local/openresty/nginx/conf/sites-enabled
+      - ./local_dev_docker/data/config/og.cert:/usr/local/openresty/nginx/conf/ssl/og.cert
+      - ./local_dev_docker/data/config/og.key:/usr/local/openresty/nginx/conf/ssl/og.key
+      - ./local_dev_docker/data/config/cron:/etc/cron.d
+    ports:
+      - "127.0.0.1:80:80"
+      - "127.0.0.1:443:443"
+    extra_hosts:
+      - "docker_host:10.200.10.1"
+    environment:
+      TZ: Asia/Hong_Kong
+      OG_USER: vagrant
+      OG_UID: 1001
+    privileged: true
+    depends_on:
+      - redisserver
+      - mysqlserver
+      - memcachedserver
+      - rabbitmq
+    networks:
+      - app-tier
+  redisserver:
+    hostname: redisserver
+    image: redis:5.0.5-alpine
+    volumes:
+      - ./local_dev_docker/data/config/etc/localtime:/etc/localtime
+    ports:
+      - "127.0.0.1:6379:6379"
+    environment:
+      TZ: Asia/Hong_Kong
+    networks:
+      - app-tier
+  memcachedserver:
+    hostname: memcachedserver
+    image: memcached:1.5-alpine
+    volumes:
+      - ./local_dev_docker/data/config/etc/localtime:/etc/localtime
+    ports:
+      - "127.0.0.1:11211:11211"
+    environment:
+      TZ: Asia/Hong_Kong
+    networks:
+      - app-tier
+  mysqlserver:
+    hostname: mysqlserver
+    image: mysql:5.7
+    volumes:
+      - ./local_dev_docker/data/var/mysql:/var/lib/mysql
+      - ./local_dev_docker/data/var/mysql-backup:/tmp/backup
+      - ./local_dev_docker/data/config/mysql-base:/docker-entrypoint-initdb.d
+      - ./local_dev_docker/data/config/mysql.conf.d:/etc/mysql/mysql.conf.d
+      - ./local_dev_docker/data/config/etc/localtime:/etc/localtime
+    ports:
+      - "127.0.0.1:3306:3306"
+    environment:
+      TZ: Asia/Hong_Kong
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: og
+      MYSQL_USER: og
+      MYSQL_PASSWORD: dcrajUg01
+      BACKUP_DB: og
+    networks:
+      - app-tier
+  rabbitmq:
+    hostname: rabbitmq
+    image: rabbitmq:3.6.16-management
+    volumes:
+      - ./local_dev_docker/data/config/etc/localtime:/etc/localtime
+    ports:
+      - "127.0.0.1:15672:15672"
+      - "127.0.0.1:5672:5672"
+    environment:
+      TZ: Asia/Hong_Kong
+      RABBITMQ_DEFAULT_USER: php
+      RABBITMQ_DEFAULT_PASS: php
+    networks:
+      - app-tier
+

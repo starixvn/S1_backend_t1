@@ -1,0 +1,682 @@
+
+body{
+	/*background: url("../images/bwin_bg.jpg") center center;*/
+	background-color: #000;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: Calibri, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif, Eurotype !important;	
+}
+
+.white{
+	color: #fff !important;
+}
+
+.h3,h3 {
+	font-size: 24px !important;
+}
+
+
+/*------------------------------
+	01 Custom Bootstrap
+------------------------------*/
+.container {
+	width: 1349px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+/*------------------------------
+	13 Registration
+------------------------------*/
+/*
+.wizard{
+	width: 415px;
+}
+*/
+
+.registration-container{
+	background-color: #333;
+	color: #fff;
+}
+
+.fuelux .wizard {
+    *zoom: 1;
+    border: 1px solid #d4d4d4;
+    border-radius: 4px;
+    background-color: #fafafa;
+    position: relative;
+    min-height: 48px;
+}
+
+.fuelux .wizard .steps-container {
+    border-radius: 4px 4px 0 0;
+    overflow: hidden;
+}
+
+.fuelux .wizard > .actions {
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 46px;
+    float: right;
+    padding-left: 15px;
+    padding-right: 15px;
+    vertical-align: middle;
+    background-color: #e6e6e6;
+    border-left: 1px solid #d4d4d4;
+    border-radius: 0 4px 0 0;
+}
+
+.fuelux .wizard .step-content {
+    border-top: 1px solid #cccccc;
+    padding: 10px;
+    float: left;
+    width: 100%;
+}
+
+.form-horizontal .control-label {
+    padding-top: 7px;
+    padding-left: 5px;
+	margin-bottom: 0;
+    text-align: left;
+    font-weight: normal;
+}
+
+.wizard {
+    border: none;
+}
+
+.wizard ul.steps > li.active .step-index .label {
+    background-color: #ffd400;
+    border-radius: 50%;
+    color: #333;
+}
+
+.wizard ul.steps > li .step-index .label {
+    background-color: #ffd400;
+    border-radius: 10px;
+    color: #333;
+}
+.wizard ul.steps > li.completed .step-index .label {
+    background-color: #ffd400;
+    border-radius: 10px;
+    color: #333;
+}
+
+.wizard h3{
+	font-weight: bold;
+	margin-bottom: -10px;
+}
+
+.input-group-addon {
+    background-color: #fff;
+    color: #333;
+    padding: 6px;
+    border-radius: 0px;
+	position: relative;
+	z-index: 3;
+	right: -10px;    
+}
+
+input#password.form-control{
+	border-right-color: #fff;
+	width: 181px;
+}
+
+.help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-indent: 25px;
+}
+
+.wizard .steps-content {
+    border-top: none;
+}
+
+.wizard ul.steps > li.active {
+    background-color: #333;
+    color: #ffd400;
+}
+
+.wizard ul.steps > li .step-index .label {
+    background-color: #858584;
+    border-radius: 10px;
+    color: #333;
+	height: 21px;
+	width: 21px;
+	display: inline-block;
+	padding: 0;
+	line-height: 20px;
+	text-align: center;
+	font-size: 16px;    
+}
+
+.wizard ul.steps > li {
+    height: 46px;
+    line-height: 46px;
+    display: table-cell;
+    list-style: none outside none;
+    padding: 0;
+    margin: 0;
+    background: #333;
+    color: #b5b5b5;
+    position: relative;
+}
+
+.wizard ul.steps > li.completed {
+    cursor: pointer;
+    background-color: #333;
+    color: #333;
+}
+
+.wizard ul.steps > li.completed .step-index .label {
+    background-color: #858584;
+    border-radius: 10px;
+    color: #333;
+}
+
+.wizard ul.steps > li.completed {
+    cursor: pointer;
+    background-color: #333;
+    color: #858584;
+}
+
+.wizard ul.steps > li.completed .step-index b{
+	color: #ffd400;
+}
+
+.weMade  {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.form-control {
+    display: block;
+    width: 215px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0px;
+    margin-left: 13px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+
+span.btn.btn-next.btn-default {
+    color: #333;
+    background-color: #858584;
+    border: none;
+    border-radius: 0px;
+}
+span.btn.btn-default.btn-prev {
+    color: #333;
+    background-color: #c7c8ca;
+    border: none;
+    border-radius: 0px;
+}
+button.btn.btn-default {
+    color: #333;
+    background-color: #c7c8ca;
+    border: none;
+    border-radius: 0px;
+}
+
+.nav.navbar-nav.navbar-right .dropdown{
+	background: transparent;
+}
+
+.dropdown button.btn.btn-default{
+	padding: 0;
+	line-height: 0;
+	height: auto;
+	margin-top: -2px;
+}
+
+.navbar-right .dropdown-menu{
+	right: -3px;
+	left: auto;
+	min-width: auto;
+	padding: 0;
+	width: auto;
+	border-radius: 0;
+	background: #d2d2d2;
+	margin-top: 4px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.9);
+}
+
+.navbar-right .dropdown-menu:after {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #d2d2d2;
+	border-width: 7px;
+	margin-left: -7px;
+}
+
+.dropdown-menu > li > a{
+	padding: 1px 5px 5px 5px;
+}
+
+.dropdown-menu > li > a:hover{
+	background: #d2d2d2;
+}
+
+span.btn.btn-next.final-step.btn-success {
+    color: #333;
+    background-color: #ffd500;
+    border-color: #ffd500;
+    border-radius: 0px;
+    margin-top: 15px;
+}
+
+.checkbox input[type=checkbox] {
+     background-color:red;
+}
+
+
+
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: $DarkBrown;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color:#fff;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:#fff;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+
+input[type="radio"] + label span {
+    background-color: #333;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.mobile-country{
+	padding: 0;
+	width: 80px;
+}	
+
+.mobile-nmbr{
+	margin-left: 2px;
+	width: 120px;
+}
+.help-mobile{
+	text-indent: 10px;
+}
+
+.birthdate{
+	width: 64px;
+}
+
+.select-birth .col-sm-3{
+	padding: 0;
+	width: 17.8%;
+}
+
+.summaryBadge{
+	background-color: #83b752;
+    border-radius: 10px;
+    color: #333;
+}
+
+.dropdown{
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background: url("../img/registration/caret-down.png") no-repeat;
+	background-color: #fff;
+	background-position: 95% 45%;
+}
+
+.col-sm-4 .birthdate.dropdown{
+	margin: 0;
+	padding: 0;
+}
+
+
+/*------------------------------
+	Registration 04
+------------------------------*/
+
+.signup-summary .container{
+	background-color: #333333;
+	color: #fff;
+	padding: 50px 0;
+}
+
+.reg-desc{
+	margin: 20px 0;
+}
+
+
+.summary-page .step-pane.active{
+	padding: 10px 0px 10px 0 !important;
+}
+
+.reg-desc h3{
+	font-weight: bold;
+	font-size: 25px;
+	padding-left: 15px;
+	margin:0;
+}
+
+.reg-desc p{
+	padding: 5px 15px;
+	margin:0;	
+}
+
+.badge{
+	background-color: #83b752;
+	font-size: 16px;
+
+}
+
+.steps-container .steps{
+	padding: 0;
+}
+
+.steps-container ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 10px 15px;	
+}
+
+.sum{
+	color: #ffd500;	
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.data{
+	padding-left: 20px;
+	padding-right: 0;
+}
+
+.input-box{
+	padding-left: 10px;
+	margin-left: 12px;
+	margin-right: 10px;
+	width: 200px;
+	padding-right: 0;
+	position: relative;
+}
+
+.eye img{
+	position: absolute;
+	right: -30px;
+	top: 10px;
+}
+
+.ok{
+	text-align: right;
+	padding: 0;
+	width: 58px;
+}
+
+.with-box{
+	padding-top: 7px; 
+}
+
+.captcha-img{
+	padding: 5px;
+}
+
+.captcha-img img{
+	padding-bottom: 10px;
+}
+
+.captcha-img .col-md-6{
+	padding-left: 10px;
+}
+
+.captcha-img .form-control{
+	padding-top: 10px;
+}
+
+.glyphicon-repeat{
+	font-size: 20px;
+	padding: 10px;
+	font-weight: bold;
+}
+
+.resp-gaming{
+	color: #333333;
+	font-size: 14px;
+}
+
+.resp-gaming p{
+	margin: 10px 0;
+}
+
+.resp-gaming label{
+	font-weight: normal;
+}
+
+.alert{
+	margin-bottom: 0;
+}
+
+.terms{
+	background-color: #939598;
+	padding: 10px 0;
+}
+
+.terms a{
+	color: #ffd500;
+	text-decoration: none;
+}
+
+.captcha-img .form-control{
+	margin-top: 5px;
+	width: 150px;
+}
+
+.actions{
+	padding: 20px 0;
+}
+
+.actions .btn{
+	color: #000;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #c7c8ca;
+}
+
+.actions .btn:hover{
+	background-color: #ffd500;
+}
+
+
+.hr-bottom {
+	border-bottom: 2px solid #8b8b8b;
+}
+
+
+.hr-reverse{
+	border-bottom: 2px solid #696a6c;
+}
+
+.bonus-game .row{
+	padding: 5px !important;
+}
+
+.form-check{
+	padding: 0 20px 10px 20px;
+}
+
+
+.add-btn{
+	padding:0;
+}
+
+/*------------------------------
+	Registration 05
+------------------------------*/
+
+.reg-finish .container {
+	background-color: #333333;
+}
+
+
+.reg-finish .container h4{
+	color:#fff;
+}
+
+
+.congrats{
+	padding-top: 20px;
+}
+
+.congrats h1{
+	color:#fff;
+	font-weight: bold;
+}
+
+.congrats p{
+	margin: 30px;
+	color: #fff;
+	font-size: 12px;	
+}
+
+.bonus-img{
+	margin: 30px 0;
+}
+
+
+#no-border-game{
+	border-left: none;
+	border-right: none;
+}
+
+.bonus-game{
+	border: 5px solid #939598;
+	padding: 0;
+}
+
+#no-border-game{
+	border-left: none;
+	border-right: none;
+}
+
+.bonus-game .col-md-6{
+	padding-left: 5px;
+}
+
+.bonus-img{
+	border:none !important; 
+}
+
+.bonus-game img{
+	padding-top: 10px;
+	padding-left: 12px;
+
+}
+
+.bonus-img .col-md-6 p{
+	padding: 5px 15px;
+	margin: 0;
+	font-weight: bold;
+	color: #fff;
+}
+
+.congrats-link{
+	margin-bottom:50px;
+	color: #fff;
+	font-size: 12px;	
+}
+
+.congrats-link a{
+	color: #ffd500;
+	text-decoration: none;
+}
+
+
+section{
+	padding: 0;
+	margin-bottom: -10px;
+}
+
+/* ======================================================
+Error Validation
+====================================================== */
+.error-validator{
+	position: absolute;
+	right: -305px;
+	top: 0;
+	padding: 10px;
+	background: #fff;
+	border-radius: 0;
+	width: 300px;
+}
+
+.error-validator::after{
+	right: 100%;
+	top: 9px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 6px;
+	margin-top: -6px;	
+}
+
+.error-validator p{
+	color: #333;
+}
+
+.error-validator p i{
+	line-height: 0px;
+	height: 16px;
+	display: inline-block;
+	top: 3px;
+	position: relative;	
+}

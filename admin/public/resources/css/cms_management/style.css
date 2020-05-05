@@ -1,0 +1,308 @@
+table#records tr td{
+	width: 15%;
+	padding: 5px;
+}
+img:not(.smartadmin-logo){
+	width: 100px;
+}
+a{
+	text-decoration: none;
+	color: red;
+}
+a.blue{
+	text-decoration: none;
+	color: #428bca;
+}
+a.blue:hover{
+	text-decoration: none;
+	color: #5bc0de;
+}
+ul#main_menu li{
+	list-style: none;
+	display: inline-block;
+	padding: 5px 10px;
+	background: blue;
+}
+ul#main_menu li a{
+	color: #fff;
+}
+.errors{
+	color: red;
+}
+
+/* button */
+.editBannerCmsBtn{
+	cursor: pointer;
+	text-decoration: none;
+}
+.promoActionBtn{
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.promoActionBtn:link{
+	text-decoration: none;
+}
+
+.actionPromoCMS a:link{
+	color: #333;
+}
+
+.editCmsPromoBtn{
+	cursor: pointer;
+}
+
+.actionCmsBannerGroup a:link{
+	color: #333;
+}
+
+.uploadNote{
+	font-size: 12px;
+}
+
+.email_template a {
+	color: #008cba;
+}
+
+.email_template .nav-tabs > li {
+	width: 150px;
+	float: left;
+	margin-bottom: -1px;
+	text-align: center;
+	text-transform:uppercase;
+}
+.email_template .nav_content {
+	width: 100%;
+	height: auto;
+	float: left;
+	border-top: none;
+	padding-bottom: 10px;
+	border: 1px solid lightgray;
+}
+
+.email_template_switch .btn-default,
+.email_template_switch .btn-default:hover,
+.email_template_switch .btn-default:active,
+.email_template_switch .btn-default.active,
+.email_template_switch .open > .dropdown-toggle.btn-default {
+	background-color: #ffffff !important;
+}
+
+.bootstrap-switch
+.bootstrap-switch-handle-off,
+.bootstrap-switch .bootstrap-switch-handle-on,
+.bootstrap-switch .bootstrap-switch-label {
+	padding: 6px 0px !important;
+}
+
+.email_template .email-template-table > thead > tr > th {
+	text-align: center;
+	font-size: larger;
+	font-weight: normal;
+	vertical-align: middle;
+	line-height:2.4;
+}
+
+.email_template .email-template-table > tbody > tr > td {
+	font-size:13px;
+	line-height:2.4;
+	vertical-align: middle;
+}
+
+.email_template .email-replace-msg > thead > tr > th {
+	font-size: larger;
+	font-weight: normal;
+	vertical-align: middle;
+	line-height:1;
+}
+
+.email_template .email-replace-msg > tbody > tr > td {
+	font-size:13px;
+	line-height:1;
+	vertical-align: middle;
+}
+
+.email_template .action-btn {
+	color: #008cba;
+	line-height: 29px;
+	padding-left:12px;
+	padding-right:12px;
+	border: 1px solid #008cba;
+	background-color: #ffffff;
+}
+
+.email_template .action-btn:focus {
+	outline:0;
+}
+
+.email_template .bootstrap-switch
+.email_template .bootstrap-switch-handle-off,
+.email_template .bootstrap-switch
+.email_template .bootstrap-switch-handle-on,
+.email_template .bootstrap-switch .bootstrap-switch-label {
+	padding:4px 12px;
+	font-size: 12px;
+}
+
+.email_template .breadcrumb {
+	font-size: 13px;
+	padding: 12px 15px;
+	text-transform: capitalize;
+}
+
+#email-edit-modal .modal-header-info,
+#email-setting-modal .modal-header-info,
+#email-preview-modal .modal-header-info,
+#email-edit-success-modal .modal-header-info {
+	color:#fff;
+	background-color: #5bc0de;
+}
+
+.email-template-table .email-content {
+	width: 100%;
+}
+
+#email-send-error-modal .modal-header-danger,
+#email-edit-error-modal .modal-header-danger {
+	color:#fff;
+	background-color: #E63F00;
+}
+
+#email-edit-modal ::-webkit-scrollbar-thumb,
+#email-preview-modal ::-webkit-scrollbar-thumb {
+	background: #008cba;
+	border-radius: 10px;
+}
+
+#email-edit-modal,
+#email-setting-modal,
+#email-preview-modal {
+	font-weight: 300;
+}
+
+#email-preview-modal .email-preview-content {
+	padding:30px;
+	background-color:#fff;
+	text-align:left;
+	font-size:14px;
+	height:400px;
+	overflow: hidden;
+	overflow-y: scroll;
+	max-height:400px;
+	color: #A8A8A8;
+}
+
+#email-preview-modal .fa-exclamation-circle {
+	font-size: 22px;
+	color: grey;
+}
+
+.email-modal .vertical-alignment-helper {
+	display:table;
+	height: 100%;
+	width: 100%;
+	pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.email-modal .vertical-align-center {
+	/* To center vertically */
+	display: table-cell;
+	vertical-align: middle;
+	pointer-events:none;
+}
+.email-modal .modal-content {
+	/* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */
+	width:inherit;
+	max-width:inherit; /* For Bootstrap 4 - to avoid the modal window stretching full width */
+	height:inherit;
+	/* To center horizontally */
+	margin: 0 auto;
+	pointer-events: all;
+}
+
+#email-edit-modal .tab-pane,
+#email-preview-modal .tab-pane {
+	padding: 0px;
+}
+
+#email-edit-modal .tab-content,
+#email-preview-modal .tab-content {
+	border:1px solid #ddd;
+	border-bottom:0px;
+	padding: 0px !important;
+}
+#email-edit-modal .nav-tabs,
+#email-preview-modal .nav-tabs {
+	border-bottom: 0px;
+	border-top: 1px solid #ddd;
+}
+#email-edit-modal .nav-tabs > li,
+#email-preview-modal .nav-tabs > li {
+	margin-bottom:0;
+	margin-top:-1px;
+}
+
+#email-edit-modal .nav-tabs > li > a::after,
+#email-preview-modal .nav-tabs > li > a::after {
+	content: "";
+	background: #4285F4;
+	height: 2px;
+	position: absolute;
+	width: 100%;
+	left: 0px;
+	bottom: 0px;
+	top: -1px;
+	transition: all 250ms ease 0s;
+}
+
+#email-edit-modal .nav-tabs > li > a,
+#email-preview-modal .nav-tabs > li > a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 20px;
+	border: 1px solid transparent;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	background-color: transparent;
+}
+
+#email-edit-modal .textarea-plain-text,
+#email-preview-modal .textarea-plain-text {
+	height: 400px;
+	width: 100%;
+	border:transparent;
+	padding:30px;
+	outline:0px !important;
+}
+
+#email-edit-modal .nav-tabs > #email-edit-modal .active > a,
+#email-preview-modal .nav-tabs > #email-edit-modal .active > a,
+#email-edit-modal .nav-tabs > #email-edit-modal .active > a:hover,
+#email-preview-modal .nav-tabs > #email-edit-modal .active > a:hover,
+#email-edit-modal .nav-tabs > #email-edit-modal .active > a:focus,
+#email-preview-modal .nav-tabs > #email-edit-modal .active > a:focus {
+	color: #555555;
+	cursor: default;
+	background-color: #ffffff;
+	border: 1px solid #ddd;
+	border-top-color: transparent;
+}
+
+#email-preview-modal .tooltip-inner {
+	max-width: 400px;
+	width: 400px;
+	background-color: #e7e7e7;
+	color: #000000;
+	padding:10px;
+	line-height: 2;
+}
+
+.footer-padding {
+	padding: 10px 15px;
+}

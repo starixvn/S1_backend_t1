@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>充值中心 - 新橙娱乐</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="pagetwo" class="left move">
+        <div class="header">
+            <div class="head_back">
+                <div class="back_btnPT" onclick="history.go(-1);"></div>
+            </div>
+            <div class="header_text"><a id="ht">在线支付</a></div>
+        </div>
+<div class="page">
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>
+
+</title>
+
+    <div class="mmenu">
+        <div class="mm_header">
+            <ul>
+                <li>选择存款方式</li>
+            </ul>
+            <div class="mm_exit"></div>
+        </div>
+    </div>
+    <div class="mmenu">
+        <div class="mm_header">
+            <ul>
+                <li id="btzz">选择银行</li>
+            </ul>
+            <div class="mm_exit"></div>
+        </div>
+        <div class="mm_main">
+            <ul>
+              <li>工商银行<i></i></li>
+              <li>农业银行<i></i></li>
+              <li>建设银行<i></i></li>
+              <li>招商银行<i></i></li>
+              <li>农业银行<i></i></li>
+              <li>中国银行<i></i></li>
+              <li>交通银行<i></i></li>
+              <li>浦发银行<i></i></li>
+              <li>华夏银行<i></i></li>
+              <li>北京农商银行<i></i></li>
+              <li>上海农商银行<i></i></i>
+              <li>兴业银行<i></i></li>
+              <li>民生银行<i></i></li>
+              <li>广发银行<i></i></li>
+              <li>光大银行<i></i></li>
+              <li>邮政储蓄银行<i></i></li>
+              <li>平安银行<i></i></li>
+              <li>中信银行<i></i></li>
+              <li>农村信用社<i></i></li>
+            </ul>
+        </div>
+    </div>
+
+
+<div class="home">
+        <div id="pane1">
+
+            <div class="input" style="margin-top: 80px;">
+                <div class="input_01"><a>TEST </a></div>
+                <input id="ol_b_amt" name="" placeholder="存款金额" type="tel" class="input_01" maxlength="8">
+                <ul id="zxtext1">
+                    <i></i>请输入存款金额
+                </ul>
+                  <div id="addtkc" class="input_01 xlmenu"><a id="bankicon">请选择银行</a> </div>
+                <!-- <div class="input_01 xlmenu" id="bank_hx"><a>选择银行</a></div> -->
+                    <input id="bankcode" type="hidden">
+                    <ul id="zxtext2">
+                        <li><i></i>请选择银行</li>
+                    </ul>
+                <a href="javascript:void(0)" id="linkpay" class="login_btn" style="display:block;" onclick="return payol('cashier.aspx',10,30000,'26','dtest123')">确&nbsp;&nbsp;&nbsp;&nbsp;定</a>
+
+            </div>
+
+
+        </div>
+         <div class="blank3"></div>
+
+    </div>
+
+
+    </div>
+
+    <div class="quickButtonBar">
+            <a href="javascript:void(0);" onclick="document.location='http://m.xc33.com/'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/iframe_promos'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="http://player.xc33.com/pub/live_chat_link/chn" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center2/deposit'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/menu'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>
+
+    <script>
+        $(document).ready(function () {
+
+        $(".xlmenu").click(function () {
+
+        var xlmenu = ".mmenu";
+
+        var xlmovie = "mmenu_movie";
+
+        $(xlmenu).addClass(xlmovie);
+
+        $(".mm_exit").click(function () {
+
+            $(xlmenu).removeClass(xlmovie);
+
+        });
+
+
+
+        $(".mm_main li").click(function () {
+
+            $(".mm_main li i").removeClass("border");
+
+            $(this).find("i").addClass("border");
+
+            $(xlmenu).removeClass(xlmovie);
+
+            var title = $(this).text();
+
+            $("#bankicon").text(title);
+
+        });
+
+
+
+    });
+
+    $(".login_btn").click(function () {
+
+               var amt = $.trim($("#ol_b_amt").val());
+               if (amt.length == 0) {
+                   $("#zxtext1").html("<i></i>请输入转账金额");
+                   $("#zxtext1").show();
+                   return false;
+               }
+               else {
+                   $("#zxtext1").hide();
+               }
+
+               if (isNaN(amt)) {
+                   $("#zxtext1").html("<i></i>金额非有效数字");
+                   $("#zxtext1").show();
+                   return false;
+               }
+               else {
+                   $("#zfbtext1").hide();
+               }
+
+               var amount = parseFloat(amt, 10);
+
+               if (amount < 100 || amount > 3000) {
+                   $("#zxtext1").html("<i></i>转账金额不能小于 100元 或大于 3000元");
+                   $("#zxtext1").show();
+                   return false;
+               }
+               else {
+                   $("#zxtext1").hide();
+               }
+
+                var bic = $("#bankicon").text();
+                if (bic.indexOf("请选择银行") != -1) {
+                    $("#zxtext2").show();
+                    return false;
+                }
+                else {
+                    $("#zxtext2").hide();
+                }
+
+               var pid = $("#pid").val();
+               if (confirm("您确定提交吗？")) {
+                   return true;
+               }
+
+               return false;
+            });
+
+});
+
+function payol(url, minamt, maxamt, pr, username, pk) {
+    var $payam = $("#ol_b_amt");
+    var payamtval = $.trim($payam.val());
+
+    if (payamtval.length == 0) {
+        $("#zxtext1 li").html("<i></i>请输入存款金额");
+        $("#zxtext1").show();
+        return false;
+    }
+    else {
+        $("#zxtext1").hide();
+    }
+
+    payamtval = parseFloat(payamtval);
+    if (payamtval < minamt) {
+        $("#zxtext1 li").html("<i></i>单笔充值金额不能小于" + minamt + "元");
+        $("#zxtext1").show();
+        return false;
+    }
+    else {
+        $("#zxtext1").hide();
+    }
+
+    if (payamtval > maxamt) {
+        $("#zxtext1 li").html("<i></i>单笔充值金额不能大于" + maxamt + "元");
+        $("#zxtext1").show();
+        return false;
+    } else {
+        $("#zxtext1").hide();
+    }
+
+    $("#linkpay").attr("target", "_blank");
+    $("#linkpay").attr("href", url + "cashier.php?amt=" + payamtval + "&pb=" + pbval + "&pr=" + pr + "&u=" + username + "&gr=1");
+    $payam.val("");
+    return true;
+}
+    </script>
+
+
+</div>
+

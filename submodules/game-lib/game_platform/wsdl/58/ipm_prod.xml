@@ -1,0 +1,948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="loginXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="loginXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="depositXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transferId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="depositXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="withdrawXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="token" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transferId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="withdrawXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBalanceXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBalanceXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllMemberOnlineXML">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllMemberOnlineXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDateTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberStatusXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberStatusXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="memberStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setMemberStatusXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberStatus" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setMemberStatusXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setHousePlayerXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setHousePlayerXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sportsName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isSettled" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastUpdated" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsLangXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sportsName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isSettled" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastUpdated" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsLangXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsByBetDatetimeXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sportsName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isSettled" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastUpdated" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsByBetDatetimeXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsByBetDatetimeLangXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sportsName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="isSettled" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastUpdated" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberBetDetailsByBetDatetimeLangXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTransferStatusXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transferId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getTransferStatusXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="transferStatus" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logoutXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="membercode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="logoutXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberGroupXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberGroupXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setMemberGroupXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MemberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GroupID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setMemberGroupXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberSummaryXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sportsName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getMemberSummaryXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllMemberBalanceXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllMemberBalanceXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBetReportXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="memberCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="startDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="endDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sportsName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="reportType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getBetReportXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setBalanceSummaryXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="timeStamp" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="setBalanceSummaryXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataSet" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="statusCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="statusDesc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="loginXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:loginXML" />
+  </wsdl:message>
+  <wsdl:message name="loginXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:loginXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="depositXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:depositXML" />
+  </wsdl:message>
+  <wsdl:message name="depositXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:depositXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="withdrawXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:withdrawXML" />
+  </wsdl:message>
+  <wsdl:message name="withdrawXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:withdrawXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBalanceXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberBalanceXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBalanceXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberBalanceXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllMemberOnlineXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllMemberOnlineXML" />
+  </wsdl:message>
+  <wsdl:message name="getAllMemberOnlineXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllMemberOnlineXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberStatusXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberStatusXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberStatusXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberStatusXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="setMemberStatusXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:setMemberStatusXML" />
+  </wsdl:message>
+  <wsdl:message name="setMemberStatusXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:setMemberStatusXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="setHousePlayerXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:setHousePlayerXML" />
+  </wsdl:message>
+  <wsdl:message name="setHousePlayerXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:setHousePlayerXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsLangXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsLangXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsLangXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsLangXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsByBetDatetimeXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsByBetDatetimeXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsByBetDatetimeXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsByBetDatetimeXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsByBetDatetimeLangXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsByBetDatetimeLangXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberBetDetailsByBetDatetimeLangXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberBetDetailsByBetDatetimeLangXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getTransferStatusXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getTransferStatusXML" />
+  </wsdl:message>
+  <wsdl:message name="getTransferStatusXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getTransferStatusXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="logoutXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:logoutXML" />
+  </wsdl:message>
+  <wsdl:message name="logoutXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:logoutXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberGroupXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberGroupXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberGroupXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberGroupXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="setMemberGroupXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:setMemberGroupXML" />
+  </wsdl:message>
+  <wsdl:message name="setMemberGroupXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:setMemberGroupXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getMemberSummaryXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getMemberSummaryXML" />
+  </wsdl:message>
+  <wsdl:message name="getMemberSummaryXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getMemberSummaryXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllMemberBalanceXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllMemberBalanceXML" />
+  </wsdl:message>
+  <wsdl:message name="getAllMemberBalanceXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllMemberBalanceXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="getBetReportXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:getBetReportXML" />
+  </wsdl:message>
+  <wsdl:message name="getBetReportXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:getBetReportXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="setBalanceSummaryXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:setBalanceSummaryXML" />
+  </wsdl:message>
+  <wsdl:message name="setBalanceSummaryXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:setBalanceSummaryXMLResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ExternalAPISoap">
+    <wsdl:operation name="loginXML">
+      <wsdl:input message="tns:loginXMLSoapIn" />
+      <wsdl:output message="tns:loginXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="depositXML">
+      <wsdl:input message="tns:depositXMLSoapIn" />
+      <wsdl:output message="tns:depositXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="withdrawXML">
+      <wsdl:input message="tns:withdrawXMLSoapIn" />
+      <wsdl:output message="tns:withdrawXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBalanceXML">
+      <wsdl:input message="tns:getMemberBalanceXMLSoapIn" />
+      <wsdl:output message="tns:getMemberBalanceXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllMemberOnlineXML">
+      <wsdl:input message="tns:getAllMemberOnlineXMLSoapIn" />
+      <wsdl:output message="tns:getAllMemberOnlineXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberStatusXML">
+      <wsdl:input message="tns:getMemberStatusXMLSoapIn" />
+      <wsdl:output message="tns:getMemberStatusXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setMemberStatusXML">
+      <wsdl:input message="tns:setMemberStatusXMLSoapIn" />
+      <wsdl:output message="tns:setMemberStatusXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setHousePlayerXML">
+      <wsdl:input message="tns:setHousePlayerXMLSoapIn" />
+      <wsdl:output message="tns:setHousePlayerXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsXML">
+      <wsdl:input message="tns:getMemberBetDetailsXMLSoapIn" />
+      <wsdl:output message="tns:getMemberBetDetailsXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsLangXML">
+      <wsdl:input message="tns:getMemberBetDetailsLangXMLSoapIn" />
+      <wsdl:output message="tns:getMemberBetDetailsLangXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsByBetDatetimeXML">
+      <wsdl:input message="tns:getMemberBetDetailsByBetDatetimeXMLSoapIn" />
+      <wsdl:output message="tns:getMemberBetDetailsByBetDatetimeXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsByBetDatetimeLangXML">
+      <wsdl:input message="tns:getMemberBetDetailsByBetDatetimeLangXMLSoapIn" />
+      <wsdl:output message="tns:getMemberBetDetailsByBetDatetimeLangXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getTransferStatusXML">
+      <wsdl:input message="tns:getTransferStatusXMLSoapIn" />
+      <wsdl:output message="tns:getTransferStatusXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="logoutXML">
+      <wsdl:input message="tns:logoutXMLSoapIn" />
+      <wsdl:output message="tns:logoutXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberGroupXML">
+      <wsdl:input message="tns:getMemberGroupXMLSoapIn" />
+      <wsdl:output message="tns:getMemberGroupXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setMemberGroupXML">
+      <wsdl:input message="tns:setMemberGroupXMLSoapIn" />
+      <wsdl:output message="tns:setMemberGroupXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getMemberSummaryXML">
+      <wsdl:input message="tns:getMemberSummaryXMLSoapIn" />
+      <wsdl:output message="tns:getMemberSummaryXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllMemberBalanceXML">
+      <wsdl:input message="tns:getAllMemberBalanceXMLSoapIn" />
+      <wsdl:output message="tns:getAllMemberBalanceXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getBetReportXML">
+      <wsdl:input message="tns:getBetReportXMLSoapIn" />
+      <wsdl:output message="tns:getBetReportXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="setBalanceSummaryXML">
+      <wsdl:input message="tns:setBalanceSummaryXMLSoapIn" />
+      <wsdl:output message="tns:setBalanceSummaryXMLSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ExternalAPISoap" type="tns:ExternalAPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="loginXML">
+      <soap:operation soapAction="http://tempuri.org/loginXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="depositXML">
+      <soap:operation soapAction="http://tempuri.org/depositXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="withdrawXML">
+      <soap:operation soapAction="http://tempuri.org/withdrawXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBalanceXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberBalanceXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMemberOnlineXML">
+      <soap:operation soapAction="http://tempuri.org/getAllMemberOnlineXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberStatusXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberStatusXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMemberStatusXML">
+      <soap:operation soapAction="http://tempuri.org/setMemberStatusXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setHousePlayerXML">
+      <soap:operation soapAction="http://tempuri.org/setHousePlayerXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberBetDetailsXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsLangXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberBetDetailsLangXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsByBetDatetimeXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberBetDetailsByBetDatetimeXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsByBetDatetimeLangXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberBetDetailsByBetDatetimeLangXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransferStatusXML">
+      <soap:operation soapAction="http://tempuri.org/getTransferStatusXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logoutXML">
+      <soap:operation soapAction="http://tempuri.org/logoutXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberGroupXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberGroupXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMemberGroupXML">
+      <soap:operation soapAction="http://tempuri.org/setMemberGroupXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberSummaryXML">
+      <soap:operation soapAction="http://tempuri.org/getMemberSummaryXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMemberBalanceXML">
+      <soap:operation soapAction="http://tempuri.org/getAllMemberBalanceXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBetReportXML">
+      <soap:operation soapAction="http://tempuri.org/getBetReportXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setBalanceSummaryXML">
+      <soap:operation soapAction="http://tempuri.org/setBalanceSummaryXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ExternalAPISoap12" type="tns:ExternalAPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="loginXML">
+      <soap12:operation soapAction="http://tempuri.org/loginXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="depositXML">
+      <soap12:operation soapAction="http://tempuri.org/depositXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="withdrawXML">
+      <soap12:operation soapAction="http://tempuri.org/withdrawXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBalanceXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberBalanceXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMemberOnlineXML">
+      <soap12:operation soapAction="http://tempuri.org/getAllMemberOnlineXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberStatusXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberStatusXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMemberStatusXML">
+      <soap12:operation soapAction="http://tempuri.org/setMemberStatusXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setHousePlayerXML">
+      <soap12:operation soapAction="http://tempuri.org/setHousePlayerXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberBetDetailsXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsLangXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberBetDetailsLangXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsByBetDatetimeXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberBetDetailsByBetDatetimeXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberBetDetailsByBetDatetimeLangXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberBetDetailsByBetDatetimeLangXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTransferStatusXML">
+      <soap12:operation soapAction="http://tempuri.org/getTransferStatusXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logoutXML">
+      <soap12:operation soapAction="http://tempuri.org/logoutXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberGroupXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberGroupXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setMemberGroupXML">
+      <soap12:operation soapAction="http://tempuri.org/setMemberGroupXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMemberSummaryXML">
+      <soap12:operation soapAction="http://tempuri.org/getMemberSummaryXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllMemberBalanceXML">
+      <soap12:operation soapAction="http://tempuri.org/getAllMemberBalanceXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getBetReportXML">
+      <soap12:operation soapAction="http://tempuri.org/getBetReportXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setBalanceSummaryXML">
+      <soap12:operation soapAction="http://tempuri.org/setBalanceSummaryXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ExternalAPI">
+    <wsdl:port name="ExternalAPISoap" binding="tns:ExternalAPISoap">
+      <soap:address location="http://kgvip.sbws.imapi.net/externalapi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ExternalAPISoap12" binding="tns:ExternalAPISoap12">
+      <soap12:address location="http://kgvip.sbws.imapi.net/externalapi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

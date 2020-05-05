@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>template</title>
+<script src="scripts/jquery.js"></script>
+<script src="scripts/underscore-min.js"></script>
+</head>
+<body>
+
+<script type="text/template" id="before_template">
+
+<form id='<%- formId %>' action='<%- ui.loginUrl %>' method='POST' target='<%- ui.loginIframeName %>'>
+<span><%- default_prefix_for_username %></span>
+<input name='login' type='text' class='ui-input fn-left J-verify' placeholder='<%- langText.form_field_username %>'>
+<input name='password' type='password' class='ui-input fn-left J-verify' placeholder='<%- langText.form_field_password %>'>
+
+<% if ( ui.captchaFlag ){ %>
+<input type='text' name='captcha' placeholder='<%- langText.label_captcha %>' class='ui-input fn-left J-verify _captcha_input' required style='width:40px'>
+<% } %>
+
+<input type='submit' value='<%- langText.button_login %>' class='fn-left ui-btn ui-btn-red J-submit'>
+<a class='fn-left ui-btn ui-btn-brown J-regist-btn _player_register' href='javascript:void(0);'><%- langText.form_register %></a>
+<input type='hidden' name='act' value='<%- act %>'>
+
+<%= ui.currency_select_html %>
+
+</form>
+<iframe name='<%- ui.loginIframeName %>' id='<%- ui.loginIframeName %>' width='0' height='0' border='0' style='display:none;border:0px;width:0px;height:0px;'></iframe>
+
+</script>
+
+<script type="text/template" id="logged_template">
+	<div class="login-member fn-left"><i class="icon icon-member"></i><a href="javascript:void(0)" class='_player_username'><%- default_prefix_for_username+playerName %></a>
+
+<%= ui.currency_select_html %>
+
+	</div>
+	<div class="login-menu fn-left fn-clear">
+	<a href="javascript:void(0)" class='_player_information'><%- langText.header_information %></a>
+	<a href="javascript:void(0)" class='_player_deposit'><%- langText.header_deposit %></a>
+	<a href="javascript:void(0)" class='_player_withdrawal'><%- langText.header_withdrawal %></a>
+	<a href="javascript:void(0)" class='_player_memcashier'><%- langText.header_memcashier %></a>
+	<a href="javascript:void(0)" class='_player_report'><%- langText.header_report %></a>
+	<a href="javascript:void(0)" class='_player_messages'><%- langText.header_messages %> (<span class="_player_internal_message_count"><%- ui.messageCount %></span>)</a></div>
+	<a class="ui-btn ui-btn-logout fn-left" href="<%- ui.logoutUrl %>" target="<%- ui.logoutIframeName %>"><%- langText.button_logout %></a>
+
+	<iframe name="<%- ui.logoutIframeName %>" id="<%- ui.logoutIframeName %>" width="0" height="0" border="0" style="display:none;border:0px;width:0px;height:0px;"></iframe>
+</script>
+
+
+<script type="text/template" id="test_template">
+test list
+
+<% if(ui.is_enabled_mdb){ %>
+<select class="_player_currency">
+<%
+//console.log(ui.active_currency_on_mdb);
+_.each(ui.available_currency_list, function(val, key, list){
+	//console.log(val);
+%>
+	<option value='<%-key%>' <%-(key==ui.active_currency_on_mdb ? "selected=''" : "")%> ><%-val['symbol']%> <%-val['name']%></option>
+<%
+});
+%>
+<% } %>
+
+</select>
+</script>
+
+<div id="show_test_template">
+</div>
+
+<script type="text/javascript">
+	var vars={
+		ui:{
+			available_currency_list: {
+				"cny":{"code":"CNY","name":"CN Yuan","short_name":"\u5143","symbol":"\u00a5","decimals":2,"dec_point":".","thousands_sep":","},
+				"thb":{"code":"THB","name":"Thai baht","short_name":"THB","symbol":"\u0e3f","decimals":2,"dec_point":".","thousands_sep":","},
+				"idr":{"code":"IDR","name":"Indo rupiah","short_name":"IDR","symbol":"Rp","decimals":2,"dec_point":".","thousands_sep":","}
+			},
+			active_currency_on_mdb: 'idr',
+			is_enabled_mdb: 1
+		}
+	};
+	//test underscore
+	var tmpl=$("#test_template").html();
+
+	console.log(vars);
+
+	var tmplObj=_.template(tmpl);
+	var html=tmplObj(vars);
+	$("#show_test_template").html(html);
+</script>
+
+
+</body>
+</html>

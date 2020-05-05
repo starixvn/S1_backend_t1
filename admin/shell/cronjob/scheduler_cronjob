@@ -1,0 +1,7 @@
+
+
+* * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh scheduler  >> /var/log/og/scheduler.log 2>&1
+
+* * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/clear_scheduler_lockfile.sh  >> /var/log/og/clear_scheduler_lockfile.log 2>&1
+
+* * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh generate_admin_dashboard  >> /var/log/og/generate_admin_dashboard.log 2>&1

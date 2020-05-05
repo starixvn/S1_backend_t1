@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<searchdetail requestId="1c2fcf7b60491f799fe439c317442f9e" pageSize="124" totalRecords="124">
+    <details>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945014" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:39" transactionId="14472231690" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326945014" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:39" transactionId="14472231692" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945048" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:44" transactionId="14472232445" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326945048" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:44" transactionId="14472232449" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945077" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:48" transactionId="14472233232" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="6.00" handId="4326945077" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:48" transactionId="14472233234" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945139" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:58" transactionId="14472234691" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326945139" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:10:58" transactionId="14472234698" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945167" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:02" transactionId="14472235466" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326945167" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:02" transactionId="14472235468" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945197" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:07" transactionId="14472236247" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326945197" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:07" transactionId="14472236250" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945228" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:12" transactionId="14472237057" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="4.00" handId="4326945228" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:12" transactionId="14472237059" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326945279" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:20" transactionId="14472238365" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="1.50" handId="4326945279" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:20" transactionId="14472238367" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956348" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:30" transactionId="14472240154" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956348" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:30" transactionId="14472240156" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956377" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:35" transactionId="14472240921" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956377" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:35" transactionId="14472240923" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956404" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:40" transactionId="14472241673" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956404" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:40" transactionId="14472241675" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956433" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:45" transactionId="14472242494" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="8.80" handId="4326956433" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:45" transactionId="14472242498" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956504" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:57" transactionId="14472244566" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956504" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:11:57" transactionId="14472244568" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956532" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:02" transactionId="14472245350" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="1.50" handId="4326956532" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:02" transactionId="14472245352" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956573" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:10" transactionId="14472246639" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956573" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:10" transactionId="14472246641" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956597" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:15" transactionId="14472247366" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956597" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:15" transactionId="14472247371" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956625" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:20" transactionId="14472248157" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956625" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:20" transactionId="14472248159" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956650" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:25" transactionId="14472248904" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="4.50" handId="4326956650" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:25" transactionId="14472248906" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956775" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:45" transactionId="14472252098" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="2.20" handId="4326956775" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:45" transactionId="14472252100" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956824" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:53" transactionId="14472253340" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956824" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:53" transactionId="14472253343" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956853" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:57" transactionId="14472254064" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956853" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:12:57" transactionId="14472254069" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956882" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:02" transactionId="14472254840" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956882" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:02" transactionId="14472254842" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956914" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:07" transactionId="14472255629" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326956914" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:07" transactionId="14472255631" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326956945" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:12" transactionId="14472256475" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.75" handId="4326956945" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:12" transactionId="14472256477" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326957010" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:23" transactionId="14472258263" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326957010" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:23" transactionId="14472258265" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326957037" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:28" transactionId="14472259007" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="38.00" handId="4326957037" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:13:28" transactionId="14472259011" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326957271" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:03" transactionId="14472264814" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326957271" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:03" transactionId="14472264816" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963309" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:08" transactionId="14472265569" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963309" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:08" transactionId="14472265571" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963344" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:12" transactionId="14472266347" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="7.00" handId="4326963344" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:12" transactionId="14472266349" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963438" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:27" transactionId="14472268837" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="34.50" handId="4326963438" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:27" transactionId="14472268839" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963595" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:50" transactionId="14472272661" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="8.60" handId="4326963595" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:14:50" transactionId="14472272669" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963689" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:03" transactionId="14472275057" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963689" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:03" transactionId="14472275059" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963727" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:08" transactionId="14472275897" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963727" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:08" transactionId="14472275899" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963761" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:13" transactionId="14472276762" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="1.00" handId="4326963761" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:13" transactionId="14472276765" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963809" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:20" transactionId="14472278075" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963809" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:20" transactionId="14472278077" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963846" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:25" transactionId="14472278890" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963846" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:25" transactionId="14472278892" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963881" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:29" transactionId="14472279733" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.50" handId="4326963881" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:29" transactionId="14472279735" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963941" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:39" transactionId="14472281272" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963941" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:39" transactionId="14472281274" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326963969" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:44" transactionId="14472282060" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326963969" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:44" transactionId="14472282070" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964002" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:48" transactionId="14472282868" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964002" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:48" transactionId="14472282870" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964033" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:53" transactionId="14472283682" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964033" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:53" transactionId="14472283686" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964069" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:58" transactionId="14472284529" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964069" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:15:58" transactionId="14472284531" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964095" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:03" transactionId="14472285331" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964095" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:03" transactionId="14472285333" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964124" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:08" transactionId="14472286166" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964124" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:08" transactionId="14472286168" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964159" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:13" transactionId="14472286956" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964159" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:13" transactionId="14472286958" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964190" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:18" transactionId="14472287775" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="5.00" handId="4326964190" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:18" transactionId="14472287777" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964250" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:27" transactionId="14472289244" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964250" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:27" transactionId="14472289247" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326964283" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:31" transactionId="14472290022" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326964283" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:31" transactionId="14472290024" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971312" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:36" transactionId="14472290842" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971312" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:36" transactionId="14472290845" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971346" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:41" transactionId="14472291666" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971346" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:41" transactionId="14472291668" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971384" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:46" transactionId="14472292512" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971384" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:46" transactionId="14472292514" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971416" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:51" transactionId="14472293352" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971416" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:51" transactionId="14472293354" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971451" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:55" transactionId="14472294187" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971451" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:16:55" transactionId="14472294190" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971494" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:00" transactionId="14472295029" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971494" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:00" transactionId="14472295035" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971530" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:05" transactionId="14472295864" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="1.50" handId="4326971530" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:05" transactionId="14472295866" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971600" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:16" transactionId="14472297693" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971600" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:16" transactionId="14472297695" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971629" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:21" transactionId="14472298530" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326971629" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:21" transactionId="14472298532" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971674" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:26" transactionId="14472299339" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.25" handId="4326971674" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:26" transactionId="14472299346" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326971728" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:34" transactionId="14472300686" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="26.60" handId="4326971728" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:17:34" transactionId="14472300688" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326972046" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:18:16" transactionId="14472307955" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326972046" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:18:16" transactionId="14472307957" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326972080" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:18:21" transactionId="14472308759" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="0.00" handId="4326972080" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:18:21" transactionId="14472308762" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="-2.50" handId="4326972117" transactionSubType="Wager" game="MadMonkey" currency="CNY" transactionDate="20160603 12:18:26" transactionId="14472309592" />
+        </transaction>
+        <transaction>
+            <player partnerId="3t" playerId="3t_snake1" />
+            <detail amount="57.10" handId="4326972117" transactionSubType="Resolve" game="MadMonkey" currency="CNY" transactionDate="20160603 12:19:48" transactionId="14472322965" />
+        </transaction>
+    </details>
+</searchdetail>

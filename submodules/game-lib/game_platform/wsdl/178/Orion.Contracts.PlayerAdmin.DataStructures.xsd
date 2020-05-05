@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfGetUsersBetsOnTableRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetUsersBetsOnTableRequest" nillable="true" type="tns:GetUsersBetsOnTableRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetUsersBetsOnTableRequest" nillable="true" type="tns:ArrayOfGetUsersBetsOnTableRequest" />
+  <xs:complexType name="GetUsersBetsOnTableRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUsersBetsOnTableRequest" nillable="true" type="tns:GetUsersBetsOnTableRequest" />
+  <xs:complexType name="ArrayOfGetUsersBetsOnTableResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetUsersBetsOnTableResponse" nillable="true" type="tns:GetUsersBetsOnTableResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetUsersBetsOnTableResponse" nillable="true" type="tns:ArrayOfGetUsersBetsOnTableResponse" />
+  <xs:complexType name="GetUsersBetsOnTableResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ModuleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalAmountOnTable" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalAmountOnTableFormatted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalPayoutOnTable" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPayoutOnTableFormatted" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetUsersBetsOnTableResponse" nillable="true" type="tns:GetUsersBetsOnTableResponse" />
+  <xs:complexType name="ArrayOfUserBrandPair">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserBrandPair" nillable="true" type="tns:UserBrandPair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserBrandPair" nillable="true" type="tns:ArrayOfUserBrandPair" />
+  <xs:complexType name="UserBrandPair">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BrandId" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserBrandPair" nillable="true" type="tns:UserBrandPair" />
+  <xs:complexType name="ArrayOfGetLinkedAccountsForUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLinkedAccountsForUserRequest" nillable="true" type="tns:GetLinkedAccountsForUserRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLinkedAccountsForUserRequest" nillable="true" type="tns:ArrayOfGetLinkedAccountsForUserRequest" />
+  <xs:complexType name="GetLinkedAccountsForUserRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLinkedAccountsForUserRequest" nillable="true" type="tns:GetLinkedAccountsForUserRequest" />
+  <xs:complexType name="ArrayOfGetLinkedAccountsForUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLinkedAccountsForUserResponse" nillable="true" type="tns:GetLinkedAccountsForUserResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLinkedAccountsForUserResponse" nillable="true" type="tns:ArrayOfGetLinkedAccountsForUserResponse" />
+  <xs:complexType name="GetLinkedAccountsForUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LinkedAccounts" nillable="true" type="tns:ArrayOfLinkedAccountInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLinkedAccountsForUserResponse" nillable="true" type="tns:GetLinkedAccountsForUserResponse" />
+  <xs:complexType name="ArrayOfLinkedAccountInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LinkedAccountInformation" nillable="true" type="tns:LinkedAccountInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLinkedAccountInformation" nillable="true" type="tns:ArrayOfLinkedAccountInformation" />
+  <xs:complexType name="LinkedAccountInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountStatus" nillable="true" type="tns:AccountStatus" />
+      <xs:element minOccurs="0" name="Brand" nillable="true" type="tns:Brand" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PurchaseLimits" nillable="true" type="tns:ArrayOfPurchaseLimit" />
+      <xs:element minOccurs="0" name="UserDetails" nillable="true" type="tns:UserDetails" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LinkedAccountInformation" nillable="true" type="tns:LinkedAccountInformation" />
+  <xs:complexType name="AccountStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChangeReason" type="xs:int" />
+      <xs:element minOccurs="0" name="CurrentStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AccountStatus" nillable="true" type="tns:AccountStatus" />
+  <xs:complexType name="Brand">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Brand" nillable="true" type="tns:Brand" />
+  <xs:complexType name="ArrayOfPurchaseLimit">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PurchaseLimit" nillable="true" type="tns:PurchaseLimit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPurchaseLimit" nillable="true" type="tns:ArrayOfPurchaseLimit" />
+  <xs:complexType name="PurchaseLimit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsShared" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PendingValueActivationDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PendingValueInPlayerCurrency" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Period" type="tns:LimitPeriodType" />
+      <xs:element minOccurs="0" name="ValueInLicenseeCurrency" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ValueInPlayerCurrency" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ValueInPlayerCurrencyFormatted" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PurchaseLimit" nillable="true" type="tns:PurchaseLimit" />
+  <xs:simpleType name="LimitPeriodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Daily" />
+      <xs:enumeration value="Weekly" />
+      <xs:enumeration value="Monthly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LimitPeriodType" nillable="true" type="tns:LimitPeriodType" />
+  <xs:complexType name="UserDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyId" type="xs:int" />
+      <xs:element minOccurs="0" name="DateLinked" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DateOfBirth" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IDNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicenseeCurrencyId" type="xs:int" />
+      <xs:element minOccurs="0" name="RegulatedMarketTypeId" type="xs:int" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UserDetails" nillable="true" type="tns:UserDetails" />
+  <xs:complexType name="ArrayOfGetLastLimitsIncreaseAndCountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLastLimitsIncreaseAndCountRequest" nillable="true" type="tns:GetLastLimitsIncreaseAndCountRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLastLimitsIncreaseAndCountRequest" nillable="true" type="tns:ArrayOfGetLastLimitsIncreaseAndCountRequest" />
+  <xs:complexType name="GetLastLimitsIncreaseAndCountRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLastLimitsIncreaseAndCountRequest" nillable="true" type="tns:GetLastLimitsIncreaseAndCountRequest" />
+  <xs:complexType name="ArrayOfGetLastLimitsIncreaseAndCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetLastLimitsIncreaseAndCountResponse" nillable="true" type="tns:GetLastLimitsIncreaseAndCountResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetLastLimitsIncreaseAndCountResponse" nillable="true" type="tns:ArrayOfGetLastLimitsIncreaseAndCountResponse" />
+  <xs:complexType name="GetLastLimitsIncreaseAndCountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IncreaseCount" type="xs:int" />
+      <xs:element minOccurs="0" name="LastChangeDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastIncreaseDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NextChangeDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NextIncreaseDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="NumberOfDaysToNextIncrease" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetLastLimitsIncreaseAndCountResponse" nillable="true" type="tns:GetLastLimitsIncreaseAndCountResponse" />
+  <xs:complexType name="ArrayOfRemovePendingPurchaseDWMLimitRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RemovePendingPurchaseDWMLimitRequest" nillable="true" type="tns:RemovePendingPurchaseDWMLimitRequest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRemovePendingPurchaseDWMLimitRequest" nillable="true" type="tns:ArrayOfRemovePendingPurchaseDWMLimitRequest" />
+  <xs:complexType name="RemovePendingPurchaseDWMLimitRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="RemoveAll" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Users" nillable="true" type="tns:ArrayOfUserBrandPair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemovePendingPurchaseDWMLimitRequest" nillable="true" type="tns:RemovePendingPurchaseDWMLimitRequest" />
+  <xs:complexType name="ArrayOfRemovePendingPurchaseDWMLimitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RemovePendingPurchaseDWMLimitResponse" nillable="true" type="tns:RemovePendingPurchaseDWMLimitResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRemovePendingPurchaseDWMLimitResponse" nillable="true" type="tns:ArrayOfRemovePendingPurchaseDWMLimitResponse" />
+  <xs:complexType name="RemovePendingPurchaseDWMLimitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RemovePendingPurchaseDWMLimitResponse" nillable="true" type="tns:RemovePendingPurchaseDWMLimitResponse" />
+</xs:schema>

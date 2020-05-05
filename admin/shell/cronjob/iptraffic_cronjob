@@ -1,0 +1,1 @@
+#0 8 * * * root eth="eth0"; log_path="/tmp/$eth.log"; if [ -z "$(ps aux | grep iptraf| grep $eth)" ]; then echo "Start iptraf process"; iptraf -i $eth -B -L $log_path -f;else mv $log_path $log_path.1 && /usr/bin/killall -USR1 iptraf; fi; /home/vagrant/Code/og/admin/shell/show_top_traffic_ip.py $log_path.1 10 > /var/log/ip_traffic.log

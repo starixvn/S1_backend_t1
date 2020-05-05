@@ -1,0 +1,146 @@
+.shop-content {
+  background: $white;
+  box-shadow: 0 2px 10px 0 lighten(rgba($black,0.7), 35);
+}
+
+.shop-header {
+  position: relative;
+  .title-name {
+    color: $white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0 15px 15px;
+    font-size: 18px;
+    font-weight: normal;
+    background: rgba(0, 0, 0,0.6);
+    background: linear-gradient(0deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+  }
+  img {
+    max-width: 100%;
+  }
+  .amount {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    i {
+      margin-right: 10px;
+    }
+    span {
+      border-radius: 4px;
+      height: 40px;
+      line-height: 40px;
+      width: 140px;
+      display: block;
+      text-align: center;
+      background-color: $amount-bg;
+      box-shadow: 0 2px 4px 0 lighten($black, 35);
+      color: $white;
+      font-size: 12px;
+    }
+  }
+  .badge-new {
+    border-radius: 6px;
+    height: 26px;
+    line-height: 26px;
+    margin-top: 10px;
+    width: 64px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    background-color: $shop-badge-new-bg;
+    color: $white;
+  }
+}
+.shop-body {
+  padding: 20px 0;
+  .col-xs-8 {
+    padding-right: 4px;
+  }
+  .col-xs-4 {
+    padding-left: 4px;
+  }
+  .btn {
+    border-radius: 8px;
+    width: 100%;
+    background: $shop-avail-btn;
+    background-repeat: no-repeat;
+    color: $white;
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+.shop-modal {
+  .modal-header {
+    padding: 0;
+    position: relative;
+    img {
+      max-width: 100%;
+    }
+    h4 {
+      color: $white;
+    	position: absolute;
+    	bottom: 0;
+    	width: 100%;
+    	margin: 0;
+    	padding: 15px;
+    	background: rgba(0, 0, 0,0.6);
+    	background: linear-gradient(0deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+    }
+    .close {
+      border-radius: 100%;
+      opacity: 1;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      height: 32px;
+      line-height: 32px;
+      width: 32px;
+      background-color: $white;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .modal-body {
+    h4 {
+      font-size: 14px;
+      color: #9a9a9a;
+    }
+  }
+  .amount {
+    i {
+      margin-right: 10px;
+    }
+    span {
+      border-radius: 4px;
+      height: 40px;
+      line-height: 40px;
+      width: 140px;
+      display: block;
+      text-align: center;
+      background-color: $amount-bg;
+      box-shadow: 0 2px 4px 0 lighten($black, 35);
+      color: $white;
+      font-size: 12px;
+    }
+  }
+  .modal-footer {
+    padding: 0;
+    .submit-btn {
+      border: 0;
+    	color: #fff;
+    	text-transform: uppercase;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0 0 4px 4px;
+      background: $modal-button-bg;
+    }
+  }
+}
+#shop .col-sm-6 {
+	margin-bottom: 15px;
+}

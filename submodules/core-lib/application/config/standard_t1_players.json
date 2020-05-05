@@ -1,0 +1,47 @@
+{
+	"qa_test_players": [
+		{
+			"username": "testt1qa",
+			"password": "rr5CwUmC",
+			"email" : "testt1qa@tripleonetech.net",
+			"registered_by" : "t1",
+			"firstName" : "testt1qa",
+			"lastName" : "t1_test_player",
+			"isPassChangeable":true
+		}
+	],
+	"dev_test_players": [
+		{
+			"username": "testt1dev",
+			"password": "hyRw2t8",
+			"email" : "testt1dev@tripleonetech.net",
+			"registered_by" : "t1",
+			"firstName" : "testt1dev",
+			"lastName" : "t1_test_player",
+			"isPassChangeable":true
+		}
+	],
+	"itdesk_test_players": [
+		{
+			"username": "testt1desk",
+			"password": "4AOYNG",
+			"email" : "testt1desk@tripleonetech.net",
+			"registered_by" : "t1",
+			"firstName" : "testt1qa",
+			"lastName" : "t1_test_player",
+			"isPassChangeable":true
+		}
+	],
+	"auto_test_players": [
+		{
+			"username": "testt1auto",
+			"password": "1w7zAm",
+			"email" : "testt1auto@tripleonetech.net",
+			"registered_by" : "t1",
+			"firstName" : "testt1auto",
+			"lastName" : "t1_test_player",
+			"isPassChangeable":false
+		}
+	]
+
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body>
+        <GetBrandCompletedGameResultsResponse xmlns="http://ws.oxypite.com/">
+            <GetBrandCompletedGameResultsResult>
+                <PlayerCompletedGamesDTO>
+                    <PlayerId>488fb2d7-c428-e611-80c3-000d3a805b30</PlayerId>
+                    <Username>cris268</Username>
+                    <BrandGameId>96dc0430-8f0e-4982-87d2-5f9453cd2c4a</BrandGameId>
+                    <GameKeyName>SGBlackbeardsBounty</GameKeyName>
+                    <GameTypeId>11</GameTypeId>
+                    <DtStarted>2016-06-02T14:32:28.567</DtStarted>
+                    <DtCompleted>2016-06-02T14:32:28.613</DtCompleted>
+                    <FriendlyGameInstanceId>187768734</FriendlyGameInstanceId>
+                    <GameInstanceId>e5f5aed4-ce28-e611-80c3-000d3a805b30</GameInstanceId>
+                    <Stake>1.2500</Stake>
+                    <Payout>0.0000</Payout>
+                    <JackpotWin>0</JackpotWin>
+                    <JackpotContribution>0</JackpotContribution>
+                    <CurrencyCode>CNY</CurrencyCode>
+                    <ChannelTypeId>1</ChannelTypeId>
+                </PlayerCompletedGamesDTO>
+            </GetBrandCompletedGameResultsResult>
+        </GetBrandCompletedGameResultsResponse>
+    </soap:Body>
+</soap:Envelope>

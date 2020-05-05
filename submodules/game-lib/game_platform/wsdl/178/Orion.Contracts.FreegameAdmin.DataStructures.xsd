@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GetPlayersByOfferRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferId" type="xs:int" />
+      <xs:element minOccurs="0" name="OfferStatusId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPlayersByOfferRequest" nillable="true" type="tns:GetPlayersByOfferRequest" />
+  <xs:complexType name="GetPlayersByOfferResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferId" type="xs:int" />
+      <xs:element minOccurs="0" name="PlayersInOffer" nillable="true" type="tns:ArrayOfPlayerOfferDetail" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetPlayersByOfferResponse" nillable="true" type="tns:GetPlayersByOfferResponse" />
+  <xs:complexType name="ArrayOfPlayerOfferDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlayerOfferDetail" nillable="true" type="tns:PlayerOfferDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayerOfferDetail" nillable="true" type="tns:ArrayOfPlayerOfferDetail" />
+  <xs:complexType name="PlayerOfferDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DateAwarded" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="GamesAwarded" type="xs:int" />
+      <xs:element minOccurs="0" name="GamesLeft" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TotalWinnings" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerOfferDetail" nillable="true" type="tns:PlayerOfferDetail" />
+  <xs:complexType name="GetOffersRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOffersRequest" nillable="true" type="tns:GetOffersRequest" />
+  <xs:complexType name="GetOffersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Offers" nillable="true" type="tns:ArrayOfOffer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOffersResponse" nillable="true" type="tns:GetOffersResponse" />
+  <xs:complexType name="ArrayOfOffer">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Offer" nillable="true" type="tns:Offer" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOffer" nillable="true" type="tns:ArrayOfOffer" />
+  <xs:complexType name="Offer">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cost" type="xs:int" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EndDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="PlayerCount" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Offer" nillable="true" type="tns:Offer" />
+  <xs:complexType name="AddPlayersToOfferRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlayerOfferActionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddPlayersToOfferRequest" nillable="true" type="tns:AddPlayersToOfferRequest" />
+  <xs:complexType name="PlayerOfferActionBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlayerActions" nillable="true" type="tns:ArrayOfPlayerAction" />
+      <xs:element minOccurs="0" name="Sequence" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerOfferActionBase" nillable="true" type="tns:PlayerOfferActionBase" />
+  <xs:complexType name="ArrayOfPlayerAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlayerAction" nillable="true" type="tns:PlayerAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlayerAction" nillable="true" type="tns:ArrayOfPlayerAction" />
+  <xs:complexType name="PlayerAction">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlayerBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InstanceId" type="xs:int" />
+          <xs:element minOccurs="0" name="OfferId" type="xs:int" />
+          <xs:element minOccurs="0" name="Sequence" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PlayerAction" nillable="true" type="tns:PlayerAction" />
+  <xs:complexType name="PlayerBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ISOCurrencyCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlayerStartDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlayerBase" nillable="true" type="tns:PlayerBase" />
+  <xs:complexType name="AddPlayersToOfferResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlayerOfferActionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HasErrors" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AddPlayersToOfferResponse" nillable="true" type="tns:AddPlayersToOfferResponse" />
+  <xs:complexType name="RemovePlayersFromOfferRequest">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlayerOfferActionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemovePlayersFromOfferRequest" nillable="true" type="tns:RemovePlayersFromOfferRequest" />
+  <xs:complexType name="RemovePlayersFromOfferResponse">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:PlayerOfferActionBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HasErrors" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RemovePlayersFromOfferResponse" nillable="true" type="tns:RemovePlayersFromOfferResponse" />
+  <xs:complexType name="GetOffersByPlayerRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="PlayerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOffersByPlayerRequest" nillable="true" type="tns:GetOffersByPlayerRequest" />
+  <xs:complexType name="GetOffersByPlayerOfferStatusRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferStatusId" type="xs:int" />
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOffersByPlayerOfferStatusRequest" nillable="true" type="tns:GetOffersByPlayerOfferStatusRequest" />
+  <xs:complexType name="GetOffersPlayerDetailsRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferId" type="xs:int" />
+      <xs:element minOccurs="0" name="PageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PageSize" type="xs:int" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOffersPlayerDetailsRequest" nillable="true" type="tns:GetOffersPlayerDetailsRequest" />
+  <xs:complexType name="GetOffersPlayerDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OfferId" type="xs:int" />
+      <xs:element minOccurs="0" name="OffersPlayerDetails" nillable="true" type="tns:ArrayOfOffersPlayerDetail" />
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalPages" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetOffersPlayerDetailsResponse" nillable="true" type="tns:GetOffersPlayerDetailsResponse" />
+  <xs:complexType name="ArrayOfOffersPlayerDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OffersPlayerDetail" nillable="true" type="tns:OffersPlayerDetail" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOffersPlayerDetail" nillable="true" type="tns:ArrayOfOffersPlayerDetail" />
+  <xs:complexType name="OffersPlayerDetail">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GamesAwarded" type="xs:int" />
+      <xs:element minOccurs="0" name="GamesLeft" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceId" type="xs:int" />
+      <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfferDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="OfferId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalWinnings" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OffersPlayerDetail" nillable="true" type="tns:OffersPlayerDetail" />
+</xs:schema>

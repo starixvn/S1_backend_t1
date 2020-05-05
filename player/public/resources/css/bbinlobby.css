@@ -1,0 +1,32 @@
+body {
+    background-color: transparent;
+}
+
+.game-item {
+    height: 240px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.game-details {
+    overflow: hidden;
+    position: relative;
+}
+
+.game-name {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.game-image {
+    height: 160px;
+    width: 100%;
+}
+
+.game-action {
+    margin-top: 5px;
+}
+
+#filter-1 {
+    display: none;
+}

@@ -1,0 +1,25 @@
+		<div class="quickButtonBar">
+            <a href="index.html">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="promotions.html">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="#" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xpj.t1t.games/player_center2/deposit'">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://m.og.local/player_center/menu'">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>

@@ -1,0 +1,1031 @@
+﻿body {
+    background: #fff;
+    word-break: break-all;
+    word-wrap: break-word;
+    font-family: "Microsoft YaHei";
+    min-width: 1200px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+a {
+    color: #222;
+}
+a:hover {
+    color: #222;
+}
+a:active {
+    color: #222;
+}
+.cMain,
+a.cMain,
+.cMain a,
+.cMain a:active {
+    color: #f0f0f0;
+}
+.layout1000 {
+    width: 1000px;
+    margin: 0 auto;
+}
+.layout {
+    width: 1200px;
+    margin: 0 auto;
+}
+.layout1120 {
+    width: 1120px;
+    margin: 0 auto;
+    zoom: 1;
+}
+.layout1120:after {
+    display: block;
+    overflow: hidden;
+    clear: both;
+    height: 0;
+    visibility: hidden;
+    content: ".";
+}
+.layout1020 {
+    width: 1020px;
+    margin: 0 auto;
+}
+.top-notice em {
+    background: url(../images/common_spirits.png) no-repeat;
+}
+.top-notice {
+    background: #fff4d1;
+    color: #777;
+    height: 30px;
+    line-height: 30px;
+    position: relative;
+    z-index: 100;
+    overflow: hidden;
+}
+.top-notice .layout {
+    position: relative;
+}
+.top-notice em {
+    background-position: -179px -120px;
+    height: 18px;
+    width: 18px;
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 0;
+}
+.top-notice .top-marquee {
+    width: 960px;
+    margin-left: 30px;
+    overflow: hidden;
+    height: 100%;
+    color: #4d3308;
+}
+.notice {
+    width: 800px;
+    height: 40px;
+    line-height: 40px;
+    margin: 40px auto;
+    background: url(../images/notice_icon.png) no-repeat left center;
+    overflow: hidden;
+}
+.notice .marquee {
+    color: #58402a;
+    width: 760px;
+    height: 40px;
+    overflow: hidden;
+    margin-left: 40px;
+    font-size: 14px;
+}
+.header {
+    background-color: #fff;
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    /*height: 132px;*/
+}
+.header-top {
+    height: 44px;
+    line-height: 44px;
+    background: #434343;
+}
+.web-nav,
+.web-nav a {
+    color: #adacac;
+}
+.web-nav a {
+    margin-right: 10px;
+}
+.web-nav a:hover {
+    color: #ee9a07;
+}
+.login-wrap {
+    /*float: right;*/
+    margin-top: 11px;
+}
+.login-menu .username-btn,
+.login-menu .password-btn {
+    float: left;
+    margin-left: 5px;
+}
+.login-menu input {
+    background-color: #fff;
+    height: 16px;
+    line-height: 16px;
+    width: 128px;
+    padding: 3px 10px;
+    border-radius: 11px;
+    border: none;
+    color: #222;
+    font-size: 12px;
+}
+.login-menu .password-btn input {
+    padding-right: 48px;
+    width: 90px;
+}
+.login-menu .forgot-password {
+    height: 22px;
+    line-height: 22px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #222;
+}
+.login-menu .forgot-password:hover {
+    color: #ee9a07;
+}
+.login-menu>a,
+.login-wrap a.service-btn {
+    background: url(../images/login_spirits.png) no-repeat;
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline;
+    float: left;
+    height: 22px;
+    line-height: 200px;
+    width: 66px;
+    overflow: hidden;
+}
+
+.login-menu a.log-btn {
+    background-position: 0 -22px;
+}
+.login-menu a.log-btn-disabled {
+    background-position: 0 -44px;
+}
+.login-menu a.reg-btn {
+    background-position: 0 -66px;
+}
+.login-wrap a.service-btn {
+    width: 84px;
+}
+
+.layout.pr.logged-in {
+    margin: -12px auto 0;
+}
+
+ul.nav.navbar-nav.accountLogin {
+    float: right;
+    width: 75%;
+    /*height: 60px;*/
+    text-align: right;
+    display: flex;
+    height: 44px;
+}
+
+.logged-in .web-nav.fl {
+    width: 25%;
+    float: left !important;
+}
+
+ul.nav.navbar-nav.accountLogin li a {
+    line-height: 13px;
+    font-size: 12px;
+    color: #fff;
+    padding: 15px 0 0;
+    height: 29px;
+    width: 100%;
+}
+
+ul.nav.navbar-nav.accountLogin li {
+    width: 9% !Important;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    height: 5px !Important;
+}
+
+.logged-in .login-wrap {
+    width: 100%;
+}
+
+ul.nav.navbar-nav.accountLogin li:first-child {
+    margin: -5px 0 0;
+}
+.lottery-banner-info-reg {
+    position: absolute;
+    top: 620px;
+    left: 112px;
+    display: none;
+    background-position: 0 0;
+    width: 215px;
+    height: 53px;
+    line-height: 53px;
+    color: #fff;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+}
+.lottery-banner-info-reg:hover {
+    background-position: 0 -53px;
+    color: #fff;
+}
+.lottery-banner-info-user {
+    position: absolute;
+    top: 620px;
+    left: 0;
+    display: none;
+    width: 440px;
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    line-height: 53px;
+}
+.logined-nav {
+    color: #ccc;
+    height: 25px;
+    line-height: 25px;
+    -webkit-text-shadow: 0 -1px 0 #000;
+    -moz-text-shadow: 0 -1px 0 #000;
+    -ms-text-shadow: 0 -1px 0 #000;
+    -o-text-shadow: 0 -1px 0 #000;
+    text-shadow: 0 -1px 0 #000;
+}
+.logined-nav>span {
+    float: left;
+    display: inline;
+    padding: 0 8px;
+}
+.logined-nav a {
+    display: inline;
+    float: left;
+    color: #ccc;
+    padding: 0 8px;
+}
+.logined-nav a:hover {
+    color: #fff;
+}
+.header-logo {
+    height: 53px;
+    float: left;
+    display: inline;
+    margin: 17px 0 18px;
+}
+.nav {
+    display: inline;
+    width: 858px;
+}
+.nav li {
+    float: left;
+    display: inline;
+    width: 106px;
+    height: 88px;
+    margin-left: 1px;
+    text-align: center;
+}
+.nav li>a {
+    height: 100%;
+    color: #856f5b;
+    font-size: 16px;
+    line-height: 88px;
+    display: block;
+}
+.nav .cur>a,
+.nav li>a:hover,
+.nav li.hover>a {
+    color: #fff;
+    background: #2e73ff;
+}
+.nav li>i {
+    background: url(http://www.xc33.com/images/ico_triangle.png) no-repeat;
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    top: 100px;
+    margin-left: -7px;
+}
+.nav-drop {
+    background: url(http://www.xc33.com/images/nav_drop_bg.png) repeat-x;
+    position: absolute;
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 100%;
+    overflow: hidden;
+}
+.nav-drop .nav-promotion {
+    width: 170px;
+    height: 145px;
+    background: url(http://www.xc33.com/images/drop_pro_bg.png) repeat;
+}
+.nav-drop dl dd {
+    float: left;
+    display: inline;
+}
+.nav-drop dl dd a {
+    background: url(http://www.xc33.com/images/nav_drop_line.png) no-repeat right 37px;
+}
+.nav-drop dl dd.sports-bb a,
+.nav-drop dl dd.l-c-gd a,
+.nav-drop dl dd.lottery-sgwin a,
+.nav-drop dl dd.games-nt a,
+.nav-drop dl dd.getfish-pt a {
+    background: none;
+}
+.nav-drop a {
+    display: block;
+    width: 100%;
+    height: 145px;
+    text-align: center;
+}
+.nav-drop a em {
+    color: #626262;
+}
+.nav-drop .hd {
+    height: 95px;
+    display: block;
+    overflow: hidden;
+}
+.nav-drop .bd {
+    display: block;
+    width: 103px;
+    height: 27px;
+    line-height: 27px;
+    margin: 10px auto 0;
+    border: 1px solid #548dfa;
+    color: #548dfa;
+    border-radius: 14px;
+}
+.nav-drop a:hover .bd {
+    background: #f0a638;
+    border-color: #f0a638;
+    color: #fff;
+}
+.nav-drop i {
+    display: block;
+    background: url(http://www.xc33.com/images/nav_hd_spirits.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+.sports-drop i {
+    width: 150px;
+}
+.lottery-drop i {
+    width: 200px;
+}
+2:09 PM
+.getfish-drop i{width:130px;}
+.nav-promotion i {
+    background-position: -652px -535px;
+    width: 48px;
+    height: 35px;
+    margin: 20px auto 5px;
+}
+.nav-drop dl dd.sports-saba i {
+    background-position: -300px 0;
+}
+.nav-drop dl dd.sports-im i {
+    background-position: -300px -95px;
+}
+.nav-drop dl dd.sports-bb i {
+    background-position: -300px -285px;
+}
+.nav-drop dl dd.sports-hg i {
+    background-position: -300px -190px;
+}
+.nav-drop dl dd.l-c-ag i {
+    background-position: 0 0;
+}
+.nav-drop dl dd.l-c-bb i {
+    background-position: 0 -95px;
+}
+.nav-drop dl dd.l-c-allbet i {
+    background-position: 0 -190px;
+}
+.nav-drop dl dd.l-c-ebet i {
+    background-position: 0 -465px;
+}
+.nav-drop dl dd.l-c-salon i {
+    background-position: 0 -285px;
+}
+.nav-drop dl dd.l-c-gd i {
+    background-position: 0 -380px;
+}
+.nav-drop dl dd.lottery-sgwin i {
+    background-position: -500px 0;
+}
+.nav-drop dl dd.lottery-bb i {
+    background-position: -500px -95px;
+}
+.nav-drop dl dd.games-pt i {
+    background-position: -150px 0;
+}
+.nav-drop dl dd.games-mg i {
+    background-position: -150px -95px;
+}
+.nav-drop dl dd.games-bb i {
+    background-position: -150px -380px;
+}
+.nav-drop dl dd.games-ag i {
+    background-position: -150px -285px;
+}
+.nav-drop dl dd.games-ttg i {
+    display: block;
+    background: url(http://www.xc33.com/images/ttg-xc33.png) no-repeat 0 19px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: contain;
+}
+.nav-drop dl dd.games-qt i {
+    display: block;
+    background: url(http://www.xc33.com/images/qt-xc33.png)  no-repeat 0 15px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: contain;
+}
+.nav-drop dl dd.games-hb i {
+    display: block;
+    background: url(http://www.xc33.com/images/habanero-xcbet.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0;
+    background-size: contain;
+}
+.nav-drop dl dd.games-hb i {
+    display: block;
+    background: url(http://www.xc33.com/images/habanero-xcbet.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0;
+    background-size: contain;
+}
+.nav-drop dl dd.games-gg i {
+    display: block;
+    background: url(http://www.xc33.com/images/global-gaming.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0;
+    background-size: contain;
+}
+.nav-drop dl dd.games-nt i {
+    background-position: -150px -190px;
+}
+.l-c-drop dl dd {
+    width: 206px;
+}
+.sports-drop dl dd {
+    width: 257px;
+}
+.games-drop dl dd {/*
+    width: 206px;*/
+    width: 196px;
+}
+.lottery-drop dl dd {
+    width: 515px;
+}
+.mod-banner {
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+.mod-banner .banner-mask {
+    background: url(../images/slider_mask.png) no-repeat center bottom;
+    height: 84px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+}
+.mod-banner .banner-mask-gray {
+    background-image: url(../images/slider_mask_gray.png);
+}
+.slide-wrap {
+    position: relative;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.slide-wrap .slide-arrow {
+    background: url(../images/slide_arrow_icon.png) no-repeat;
+    height: 38px;
+    width: 24px;
+    position: relative;
+    z-index: 2;
+    display: block!important;
+    top: 50%;
+    margin-top: -19px;
+}
+.slide-wrap .slide-prev {
+    left: 50%;
+    margin-left: -588px;
+}
+.slide-wrap .slide-next {
+    background-position: right -38px;
+    left: 50%;
+    margin-left: 588px;
+}
+.slide-wrap .num {
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    bottom: 30px;
+    *left: 0;
+    z-index: 10;
+}
+.slide-wrap .num span {
+    width: 8px;
+    height: 8px;
+    background: #fffcba;
+    font-size: 0;
+    margin: 1px 8px;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    border-radius: 4px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+.slide-wrap .num span.current {
+    background: #ffae35;
+    width: 10px;
+    height: 10px;
+    margin: 0 7px;
+    border-radius: 5px;
+}
+.slide-wrap ul li {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    display: none;
+}
+.slide-wrap ul li a {
+    display: block;
+}
+.slide-wrap ul li img {
+    position: relative;
+    left: -50%;
+}
+.mod-banner .banner-info {
+    position: absolute;
+    top: 0;
+}
+.mod-banner .lottery-banner-info {
+    width: 440px;
+    height: 700px;
+    left: 50%;
+    margin-left: -600px;
+    background: url(../images/cp_banner_bg.png);
+}
+.mod-lottery .lottery-topico {
+    padding-top: 150px;
+    text-align: center;
+}
+.mod-banner .games-banner-info {
+    background: url(../images/games_banner_info_bg.png) repeat-x 0 -20px;
+    width: 377px;
+    height: 550px;
+    left: 50%;
+    margin-left: 223px;
+    text-align: center;
+}
+.float-box {
+    position: fixed;
+    z-index: 1000;
+    top: 170px;
+    right: 0!important;
+    float: right;
+}
+.float-box>div {
+    height: 230px;
+    width: 52px;
+}
+.float-box li {
+    width: 52px;
+    height: 44px;
+    margin-bottom: 2px;
+    position: relative;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.float-box li a {
+    display: block;
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #4292ff;
+    border-right: 8px solid #2f75ff;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+.float-box li i {
+    background: url(../images/side_contact_right.png) no-repeat;
+    display: block;
+    height: 44px;
+}
+.float-box li.box-service i {
+    background-position: 0 0;
+}
+.float-box li.box-tel i {
+    background-position: 0 -46px;
+}
+.float-box li.box-qq i {
+    background-position: 0 -92px;
+}
+.float-box li.box-wechat i {
+    background-position: 0 -138px;
+}
+.float-box li.box-top i {
+    background-position: 0 -184px;
+}
+.float-box li a:hover {
+    background: #ffb015;
+    border-color: #ff9901;
+}
+.float-box li.box-service a:hover {
+    width: 127px;
+    left: -83px;
+}
+.float-box li.box-qq a:hover,
+.float-box li.box-tel a:hover {
+    width: 167px;
+    left: -123px;
+}
+.float-box li a span {
+    display: none;
+    width: 143px;
+    height: 175px;
+    position: absolute;
+    left: -143px;
+    bottom: 0;
+}
+.float-box li.box-wechat span {
+    background: url(../images/wechat_qrcode.png) no-repeat;
+}
+.float-box li.box-wechat a:hover span {
+    display: block;
+}
+.float-box li.box-wechat a:hover {
+    border-radius: 0;
+}
+.mod-forms label,
+.mod-forget-passwd li label {
+    line-height: 30px;
+}
+.withdraw-psw-tip p a {
+    color: #e04220;
+}
+.withdraw-psw-tip p a:hover {
+    color: #f99d1c;
+}
+.mod-reg,
+.mod-forget-passwd,
+.mod-error {
+    background: #f7f7f7;
+    padding: 30px 0 80px;
+}
+.mod-reg .layout,
+.mod-forget-passwd .layout,
+.mod-error .layout {
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+}
+.mod-reg .hd,
+.mod-forget-passwd .hd {
+    padding: 28px 30px;
+    border-bottom: 1px dashed #e3e3e3;
+}
+.mod-reg .hd h3,
+.mod-forget-passwd .hd h3 {
+    font-size: 24px;
+    line-height: 24px;
+    color: #0088ff;
+}
+.mod-reg .hd p {
+    padding-top: 10px;
+    color: #666;
+    line-height: 12px;
+}
+.mod-reg .hd p span {
+    font-size: 14px;
+}
+.mod-reg fieldset,
+.mod-forget-passwd fieldset {
+    border: 1px solid #eee;
+    margin: 30px;
+    padding: 10px;
+}
+.mod-reg fieldset legend {
+    font-size: 16px;
+    color: #333;
+}
+.mod-reg .agreement {
+    margin: 0 160px;
+    color: #999;
+}
+.mod-reg .agreement a {
+    color: #0088ff;
+    text-decoration: underline;
+}
+.mod-reg .reg-sub a,
+.mod-forget-passwd .ways a {
+    background: url(../images/btn_spirits.png) no-repeat 0 -106px;
+    margin: 30px 160px;
+    display: block;
+    width: 180px;
+    height: 43px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 43px;
+}
+.mod-reg .reg-sub a:hover,
+.mod-forget-passwd .ways a:hover {
+    background-position: 0 -149px;
+}
+.mod-reg .mod-forms label,
+.mod-forget-passwd li label {
+    color: #333;
+}
+.mod-forget-passwd fieldset legend {
+    font: 16px/2.5 "Microsoft YaHei";
+    color: #217eec;
+}
+.mod-forget-passwd .ways span {
+    color: #666;
+}
+.mod-error .layout {
+    padding: 80px 0;
+}
+.mod-error .error-wrap h3 {
+    color: #333;
+}
+.mod-error .error-wrap p {
+    color: #999;
+}
+.mod-error .error-wrap .refresh-btn {
+    width: 120px;
+    padding: 7px 0;
+    margin: 0;
+    background: #0088ff;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.mod-error .error-wrap .refresh-btn:hover {
+    background: #3aafff;
+}
+.user-ctr,
+.ag-ctr {
+    background: #f7f7f7;
+    padding: 30px 0 80px;
+}
+.user-ctr .layout,
+.ag-ctr .layout {
+    background: #fff;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+}
+.user-ctr .items-tab,
+.ag-ctr .items-tab,
+.user-ctr .items-tab a {
+    background-image: url(../images/hd_bg.png)!important;
+}
+.user-ctr .items-tab a:hover,
+.user-ctr .items-tab a.current,
+.user-ctr .items-tab a.current:hover,
+.item h3.title,
+.item .item-tab a:hover {
+    color: #217eec;
+}
+.item .item-tab a,
+.forms-btn-g a,
+.forms-btn-g input,
+.mod-retrieval .btn-sub,
+.mod-retrieval .btn,
+.mod-pt .pt-wrap .btn-apply,
+.mod-pt .pt-wrap .btn-applied {
+    border-radius: 0;
+}
+.item .item-tab a {
+    background: #ececec;
+}
+.recycle-btn:hover {
+    color: #000;
+}
+.item h3.title {
+    font-weight: 600;
+}
+.item .item-tab a.current,
+.item .item-tab a.current:hover {
+    background: #217eec;
+    font-weight: 600;
+}
+.page .current,
+.mod-pt .pt-info li a {
+    color: #217eec;
+}
+.mod-pt .pt-wrap .unfold:hover,
+.mod-pt .pt-wrap .fold:hover,
+.page a:hover {
+    border-color: #217eec;
+    color: #217eec;
+}
+.footer {
+    background: url(../images/footer_bg.png) no-repeat center top;
+    padding-top: 100px;
+    color: #9a9898;
+    margin-top: -93px;
+}
+.footer a {
+    color: #9a9898;
+}
+.footer a:hover {
+    color: #ff9e09;
+}
+.footer-top {
+    font-size: 13px;
+    padding-bottom: 35px;
+    background: #434343;
+}
+.footer-top ul {
+    padding-left: 40px;
+}
+.footer-top li {
+    float: left;
+    display: inline;
+}
+.footer-top-01 {
+    width: 550px;
+}
+.footer-top-02 {
+    width: 260px;
+}
+.footer-top-03 {
+    width: 250px;
+    text-align: center;
+}
+.footer-top h4 {
+    font-size: 16px;
+    padding: 35px 0 20px;
+}
+.footer-top-01 p a {
+    margin-right: 15px;
+}
+.footer-top-01 .footer-icons {
+    background: url(../images/footer_icons.png) no-repeat;
+    height: 88px;
+    width: 404px;
+}
+.footer-top-02 a {
+    display: block;
+    margin-bottom: 16px;
+}
+.footer-top-03 p {
+    margin-top: 30px;
+}
+.footer-contact {
+    padding: 25px 0;
+    background: #3b3b3b;
+}
+.footer-contact li {
+    float: left;
+    display: inline;
+    width: 220px;
+    height: 30px;
+    padding-left: 80px;
+    line-height: 30px;
+    color: #5d5d5d;
+    font-size: 16px;
+    font-family: Arial;
+    background-image: url(../images/footer_contact_icon.png);
+    background-repeat: no-repeat;
+}
+.footer-contact li:hover {
+    color: #ff9e09;
+}
+.footer-tel {
+    background-position: 0 0;
+}
+.footer-tel:hover {
+    background-position: 0 -250px;
+}
+.footer-wechat {
+    background-position: 0 -60px;
+}
+.footer-wechat:hover {
+    background-position: 0 -310px;
+}
+.footer-qq {
+    background-position: 0 -120px;
+}
+.footer-qq:hover {
+    background-position: 0 -370px;
+}
+.footer-email {
+    background-position: 0 -190px;
+    width: 140px!important;
+}
+.footer-email:hover {
+    background-position: 0 -440px;
+}
+.footer-bottom {
+    background: #fff;
+    padding: 25px 0;
+}
+.footer-bottom p {
+    width: 500px;
+    font-size: 13px;
+    color: #656565;
+    margin-left: 40px;
+}
+.footer-icons-02 {
+    background: url(../images/footer_icons2.jpg) no-repeat;
+    height: 29px;
+    width: 350px;
+    margin-right: 40px;
+}
+
+.nav-drop dl dd.games-hb i {
+    display: block;
+    background: url(../images/habanero-xcbet.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0;
+    background-size: contain;
+}
+
+.nav-drop dl dd.games-gg i {
+    display: block;
+    background: url(../images/global-gaming.png) no-repeat;
+    width: 100px;
+    height: 100px;
+    margin: 20px auto 0;
+    background-size: contain;
+}
+
+.nav-drop dl dd.games-qt i {
+    display: block;
+    background: url(../images/qt-xc33.png) no-repeat 0 15px;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    background-size: contain;
+}
+
+.getfish-drop i{width:130px;}
+.nav-promotion i {
+    background-position: -652px -535px;
+    width: 48px;
+    height: 35px;
+    margin: 20px auto 5px;
+}
+.getfish-drop dl dd{width:342px;}
+.nav-drop dl dd.getfish-ag i{background-position:-715px 0px;}.nav-drop dl dd.getfish-gg i{background-position:-715px -95px;}.nav-drop dl dd.getfish-pt i{background-position:-715px -190px;}
+
+ul.nav.navbar-nav.accountLogin li.lvl{
+    /*width: 12% !important;*/
+    margin-top: -1px;
+    display: flex;
+    flex-grow: 1;
+    text-align: right;
+}
+
+ul.nav.navbar-nav.accountLogin li.lvl span{
+    vertical-align: middle;background-color: #ee9a06;font-size: 10px;padding: 0px 3px;margin-right: 6px;border-radius: 2px;color: #FFF;
+}
+
+a#og-username:hover, a#playerTotalBalance:hover {
+    background: none !important;
+}
+
+
+

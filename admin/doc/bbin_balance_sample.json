@@ -1,0 +1,425 @@
+{
+  "result": true,
+  "data": [
+    {
+      "LoginName": "lstest002",
+      "Currency": "RMB",
+      "Balance": 20,
+      "TotalBalance": 20
+    },
+    {
+      "LoginName": "lsboyibo",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstestneo",
+      "Currency": "RMB",
+      "Balance": 99,
+      "TotalBalance": 99
+    },
+    {
+      "LoginName": "lsgz9210",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lssamm",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lschakk12",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsdadudu",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstwinkle617",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lssy16888",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsbwj888",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lshua121314",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsxhl0857",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsboleer888",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsnh201311",
+      "Currency": "RMB",
+      "Balance": 0.8,
+      "TotalBalance": 0.8
+    },
+    {
+      "LoginName": "lsshaob1990",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsgggdsdfds",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lszz1987",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsvivian615",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsxiaowen12",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "ls6881216",
+      "Currency": "RMB",
+      "Balance": 120,
+      "TotalBalance": 120
+    },
+    {
+      "LoginName": "lsdft8546",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsbbhrgl",
+      "Currency": "RMB",
+      "Balance": 148,
+      "TotalBalance": 148
+    },
+    {
+      "LoginName": "lsdimpz241",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstext123",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lswyjkysyx",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstext456",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstexwood",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsa35678",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lshyzhuzi",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lssuke123",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsddsadasd",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lswang8886",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstestyyyy",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsxc8889",
+      "Currency": "RMB",
+      "Balance": 8,
+      "TotalBalance": 8
+    },
+    {
+      "LoginName": "lstowin888",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsjiongzi22",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lshujin1218",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsgege321",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lszhang5920",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsss650973",
+      "Currency": "RMB",
+      "Balance": 0.5,
+      "TotalBalance": 0.5
+    },
+    {
+      "LoginName": "lszax0314",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lszax520",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lskangjj23",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lszzz3443",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsa5770412",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsvbvba1",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsqilin3402",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "ls333444555",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsbjbyyh",
+      "Currency": "RMB",
+      "Balance": 170.5,
+      "TotalBalance": 170.5
+    },
+    {
+      "LoginName": "lsyanhui",
+      "Currency": "RMB",
+      "Balance": 0.1,
+      "TotalBalance": 0.1
+    },
+    {
+      "LoginName": "lslijl",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lslinye1314",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lslpcaijie",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lski8989ki",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lszb5n709",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsbslghm2015",
+      "Currency": "RMB",
+      "Balance": 62,
+      "TotalBalance": 62
+    },
+    {
+      "LoginName": "lsjianing",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lswwp888",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lschitotest",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lswutao999",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsgxnnyd",
+      "Currency": "RMB",
+      "Balance": 1.04,
+      "TotalBalance": 1.04
+    },
+    {
+      "LoginName": "lsrr1234",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lslhg888",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsliwenyue",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsnnn168",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lstestneo2",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsamend116",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsht860528",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    },
+    {
+      "LoginName": "lsziqiu77",
+      "Currency": "RMB",
+      "Balance": 0,
+      "TotalBalance": 0
+    }
+  ],
+  "pagination": {
+    "Page": 1,
+    "PageLimit": "500",
+    "TotalNumber": "69",
+    "TotalPage": 1
+  }
+}

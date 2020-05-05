@@ -1,0 +1,25 @@
+{
+    "require": {
+        "paquettg/php-html-parser": "*",
+        "nategood/httpful": "*",
+		"phpmailer/phpmailer": "^6.1",
+		"illuminate/database": "*",
+        "zhuzhichao/ip-location-zh": "*",
+        "monolog/monolog": "*",
+        "swiftmailer/swiftmailer": "*",
+        "mtdowling/cron-expression": "*",
+        "geoip2/geoip2":"~2.0",
+        "league/csv":"^8.0",
+        "symfony/http-foundation": "3.2.*",
+        "php2wsdl/php2wsdl": "^0.5.0",
+        "mustache/mustache": "^2.12",
+        "matthiasmullie/minify": "^1.3",
+        "league/climate": "^3.4",
+        "czproject/git-php": "^3.14",
+        "php-amqplib/php-amqplib": "^2.7",
+        "symfony/yaml": "3.4.*",
+        "symfony/event-dispatcher": "3.4.*",
+        "authy/php": "^3.0",
+        "ipip/db": "^1.0"
+    }
+}

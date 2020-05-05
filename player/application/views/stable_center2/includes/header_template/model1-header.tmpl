@@ -1,0 +1,566 @@
+<div id="header_template">
+    <header>
+        <div class="red-orange-gradient">
+            <div class="container">
+                <div class="row">
+                    <div class="top-bar">
+                        <div class="col-md-1 col-xs-1">
+                            <p>Announcement</p>
+                        </div>
+                        <div class="col-md-11 col-xs-11 announcement-wrapper">
+                            <iframe src="/pub/announcement" style="border: none;" scrolling="no" seamless="seamless"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar header-navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-nav-collapse" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{{ url }}">
+                        <img src="{{ url }}/includes/assets/images/logotripleonedemo.png">
+                    </a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="header-nav-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="{{ url }}">
+                                <img class="pull-left" src="{{ url }}/includes/assets/images/icons/home-icon.png">
+                                <p>Home</p>
+                            </a>
+                        </li>
+                        <li class="g-providers">
+                            <a id="more-nav" href="#" style="display: ;"><img class="responsive-img" src="{{ url }}/includes/assets/images/icons/game-icon.png" style="width: 22px;height: 22px;position: relative;top: -3px;margin-right: 3px;">Games</a>
+                            <ul id="game_providers" class="animated fadeIn">
+                                <div class="container">
+                                    <li id="slots" class="slots-menu">
+                                        <a href="{{ url }}/slots.html">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/icons/slots-icon.png">
+                                            <p>Slots</p>
+                                        </a>
+                                        <!--Slots Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper slots-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <li class="slideInRight PT_Slots">
+                                                        <a href="{{url}}/slots.html?prv=playtech">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-slots-pt.png">
+                                                            <span><strong>Playtech</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight HB_Slots">
+                                                        <a href="{{url}}/slots.html?prv=habanero">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-slots-hb.png">
+                                                            <span><strong>Habanero</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight MG_Slots">
+                                                        <a href="{{url}}/slots.html?prv=microgaming">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-slots-mg.png">
+                                                            <span><strong>Microgaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight PP_Slots">
+                                                        <a href="{{url}}/slots.html?prv=pragmatic">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-slots-pp.png">
+                                                            <span><strong>Pragmatic Play</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight ISB_Slots">
+                                                        <a href="{{url}}/slots.html?prv=isoftbet">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-slots-isb.png">
+                                                            <span><strong>iSoftBet</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight PNG_Slots">
+                                                        <a href="{{url}}/slots.html?prv=playngo">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-slots-png.png">
+                                                            <span><strong>Play n Go</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight AGIN_Slots">
+                                                        <a href="/player_center/goto_t1games/1013/8/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-ag.png">
+                                                            <span><strong>Asia Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight BBIN_Slots">
+                                                    <a href="/player_center/goto_t1games/1024/37/real">
+                                                        <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-bbin.png">
+                                                        <span><strong>BBIN</strong></span>
+                                                    </a>
+                                                    </li>
+                                                    <li class="slideInRight CQ9_Slots">
+                                                        <a href="{{url}}/slots.html?prv=cq9">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-cq9.png">
+                                                            <span><strong>CQ9</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight JUMBO_Slots">
+                                                        <a href="{{url}}/slots.html?prv=jumbo">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-jumbo.png">
+                                                            <span><strong>Jumbo</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight SPG_Slots">
+                                                        <a href="{{url}}/slots.html?prv=spadegame">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-sg.png">
+                                                            <span><strong>Spade Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight TTG_Slots">
+                                                        <a href="{{url}}/slots.html?prv=ttg">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-ttg.png">
+                                                            <span><strong>Toptrend Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight YP_Slots">
+                                                        <a href="{{url}}/slots.html?prv=yoplay">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/slots-thumb/dd-slots-yp.png">
+                                                            <span><strong>Yoplay</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li id="livecasino" class="livecasino-menu">
+                                        <a href="{{ url }}/live-casino.html">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/icons/livecasino-icon.png">
+                                            Live Casino
+                                        </a>
+                                        <!--Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper lc-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <li class="slideInRight LOTUS_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1041">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-livecasino-ag.png">
+                                                            <span><strong>Lotus Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight SAG_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1034/">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-livecasino-sa.png">
+                                                            <span><strong>SA Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight BBIN_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1024/3/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-livecasino-bbin.png">
+                                                            <span><strong>BBIN</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight DG_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1009">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g1.png">
+                                                            <span><strong>Dream Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight OG_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1006">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g2.png">
+                                                            <span><strong>Oriental Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight MG_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1008">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g3.png">
+                                                            <span><strong>Micro Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight EBET_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1014">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g4.png">
+                                                            <span><strong>EBET</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight PT_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1002/bal">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g5.png">
+                                                            <span><strong>Playtech</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight AGIN_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1013/6/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g6.png">
+                                                            <span><strong>Asia Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight HOGAMING_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1039">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g7.png">
+                                                            <span><strong>HO Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight ALLBET_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1007">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g8.png">
+                                                            <span><strong>Allbet</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight GOLDDELUXE_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1026/Baccarat/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g9.png">
+                                                            <span><strong>Gold Deluxe</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight EVO_Livecasino">
+                                                        <a href="/player_center/goto_t1games/1040">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g10.png">
+                                                            <span><strong>Evolution Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight SUNCITY_Livecasino">
+                                                        <a href="/iframe_module/goto_t1games/1033/lobby">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/livecasino-thumb/g11.png">
+                                                            <span><strong>Sunbet</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li id="sports" class="sportsbook-menu">
+                                        <a href="#">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/icons/sports-icon.png">
+                                            Sports
+                                        </a>
+                                        <!--Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper sports-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <!-- <li class="slideInRight RWB_Sportsbook">
+                                                        <a href="#!">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/sports-rwb-logo.png">
+                                                            <span><strong>RWB</strong></span>
+                                                        </a>
+                                                    </li> -->
+                                                    <!--  <li class="slideInRight 3SING_Sportsbook">
+                                                        <a href="">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/3sing.png">
+                                                            <span><strong>3SING</strong></span>
+                                                        </a>
+                                                    </li> -->
+                                                    <li class="slideInRight AGIN_Sportsbook">
+                                                        <a href="/iframe_module/goto_t1games/1013/null/real/TASSPTA">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/ag.png">
+                                                            <span><strong>Asia Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight BBIN_Sportsbook">
+                                                        <a href="/player_center/goto_t1games/1024/1/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/bbin.png">
+                                                            <span><strong>BBIN</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight SBT_Sportsbook">
+                                                        <a href="/iframe_module/goto_t1games/1042">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/bti.png">
+                                                            <span><strong>BTI</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight IPMSPORTSBOOK_Sportsbook">
+                                                        <a href="">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/ipm.png">
+                                                            <span><strong>INPLAY Matrix</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight ONEWORKS_Sportsbook">
+                                                        <a href="/iframe_module/goto_t1games/1030/1">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/sports-thumb/oneworks.png">
+                                                            <span><strong>Oneworks</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li id="fishing" class="fishing-menu">
+                                        <a href="{{ url }}/fishing.html">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/icons/fishing-icon.png">
+                                            Fishing
+                                        </a>
+                                        <!--Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper fishing-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <li class="slideInRight GLOBGAMING_Fishing">
+                                                        <a href="/iframe_module/goto_t1games/1005/61/real/110">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/dd-fishing-ag.png">
+                                                            <span><strong>GG Fishing</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight AGIN_Fishing">
+                                                        <a href="/player_center/goto_t1games/1013/6/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/fishing-thumb/dd-fishing-ag.png">
+                                                            <span><strong>Asia Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight PT_Fishing">
+                                                        <a href="/player_center/goto_t1games/1002/cashfi">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/fishing-thumb/dd-fishing-pt.png">
+                                                            <span><strong>Playtech</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight BBIN_Fishing">
+                                                        <a href="/player_center/goto_t1games/1024/fish/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/fishing-thumb/dd-fishing-bbin.png">
+                                                            <span><strong>BBIN</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight MEGAWIN_Fishing">
+                                                        <a href="/iframe_module/goto_t1games/1035/1051">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/fishing-thumb/dd-fishing-mini.png">
+                                                            <span><strong>Mini World Games</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight JUMBO_Fishing">
+                                                        <a href="/iframe_module/goto_t1games/1018/7001/real/fishing">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/fishing-thumb/dd-fishing-jumbo.png">
+                                                            <span><strong>Jumbo</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight SAG_Fishing">
+                                                        <a href="/iframe_module/goto_t1games/1034/FishermenGold">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/fishing-thumb/dd-fishing-sa.png">
+                                                            <span><strong>SA Gaming</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li id="lottery" class="lottery-menu">
+                                        <a href="#">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/icons/lottery-icon.png">
+                                            Lottery
+                                        </a>
+                                        <!--Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper lottery-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <li class="slideInRight T1L_Lottery">
+                                                        <a href="/player_center/goto_t1lottery/1004/">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/lottery-thumb/dd-lottery-t1.png">
+                                                            <span><strong>T1 Lottery</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight BBIN_Lottery">
+                                                        <a href="/player_center/goto_t1games/1024/34/real">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/lottery-thumb/dd-lottery-bbin.png">
+                                                            <span><strong>BBIN Lottery</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight VR_Lottery">
+                                                        <a href="/iframe_module/goto_t1games/1019">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/lottery-thumb/dd-lottery-vr.png">
+                                                            <span><strong>VR Lottery</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li id="poker" class="poker-menu">
+                                        <a href="{{ url }}/poker.html">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/icons/poker-icon.png">
+                                            Poker
+                                        </a>
+                                        <!--Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper poker-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <li class="slideInRight IDN_Poker">
+                                                        <a href="/player_center/goto_t1games/1025">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/poker-thumb/dd-poker-idn.png">
+                                                            <span><strong>IDN Play</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight GGPOKER_Poker">
+                                                        <a href="/iframe_module/goto_t1games/1028">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/poker-thumb/dd-poker-gg.png">
+                                                            <span><strong>GG Poker</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                    <li id="chess" class="chess-menu">
+                                        <a href="{{ url }}/chess.html">
+                                            <img class="pull-left" src="{{ url }}/includes/assets/images/thumbnail/chess-thumb/chess-icon.svg" style="width: 24px;">
+                                            Chess
+                                        </a>
+                                        <!--Secondary Mega Menu-->
+                                        <nav id="mega-menu" class="fadeIn">
+                                            <div class="nav-wrapper poker-menu-wrapper">
+                                                <ul class="pull-left hide-on-med-and-down">
+                                                    <li class="slideInRight KYGAMES_Chess">
+                                                        <a href="/iframe_module/goto_t1games/1032">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/chess-thumb/ky.png">
+                                                            <span><strong>KY Games</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight LEYOU_Chess">
+                                                        <a href="/iframe_module/goto_t1games/1037">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/chess-thumb/leyou.png">
+                                                            <span><strong>Leyou</strong></span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="slideInRight TIANHAO_Chess">
+                                                        <a href="/iframe_module/goto_t1games/1038">
+                                                            <img src="{{ url }}/includes/assets/images/thumbnail/chess-thumb/tianhao.png">
+                                                            <span><strong>Tianhao</strong></span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </nav>
+                                    </li>
+                                </div>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="{{ url }}/promotions.html">
+                                <img class="pull-left" src="{{ url }}/includes/assets/images/icons/promotion-icon.png">
+                                Promotion
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url }}/download.html">
+                                <img class="pull-left" src="{{ url }}/includes/assets/images/icons/download-icon.png">
+                                Downloads
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <form class="login-wrapper right">
+                                <div id="_player_login_area" class="loginbox">
+                                    Loading... <a href="#" style="display:none;">直接登录</a>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+    </header>
+
+<!-- For Navigation -->
+<script type="text/javascript">
+    $(document).ready(function(){
+    var nav_objs = [
+          'AGIN_Livecasino',
+          'BBIN_Livecasino',
+          'DG_Livecasino',
+          'OG_Livecasino',
+          'MG_Livecasino',
+          'EBET_Livecasino',
+          'PT_Livecasino',
+          'LOTUS_Livecasino',
+          'HOGAMING_Livecasino',
+          'PT_Slots',
+          'MG_Slots',
+          'HB_Slots',
+          'JUMBO_Slots',
+          'ISB_Slots',
+          'BBIN_Slots',
+          'PNG_Slots',
+          'CQ9_Slots',
+          'AGIN_Fishing',
+          'GLOBGAMING_Fishing',
+          'PT_Fishing',
+          'BBIN_Fishing',
+          'MEGAWIN_Fishing',
+          'ONEWORKS_Sportsbook',
+          'BBIN_Sportsbook',
+          'AGIN_Sportsbook',
+          'RWB_Sportsbook',
+          'KYGAMES_Chess',
+          'LEYOU_Chess',
+          'TIANHAO_Chess',
+          'ALLBET_Livecasino',
+          'SAG_Livecasino',
+          'GOLDDELUXE_Livecasino',
+          'EVO_Livecasino',
+          'SUNCITY_Livecasino',
+          'PP_Slots',
+          'YP_Slots',
+          'SPG_Slots',
+          'TTG_Slots',
+          'AGIN_Slots',
+          'JUMBO_Fishing',
+          'SAG_Fishing',
+          'T1L_Lottery',
+          'VR_Lottery',
+          'BBIN_Lottery',
+          'IDN_Poker',
+          'GGPOKER_Poker',
+          '3SING_Sportsbook',
+          'IPMSPORTSBOOK_Sportsbook',
+          'SBT_Sportsbook',
+          'FINANCE_Financialbets',
+    ];
+
+    var totbet_url = "http://ice2019.tot.bet";
+    var loc_host = location.host;
+    var code = loc_host.split(".")[1];
+
+    console.log("CODE: "+code);
+    $.ajax({
+      url:totbet_url+'/api/rest/get_client_game_apis/'+code,
+      type:'GET',
+      async: false,
+      crossDomain:true,
+      success: function(data){
+        var result = JSON.parse(data.result);
+
+        //these hides all games and menu initially
+        $.each(nav_objs, function(k, v) {
+            initgame = v;
+            $("."+initgame).hide();
+            game_cat_menu = initgame.substr(initgame.indexOf("_") + 1).toLowerCase()+"-menu";
+            $("."+game_cat_menu).hide();
+            console.log("initgame:"+initgame);
+        });
+
+        // these will filter and show only the selected games and menu from client
+        $.each(result, function(key, value) {
+          game = value.substr(value.indexOf("-") + 1);
+                    $.each(nav_objs, function(k, v) {
+            if(game === v){
+              game_cat_menu = v.substr(v.indexOf("_") + 1).toLowerCase()+"-menu";
+              $("."+game_cat_menu).show();
+              $("."+game).show();
+              console.log("Game:"+game);
+            }
+          });
+        });
+      }
+     });
+
+
+    var nav_count = $('li#trigger').filter(function() {
+        return $(this).css('display') !== 'none';
+    }).length;
+
+    if (nav_count > 5 ) {
+        $('a#more-nav').css('display', 'block')
+        $('ul#nav-mobile > li:nth-child(2)').addClass('li-custom');
+        $('ul#game_providers').addClass('g-custom');
+    }
+ });
+
+</script>
+
+</div>

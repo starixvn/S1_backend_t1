@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>会员资料</title>
+<link href="styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body id="deposit">
+<div id="box">
+  <div id="top">
+   <div id="kb2"></div>
+   <div id="header">
+    <div id="logo"><img src="images/logo.jpg" width="258" height="94" /></div>
+    <div id="login">
+     <div id="login_xx">账号：hotmail06 |中心钱包 余额：<span>0</span>  </div>     <div id="login_an" class="bt1"><a href="index.html">退出登录</a></div>
+</div>
+   </div>
+   <div id="box_notice">
+                    <div class="notice_rim">
+                        <div class="notice_title">最新资讯：</div>
+                        <div class="control_bar">
+                              <a href="#"><img src="images/control_left.png"></a>
+                              <a href="#"><img src="images/control_right.png"></a>
+                        </div>
+                        <ul>
+                            <li><a href="#">热烈祝贺天天堂娱乐城全新官网上线!</a><span>2015-01-27</span></li>
+                        </ul>
+                    </div>
+                </div>
+   <div id="dh">
+    <div class="kb"></div>
+    <ul id="nav">
+      <li class="start"><a href="member_start.html">开始游戏</a></li>
+      <li class="profile"><a href="member_file.html">会员资料</a></li>
+      <li class="deposit"><a href="member_deposit.html">我要存款</a></li>
+      <li class="transfers"><a href="memeber_transfers.html">户内转账</a></li>
+      <li class="withdrawal"><a href="member_withdrawal.html">我要提款</a></li>
+      <li class="record"><a href="member_record.html">交易记录</a></li>
+      <li class="activity"><a href="member_activity.html">优惠活动</a></li>
+      <li class="mail"><a href="memeber_mail.html">站内信</a></li>
+    </ul>
+   </div>
+  </div><!--top-->
+  <div id="main">
+    <div id="main_con">
+       <div class="pub_txt">请选择您的充值方式</div>
+    </div>
+    <div id="main_con" class="clearfix">
+       <div class="box_left">
+       		<ul>
+            	<li><a href="member_deposit.html" >网银通道</a></li>
+            	<li><a href="member_deposit_zxf.html" class="actived">在线支付通道</a></li>
+            	<li><a href="#">ATM通道</a></li>
+            </ul>
+       </div>
+       <div class="box_right">
+       		<div class="right_title">在线支付通道</div>
+            <div class="right_cont">
+            
+            
+            	<div class="zffs">在线支付存款通道</div>
+                <div class="zffs_con">
+                  <div class="xlrk"><a href="#">在线支付线路1 >></a></div>
+                  <div class="xlrk"><a href="#">在线支付线路2 >></a></div>
+                  <div class="xlrk"><a href="#">在线支付线路3 >></a></div>
+                </div>
+        
+                <div class="zffs"></div>
+                <div class="zffs_con">
+                  <div class="xlrk"><a href="#">在线支付线路4 >></a></div>
+                  <div class="xlrk"><a href="#">在线支付线路5 >></a></div>
+                  <div class="xlrk"><a href="#">在线支付线路6 >></a></div>
+                </div>
+                
+                
+            </div>
+            
+       </div>
+    </div>
+    
+    <div class="main_foot"></div>
+  </div><!--main-->
+</div>
+
+
+<div id="box_foot">
+    	<div class="foot_rim">
+        	<img src="images/foot_img.gif" />
+            <div class="cp_txt">
+            	<a href="about_1.html">关于我们</a> ｜ <a href="about_2.html">联系我们</a> ｜ <a href="about_3.html">合作伙伴</a> ｜ <a href="about_4.html">存款帮助</a> ｜ <a href="about_5.html">取款帮助</a> ｜ <a href="about_6.html">常见问题</a>
+<p>©版权所有2014 天天堂 Reserved</p>
+          </div>
+        </div>
+    </div>
+    
+     <script src="scripts/jquery-1.8.3.min.js"></script>
+      <script src="scripts/global.min.js"></script>
+      <script type="text/javascript">
+            $(document).ready(function() {
+
+                $(".bank_list ul li").hover(function(){
+                  $(this).children(".tips_rim").stop().show(300);
+                },function(){
+                  $(this).children(".tips_rim").stop().hide(300);
+                });
+
+            })
+      </script>
+</body>
+</html>

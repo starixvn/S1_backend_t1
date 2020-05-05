@@ -1,0 +1,39 @@
+{
+    "template_name": "Rescue",
+    "template_parameters": [
+        { "name": "bonusReleaseToPlayer", "type": "checkbox", "label_lang": "Manual", "value": true },
+        { "name": "withdrawRequirementBetCntCondition", "type": "float_amount", "label_lang": "A multiple of Bet Amount", "value": 20 }
+    ],
+    "json_info": {
+        "applicationPeriodStart": "2016-01-01 00:00:00",
+        "bonusAmount": false,
+        "bonusApplicationLimitRule" : "0",
+        "bonusApplicationLimitRuleCnt" : false,
+        "bonusReleaseRule": "3",
+        "bonusReleaseToPlayer": 0,
+        "depositConditionNonFixedDepositAmount": "0",
+        "depositPercentage": 0,
+        "depositSuccesionCnt": false,
+        "depositSuccesionPeriod": "4",
+        "depositSuccesionType": "0",
+        "gameRecordEndDate": false,
+        "gameRecordStartDate": false,
+        "gameRequiredBet": false,
+        "hide_date": "2099-01-01 00:00:00",
+        "maxBonusAmount": false,
+        "noEndDateFlag": 0,
+        "nonDepositPromoType": "8",
+        "nonfixedDepositMaxAmount": false,
+        "nonfixedDepositMinAmount": false,
+        "promoType": "1",
+        "withdrawRequirementBetAmount": false,
+        "withdrawRequirementBetCntCondition": "10",
+        "withdrawRequirementConditionType": "1"
+    },
+    "formula": {
+        "bonus_release": "\/\/\u5956\u91d1\u53d1\u653e\uff1a\uff08\u6628\u5929\u5b58-\u6628\u5929\u53d6-\u4eca\u59290\u70b9\u4f59\u989d\uff09* 10% \u4e0a\u96508888\nPHP.runtime.debug_log('start bonus release');\nvar yesterday=PHP.runtime.get_yesterday();\nvar loss_amount=PHP.runtime.get_loss_by_date(yesterday);\n\nvar bonus_amount=loss_amount*0.1;\nvar max_bonus=8888;\nvar errorMessageLang=null;\n\nif(bonus_amount>max_bonus){\n\tbonus_amount=max_bonus;\n}\nif(bonus_amount<=0){\n\terrorMessageLang=\"\u5bf9\u4e0d\u8d77\uff0c\u4e0d\u7b26\u5408\u4f18\u60e0\u6761\u4ef6\";\n}\n\nPHP.runtime.debug_log('yesterday:'+yesterday+', loss_amount:'+loss_amount);\n\nvar result={\"bonus_amount\":bonus_amount,\"errorMessageLang\":errorMessageLang};\nresult;\n",
+        "withdraw_condition": null,
+        "bonus_condition": "\/\/\u4e00\u5929\u4e00\u6b21\uff0c\u6628\u5929\u5b58-\u6628\u5929\u53d6-\u4eca\u59290\u70b9\u4f59\u989d>10\nPHP.runtime.debug_log('start bonus release');\nvar yesterday=PHP.runtime.get_yesterday();\nvar today=PHP.runtime.get_today();\n\nvar loss_amount=PHP.runtime.get_loss_by_date(yesterday);\nvar cnt_promo=PHP.runtime.count_approved_promo_by_date(today);\n\nvar min=10;\nvar success=false;\nvar message='\u5bf9\u4e0d\u8d77\uff0c\u4e0d\u7b26\u5408\u4f18\u60e0\u6761\u4ef6';\n\nif( loss_amount>min && cnt_promo<1){\n    success=true;\n    message=null;\n}\n\nPHP.runtime.debug_log('yesterday:'+yesterday+', loss_amount:'+loss_amount);\n\nvar result={ \"success\": success , \"message\": message};\nresult;\n"
+    }
+
+}

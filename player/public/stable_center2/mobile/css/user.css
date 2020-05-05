@@ -1,0 +1,132 @@
+﻿.user_top{width: 1200px; height:255px; margin: 0 auto; background-color: #FFFFFF; margin-bottom: 50px; margin-top:50px;}
+.user_top_n{padding-left:100px; padding-top:28px;}
+.user_top_left{width:162px; height:179px; margin-right:45px; float:left;}
+.user_top_center{width:288px; background-color:#FFFFFF; float:left; border-left: 1px solid #e5e5e5; padding-left: 47px; margin-top: 30px;}
+.font1{color:#666666;font-size: 18px;font-weight: 600;}
+.font2{color:#797979;margin-left:17px;}
+.font_color_yellow{color:#f2970e;}
+.user_top_center_p1{color:#b2b2b2; margin-top:20px;}
+.user_top_center_p2{color:#b2b2b2; margin-top:5px;}
+.user_top_center_p3{color:#b2b2b2; margin-top:15px;}
+.user_top_right{width:130px;  background-color:#FFFFFF; float:left;}
+.user_top_right a{color:#ffffff;display:inline-block; width:130px; height: 36px;background:url(../images/btn_spirits.png) no-repeat 0 -361px; font-size: 15px;text-align:center;line-height:35px;margin-top:60px;}
+    .user_top_right a:hover{background-position: 0 -325px;}
+.user_top_bottom{background-color:#FFFFFF; width: 1200px; margin-top:48px; clear:both; height: 750px; margin: 0 auto; margin-bottom: 100px; padding-top: 8px;}
+.user_top_bottom_left{display: inline; float: left; background-color: #fbfbfb;}
+.user_top_bottom_left ul li{width:260px; height:69px; padding-top: 26px; margin-bottom: 23px;border-left: 5px solid #FFF;cursor: pointer;}
+    .user_top_bottom_left ul li:hover{border-left: 5px solid #2e73ff;}
+    .user_top_bottom_left ul li.hourcut{border-left: 5px solid #ffbd03;    background-color: #f1f1f1;}
+.user_left_both{ text-align: center;font-size: 15px;font-weight: 600;color:#666666;}
+.user_left_text{ text-align: center;font-size: 14px;color:#8c8c8c;}
+.user_top_bottom_right{padding-left: 28px; height: auto; float: left;background-color: #f1f1f1;}
+.user_top_bottom_right h1{font-size: 16px;font-weight: 600; color:#8c8c8c; margin-top:40px;}
+.user_top_signday{background-color:#FFFFFF; float:left;}
+    .user_top_signday .signday_main{width:280px;height: 37px;background:url(../images/checksign.png) no-repeat 10px 0;margin: 60px 0 0 100px;position: relative;}
+    .signday_main a{width:130px; height: 36px;background:url(../images/btn_spirits.png) no-repeat 0 -361px;display: inline-block;text-align:center;line-height: 34px;font-size: 15px;color: #FFF;}
+    .signday_main a:hover{background-position: 0 -325px;}
+    .signday_main span{color: #777;margin-left: 10px;}
+    .signday_main span font{width: 40px;    display: inline-block;    text-align: center;    font-size: 14px;}
+    .signday_main .calendarshow{display: none;position: absolute;top:40px;left:-150px;z-index: 999;}
+.anquan_list{
+    width:800px; 
+    height: 50px; 
+    margin-top: 45px;margin-left: 90px;}
+.anquan_list ul li{
+    display:inline-block; 
+    width:189px; 
+    height:43px; 
+    margin-right: 22px;
+    background: url(../images/btn_spirits.png) no-repeat 0px -149px;
+    position: relative;
+    cursor: pointer;
+}
+.anquan_list_img{ width: 30px;height: 25px; background:url(../images/ucenter_icon2.png) no-repeat 0 2px; float: left; margin-top:8px; margin-left:40px; }
+    .anquan_email{}
+    .anquan_mobile{background-position: 0 -28px;}
+    .anquan_clock{background-position: 0 -62px;}
+
+.anquan_list_text{
+    float:left; 
+    margin-top:8px; 
+    margin-left:10px; 
+    color:#FFFFFF; 
+    font-size:14px; 
+}
+.anquan_list_num{
+    width:30px; 
+    height:20px;  
+    color:#FFFFFF; 
+    text-align:center;
+    line-height: 18px;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    background:url(../images/ucenter_icon2.png) no-repeat 0 -93px;
+}
+.anquan_list_img_mobile{width: 17px;height: 30px; background-image:url(../images/mobile.jpg); float: left; margin-top:3px; margin-left:47px;}
+.anquan_list_img_clock{width: 18px;height: 21px; background-image:url(../images/clock.jpg); float: left; margin-top:10px; margin-left:47px;}
+.proGender{width:900px; height: 50px; margin-top:30px; position: relative;}
+.Genderleft{width:70px; height:50px; float:left;  text-align:right; color:#8c8c8c; line-height: 40px; font-weight: 600}
+.Genderright{width:600px; height:50px; float:left; background-color:#ffffff; line-height: 40px; color: #666666;}
+.Genderright_ts{width:600px; height:30px; float:left; line-height: 40px; color: #666666;}
+.Gender{margin-left: 20px; margin-right: 10px; margin-top: 15px; width:13px; height: 13px; display: inline-block;}
+.selectyear{width: 118px; height: 46px; display: inline-block; background-image:url(../images/select.jpg); text-align: center;line-height: 50px; color: #666666; margin-left: 20px;}
+.selectmonth{width: 118px; height: 46px; display: inline-block; background-image:url(../images/select.jpg); text-align: center;line-height: 50px; color: #666666; margin-left: 30px;}
+.selectday{width: 118px; height: 46px; display: inline-block; background-image:url(../images/select.jpg); text-align: center;line-height: 50px; color: #666666; margin-left: 30px;}
+.birdaytext{float: left; margin-left: 30px; height: 40px; background-color:FFFFFF;line-height: 50px; color: #999999;}
+.user_top_bottom .submit{width:500px;}
+.user_top_bottom .submit a{width:216px; height:52px; display:block; background:url(../images/btn_spirits.png) no-repeat 0 -54px; margin:51px 0 50px 70px;}
+.user_top_bottom .submit a:hover{background-position: 0 0;}
+.user_top_bottom h1{margin-left: 20px;}
+.linehight{line-height: 50px;}
+
+.user_top_bottom .select_form {
+    width: 150px;
+    height: 51px;
+    background: url(../images/select_input_w.png) no-repeat 0 -94px;
+    float: left;
+    font-size: 14px;
+    text-align: center;
+    line-height: 45px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.user_top_bottom .zizhulist {
+    width: 100%;
+    background-color: #FFF;
+    position: absolute;
+    z-index: 100;
+    left: 0px;
+    top: 30px;
+    padding: 15px 0 0 0;
+    border-radius: 0 0 20px 20px;
+    display: none;
+    overflow: hidden;
+}
+.user_top_bottom .zizhulist ul {
+    overflow-y: auto;
+    max-height: 300px;
+}
+.user_top_bottom .zizhulist ul li{text-align: center;cursor: pointer;}
+.user_top_bottom .zizhulist ul li.suan{background-color:#F6F6F6;}
+.user_top_bottom .zizhulist ul li:hover{background-color: #e0e0e0;}
+.user_top_bottom .input_form {
+    background: url(../images/select_input_w.png) no-repeat;
+    text-align: left;
+    width: 280px;
+    height: 47px;
+    float: left;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+    .user_top_bottom .input_form .jine {background-color: #FFF;padding: 4px 6px;
+    margin-top: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #444;
+    width: 220px;
+    height: 30px;
+    border: none;
+    vertical-align: middle;
+    padding-left: 15px;}

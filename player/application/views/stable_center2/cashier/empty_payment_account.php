@@ -1,0 +1,1 @@
+<h1 class="text-danger"><?=lang('No Deposit account Available');?></h1>

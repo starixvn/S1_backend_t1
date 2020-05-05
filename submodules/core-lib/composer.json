@@ -1,0 +1,6 @@
+{
+    "require": {
+        "league/climate": "^3.4",
+        "hoa/fastcgi": "~3.0"
+    }
+}

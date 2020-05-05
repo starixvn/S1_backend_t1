@@ -1,0 +1,24 @@
+{
+    "sProcessing":   "Pengolahan...",
+    "sLengthMenu":   "Pameran _MENU_ hasil",
+    "sZeroRecords":  "Tidak ada hasil yang cocok",
+    "sInfo":         "Menampilkan _START_ untuk _END_ hasil，sama sekali _TOTAL_ barang",
+    "sInfoEmpty":    "Menampilkan 0 - 0 hasil，total 0",
+    "sInfoFiltered": "(Oleh _MAX_ Filter hasil)",
+    "sInfoPostFix":  "",
+    "sSearch":       "Menunjukkan:",
+    "sUrl":          "",
+    "sEmptyTable":     "Data tidak tersedia pada tabel ini",
+    "sLoadingRecords": "Pemuatan...",
+    "sInfoThousands":  ",",
+    "oPaginate": {
+        "sFirst":    "Pertama",
+        "sPrevious": "Sebelumnya",
+        "sNext":     "Berikutnya",
+        "sLast":     "Terakhir"
+    },
+    "oAria": {
+        "sSortAscending":  ": Mengurutkan kolom ini dalam urutan menaik",
+        "sSortDescending": ": Mengurutkan kolom ini dalam urutan"
+    }
+}

@@ -1,0 +1,70 @@
+.mc-ul {
+	background-color: $primary-color;
+	height: 100%;
+	float: none;
+	vertical-align: top;
+	padding: 0;
+}
+.mc-ul ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mc-ul li a{
+	display: block;
+	color: #a2a2a2;
+	line-height: 60px;
+	border-bottom: 1px dotted #fff;
+	padding: 0 20px;
+}
+.mc-ul li a span{
+	margin-right: 20px;
+}
+.mc-ul li a span.fa{
+	margin-right: 23px;
+}
+.mc-ul li.active a {
+	background: $primary-gradient;
+	color: #fff;
+	position: relative;
+}
+.mc-ul li.active a:after {
+	content: "\e251";
+  font-family: 'Glyphicons Halflings';
+	position: absolute;
+  right: 0;
+  top: 50%;
+  font-size: 26px;
+  transform: translate(9px,-50%);
+}
+.mc-ul li.active a .glyphicon,
+.mc-ul li a:hover .glyphicon {
+	color: #fff;
+}
+.mc-ul li a:hover{
+	background: $primary-gradient;
+	color: #fff;
+}
+.mc-ul li.active a span,
+.mc-ul li a:hover span{
+	color: #fff;
+}
+.mc-ul li:hover .notification,
+.mc-ul li.active .notification {
+	color: #353535;
+}
+.member-center {
+  .notification {
+    background-color: #fff;
+    color: #353535;
+    border-radius: 10px;
+    padding: 3px 6px;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-right: 0;
+		float: right;
+    line-height: 16px;
+    margin-top: 18px;
+  }
+}

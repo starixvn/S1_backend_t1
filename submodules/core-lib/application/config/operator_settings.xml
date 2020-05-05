@@ -1,0 +1,1423 @@
+<DATA>
+	<ROW>
+		<name>previous_balance_set_amount</name>
+		<value>5</value>
+		<note>checks previous balances of player and disables those balances equal or less the set amount and not include to the computation of withdraw conditions</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>non_promo_withdraw_setting</name>
+		<value>1</value>
+		<note>withdraw condition for non promo with bet or no bet</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>email_aff_track_code_list_temp</name>
+		<value>email</value>
+		<note>Email Affiliate Tracking Code</note>
+		<template>Sample</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>promo_cancellation_setting</name>
+		<value>1</value>
+		<note>0-manual, 1-auto</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>ip_rules</name>
+		<value>false</value>
+		<note>true = use ip list, false = ignore ip list</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_smtp_server</name>
+		<value>mail.smartbackend.com</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_smtp_port</name>
+		<value>587</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_smtp_auth</name>
+		<value>1</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_smtp_secure</name>
+		<value>tls</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_smtp_username</name>
+		<value>noreply</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_smtp_password</name>
+		<value>sj2sf3sDF47</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>mail_from</name>
+		<value>info@dw777.com</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>disable_smtp_ssl_verify</name>
+		<value>1</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>affiliate_default_terms</name>
+		<value>{&quot;terms&quot;: {&quot;terms_type&quot;: &quot;option1&quot;,&quot;totalactiveplayer&quot;: &quot;10&quot;,&quot;minimumBetting&quot;: &quot;1000&quot;,&quot;minimumDeposit&quot;: &quot;100&quot;,&quot;provider&quot;: []}}</value>
+		<note>affiliate default terms in json format</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>sub_affiliate_default_terms</name>
+		<value>{&quot;terms&quot;: {&quot;terms_type&quot;: &quot;allow&quot;,&quot;sub_allowed&quot;:&quot;manual&quot;,&quot;manual_open&quot;:&quot;manual&quot;,&quot;sub_link&quot;:&quot;link&quot;,&quot;sub_level&quot;:&quot;5&quot;,&quot;sub_levels&quot;:[25,2,1,0,0]}}</value>
+		<note>sub affiliate default terms in json format</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>min_withdraw</name>
+		<value>10</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cashback_settings</name>
+		<value>{&quot;fromHour&quot;:&quot;00&quot;,&quot;toHour&quot;:&quot;23&quot;,&quot;payTimeHour&quot;:&quot;01:00&quot;,&quot;payLastUpdate&quot;:false,&quot;min_cashback_amount&quot;:&quot;&quot;,&quot;max_cashback_amount&quot;:&quot;10000&quot;,&quot;withdraw_condition&quot;:&quot;&quot;,&quot;no_cashback_bonus_for_non_deposit_player&quot;:&quot;1&quot;}</value>
+		<note>Cashback Settings Default in json format</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>affiliate_settings</name>
+		<value>{&quot;baseIncomeConfig&quot;: &quot;1&quot;,&quot;level_master&quot;:&quot;50&quot;,&quot;minimumPayAmount&quot;: &quot;0&quot;,&quot;paymentDay&quot;: &quot;1&quot;,&quot;cashback_fee&quot;: &quot;100&quot;}</value>
+		<note>affiliate set by operator in json format</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>blocked_game_setting</name>
+		<value>{&quot;1&quot;: &quot;0&quot;,&quot;2&quot;: &quot;0&quot;,&quot;6&quot;: &quot;0&quot;,&quot;7&quot;: &quot;0&quot;,&quot;8&quot;: &quot;0&quot;,&quot;10&quot;: &quot;0&quot;,&quot;11&quot;: &quot;0&quot;}</value>
+		<note>Blocked Game Settings Default in json format</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>captcha_registration</name>
+		<value>1</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>default_3rdparty_payment</name>
+		<value>NULL</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>payment_account_types</name>
+		<value>NULL</value>
+		<note>NULL</note>
+		<template>{&quot;1&quot; : { &quot;lang_key&quot;: &quot;pay.manual_online_payment&quot;, &quot;enabled&quot;: false},&quot;2&quot; : { &quot;lang_key&quot;: &quot;pay.auto_online_payment&quot;, &quot;enabled&quot;: true},&quot;3&quot; : { &quot;lang_key&quot;: &quot;pay.local_bank_offline&quot;, &quot;enabled&quot;: false}}</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>responsible_gaming</name>
+		<value>0</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>reg.siteName</name>
+		<value>_json:{&quot;1&quot;:&quot;Paramount Casino&quot;,&quot;2&quot;:&quot;\u4f73\u5b9d\u5a31\u4e50&quot;}</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>approve_transfer_to_main</name>
+		<value></value>
+		<note>Allow admin user to approve transfer to main</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Approve Transfer To Main&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>approve_transfer_from_main</name>
+		<value></value>
+		<note>Allow admin user to approve transfer from main</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Approve Transfer From Main&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_self_exclusion</name>
+		<value>1</value>
+		<note>Will check for self exclusion request</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for self exclusion request&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_unself_exclusion</name>
+		<value>1</value>
+		<note>Will check for due self exclusion</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for due self exclusion&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_cool_off</name>
+		<value>1</value>
+		<note>Will check for due cool off</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for due cool off&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_session_limit_checker</name>
+		<value>1</value>
+		<note>Will check if player reached the playing time period</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check if player reached the playing time period&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_approve_loss_limit_request</name>
+		<value>1</value>
+		<note>Will approve the loss limit request</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will approve the loss limit request&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_deposit_and_loss_limit_player_reactivation</name>
+		<value>1</value>
+		<note>Will reactivate due player</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will reactivate due player&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_daily_loss_limit_checker</name>
+		<value>1</value>
+		<note>Will check for active player with loss limit daily</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for active player with loss limit daily&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_weekly_loss_limit_checker</name>
+		<value>1</value>
+		<note>Will check for active player with loss limit weekly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for active player with loss limit weekly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_monthly_loss_limit_checker</name>
+		<value>1</value>
+		<note>Will check for active player with loss limit monthly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for active player with loss limit monthly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_daily_deposit_limit_checker</name>
+		<value>1</value>
+		<note>Will check for active player with deposit limit daily</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for active player with deposit limit daily&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_weekly_deposit_limit_checker</name>
+		<value>1</value>
+		<note>Will check for active player with deposit limit weekly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for active player with deposit limit weekly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_exec_monthly_deposit_limit_checker</name>
+		<value>1</value>
+		<note>Will check for active player with deposit limit monthly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Will check for active player with deposit limit monthly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_calc_cashback</name>
+		<value>1</value>
+		<note>Calculate cashback</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Calculate cashback&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_pay_cashback</name>
+		<value>1</value>
+		<note>Pay cashback</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Pay cashback&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_geoipupdate</name>
+		<value>1</value>
+		<note>Update GEOIP</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Update GEOIP&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_clear_sessions</name>
+		<value>1</value>
+		<note>Clear timeout sessions</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Clear timeout sessions&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_check_hiding_promo</name>
+		<value>1</value>
+		<note>Check hiding promo rules</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Check hiding promo rules&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_reset_approved_withdraw_amount</name>
+		<value>1</value>
+		<note>Reset approved withdraw amount daily back to original</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Reset approved withdraw amount daily back to original&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_upload_to_rackspace</name>
+		<value>0</value>
+		<note>Upload sites to rackspace</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Upload sites to rackspace&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_calculate_monthly_earnings</name>
+		<value>1</value>
+		<note>Calculate monthly affiliate earnings</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Calculate monthly affiliate earnings&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_check_referral</name>
+		<value>1</value>
+		<note>Check player referral</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Check player referral&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_sync_all_total_hours</name>
+		<value>1</value>
+		<note>Sync all total hours</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Sync all total hours&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_rebuild_totals</name>
+		<value>1</value>
+		<note>Rebuild totals info without hours</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Rebuild totals info without hours&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_rebuild_game_logs_by_timelimit</name>
+		<value>1</value>
+		<note>Rebuild game logs daily</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Rebuild game logs daily&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_rebuild_game_logs_last_hour</name>
+		<value>0</value>
+		<note>Rebuild game logs hourly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Rebuild game logs hourly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_update_players_total_deposit_amount</name>
+		<value>1</value>
+		<note>Update players total deposit amount</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Update players total deposit amount&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_fix_affiliate_count</name>
+		<value>1</value>
+		<note>Fix affiliate count info</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Fix affiliate count info&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_sync_long_total_info</name>
+		<value>1</value>
+		<note>Sync long total day/month/year info last 7 days</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Sync long total day\/month\/year info last 7 days&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_clear_small_negative</name>
+		<value>1</value>
+		<note>Clear small negative in wallets daily</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Clear small negative in wallets daily&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_batch_sync_balance_all</name>
+		<value>1</value>
+		<note>Sync balance history hourly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Sync balance history hourly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_archive_game_log</name>
+		<value>1</value>
+		<note>Archive game logs</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Archive game logs&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_sync_ag_ftp</name>
+		<value>0</value>
+		<note>Sync AG game logs ftp</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Sync AG game logs ftp&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_sync_entwine_ftp</name>
+		<value>0</value>
+		<note>Sync Entwine game logs ftp</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Sync Entwine game logs ftp&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_fix_level_history</name>
+		<value>1</value>
+		<note>Fix level history level</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Fix level history level&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_sync_silverpop_database</name>
+		<value>0</value>
+		<note>Sync silverpop database</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Sync silverpop database&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_clear_clockwalk</name>
+		<value>1</value>
+		<note>Clear clockwalk</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Clear clockwalk&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_generate_dashboard</name>
+		<value>1</value>
+		<note>Generate admin dashboard</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Generate admin dashboard&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>single_player_session</name>
+		<value>0</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:false,&quot;label_lang&quot;:&quot;Single Player Session&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>special_payment_list</name>
+		<value>24,19,1,6,7,13,14,25,26,27,28</value>
+		<note>Defines which 3rd party payment to appear in the sidebar during withdrawal. Comma separated collection account IDs.</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>custom_withdrawal_processing_stages</name>
+		<value>NULL</value>
+		<note>NULL</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>self_exclusion_approval_day_cnt</name>
+		<value>2</value>
+		<note>Number of days will the system approve self exclusion request</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cool_off_approval_day_cnt</name>
+		<value>2</value>
+		<note>Number of days will the system approve cool off request</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>deposit_limit_approval_day_cnt</name>
+		<value>1</value>
+		<note>Number of days will the system approve deposit limit request</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>loss_limit_approval_day_cnt</name>
+		<value>1</value>
+		<note>Number of days will the system approve loss limit request</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>automatic_reopen_temp_self_exclusion_account</name>
+		<value>1</value>
+		<note>Automatic reopen the account after Temp Self Exclusion</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;radio&quot;,&quot;default_value&quot;:1,&quot;label_lang&quot;:&quot;Automatic reopen the account after Temp Self Exclusion"}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>disable_and_hide_wagering_limits</name>
+		<value>1</value>
+		<note>Disable and hide wagering limits</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;radio&quot;,&quot;default_value&quot;:1,&quot;label_lang&quot;:&quot;Disable and hide wagering limits"}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>player_reactication_day_cnt</name>
+		<value>1</value>
+		<note>Number of days will the system reactivates the player after block in the game and website</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>affiliate_common_settings</name>
+		<value>NULL</value>
+		<note>NULL</note>
+		<template>{&quot;baseIncomeConfig&quot;:1,&quot;level_master&quot;:50,&quot;admin_fee&quot;:0,&quot;transaction_fee&quot;:0,&quot;bonus_fee&quot;:0,&quot;cashback_fee&quot;:100,&quot;minimumPayAmount&quot;:0,&quot;paymentDay&quot;:1,&quot;autoTransferToWallet&quot;:false,&quot;autoTransferToLockedWallet&quot;:false,&quot;totalactiveplayer&quot;:&quot;10&quot;,&quot;minimumBetting&quot;:&quot;1000&quot;,&quot;minimumDeposit&quot;:&quot;100&quot;,&quot;provider&quot;:[],&quot;provider_betting_amount&quot;:[],&quot;manual_open&quot;:true,&quot;sub_link&quot;:true,&quot;sub_level&quot;:10,&quot;sub_levels&quot;:[25,2,1,0,0,0,0,0,0,0]}</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>country_rules</name>
+		<value>1</value>
+		<note>true = use country list, false = ignore country list</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cronjob_adjust_level</name>
+		<value>1</value>
+		<note>Down/up level monthly</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;checkbox&quot;,&quot;default_value&quot;:true,&quot;label_lang&quot;:&quot;Down\/up level monthly&quot;}</description_json>
+	</ROW>
+
+	<ROW>
+		<name>country_rules_mode </name>
+		<value>allow_all</value>
+		<note>Allow all or deny all</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>block_page_url</name>
+		<value>/block-page.html</value>
+		<note>Blocking page</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>sms_registration_template</name>
+		<value><![CDATA[欢迎您加入，请进入 {player_center_url} ，使用用户名 {player_username} 登录]]></value>
+		<note>SMS Registration Template</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>deposit_count_list</name>
+		<value>4</value>
+		<note>default deposit count type</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>bank_number_validator_mode</name>
+		<value>only_allow_duplicate_one_player</value>
+		<note>
+			only_allow_duplicate_one_player: one player allow duplicate withdrawal and deposit, but can't allow duplicate number in withdrawal or deposit
+			only_allow_duplicate_one_player_any: one player allow duplicate number , no matter withdrawal or deposit
+			not_allow_duplicate_number: don't allow any duplicate bank account number.
+			allow_any_duplicate_number: allow any duplicate bank account number for any player.
+		</note>
+		<template>NULL</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.bank_number_validator_mode",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "only_allow_duplicate_one_player": "only_allow_duplicate_one_player",
+        "only_allow_duplicate_one_player_any": "only_allow_duplicate_one_player_any",
+        "not_allow_duplicate_number": "not_allow_duplicate_number",
+        "not_allow_duplicate_number_on_same_banktype": "not_allow_duplicate_number_on_same_banktype",
+        "not_allow_duplicate_number_on_same_banktype_any": "not_allow_duplicate_number_on_same_banktype_any",
+        "allow_any_duplicate_number": "allow_any_duplicate_number"
+    }
+}
+		]]></description_json>
+	</ROW>
+
+	<ROW>
+		<name>special_payment_list_mobile</name>
+		<value></value>
+		<note>special payment list mobile</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>player_center_template</name>
+		<value>iframe</value>
+		<note>template for player center</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>cms_version</name>
+		<value>1.00.00.0001</value>
+		<note>Version for cms refferences</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>realtime_cashback_time_limit</name>
+		<value>48</value>
+		<note>last hours to limit cashback time</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+
+	<ROW>
+		<name>email_contact_us_template</name>
+		<value>email</value>
+		<note>Email Contact Us Template</note>
+		<template>
+		<![CDATA[
+<p><span style="color: rgb(24, 55, 77); font-family: HelveticaNeueLight, HelveticaNeue-Light, 'Helvetica Neue Light', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">Subject: [subject]</span><br><span style="color: rgb(24, 55, 77); font-family: HelveticaNeueLight, HelveticaNeue-Light, 'Helvetica Neue Light', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">From: [name]</span><br><span style="color: rgb(24, 55, 77); font-family: HelveticaNeueLight, HelveticaNeue-Light, 'Helvetica Neue Light', HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">Email: [email]</span></p><div><span style="color: rgb(24, 55, 77); font-family: HelveticaNeueLight, HelveticaNeue-Light, &quot;Helvetica Neue Light&quot;, HelveticaNeue, Helvetica, Arial, sans-serif; font-size: 16px;">[message]</span></div>
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+			{"type":"text","default_value":""}
+		]]>
+		</description_json>
+	</ROW>
+
+	<ROW>
+		<name>player_center_enabled_language</name>
+		<value>NULL</value>
+		<note>Player Center Enabled language</note>
+		<template>
+		<![CDATA[
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+{
+    "label_lang": "operator_settings.player_center_enabled_language",
+    "type":"checkbox",
+    "default_value":"",
+    "list": {
+        "1": "English",
+        "2": "Chinese",
+        "3": "Indonesian",
+        "4": "Vietnamese",
+        "5": "Korean"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+
+	<ROW>
+		<name>deposit_process</name>
+		<value>1</value>
+		<note>Deposit Process</note>
+		<template>
+		<![CDATA[
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+{
+    "label_lang": "operator_settings.deposit_process",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "1": "method1",
+        "2": "method2",
+        "3": "method3"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>password_recovery_options</name>
+		<value>1</value>
+		<note>password_recovery_options</note>
+		<template>
+		<![CDATA[
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+{
+    "label_lang": "operator_settings.password_recovery_options",
+    "type":"select",
+    "default_value":"1",
+    "list": {
+        "1": "Question",
+        "2": "SMS",
+        "3": "1 + 2",
+        "4": "Email",
+        "5": "4 + 1",
+        "6": "4 + 2",
+        "7": "4 + 2 + 1"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>last_batch_update_cashback_time</name>
+		<value></value>
+		<note>last batch update cashback time</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>birthday_option</name>
+		<value>1</value>
+		<note>birthday option</note>
+		<template>
+		<![CDATA[
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+{
+    "label_lang": "operator_settings.birthday_option",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "1": "selector",
+        "2": "datepicker"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>announcement_option</name>
+		<value>1</value>
+		<note>announcement option</note>
+		<template>
+		<![CDATA[
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+{
+    "label_lang": "operator_settings.announcement_option",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "1": "window-open",
+        "2": "bootstrap-modal"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>withdraw_pending_review_tags</name>
+		<value>NULL</value>
+		<note>Withdraw Processing Stage (Pending Review Tags)</note>
+		<template>
+		<![CDATA[
+		]]>
+		</template>
+		<description_json>
+		<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_center_logout_action</name>
+		<value>1</value>
+		<note>Player Center logout after the redirect page</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.player_center_logout_action",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "1": "login",
+        "2": "www_home"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>cashier_notification_settings</name>
+		<value>NULL</value>
+		<note>NULL</note>
+		<template>
+			{ &quot;transfer_fund_notif&quot;:{ &quot;1&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-001&quot;, &quot;label&quot;:&quot;Not found player&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Player not found&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Player not found&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Player not found&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Player not found&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Not found player&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;2&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-002&quot;, &quot;label&quot;:&quot;No enough balance&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;No enough balance&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;No enough balance&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;No enough balance&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;No enough balance&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;ยอดเงินไม่เพียงพอ&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;3&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-003&quot;, &quot;label&quot;:&quot;Network Error&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Network Error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Network Error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Network Error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Network Error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Network Error&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;4&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-004&quot;, &quot;label&quot;:&quot;Game Account is locked&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Game Account is locked&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Game Account is locked&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Game Account is locked&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Game Account is locked&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Game Account is locked&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } }}, &quot;5&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-005&quot;, &quot;label&quot;:&quot;Transfer amount is too high&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too high&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too high&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too high&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too high&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too high&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;6&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-006&quot;, &quot;label&quot;:&quot;Transfer amount is too low&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too low&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too low&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too low&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too low&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Transfer amount is too low&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;7&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-007&quot;, &quot;label&quot;:&quot;Login problem&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Login problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Login problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Login problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Login problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Login problem&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;8&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-008&quot;, &quot;label&quot;:&quot;Session timeout&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Session timeout&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Session timeout&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Session timeout&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Session timeout&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Session timeout&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;9&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-009&quot;, &quot;label&quot;:&quot;No enough credit in system&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Sorry, the game api is under system maintenance&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;No enough credit in system&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;No enough credit in system&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;No enough credit in system&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;No enough credit in system&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;10&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-010&quot;, &quot;label&quot;:&quot;Game provider account problem&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Game provider account problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Game provider account problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Game provider account problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Game provider account problem&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Game provider account problem&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;11&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-011&quot;, &quot;label&quot;:&quot;Game provider internal error&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Game provider internal error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Game provider internal error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Game provider internal error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Game provider internal error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Game provider internal error&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;12&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-012&quot;, &quot;label&quot;:&quot;Invalid transfer amount&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transfer amount&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transfer amount&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transfer amount&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transfer amount&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transfer amount&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;13&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-013&quot;, &quot;label&quot;:&quot;Invalid key&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Invalid key&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Invalid key&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Invalid key&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Invalid key&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Invalid key&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;14&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-014&quot;, &quot;label&quot;:&quot;Duplicate transfer&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Sorry, the game api is under system maintenance&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Duplicate transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Duplicate transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Duplicate transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Duplicate transfer&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;15&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-015&quot;, &quot;label&quot;:&quot;Game provider network error&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Game provider network error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Game provider network error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Game provider network error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Game provider network error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Game provider network error&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;16&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-016&quot;, &quot;label&quot;:&quot;Disabled deposit by game provider&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Disabled deposit by game provider&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Disabled deposit by game provider&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Disabled deposit by game provider&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Disabled deposit by game provider&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Disabled deposit by game provider&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } },&quot;17&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-017&quot;, &quot;label&quot;:&quot;Ip not authorized&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Ip not authorized&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Ip not authorized&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Ip not authorized&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Ip not authorized&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Ip not authorized&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;18&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-017&quot;, &quot;label&quot;:&quot;Invalid transaction id&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transaction id&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transaction id&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transaction id&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transaction id&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Invalid transaction id&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;19&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-019&quot;, &quot;label&quot;:&quot;Agent not exist&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Agent not exist&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Agent not exist&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Agent not exist&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Agent not exist&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Agent not exist&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;20&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-020&quot;, &quot;label&quot;:&quot;Agent not exist&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Incomplete information&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Incomplete information&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Incomplete information&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Incomplete information&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Incomplete information&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;21&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-021&quot;, &quot;label&quot;:&quot;Lower or greater than min or max transfer&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Lower or greater than min or max transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Lower or greater than min or max transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Lower or greater than min or max transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Lower or greater than min or max transfer&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Lower or greater than min or max transfer&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;22&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-022&quot;, &quot;label&quot;:&quot;Currency error&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Currency error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Currency error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Currency error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Currency error&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Currency error&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;23&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-023&quot;, &quot;label&quot;:&quot;Locked game merchant&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Locked game merchant&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Locked game merchant&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Locked game merchant&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Locked game merchant&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Locked game merchant&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;24&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-024&quot;, &quot;label&quot;:&quot;Balance not sync&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Balance not sync&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;,&quot;custom_error_msg&quot;:&quot;Balance not sync&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Balance not sync&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Balance not sync&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Balance not sync&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;25&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-025&quot;, &quot;label&quot;:&quot;Invalid product wallet&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Invalid product wallet&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Invalid product wallet&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Invalid product wallet&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Invalid product wallet&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Invalid product wallet&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;997&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-997&quot;, &quot;label&quot;:&quot;API Maintaining&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;API Maintaining&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;API Maintaining&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;API Maintaining&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;API Maintaining&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;API Maintaining&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } },&quot;998&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-998&quot;, &quot;label&quot;:&quot;API failed&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;API failed&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;API failed&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;API failed&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;API failed&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;API failed&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } }, &quot;999&quot;:{ &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;FT-999&quot;, &quot;label&quot;:&quot;Unknown&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;custom_error_msg&quot;:&quot;Unknown&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;custom_error_msg&quot;:&quot;对不起，游戏正在进行维护中&quot;, &quot;player_option_msg1&quot;:&quot;请在5分钟后重试，或联系我们的在线客服&quot;, &quot;player_option_msg2&quot;:&quot;与此同时，您也可以先尝试我们的其他游戏&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;custom_error_msg&quot;:&quot;Unknown&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;custom_error_msg&quot;:&quot;Unknown&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;viet&quot;:{ &quot;language&quot;:&quot;vietnamese&quot;, &quot;custom_error_msg&quot;:&quot;Unknown&quot;, &quot;player_option_msg1&quot;:&quot;Please try again after 5 minutes or you may contact our customer support&quot;, &quot;player_option_msg2&quot;:&quot;In the mean time you may try our other best selling games below&quot; }, &quot;th&quot;:{ &quot;language&quot;:&quot;thai&quot;, &quot;custom_error_msg&quot;:&quot;Unknown&quot;, &quot;player_option_msg1&quot;:&quot;โปรดลองใหม่อีกครั้งหลังจาก 5 นาทีหรือติดต่อเจ้าหน้าที่&quot;, &quot;player_option_msg2&quot;:&quot;ระหว่างรอ สมาชิกสามารถเพลิดเพลินกับเกมยอดนิยมได้นะคะ&quot; } } } }, &quot;cashback_notif&quot;:{ &quot;1&quot;:{ &quot;label&quot;:&quot;Games played are not under cashback bonus game list condition&quot;, &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;true&quot;, &quot;custom_error_code&quot;:&quot;CB-001&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;claim_error_notif_msg&quot;:&quot;Hi! these games you played is not under cashback bonus game list condition&quot;, &quot;player_option_msg&quot;:&quot;You may contact our customer service&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;claim_error_notif_msg&quot;:&quot;您选择的游戏不在合格的返水列表里&quot;, &quot;player_option_msg&quot;:&quot;请联系我们的在线客服&quot; },&quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;claim_error_notif_msg&quot;:&quot;Hi! these games you played is not under cashback bonus game list condition&quot;, &quot;player_option_msg&quot;:&quot;You may contact our customer service&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;claim_error_notif_msg&quot;:&quot;Hi! these games you played is not under cashback bonus game list condition&quot;, &quot;player_option_msg&quot;:&quot;You may contact our customer service&quot; } } }, &quot;2&quot;:{ &quot;label&quot;:&quot;The last cashback request has not been processed&quot;, &quot;is_enabled&quot;:&quot;true&quot;, &quot;is_inuse&quot;:&quot;false&quot;, &quot;custom_error_code&quot;:&quot;CB-002&quot;, &quot;multi_lang_messages&quot;:{ &quot;en&quot;:{ &quot;language&quot;:&quot;english&quot;, &quot;claim_error_notif_msg&quot;:&quot;The last cashback request has not been processed&quot;, &quot;player_option_msg&quot;:&quot;Please wait or contact our customer support&quot; }, &quot;cn&quot;:{ &quot;language&quot;:&quot;chinese&quot;, &quot;claim_error_notif_msg&quot;:&quot;最后一笔返水请求尚未处理&quot;, &quot;player_option_msg&quot;:&quot;请联系我们的在线客服&quot; }, &quot;ind&quot;:{ &quot;language&quot;:&quot;indonesian&quot;, &quot;claim_error_notif_msg&quot;:&quot;The last cashback request has not been processed&quot;, &quot;player_option_msg&quot;:&quot;Please wait or contact our customer support&quot; }, &quot;kor&quot;:{ &quot;language&quot;:&quot;korean&quot;, &quot;claim_error_notif_msg&quot;:&quot;The last cashback request has not been processed&quot;, &quot;player_option_msg&quot;:&quot;Please wait or contact our customer support&quot; } } } }, &quot;customer_support&quot;:{ &quot;0&quot;:{ &quot;label&quot;:&quot;Customer Support Url&quot;, &quot;url&quot;:&quot;http://www.playercenter.cs.t1t.games&quot;, &quot;is_enable&quot;:&quot;true&quot; } } }
+		</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>deposit_successful_action</name>
+		<value>1</value>
+		<note>deposit_successful_action</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.deposit_successful_action",
+    "type":"select",
+    "default_value":"1",
+    "list": {
+        "1": "Redirect to",
+        "2": "Player Center page"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>registered_success_popup</name>
+		<value>1</value>
+		<note>registered_success_popup</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.registered_success_popup",
+    "type":"select",
+    "default_value":"1",
+    "list": {
+        "1": "promo pop-up",
+        "2": "images pop-up"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_center_mobile_header_title_style</name>
+		<value>1</value>
+		<note>player_center_mobile_header_title_style</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.player_center_mobile_header_title_style",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "1": "default(Shows logo on dashboard, shows each title name on other pages)",
+        "2": "All logo"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>prefer_player_center_logo</name>
+		<value>1</value>
+		<note>prefer_player_center_logo</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.prefer_www_logo",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "0": "default",
+        "1": "upload",
+        "2": "www"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>self_exclusion_cooling_off_day_cnt</name>
+		<value>1</value>
+		<note>Number of days will the system add cooling off after temporary self exclusion expired</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_auto_lock</name>
+		<value>0</value>
+		<note>player_auto_lock</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.player_auto_lock",
+    "type":"radio",
+    "default_value":"1",
+    "list": {
+        "0": "disable",
+        "1": "idle",
+        "2": "browser_blur"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_auto_lock_time_limit</name>
+		<value>600</value>
+		<note>player_auto_lock_time_limit</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.player_auto_lock_time_limit",
+    "type":"number",
+    "default_value":"600"
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_auto_lock_password_failed_attempt</name>
+		<value>3</value>
+		<note>player_auto_lock_password_failed_attempt</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"label_lang": "operator_settings.player_auto_lock_password_failed_attempt",
+    "type":"number",
+    "default_value":"3"
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>use_smtp_api</name>
+		<value>false</value>
+		<note>true = use SMTP API, false = use default SMTP SETTINGS</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+	<ROW>
+		<name>smtp_api_mail_from_name</name>
+		<value>NULL</value>
+		<note>SMTP API email from name</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+	<ROW>
+		<name>smtp_api_mail_from_email</name>
+		<value>NULL</value>
+		<note>SMTP API email from email</note>
+		<template>NULL</template>
+		<description_json>{&quot;type&quot;:&quot;text&quot;,&quot;default_value&quot;:&quot;&quot;}</description_json>
+	</ROW>
+	<ROW>
+		<name>player_center_currency_display_format</name>
+		<value>NULL</value>
+		<note>Player Center Currency display format</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.player_center_currency_display_format",
+    "type":"checkbox",
+    "default_value":"",
+    "list": {
+        "currency_name": "currency_name",
+        "currency_short_name": "currency_short_name",
+        "currency_code": "currency_code",
+        "currency_symbol": "currency_symbol"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_center_notification</name>
+		<value>NULL</value>
+		<note>Player Center Notification</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.player_center_notification",
+    "type":"radio",
+    "default_value":"0",
+    "list": {
+        "0": "disable",
+        "1": "enable"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_center_notification_check_interval</name>
+		<value>NULL</value>
+		<note>Check interval of Player Center Notification</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.player_center_notification_check_interval",
+    "type":"number",
+    "default_value":"60"
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_center_notification_source_type</name>
+		<value>NULL</value>
+		<note>notify source type of Player Center Notification</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.player_center_notification_source_type",
+    "type":"checkbox",
+    "default_value":"",
+    "list": {
+        "1": "last_login",
+        "2": "deposit",
+        "3": "withdrawal",
+        "4": "vip_upgrade"
+    }
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>sms_api_list</name>
+		<value>NULL</value>
+		<note>sms api list</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.sms_api_list",
+    "type":"radio",
+    "default_value":"",
+    "config": "sms_api"
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_login_failed_attempt_blocked</name>
+		<value>0</value>
+		<note>Player login failed attempt blocked</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_login_failed_attempt_times</name>
+		<value>5</value>
+		<note>Player login failed attempt times</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_login_failed_attempt_reset_timeout</name>
+		<value>30</value>
+		<note>Player login failed attempt reset timeout</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>limit_of_single_ip_registrations_per_day</name>
+		<value>50</value>
+		<note>Maximum number of single IP registrations per day</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+    "label_lang": "operator_settings.limit_of_single_ip_registrations_per_day",
+    "type":"number",
+    "default_value":"60"
+}
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>default_message_admin_sender_name</name>
+		<value></value>
+		<note>default message admin sender name</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>admin_send_message_length_limit</name>
+		<value></value>
+		<note>admin send message length limit</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_send_message_length_limit</name>
+		<value></value>
+		<note>player send message length limit</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+		]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>player_message_request_form_attributes</name>
+		<value></value>
+		<note>player message request form attributes</note>
+		<template>
+			<![CDATA[
+			]]>
+		</template>
+		<description_json>
+			<![CDATA[
+			]]>
+		</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_enable_deposit_bank</name>
+		<value>0</value>
+		<note>Enable "Deposit Bank" tab</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_require_deposit_bank_account</name>
+		<value>0</value>
+		<note>Require player to bind financial account before deposit</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_deposit_account_limit</name>
+		<value>0</value>
+		<note>Maximum number of one player deposit account (checkbox)</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_max_deposit_account_number</name>
+		<value>NULL</value>
+		<note>Maximum number of one player deposit account (number)</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_can_be_withdraw_and_deposit</name>
+		<value>0</value>
+		<note>Account number can be used in deposit and withdrawal</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_deposit_account_default_unverified</name>
+		<value>0</value>
+		<note>Set Newly Registered Deposit Financial Account to Unverified</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_withdraw_account_limit</name>
+		<value>0</value>
+		<note>Maximum number of one player withdraw account (checkbox)</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_max_withdraw_account_number</name>
+		<value>NULL</value>
+		<note>Maximum number of one player withdraw account (number)</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_allow_edit</name>
+		<value>0</value>
+		<note>Allow players to edit account info after saving</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_one_account_per_institution</name>
+		<value>0</value>
+		<note>Each financial institution can have only one account</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_allow_delete</name>
+		<value>0</value>
+		<note>Allow players to delete financial account</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>financial_account_withdraw_account_default_unverified</name>
+		<value>0</value>
+		<note>Set Newly Registered Withdrawal Financial Account to Unverified</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>show_max_withdrawal_per_transaction</name>
+		<value>1</value>
+		<note>Allow player center withdrawal page show max withdrawal per transaction</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>show_daily_max_withdrawal_amount</name>
+		<value>1</value>
+		<note>Allow player center withdrawal page show daiply max withdrawal amount</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>admin_email_template_set_send_lang</name>
+		<value>[1,1]
+		</value>
+		<note>admin email template set send language</note>
+		<template></template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>admin_email_template_set_send_content_mode</name>
+		<value>1</value>
+		<note>admin email template set content mode</note>
+		<template>NULL</template>
+		<description_json>NULL</description_json>
+	</ROW>
+	<ROW>
+		<name>admin_sess_expire</name>
+		<value>
+		<![CDATA[
+{
+	"enable":1,
+	"sess_expiration":"1800"
+}
+		]]>
+		</value>
+		<note>auto logout admin sess expire setting</note>
+		<template>
+			<![CDATA[
+		]]>
+		</template>
+		<description_json>
+			<![CDATA[
+{
+	"enable":1,
+	"sess_expiration":"1800"
+}
+		]]>
+		</description_json>
+	</ROW>
+</DATA>

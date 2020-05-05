@@ -1,0 +1,612 @@
+/* dashboard notification */
+.notificationDashboard{
+	border:1px solid;
+	border-color: #ccc;
+	border-radius:10px;
+	text-align:center;
+	margin-right:5px;
+	padding: 5px;
+	background-color: #CF4435;
+	opacity: .7;
+	cursor: pointer;
+  color: #fff;
+}
+
+.notDboard-active{
+	-webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-animation-name: hover;
+  animation-name: hover;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  opacity: 1;
+  background-color: #2E4154;
+  color: #fff;
+}
+
+.notDboard-active:before {
+  opacity: .4;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  -webkit-animation-name: hover-shadow;
+  animation-name: hover-shadow;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Hover Shadow */
+@-webkit-keyframes hover {
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes hover {
+  50% {
+    -webkit-transform: translateY(-3px);
+    transform: translateY(-3px);
+  }
+
+  100% {
+    -webkit-transform: translateY(-6px);
+    transform: translateY(-6px);
+  }
+}
+
+@-webkit-keyframes hover-shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+}
+
+@keyframes hover-shadow {
+  0% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+
+  50% {
+    -webkit-transform: translateY(3px);
+    transform: translateY(3px);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translateY(6px);
+    transform: translateY(6px);
+    opacity: .4;
+  }
+}
+
+.hover-shadow {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hover-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hover-shadow:hover, .hover-shadow:focus, .hover-shadow:active {
+  -webkit-transform: translateY(-6px);
+  transform: translateY(-6px);
+  -webkit-animation-name: hover;
+  animation-name: hover;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+.hover-shadow:hover:before, .hover-shadow:focus:before, .hover-shadow:active:before {
+  opacity: .4;
+  -webkit-transform: translateY(6px);
+  transform: translateY(6px);
+  -webkit-animation-name: hover-shadow;
+  animation-name: hover-shadow;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+/* Bubble Float Bottom */
+.bubble-float-bottom {
+  display: inline-block;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.bubble-float-bottom:before {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  bottom: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #e1e1e1 transparent transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: bottom;
+  transition-property: bottom;
+}
+.bubble-float-bottom:hover, .bubble-float-bottom:focus, .bubble-float-bottom:active {
+  -webkit-transform: translateY(-5px) translateZ(0);
+  transform: translateY(-5px) translateZ(0);
+}
+.bubble-float-bottom:hover:before, .bubble-float-bottom:focus:before, .bubble-float-bottom:active:before {
+  bottom: -10px;
+}
+
+.notificationDashboardTxt{
+	font-size:25px;
+}
+
+.notificationDashboardLabel{
+	font-size:12px;
+}
+
+/* date range picker */
+.daterangePicker{
+	background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc
+}
+
+.choosenDateRange{
+	text-align: right;
+	font-size: 12px;
+}
+
+/* review btn */
+.review-btn {
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* moreFilter btn */
+#moreFilter{
+  margin: -15px 0px 6px 0px;
+/*  background: #D9EDF7;
+  border-color: #bce8f1;*/
+}
+.moreFilter-btn{
+	cursor: pointer;
+}
+
+/* add/edit ranking btn */
+.editRankingLevelSettingBtn, .addRankingLevelSettingBtn{
+  cursor: pointer;
+}
+
+/* deleteRankingBtn btn */
+.deleteRankingBtn, .deleteRankingBtn:link{
+	cursor: pointer;
+	color: #000;
+}
+
+/*notification refresh list btn */
+.notificationRefreshList :hover{
+  text-decoration: none;
+  color: #000;
+}
+
+/*transaction alert msg*/
+.transactAlertMsg{
+  margin: 5px;
+  padding: 5px;
+  border:1px solid #a6ca8a;
+  background-color: #e9ffd9;
+  border-radius:10px;
+}
+
+.notificationRefreshList{
+	color: #000;
+}
+
+
+/* modal */
+.modal_full {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin:0;
+}
+.modal_full .modal-content {
+      height: 100%;
+      border-radius: 0;
+      color:#white;
+      overflow:auto;
+}
+
+/*
+.modal-dialog {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin:0;
+}
+.modal-content {
+      height: 100%;
+      border-radius: 0;
+      color:#white;
+      overflow:auto;
+}
+ */
+
+
+/* modal NOTE: OVERRIDE MODAL ABOVE FOR Banktype table */
+@media (min-width: 1200px) {
+
+
+#banktype-edit-column {
+    width: 17%; /* respsonsive width */
+    margin-left:43%; /* width/2) */
+	height:450px;
+	overflow:auto;
+	border-radius: 10px;
+}
+#conf-delete-modal {
+    width: 35%; /* respsonsive width */
+    margin-left:35%; /* width/2) */
+	height:25%;
+	overflow:auto;
+	border-radius: 10px;
+}
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+#banktype-edit-column {
+    width: 30%; /* respsonsive width */
+    margin-left:36%; /* width/2) */
+	height:450px;
+	overflow:auto;
+	border-radius: 10px;
+}
+#conf-delete-modal {
+    width: 60%; /* respsonsive width */
+    margin-left:25%; /* width/2) */
+	height:25%;
+	overflow:auto;
+	border-radius: 10px;
+}
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+#banktype-edit-column {
+    width: 30%;
+    margin-left:36%;
+	height:450px;
+	overflow:auto;
+	border-radius: 10px;
+}
+#conf-delete-modal {
+    width: 50%;
+    margin-left:25%;
+	height:25%;
+	overflow:auto;
+	border-radius: 10px;
+}
+}
+@media (max-width: 767px) {
+#banktype-edit-column {
+    width: 100%;
+    margin-left:0%;
+	height:450px;
+	overflow:auto;
+	border-radius: 10px;
+}
+#conf-delete-modal {
+    width: 100%;
+    margin-left:0;
+	height:25%;
+	overflow:auto;
+    border-radius: 10px;
+}
+}
+@media (max-width: 480px) {
+#banktype-edit-column {
+    width: 100%;
+    margin-left:0;
+	height:450px;
+	overflow:auto;
+    border-radius: 10px;
+}
+#conf-delete-modal {
+    width: 100%;
+    margin-left:0;
+	height:25%;
+	overflow:auto;
+    border-radius: 10px;
+}
+}
+
+
+
+
+.sr-only{
+	color: #000;
+}
+
+/* */
+.search-query{
+	background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc;
+	width: 300px;
+  height: 33px;
+  margin-right: 5px;
+}
+
+.tablepress tbody td {
+  font-family: Tahoma;
+  font-size: 11px;
+}
+
+/*table { table-layout: fixed; }*/
+/*table td { word-wrap: break-word; }*/
+
+.depositSlipBtn{
+  cursor: pointer;
+}
+
+table td { word-wrap: break-word; }
+.actionBankAccountGroup a:link{
+  color: #333;
+}
+
+.tableHeaderFont{
+  font-size:11px;
+  font-weight: bold;
+}
+
+.image-box-list .clearfix{
+  background: rgba(0,0,0,0.03);
+  border-radius: 10px;
+}
+
+.image-box-list .image-container,
+.image-box-list .upload-browse{
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin: 11px auto;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: rgba(0,0,0,0.02);
+}
+
+.image-box-list .image-container{
+  background: rgba(0,0,0,0.01);
+  cursor: pointer;
+}
+
+.image-box-list .image-container img{
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.image-box-list .image-container i{
+  position: absolute;
+  z-index: 2;
+}
+
+.image-box-list .image-container i.fa.fa-search{
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background: #008cba;
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.image-box-list .image-container i.fa.fa-trash-o{
+  left: 50%;
+  bottom: 0;
+  width: 50%;
+  background: #f04124;
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+}
+
+
+.custom-file-upload input[type="file"] {
+  display: none;
+}
+.custom-file-upload {
+  display: inline-block;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  background: transparent;
+  font-size: 10px;
+  color: #a4a4a4;
+  text-align: center;
+  float: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;   
+}
+
+
+.custom-file-upload i{
+  margin-top: 35px;
+  height: 40px;
+  background: #C7C7C7;
+  width: 2px;
+  display: inline-block;
+  position: relative;
+}
+.custom-file-upload i:after{
+  content: '';
+  background: #C7C7C7;
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+
+.custom-file-upload span{
+  display: block;
+  font-size: 14px;
+}
+
+.overlay{
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgb(0,0,0,0.87);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 40px;
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    text-align: center;
+    line-height: 40px;
+}
+.overlay .img_container{
+    position: relative;
+    height: 400px;
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(0,0,0,0);
+    margin-bottom: 15px;
+}
+.overlay .img_container img {
+    height: 100%;
+}
+.overlay .img-info{
+    margin-top: 5%;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+}
+.overlay .img-info label{
+    color: #c5c5c5;
+    font-size: 14px;
+}
+.overlay .img-info span{
+    color: #fff;
+    margin-left: 10px;
+}
+.overlay a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.image-on-hover{
+  text-align: center;
+}
+.image-on-hover .delete-btn{
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    background: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#view_deposit_receipt_modal .modal-dialog {
+  display: table;
+}
+
+#view_deposit_receipt_modal .modal-dialog img {
+  max-width: 80vw;
+  max-height: 80vh;
+}

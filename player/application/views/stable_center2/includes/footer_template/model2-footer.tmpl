@@ -1,0 +1,43 @@
+<div id="footer_template">
+    <footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ url }}/includes/assets/images/footer-logo.png">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul class="right footer-links">
+                    <li class="center-align inline-block"><a href="{{ url }}/aboutus.html">About Us</a></li>
+                    <li class="center-align inline-block"><a href="{{ url }}/terms-and-conditions.html">Terms &amp; Condition</a></li>
+                    <li class="center-align inline-block"><a href="{{ url }}/privacy-policy.html">Privacy &amp; Policy</a></li>
+                    <li class="center-align inline-block"><a href="{{ url }}/responsible-gaming.html">Responsible Gaming</a></li>
+                    <li class="center-align inline-block"><a href="{{ url }}/game-rules.html">Game Rules</a></li>
+                    <li class="center-align inline-block"><a href="{{ url }}/affiliates.html">Affiliates</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="disclaimer">
+            <p>© Copyright Reserved 2018 | Powered by Tripleone Technology</p>
+        </div>
+    </div>
+    </footer>
+
+<script type="text/javascript">
+if ($(".cstm-mod").hasClass("login-mod")) {
+        $("header").hide();
+        $("footer").hide();
+        $(".login-mod").append("<video loop autoplay muted id='regVids' style='position: fixed;top: 0;left: 0;width: 100%;'><source src='{{ url }}/includes/assets/video/log-reg-bg-video.mp4?=v0.1' type='video/mp4'></video>");
+        $(".login-mod").append("<a href='{{ url }}' class='logo-home'><img src='{{ url }}/includes/assets/images/logo-log-reg.png' alt='' /></a>");
+    }
+if ($(".cstm-mod").hasClass("registration-mod")) {
+        $("header").hide();
+        $("footer").hide();
+        $(".registration-mod").append("<video loop autoplay muted id='regVids' style='position: fixed;top: 0;left: 0;width: 100%;'><source src='{{ url }}/includes/assets/video/log-reg-bg-video.mp4?=v0.1'></video>");
+        $(".registration-mod").append("<a href='{{ url }}' class='logo-home'><img src='{{ url }}/includes/assets/images/logo-log-reg.png' alt='' /></a>");
+        $("#registration_form").append("<p class='ahac'>Already have an account?</p><a href='{{ url }}/iframe/auth/login' class='back-btn'>Log In Here</a>");
+    }
+</script>
+
+</div>

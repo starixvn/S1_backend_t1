@@ -1,0 +1,802 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:i4="http://mgsops.net/AdminAPI_Achievements" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:i2="http://mgsops.net/AdminAPI_ItalyPlayer" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:i0="http://mgsops.net/AdminAPI_Admin" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:i3="http://mgsops.net/AdminAPI_Freegame" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:i1="http://mgsops.net/AdminAPI_Gaming/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="VanguardAdmin" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="Orion_VG_SOAP2_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Orion_PA_SOAP_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Orion_ItalyPlayer_SOAP_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Orion_VG_SOAP1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="Orion_Achievements_SOAP_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <http:BasicAuthentication xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:import namespace="http://mgsops.net/AdminAPI_Admin" location="mgsops.net.AdminAPI_Admin.wsdl" />
+  <wsdl:import namespace="http://mgsops.net/AdminAPI_Gaming/" location="mgsops.net.AdminAPI_Gaming.wsdl" />
+  <wsdl:import namespace="http://mgsops.net/AdminAPI_ItalyPlayer" location="mgsops.net.AdminAPI_ItalyPlayer.wsdl" />
+  <wsdl:import namespace="http://mgsops.net/AdminAPI_Freegame" location="mgsops.net.AdminAPI_Freegame.wsdl" />
+  <wsdl:import namespace="http://mgsops.net/AdminAPI_Achievements" location="mgsops.net.AdminAPI_Achievements.wsdl" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" schemaLocation="tempuri.org.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Common" schemaLocation="Orion.Common.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" schemaLocation="schemas.microsoft.com.2003.10.Serialization.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" schemaLocation="Orion.Contracts.VanguardAdmin.DataStructures.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVanguardAdmin_GetCommitQueueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommitQueueData" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_GetCommitQueueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCommitQueueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_GetCommitQueueData_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q1:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_GetRollbackQueueData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRollbackQueueData" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_GetRollbackQueueData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRollbackQueueDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_GetRollbackQueueData_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q2:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ManuallyValidateBet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ManuallyValidateBet" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ManuallyValidateBet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ManuallyValidateBetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ManuallyValidateBet_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q3:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ValidateApiUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUser" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ValidateApiUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ValidateApiUser_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q4:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ValidateApiUserExtended_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUserExtended" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ValidateApiUserExtended_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateApiUserExtendedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVanguardAdmin_ValidateApiUserExtended_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q5:CustomFault" />
+  </wsdl:message>
+  <wsdl:portType name="IVanguardAdmin">
+    <wsdl:operation name="GetCommitQueueData">
+      <wsdl:input wsam:Action="http://tempuri.org/IVanguardAdmin/GetCommitQueueData" message="tns:IVanguardAdmin_GetCommitQueueData_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IVanguardAdmin/GetCommitQueueDataResponse" message="tns:IVanguardAdmin_GetCommitQueueData_OutputMessage" />
+      <wsdl:fault wsam:Action="http://tempuri.org/IVanguardAdmin/GetCommitQueueDataCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin_GetCommitQueueData_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRollbackQueueData">
+      <wsdl:input wsam:Action="http://tempuri.org/IVanguardAdmin/GetRollbackQueueData" message="tns:IVanguardAdmin_GetRollbackQueueData_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IVanguardAdmin/GetRollbackQueueDataResponse" message="tns:IVanguardAdmin_GetRollbackQueueData_OutputMessage" />
+      <wsdl:fault wsam:Action="http://tempuri.org/IVanguardAdmin/GetRollbackQueueDataCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin_GetRollbackQueueData_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ManuallyValidateBet">
+      <wsdl:input wsam:Action="http://tempuri.org/IVanguardAdmin/ManuallyValidateBet" message="tns:IVanguardAdmin_ManuallyValidateBet_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IVanguardAdmin/ManuallyValidateBetResponse" message="tns:IVanguardAdmin_ManuallyValidateBet_OutputMessage" />
+      <wsdl:fault wsam:Action="http://tempuri.org/IVanguardAdmin/ManuallyValidateBetCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin_ManuallyValidateBet_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApiUser">
+      <wsdl:input wsam:Action="http://tempuri.org/IVanguardAdmin/ValidateApiUser" message="tns:IVanguardAdmin_ValidateApiUser_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IVanguardAdmin/ValidateApiUserResponse" message="tns:IVanguardAdmin_ValidateApiUser_OutputMessage" />
+      <wsdl:fault wsam:Action="http://tempuri.org/IVanguardAdmin/ValidateApiUserCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin_ValidateApiUser_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApiUserExtended">
+      <wsdl:input wsam:Action="http://tempuri.org/IVanguardAdmin/ValidateApiUserExtended" message="tns:IVanguardAdmin_ValidateApiUserExtended_InputMessage" />
+      <wsdl:output wsam:Action="http://tempuri.org/IVanguardAdmin/ValidateApiUserExtendedResponse" message="tns:IVanguardAdmin_ValidateApiUserExtended_OutputMessage" />
+      <wsdl:fault wsam:Action="http://tempuri.org/IVanguardAdmin/ValidateApiUserExtendedCustomFaultFault" name="CustomFaultFault" message="tns:IVanguardAdmin_ValidateApiUserExtended_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Orion_VG_SOAP2" type="i0:IVanguardAdmin2">
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsp:PolicyReference URI="#Orion_VG_SOAP2_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCommitQueueData">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetCommitQueueData" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetRollbackQueueData">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetRollbackQueueData" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManuallyValidateBet">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyValidateBet" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApiUser">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUser" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateApiUserExtended">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ValidateApiUserExtended" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetVoidedFundsInPlay">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetVoidedFundsInPlay" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsVoidedFundsEnabled">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetIsVoidedFundsEnabled" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessVoidedFundsInPlay">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ProcessVoidedFundsInPlay" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGenericQueueData">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetGenericQueueData" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetryGenericQueueData">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetryGenericQueueData" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFailedEndGameQueue">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetFailedEndGameQueue" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ManuallyCompleteGame">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/ManuallyCompleteGame" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetApiVersion">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetApiVersion" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FlushPendingCashin">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/FlushPendingCashin" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgressiveWinCashinReport">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/GetProgressiveWinCashinReport" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveGameResultAfterReconcile">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Admin/IVanguardAdmin2/RetrieveGameResultAfterReconcile" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Orion_PA_SOAP" type="i1:IAdminAPI_Gaming">
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsp:PolicyReference URI="#Orion_PA_SOAP_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsersBetsOnTable">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Gaming/IAdminAPI_Gaming/GetUsersBetsOnTable" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Orion_ItalyPlayer_SOAP" type="i2:IPlayerAdmin">
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsp:PolicyReference URI="#Orion_ItalyPlayer_SOAP_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetSingleGamingGroupLimit">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSingleGamingGroupLimit" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountStatus">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserAccountStatus" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProtectionSystemSetting">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionSystemSetting" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProtectionUserSetting">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionUserSetting" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProtectionActivityStatement">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionActivityStatement" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetGamePlayExclusionTypes">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetGamePlayExclusionTypes" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodTypes">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPeriodTypes" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingTypes">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSettingTypes" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerPurchaseLimit">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerPurchaseLimit" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerPurchaseLimit">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerPurchaseLimit" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetValidatedUserId">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetValidatedUserId" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerDataBasic">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerDataBasic" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdFromSigninNameOrLoginName">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserIdFromSigninNameOrLoginName" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserTokenStatus">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateUserTokenStatus" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerLimits">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerLimits" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerLimits">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerLimits" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGamePlayExclusion">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateGamePlayExclusion" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddGamePlayExclusion">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AddGamePlayExclusion" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="IsPlayerExcluded">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/IsPlayerExcluded" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyDisplayFormat">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyDisplayFormat" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyForUser">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyForUser" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsibleGamingTest">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetResponsibleGamingTest" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AnswerResponsibleGamingTest">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AnswerResponsibleGamingTest" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkedAccountsForUser">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLinkedAccountsForUser" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetLastLimitsIncreaseAndCount">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLastLimitsIncreaseAndCount" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePendingPurchaseDWMLimit">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RemovePendingPurchaseDWMLimit" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="FlushPendingPurchaseDWMLimitPerUser">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/FlushPendingPurchaseDWMLimitPerUser" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RGLLimitsNotification">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RGLLimitsNotification" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Orion_VG_SOAP1" type="i3:IFreegameAdmin">
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsp:PolicyReference URI="#Orion_VG_SOAP1_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPlayersByFreegame">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetPlayersByFreegame" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegames">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegames" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayersToFreegame">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/AddPlayersToFreegame" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePlayersFromFreegame">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/RemovePlayersFromFreegame" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegamesByPlayer">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayer" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegamesByPlayerOfferStatus">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayerOfferStatus" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegamesPlayerDetails">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesPlayerDetails" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Orion_Achievements_SOAP" type="i4:IAchievementsService">
+    <wsaw:UsingAddressing wsdl:required="false" />
+    <wsp:PolicyReference URI="#Orion_Achievements_SOAP_policy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetServerAchievements">
+      <soap:operation soapAction="http://mgsops.net/AdminAPI_Achievements/IAchievementsService/GetServerAchievements" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultFault">
+        <soap:fault name="CustomFaultFault" use="literal" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VanguardAdmin">
+    <wsdl:port name="Orion_VG_SOAP2" binding="tns:Orion_VG_SOAP2">
+      <soap:address location="https://orionapi22.gameassists.co.uk/Orion/VanguardAdmin/SOAP2" />
+    </wsdl:port>
+    <wsdl:port name="Orion_PA_SOAP" binding="tns:Orion_PA_SOAP">
+      <soap:address location="https://orionapi22.gameassists.co.uk/Orion/GamingAdmin/SOAP" />
+    </wsdl:port>
+    <wsdl:port name="Orion_ItalyPlayer_SOAP" binding="tns:Orion_ItalyPlayer_SOAP">
+      <soap:address location="https://orionapi22.gameassists.co.uk/Orion/ItalyPlayerAdmin/SOAP" />
+    </wsdl:port>
+    <wsdl:port name="Orion_VG_SOAP1" binding="tns:Orion_VG_SOAP1">
+      <soap:address location="https://orionapi22.gameassists.co.uk/Orion/FreegameAdmin/SOAP" />
+    </wsdl:port>
+    <wsdl:port name="Orion_Achievements_SOAP" binding="tns:Orion_Achievements_SOAP">
+      <soap:address location="https://orionapi22.gameassists.co.uk/Orion/Achievements/SOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

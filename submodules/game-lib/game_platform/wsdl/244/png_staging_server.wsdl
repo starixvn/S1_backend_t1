@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions name="CasinoGameService" targetNamespace="http://playngo.com/v1"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+	xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex"
+	xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+	xmlns:wsa10="http://www.w3.org/2005/08/addressing"
+	xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+	xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy"
+	xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract"
+	xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+	xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing"
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://playngo.com/v1"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+	xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl"
+	xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+	<wsp:Policy wsu:Id="CasinoGameServiceHttp_policy">
+		<wsp:ExactlyOne>
+			<wsp:All>
+				<http:BasicAuthentication
+					xmlns:http="http://schemas.microsoft.com/ws/06/2004/policy/http"/>
+				</wsp:All>
+			</wsp:ExactlyOne>
+		</wsp:Policy>
+		<wsdl:types>
+			<xsd:schema targetNamespace="http://playngo.com/v1/Imports">
+				<xsd:import schemaLocation="http://agastage.playngonetwork.com:22819/CasinoGameService?xsd=xsd0" namespace="http://playngo.com/v1"/>
+				<xsd:import schemaLocation="http://agastage.playngonetwork.com:22819/CasinoGameService?xsd=xsd3" namespace="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+				<xsd:import schemaLocation="http://agastage.playngonetwork.com:22819/CasinoGameService?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/"/>
+				<xsd:import schemaLocation="http://agastage.playngonetwork.com:22819/CasinoGameService?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays"/>
+				<xsd:import schemaLocation="http://agastage.playngonetwork.com:22819/CasinoGameService?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Practices.EnterpriseLibrary.Validation.Integration.WCF"/>
+			</xsd:schema>
+		</wsdl:types>
+		<wsdl:message name="CasinoGameService_AddFreegameOffers_InputMessage">
+			<wsdl:part name="parameters" element="tns:AddFreegameOffers"/>
+		</wsdl:message>
+		<wsdl:message name="CasinoGameService_AddFreegameOffers_OutputMessage">
+			<wsdl:part name="parameters" element="tns:AddFreegameOffersResponse"/>
+		</wsdl:message>
+		<wsdl:message name="CasinoGameService_AddFreegameOffers_ServiceFaultFault_FaultMessage">
+			<wsdl:part name="detail" element="tns:ServiceFault"/>
+		</wsdl:message>
+		<wsdl:message name="CasinoGameService_AddFreegameOffers_ValidationFaultFault_FaultMessage">
+			<wsdl:part name="detail" element="q1:ValidationFault"
+				xmlns:q1="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+			</wsdl:message>
+			<wsdl:message name="CasinoGameService_GetFreegameOffers_InputMessage">
+				<wsdl:part name="parameters" element="tns:GetFreegameOffers"/>
+			</wsdl:message>
+			<wsdl:message name="CasinoGameService_GetFreegameOffers_OutputMessage">
+				<wsdl:part name="parameters" element="tns:GetFreegameOffersResponse"/>
+			</wsdl:message>
+			<wsdl:message name="CasinoGameService_GetFreegameOffers_ServiceFaultFault_FaultMessage">
+				<wsdl:part name="detail" element="tns:ServiceFault"/>
+			</wsdl:message>
+			<wsdl:message name="CasinoGameService_GetFreegameOffers_ValidationFaultFault_FaultMessage">
+				<wsdl:part name="detail" element="q2:ValidationFault"
+					xmlns:q2="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+				</wsdl:message>
+				<wsdl:message name="CasinoGameService_CancelFreegame_InputMessage">
+					<wsdl:part name="parameters" element="tns:CancelFreegame"/>
+				</wsdl:message>
+				<wsdl:message name="CasinoGameService_CancelFreegame_OutputMessage">
+					<wsdl:part name="parameters" element="tns:CancelFreegameResponse"/>
+				</wsdl:message>
+				<wsdl:message name="CasinoGameService_CancelFreegame_ServiceFaultFault_FaultMessage">
+					<wsdl:part name="detail" element="tns:ServiceFault"/>
+				</wsdl:message>
+				<wsdl:message name="CasinoGameService_CancelFreegame_ValidationFaultFault_FaultMessage">
+					<wsdl:part name="detail" element="q3:ValidationFault"
+						xmlns:q3="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+					</wsdl:message>
+					<wsdl:message name="CasinoGameService_GetUnfinishedGames_InputMessage">
+						<wsdl:part name="parameters" element="tns:GetUnfinishedGames"/>
+					</wsdl:message>
+					<wsdl:message name="CasinoGameService_GetUnfinishedGames_OutputMessage">
+						<wsdl:part name="parameters" element="tns:GetUnfinishedGamesResponse"/>
+					</wsdl:message>
+					<wsdl:message name="CasinoGameService_GetUnfinishedGames_ServiceFaultFault_FaultMessage">
+						<wsdl:part name="detail" element="tns:ServiceFault"/>
+					</wsdl:message>
+					<wsdl:message name="CasinoGameService_GetUnfinishedGames_ValidationFaultFault_FaultMessage">
+						<wsdl:part name="detail" element="q4:ValidationFault"
+							xmlns:q4="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+						</wsdl:message>
+						<wsdl:message name="CasinoGameService_GetTriggeredAchievementsByPlayer_InputMessage">
+							<wsdl:part name="parameters" element="tns:GetTriggeredAchievementsByPlayer"/>
+						</wsdl:message>
+						<wsdl:message name="CasinoGameService_GetTriggeredAchievementsByPlayer_OutputMessage">
+							<wsdl:part name="parameters" element="tns:GetTriggeredAchievementsByPlayerResponse"/>
+						</wsdl:message>
+						<wsdl:message name="CasinoGameService_GetTriggeredAchievementsByPlayer_ServiceFaultFault_FaultMessage">
+							<wsdl:part name="detail" element="tns:ServiceFault"/>
+						</wsdl:message>
+						<wsdl:message name="CasinoGameService_GetTriggeredAchievementsByPlayer_ValidationFaultFault_FaultMessage">
+							<wsdl:part name="detail" element="q5:ValidationFault"
+								xmlns:q5="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+							</wsdl:message>
+							<wsdl:message name="CasinoGameService_GetTriggeredAchievements_InputMessage">
+								<wsdl:part name="parameters" element="tns:GetTriggeredAchievements"/>
+							</wsdl:message>
+							<wsdl:message name="CasinoGameService_GetTriggeredAchievements_OutputMessage">
+								<wsdl:part name="parameters" element="tns:GetTriggeredAchievementsResponse"/>
+							</wsdl:message>
+							<wsdl:message name="CasinoGameService_GetTriggeredAchievements_ServiceFaultFault_FaultMessage">
+								<wsdl:part name="detail" element="tns:ServiceFault"/>
+							</wsdl:message>
+							<wsdl:message name="CasinoGameService_GetTriggeredAchievements_ValidationFaultFault_FaultMessage">
+								<wsdl:part name="detail" element="q6:ValidationFault"
+									xmlns:q6="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+								</wsdl:message>
+								<wsdl:message name="CasinoGameService_GetAchievementSummary_InputMessage">
+									<wsdl:part name="parameters" element="tns:GetAchievementSummary"/>
+								</wsdl:message>
+								<wsdl:message name="CasinoGameService_GetAchievementSummary_OutputMessage">
+									<wsdl:part name="parameters" element="tns:GetAchievementSummaryResponse"/>
+								</wsdl:message>
+								<wsdl:message name="CasinoGameService_GetAchievementSummary_ServiceFaultFault_FaultMessage">
+									<wsdl:part name="detail" element="tns:ServiceFault"/>
+								</wsdl:message>
+								<wsdl:message name="CasinoGameService_GetAchievementSummary_ValidationFaultFault_FaultMessage">
+									<wsdl:part name="detail" element="q7:ValidationFault"
+										xmlns:q7="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+									</wsdl:message>
+									<wsdl:message name="CasinoGameService_GetAchievements_InputMessage">
+										<wsdl:part name="parameters" element="tns:GetAchievements"/>
+									</wsdl:message>
+									<wsdl:message name="CasinoGameService_GetAchievements_OutputMessage">
+										<wsdl:part name="parameters" element="tns:GetAchievementsResponse"/>
+									</wsdl:message>
+									<wsdl:message name="CasinoGameService_GetAchievements_ServiceFaultFault_FaultMessage">
+										<wsdl:part name="detail" element="tns:ServiceFault"/>
+									</wsdl:message>
+									<wsdl:message name="CasinoGameService_GetAchievements_ValidationFaultFault_FaultMessage">
+										<wsdl:part name="detail" element="q8:ValidationFault"
+											xmlns:q8="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_RegisterUser_InputMessage">
+											<wsdl:part name="parameters" element="tns:RegisterUser"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_RegisterUser_OutputMessage">
+											<wsdl:part name="parameters" element="tns:RegisterUserResponse"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_RegisterUser_ServiceFaultFault_FaultMessage">
+											<wsdl:part name="detail" element="tns:ServiceFault"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_Credit_InputMessage">
+											<wsdl:part name="parameters" element="tns:Credit"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_Credit_OutputMessage">
+											<wsdl:part name="parameters" element="tns:CreditResponse"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_Credit_ServiceFaultFault_FaultMessage">
+											<wsdl:part name="detail" element="tns:ServiceFault"/>
+										</wsdl:message>
+										<wsdl:message name="CasinoGameService_Credit_ValidationFaultFault_FaultMessage">
+											<wsdl:part name="detail" element="q9:ValidationFault"
+												xmlns:q9="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+											</wsdl:message>
+											<wsdl:message name="CasinoGameService_Debit_InputMessage">
+												<wsdl:part name="parameters" element="tns:Debit"/>
+											</wsdl:message>
+											<wsdl:message name="CasinoGameService_Debit_OutputMessage">
+												<wsdl:part name="parameters" element="tns:DebitResponse"/>
+											</wsdl:message>
+											<wsdl:message name="CasinoGameService_Debit_ServiceFaultFault_FaultMessage">
+												<wsdl:part name="detail" element="tns:ServiceFault"/>
+											</wsdl:message>
+											<wsdl:message name="CasinoGameService_Debit_ValidationFaultFault_FaultMessage">
+												<wsdl:part name="detail" element="q10:ValidationFault"
+													xmlns:q10="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_Balance_InputMessage">
+													<wsdl:part name="parameters" element="tns:Balance"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_Balance_OutputMessage">
+													<wsdl:part name="parameters" element="tns:BalanceResponse"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_Balance_ServiceFaultFault_FaultMessage">
+													<wsdl:part name="detail" element="tns:ServiceFault"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_GetTicket_InputMessage">
+													<wsdl:part name="parameters" element="tns:GetTicket"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_GetTicket_OutputMessage">
+													<wsdl:part name="parameters" element="tns:GetTicketResponse"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_GetTicket_ServiceFaultFault_FaultMessage">
+													<wsdl:part name="detail" element="tns:ServiceFault"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_DebitAccount_InputMessage">
+													<wsdl:part name="parameters" element="tns:DebitAccount"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_DebitAccount_OutputMessage">
+													<wsdl:part name="parameters" element="tns:DebitAccountResponse"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_DebitAccount_ServiceFaultFault_FaultMessage">
+													<wsdl:part name="detail" element="tns:ServiceFault"/>
+												</wsdl:message>
+												<wsdl:message name="CasinoGameService_DebitAccount_ValidationFaultFault_FaultMessage">
+													<wsdl:part name="detail" element="q11:ValidationFault"
+														xmlns:q11="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+													</wsdl:message>
+													<wsdl:message name="CasinoGameService_CreditAccount_InputMessage">
+														<wsdl:part name="parameters" element="tns:CreditAccount"/>
+													</wsdl:message>
+													<wsdl:message name="CasinoGameService_CreditAccount_OutputMessage">
+														<wsdl:part name="parameters" element="tns:CreditAccountResponse"/>
+													</wsdl:message>
+													<wsdl:message name="CasinoGameService_CreditAccount_ServiceFaultFault_FaultMessage">
+														<wsdl:part name="detail" element="tns:ServiceFault"/>
+													</wsdl:message>
+													<wsdl:message name="CasinoGameService_CreditAccount_ValidationFaultFault_FaultMessage">
+														<wsdl:part name="detail" element="q12:ValidationFault"
+															xmlns:q12="http://www.microsoft.com/practices/EnterpriseLibrary/2007/01/wcf/validation"/>
+														</wsdl:message>
+														<wsdl:portType name="CasinoGameService">
+															<wsdl:documentation>
+																<summary>Casino game service</summary>
+															</wsdl:documentation>
+															<wsdl:operation name="AddFreegameOffers">
+																<wsdl:documentation>
+																	<summary>Add a offer to a specific user for a specific game</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/AddFreegameOffers" message="tns:CasinoGameService_AddFreegameOffers_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/AddFreegameOffersResponse" message="tns:CasinoGameService_AddFreegameOffers_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/AddFreegameOffersServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_AddFreegameOffers_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/AddFreegameOffersValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_AddFreegameOffers_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetFreegameOffers">
+																<wsdl:documentation>
+																	<summary>List all freegame offers.</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetFreegameOffers" message="tns:CasinoGameService_GetFreegameOffers_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetFreegameOffersResponse" message="tns:CasinoGameService_GetFreegameOffers_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetFreegameOffersServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetFreegameOffers_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetFreegameOffersValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_GetFreegameOffers_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="CancelFreegame">
+																<wsdl:documentation>
+																	<summary>Cancel a free game offer</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/CancelFreegame" message="tns:CasinoGameService_CancelFreegame_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/CancelFreegameResponse" message="tns:CasinoGameService_CancelFreegame_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/CancelFreegameServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_CancelFreegame_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/CancelFreegameValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_CancelFreegame_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetUnfinishedGames">
+																<wsdl:documentation>
+																	<summary>Get all open games/unfinished games for specified external id</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetUnfinishedGames" message="tns:CasinoGameService_GetUnfinishedGames_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetUnfinishedGamesResponse" message="tns:CasinoGameService_GetUnfinishedGames_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetUnfinishedGamesServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetUnfinishedGames_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetUnfinishedGamesValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_GetUnfinishedGames_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetTriggeredAchievementsByPlayer">
+																<wsdl:documentation>
+																	<summary>Get a list of triggered achievements for specified external id and specified date range</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsByPlayer" message="tns:CasinoGameService_GetTriggeredAchievementsByPlayer_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsByPlayerResponse" message="tns:CasinoGameService_GetTriggeredAchievementsByPlayer_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsByPlayerServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetTriggeredAchievementsByPlayer_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsByPlayerValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_GetTriggeredAchievementsByPlayer_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetTriggeredAchievements">
+																<wsdl:documentation>
+																	<summary>Get a list of triggered achievements for a specified date range</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievements" message="tns:CasinoGameService_GetTriggeredAchievements_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsResponse" message="tns:CasinoGameService_GetTriggeredAchievements_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetTriggeredAchievements_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_GetTriggeredAchievements_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetAchievementSummary">
+																<wsdl:documentation>
+																	<summary>Get a list summary of achievements with accumulated points for a specified period </summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementSummary" message="tns:CasinoGameService_GetAchievementSummary_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementSummaryResponse" message="tns:CasinoGameService_GetAchievementSummary_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementSummaryServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetAchievementSummary_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementSummaryValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_GetAchievementSummary_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetAchievements">
+																<wsdl:documentation>
+																	<summary>Get a list of achievements. Status can be "Active", "Future", "Historical" or "None"</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievements" message="tns:CasinoGameService_GetAchievements_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementsResponse" message="tns:CasinoGameService_GetAchievements_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementsServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetAchievements_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameTPService/GetAchievementsValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_GetAchievements_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="RegisterUser">
+																<wsdl:documentation>
+																	<summary>Register a new user account</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/RegisterUser" message="tns:CasinoGameService_RegisterUser_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/RegisterUserResponse" message="tns:CasinoGameService_RegisterUser_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/RegisterUserServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_RegisterUser_ServiceFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="Credit">
+																<wsdl:documentation>
+																	<summary>Transfer of funds to the user's account</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/Credit" message="tns:CasinoGameService_Credit_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditResponse" message="tns:CasinoGameService_Credit_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_Credit_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_Credit_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="Debit">
+																<wsdl:documentation>
+																	<summary>Transfer of funds from the user's account</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/Debit" message="tns:CasinoGameService_Debit_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitResponse" message="tns:CasinoGameService_Debit_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_Debit_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_Debit_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="Balance">
+																<wsdl:documentation>
+																	<summary>Get the user's account balance</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/Balance" message="tns:CasinoGameService_Balance_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/BalanceResponse" message="tns:CasinoGameService_Balance_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/BalanceServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_Balance_ServiceFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="GetTicket">
+																<wsdl:documentation>
+																	<summary>Returns a session ticket user for launching a game</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/GetTicket" message="tns:CasinoGameService_GetTicket_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/GetTicketResponse" message="tns:CasinoGameService_GetTicket_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/GetTicketServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_GetTicket_ServiceFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="DebitAccount">
+																<wsdl:documentation>
+																	<summary>Transfer of funds from the user's account and return user balance</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitAccount" message="tns:CasinoGameService_DebitAccount_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitAccountResponse" message="tns:CasinoGameService_DebitAccount_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitAccountServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_DebitAccount_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/DebitAccountValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_DebitAccount_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+															<wsdl:operation name="CreditAccount">
+																<wsdl:documentation>
+																	<summary>Transfer of funds to the user's account and return user balance</summary>
+																</wsdl:documentation>
+																<wsdl:input wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditAccount" message="tns:CasinoGameService_CreditAccount_InputMessage"/>
+																<wsdl:output wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditAccountResponse" message="tns:CasinoGameService_CreditAccount_OutputMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditAccountServiceFaultFault" name="ServiceFaultFault" message="tns:CasinoGameService_CreditAccount_ServiceFaultFault_FaultMessage"/>
+																<wsdl:fault wsaw:Action="http://playngo.com/v1/CasinoGameService/CreditAccountValidationFaultFault" name="ValidationFaultFault" message="tns:CasinoGameService_CreditAccount_ValidationFaultFault_FaultMessage"/>
+															</wsdl:operation>
+														</wsdl:portType>
+														<wsdl:binding name="CasinoGameServiceHttp" type="tns:CasinoGameService">
+															<wsp:PolicyReference URI="#CasinoGameServiceHttp_policy"/>
+															<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+															<wsdl:operation name="AddFreegameOffers">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/AddFreegameOffers" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetFreegameOffers">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/GetFreegameOffers" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="CancelFreegame">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/CancelFreegame" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetUnfinishedGames">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/GetUnfinishedGames" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetTriggeredAchievementsByPlayer">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievementsByPlayer" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetTriggeredAchievements">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/GetTriggeredAchievements" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetAchievementSummary">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/GetAchievementSummary" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetAchievements">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameTPService/GetAchievements" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="RegisterUser">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/RegisterUser" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="Credit">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/Credit" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="Debit">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/Debit" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="Balance">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/Balance" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="GetTicket">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/GetTicket" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="DebitAccount">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/DebitAccount" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+															<wsdl:operation name="CreditAccount">
+																<soap:operation soapAction="http://playngo.com/v1/CasinoGameService/CreditAccount" style="document"/>
+																<wsdl:input>
+																	<soap:body use="literal"/>
+																</wsdl:input>
+																<wsdl:output>
+																	<soap:body use="literal"/>
+																</wsdl:output>
+																<wsdl:fault name="ServiceFaultFault">
+																	<soap:fault name="ServiceFaultFault" use="literal"/>
+																</wsdl:fault>
+																<wsdl:fault name="ValidationFaultFault">
+																	<soap:fault name="ValidationFaultFault" use="literal"/>
+																</wsdl:fault>
+															</wsdl:operation>
+														</wsdl:binding>
+														<wsdl:service name="CasinoGameService">
+															<wsdl:port name="CasinoGameServiceHttp" binding="tns:CasinoGameServiceHttp">
+																<soap:address location="http://agastage.playngonetwork.com:22819/CasinoGameService"/>
+															</wsdl:port>
+														</wsdl:service>
+													</wsdl:definitions>

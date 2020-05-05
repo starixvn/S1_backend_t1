@@ -1,0 +1,115 @@
+.mc-content{
+	padding: 0 20px 20px;
+	float: none;
+
+  .row{
+  	margin: 0;
+  }
+  h1{
+  	padding-bottom: 15px;
+		font-size: 28px;
+		font-weight: 600;
+  	color: #353535;
+  }
+  // start of cashier center header
+  .cashier-center-header {
+    margin-right: -5px;
+    margin-left: -5px;
+
+    div[class*="col-md"] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .inner-content {
+      border-radius: 6px;
+      border: 1px solid $border-color;
+      padding: 28px 15px 0;
+      min-height: 100px;
+    }
+    p{
+    	margin: 0;
+    	font-weight: bold;
+    	font-size: 12px;
+    	color: #101010;
+    }
+    h2{
+    	display: inline-block;
+    	margin: 0;
+    	color: #353535;
+    	font-weight: bold;
+      font-size: 24px;
+      &.d-yen {
+      	color: $secondary-color;
+      }
+    }
+    a {
+      &.btn {
+        background: $button-bg;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+				border: 0;
+        margin-top: -10px;
+        max-width: 100px;
+        width: 100%;
+        font-size: 12px;
+        color: $white;
+        float: right;
+				&:hover {
+					background: $button-bg-hover;
+				}
+      }
+    }
+  }// end of cashier center header
+  //start of cashier center body
+  .sub-wallet-container {
+    margin-right: -5px;
+    margin-left: -5px;
+    div[class*="col-sm"] {
+      padding-left: 5px;
+      padding-right: 5px;
+      div[class*="col-xs"] {
+        min-height: 30px;
+        line-height: 30px;
+      }
+    }
+    .inner-content {
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      padding: 5px 0;
+      font-size: 12px;
+      background-color: #f3f3f3;
+      .btn {
+				border: 0;
+        border-radius: 8px;
+        max-width: 100px;
+        width: 100%;
+        font-size: 12px;
+        text-transform: uppercase;
+        background: rgba(127,134,150,1);
+        background: $alt-button-bg;
+        background-repeat: no-repeat;
+        color: $white;
+				&:hover {
+					background: $alt-button-bg-hover;
+				}
+      }
+    }
+  }
+  .cashier-center-withdrawal {
+    .col-xs-6 {
+      height: 25px;
+      line-height: 25px;
+    }
+    .text-label {
+      color: #868686;
+    }
+    .inner-content {
+      border: 1px solid $border-color;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      padding: 10px 0;
+      font-size: 14px;
+    }
+  }
+}

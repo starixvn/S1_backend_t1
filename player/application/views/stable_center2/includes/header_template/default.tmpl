@@ -1,0 +1,28 @@
+<header class="header" role="banner" aria-label="weBet header">
+    <div class="header__primary container">
+        <div class="header__column">
+            <a href="{{ url }}" class="header__logo"><img class="logoIndex" src="{{ logo_path }}"></a>
+        </div>
+        <div class="header__column header__column--user">
+            <!-- player_login_area -->
+            <div id="_player_login_area" class="loginbox fn-right pull-right">
+                {{ textLang.text_loading }} <a href="" style="display:none;">直接登录</a>
+            </div>
+            <div class="fn-right switch-language pull-right">
+                <a href="javascript: void('0');" class="_og_switch_lang" data-lang-id="1" data-lang-code="en"><img src="{{ player_url }}/stable_center2/img/en-icon.png" alt="English Language"></a>&nbsp;|&nbsp;
+                <a href="javascript: void('0');" class="_og_switch_lang" data-lang-id="2" data-lang-code="cn"><img src="{{ player_url }}/stable_center2/img/cn-icon.png" alt="Chinese Language"></a>&nbsp;|&nbsp;
+            </div>
+            <!-- player_login_area -->
+        </div>
+    </div>
+    <section class="announcement-ticker">
+        <div class="announcement-ticker_inner container">
+            <div class="col col-md-2 text-center news-ticker__label" style="background-color: #F00; color: #FFF;">
+                <span class="announcement-ticker_label_text" style="line-height: 34px; font-size: 16px;">最新消息</span>
+            </div>
+            <div class="col col-md-10 nopadding news-ticker_view">
+                <iframe class="_public_news" src="javascript: void(0);" style="border: none;height:34px;width:100%;" scrolling="no"></iframe>
+            </div>
+        </div>
+    </section>
+</header>

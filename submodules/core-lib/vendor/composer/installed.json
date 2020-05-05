@@ -1,0 +1,591 @@
+[
+    {
+        "name": "hoa/consistency",
+        "version": "1.17.05.02",
+        "version_normalized": "1.17.05.02",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Consistency.git",
+            "reference": "fd7d0adc82410507f332516faf655b6ed22e4c2f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Consistency/zipball/fd7d0adc82410507f332516faf655b6ed22e4c2f",
+            "reference": "fd7d0adc82410507f332516faf655b6ed22e4c2f",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/exception": "~1.0",
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "hoa/stream": "~1.0",
+            "hoa/test": "~2.0"
+        },
+        "time": "2017-05-02T12:18:12+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Consistency\\": "."
+            },
+            "files": [
+                "Prelude.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Consistency library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "autoloader",
+            "callable",
+            "consistency",
+            "entity",
+            "flex",
+            "keyword",
+            "library"
+        ]
+    },
+    {
+        "name": "hoa/event",
+        "version": "1.17.01.13",
+        "version_normalized": "1.17.01.13",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Event.git",
+            "reference": "6c0060dced212ffa3af0e34bb46624f990b29c54"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Event/zipball/6c0060dced212ffa3af0e34bb46624f990b29c54",
+            "reference": "6c0060dced212ffa3af0e34bb46624f990b29c54",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/consistency": "~1.0",
+            "hoa/exception": "~1.0"
+        },
+        "require-dev": {
+            "hoa/test": "~2.0"
+        },
+        "time": "2017-01-13T15:30:50+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Event\\": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Event library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "event",
+            "library",
+            "listener",
+            "observer"
+        ]
+    },
+    {
+        "name": "hoa/exception",
+        "version": "1.17.01.16",
+        "version_normalized": "1.17.01.16",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Exception.git",
+            "reference": "091727d46420a3d7468ef0595651488bfc3a458f"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Exception/zipball/091727d46420a3d7468ef0595651488bfc3a458f",
+            "reference": "091727d46420a3d7468ef0595651488bfc3a458f",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/consistency": "~1.0",
+            "hoa/event": "~1.0"
+        },
+        "require-dev": {
+            "hoa/test": "~2.0"
+        },
+        "time": "2017-01-16T07:53:27+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Exception\\": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Exception library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "exception",
+            "library"
+        ]
+    },
+    {
+        "name": "hoa/fastcgi",
+        "version": "3.19.03.08",
+        "version_normalized": "3.19.03.08",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Fastcgi.git",
+            "reference": "7a6deb0a635f0ce01a5cf9bc03f9f7dba98717e7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Fastcgi/zipball/7a6deb0a635f0ce01a5cf9bc03f9f7dba98717e7",
+            "reference": "7a6deb0a635f0ce01a5cf9bc03f9f7dba98717e7",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/consistency": "~1.0",
+            "hoa/exception": "~1.0",
+            "hoa/socket": "~1.0"
+        },
+        "require-dev": {
+            "hoa/test": "~2.0"
+        },
+        "time": "2019-03-08T08:29:27+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Fastcgi\\": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Fastcgi library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "cgi",
+            "fastcgi",
+            "library"
+        ]
+    },
+    {
+        "name": "hoa/protocol",
+        "version": "1.17.01.14",
+        "version_normalized": "1.17.01.14",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Protocol.git",
+            "reference": "5c2cf972151c45f373230da170ea015deecf19e2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Protocol/zipball/5c2cf972151c45f373230da170ea015deecf19e2",
+            "reference": "5c2cf972151c45f373230da170ea015deecf19e2",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/consistency": "~1.0",
+            "hoa/exception": "~1.0"
+        },
+        "require-dev": {
+            "hoa/test": "~2.0"
+        },
+        "time": "2017-01-14T12:26:10+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Protocol\\": "."
+            },
+            "files": [
+                "Wrapper.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Protocol library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "library",
+            "protocol",
+            "resource",
+            "stream",
+            "wrapper"
+        ]
+    },
+    {
+        "name": "hoa/socket",
+        "version": "1.17.05.16",
+        "version_normalized": "1.17.05.16",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Socket.git",
+            "reference": "1a43f073d910d0f803de8cc9256779db1027906d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Socket/zipball/1a43f073d910d0f803de8cc9256779db1027906d",
+            "reference": "1a43f073d910d0f803de8cc9256779db1027906d",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/consistency": "~1.0",
+            "hoa/exception": "~1.0",
+            "hoa/stream": "~1.0"
+        },
+        "require-dev": {
+            "hoa/test": "~2.0"
+        },
+        "time": "2017-05-16T07:55:41+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Socket\\": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Socket library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "Socket",
+            "client",
+            "library",
+            "node",
+            "server",
+            "tcp",
+            "udp"
+        ]
+    },
+    {
+        "name": "hoa/stream",
+        "version": "1.17.02.21",
+        "version_normalized": "1.17.02.21",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/hoaproject/Stream.git",
+            "reference": "3293cfffca2de10525df51436adf88a559151d82"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/hoaproject/Stream/zipball/3293cfffca2de10525df51436adf88a559151d82",
+            "reference": "3293cfffca2de10525df51436adf88a559151d82",
+            "shasum": ""
+        },
+        "require": {
+            "hoa/consistency": "~1.0",
+            "hoa/event": "~1.0",
+            "hoa/exception": "~1.0",
+            "hoa/protocol": "~1.0"
+        },
+        "require-dev": {
+            "hoa/test": "~2.0"
+        },
+        "time": "2017-02-21T16:01:06+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Hoa\\Stream\\": "."
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Ivan Enderlin",
+                "email": "ivan.enderlin@hoa-project.net"
+            },
+            {
+                "name": "Hoa community",
+                "homepage": "https://hoa-project.net/"
+            }
+        ],
+        "description": "The Hoa\\Stream library.",
+        "homepage": "https://hoa-project.net/",
+        "keywords": [
+            "Context",
+            "bucket",
+            "composite",
+            "filter",
+            "in",
+            "library",
+            "out",
+            "protocol",
+            "stream",
+            "wrapper"
+        ]
+    },
+    {
+        "name": "league/climate",
+        "version": "3.4.1",
+        "version_normalized": "3.4.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/thephpleague/climate.git",
+            "reference": "d657a19837c1f79a891381fb128b755aa3386381"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/thephpleague/climate/zipball/d657a19837c1f79a891381fb128b755aa3386381",
+            "reference": "d657a19837c1f79a891381fb128b755aa3386381",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^5.6|^7.0",
+            "psr/log": "^1.0",
+            "seld/cli-prompt": "^1.0"
+        },
+        "require-dev": {
+            "mikey179/vfsstream": "^1.4",
+            "mockery/mockery": "^1.0",
+            "phpunit/phpunit": "^5.7.16"
+        },
+        "suggest": {
+            "ext-mbstring": "If ext-mbstring is not available you MUST install symfony/polyfill-mbstring"
+        },
+        "time": "2018-04-29T16:43:54+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "League\\CLImate\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Craig Duncan",
+                "email": "git@duncanc.co.uk",
+                "homepage": "https://github.com/duncan3dc",
+                "role": "Developer"
+            },
+            {
+                "name": "Joe Tannenbaum",
+                "email": "hey@joe.codes",
+                "homepage": "http://joe.codes/",
+                "role": "Developer"
+            }
+        ],
+        "description": "PHP's best friend for the terminal. CLImate allows you to easily output colored text, special formats, and more.",
+        "keywords": [
+            "cli",
+            "colors",
+            "command",
+            "php",
+            "terminal"
+        ]
+    },
+    {
+        "name": "psr/log",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/php-fig/log.git",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2016-10-10T12:19:37+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Psr\\Log\\": "Psr/Log/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "PHP-FIG",
+                "homepage": "http://www.php-fig.org/"
+            }
+        ],
+        "description": "Common interface for logging libraries",
+        "homepage": "https://github.com/php-fig/log",
+        "keywords": [
+            "log",
+            "psr",
+            "psr-3"
+        ]
+    },
+    {
+        "name": "seld/cli-prompt",
+        "version": "1.0.3",
+        "version_normalized": "1.0.3.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Seldaek/cli-prompt.git",
+            "reference": "a19a7376a4689d4d94cab66ab4f3c816019ba8dd"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Seldaek/cli-prompt/zipball/a19a7376a4689d4d94cab66ab4f3c816019ba8dd",
+            "reference": "a19a7376a4689d4d94cab66ab4f3c816019ba8dd",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3"
+        },
+        "time": "2017-03-18T11:32:45+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Seld\\CliPrompt\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be"
+            }
+        ],
+        "description": "Allows you to prompt for user input on the command line, and optionally hide the characters they type",
+        "keywords": [
+            "cli",
+            "console",
+            "hidden",
+            "input",
+            "prompt"
+        ]
+    }
+]

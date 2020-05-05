@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>钱包转账中心 - 新橙娱乐</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script> 
+
+
+</head>
+<body>
+
+<div id="pagetwo" class="left move">
+        <div class="header">
+             <div class="head_back">
+                <div class="back_btnPT" onclick="history.go(-1);"></div>
+            </div>
+            <div class="header_text"><a id="ht1">转账</a></div>
+        </div>
+
+        <div class="page">
+
+
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>
+
+        </title>
+
+
+            <div class="mmenu">
+                <div class="mm_header">
+                    <ul>
+                        <li>选择提款卡</li>
+                    </ul>
+                    <div class="mm_exit"></div>
+                </div>
+                <div class="mm_main">
+                    <ul>
+                        <ul>
+                            <li id="zxzh">众鑫账户<i></i></li>
+                            <li>EA平台<i></i></li>
+                            <li>BBIN平台<i></i></li>
+                            <li>AG平台<i></i></li>
+                            <li>EBET平台<i></i></li>
+                            <li>体育平台<i></i></li>
+                            <li>LB平台<i></i></li>
+                            <li>KG平台<i></i></li>
+                            <li>AMP平台<i></i></li>
+                            <li>棋牌平台<i></i></li>
+                            <li style="margin-bottom: 20px;">PT平台<i></i></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="home">
+                <div class="zzkb"></div>
+                <div class="input">
+                    <div id="zh1" class="input_01 xlmenu">请选择转出账户</div>
+                    <ul id="zztext1">
+                        <li><i></i>请选择转账账户</li>
+                    </ul>
+                    <div class="accarrow">
+                        <li></li>
+                    </div>
+                    <div id="zh2" class="input_01 xlmenu">请选择转入账户</div>
+                    <ul id="zztext2">
+                        <li><i></i>请选择转账账户</li>
+                    </ul>
+                    <input id="tran-amt" name="" placeholder="输入转账金额" type="tel" class="input_01">
+                    <ul id="zztext3">
+                        <li><i></i>请输入转账金额</li>
+                    </ul>
+                </div>
+                <div class="login_btn" id="accqd">确定</div>
+            </div>
+                 
+                 <script>
+                     $(document).ready(function () { 
+                var btn = $(".user_btn,.menu_btn,.menu_btn_two"); 
+                var menu = $(".menu_right,.menu_left");
+                var leftmove = "left_move";
+                var mmove = "menu_move";
+                var leftm = $(".menu_left");
+                var rightm = $(".menu_right");
+
+
+                $(".xlmenu").click(function () {
+
+                    var xlmenu = ".mmenu";
+                    var xlmovie = "mmenu_movie";
+
+                    $(xlmenu).addClass(xlmovie);
+
+                    var mmenu = $(this).attr("id");
+                    if (mmenu == "zh1")/*选择银行菜单*/ {
+                        choicemenu();
+
+                        var eput = $(this);
+                        var plat;
+
+                        plat = $("#zxzh").text();
+                        indexval = eput.text();
+
+                    }
+                    if (mmenu == "zh2")/*选择银行菜单*/ {
+                        choicemenu();
+
+                        var eput = $(this);
+                        var plat;
+
+                        plat = $("#zxzh").text();
+                        indexval = eput.text();
+
+                    }
+
+                    $(".mm_exit").click(function () {
+                        $(xlmenu).removeClass(xlmovie);
+                    });
+                    function choicemenu() {
+                        $(".mm_main li").unbind("click");
+                        $(".mm_main li").click(function () {
+                            $(".mm_main li i").removeClass("border");
+                            $(this).find("i").addClass("border");
+                            $(xlmenu).removeClass(xlmovie);
+                            var title = $(this).text();
+                            if (mmenu == "zh1" || "zh2") {
+                                eput.text($(this).text());
+                                if (eput.attr("id") == "zh1" && $(this).text() != plat) {
+                                    $("#zh2").text(plat);
+                                } else if (eput.attr("id") == "zh2" && $(this).text() != plat) {
+                                    $("#zh1").text(plat);
+                                } else if ($("#zh1").text() == plat && $("#zh2").text() == plat) {
+                                    $("#zh1").text("请选择转出账户");
+                                    $("#zh2").text("请选择转入账户");
+                                    eput.text($(this).text());
+                                }
+                            }
+                        });
+                    };
+                });
+
+                $("#accqd").click(function () {
+                    var zha = $("#zh1").text();
+                    var zhb = $("#zh2").text();
+                    var zxzh = "众鑫账户";
+
+                    if (zha == "请选择转出账户") {
+                        $("#zztext1").show();
+                        return false;
+                    } else {
+                        $("#zztext1").hide()
+                    }
+
+                    if (zhb == "请选择转入账户") {
+                        $("#zztext2").show();
+                        return false;
+                    } else {
+                        $("#zztext2").hide()
+                    }
+
+                    if (zha == zxzh && zhb != zxzh) {
+                        TranToGame();
+                    }
+                    else if (zha != zxzh && zhb == zxzh) {
+                        TranToPlat();
+                    }
+
+                });
+            });
+            var IsSubmit = false;
+            function TranToGame() {
+                if (IsSubmit) {
+                    alert("正在转账中");
+                    return false;
+                }
+                var zha = $("#zh1").text();
+                if (zha == "请选择转出账户") {
+                    $("#zztext1").show();
+                    return false;
+                } else {
+                    $("#zztext1").hide()
+                }
+                var zhb = $("#zh2").text();
+                if (zhb == "请选择转入账户") {
+                    $("#zztext2").show();
+                    return false;
+                } else {
+                    $("#zztext2").hide()
+                }
+
+                var tga = $("#tran-amt");
+                var amt = $.trim(tga.val());
+                if (amt.length == 0) {
+                    $("#zztext3 li").html("<i></i>请输入转账金额")
+                    $("#zztext3").show();
+                    return false;
+                } else {
+                    $("#zztext3").hide()
+                }
+                if (isNaN(amt)) {
+                    $("#zztext3 li").html("<i></i>输入的金额不合法")
+                    $("#zztext3").show();
+                    return false;
+                } else {
+                    $("#zztext3").hide()
+                }
+                amt = parseFloat(amt);
+                if (amt < 1) {
+                    $("#zztext3 li").html("<i></i>转账金额不能小于1元")
+                    $("#zztext3").show();
+                    return false;
+                } else {
+                    $("#zztext3").hide()
+                }
+
+                var game = zhb;
+                var tip = game;
+                if (game == "众鑫账户") {
+                    alert("错误转账");
+                    return false;
+                }
+                if (game == "EA平台") {
+                    game = "EA";
+                }
+                else if (game == "BBIN平台") {
+                    game = "BBIN";
+                }
+                else if (game == "KG平台") {
+                    game = "KG";
+                }
+                else if (game == "LB平台") {
+                    game = "LB";
+                }
+                else if (game == "体育平台") {
+                    game = "Sports";
+                }
+                else if (game == "AMP平台") {
+                    game = "AMP";
+                }
+                else if (game == "AG平台") {
+                    game = "AG";
+                }
+                else if (game == "棋牌平台") {
+                    game = "CH";
+                }
+                else if (game == "EBET平台") {
+                    game = "EBET";
+                }
+                else if (game == "PT平台") {
+                    game = "PT";
+                }
+                if (confirm("您确定转入" + tip + "吗？")) {
+                    IsSubmit = true;
+                    $("#loading").show();
+
+                   
+
+
+
+                }
+                return false;
+            }
+
+            function TranToPlat() {
+                if (IsSubmit) {
+                    alert("正在转账中");
+                    return false;
+                }
+                var zha = $("#zh1").text();
+                if (zha == "请选择转出账户") {
+                    $("#zztext1").show();
+                    return false;
+                } else {
+                    $("#zztext1").hide()
+                }
+                var zhb = $("#zh2").text();
+                if (zhb == "请选择转入账户") {
+                    $("#zztext2").show();
+                    return false;
+                } else {
+                    $("#zztext2").hide()
+                }
+
+                var tga = $("#tran-amt");
+                var amt = $.trim(tga.val());
+                if (amt.length == 0) {
+                    $("#zztext3 li").html("<i></i>请输入转账金额")
+                    $("#zztext3").show();
+                    return false;
+                } else {
+                    $("#zztext3").hide()
+                }
+                if (isNaN(amt)) {
+                    $("#zztext3 li").html("<i></i>输入的金额不合法")
+                    $("#zztext3").show();
+                    return false;
+                } else {
+                    $("#zztext3").hide()
+                }
+                amt = parseFloat(amt);
+                if (amt < 1) {
+                    $("#zztext3 li").html("<i></i>转账金额不能小于1元")
+                    $("#zztext3").show();
+                    return false;
+                } else {
+                    $("#zztext3").hide()
+                }
+
+                var game = zha;
+                var tip = game;
+                if (game == "众鑫账户") {
+                    alert("错误转账");
+                    return false;
+                }
+                if (game == "EA平台") {
+                    game = "EA";
+                }
+                else if (game == "BBIN平台") {
+                    game = "BBIN";
+                }
+                else if (game == "KG平台") {
+                    game = "KG";
+                }
+                else if (game == "LB平台") {
+                    game = "LB";
+                }
+                else if (game == "体育平台") {
+                    game = "Sports";
+                }
+                else if (game == "AMP平台") {
+                    game = "AMP";
+                }
+                else if (game == "AG平台") {
+                    game = "AG";
+                }
+                else if (game == "棋牌平台") {
+                    game = "CH";
+                }
+                else if (game == "EBET平台") {
+                    game = "EBET";
+                }
+                else if (game == "PT平台") {
+                    game = "PT";
+                }
+                if (confirm("您确定转出" + tip + "吗？")) {
+                    IsSubmit = true;
+                    $("#loading").show();
+                    $.post("Ajaxweb/test", { act: "tran", c: "OUT", game: game, amt: amt, t: Math.random() },
+                  function (data) {
+                      $("#loading").hide();
+                      alert(data);
+                      if (data.indexOf('成功') != -1) {
+                          tga.val("");
+                      }
+
+                      IsSubmit = false;
+                  });
+                }
+                return false;
+            }
+                 </script> 
+        </div>
+</div>        

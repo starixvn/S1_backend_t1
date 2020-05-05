@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>我的资料 - 新橙娱乐</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="pagetwo" class="left move">
+        <div class="header">
+            <div class="head_back">
+                <div class="back_btnPT" onclick="history.go(-1);"></div>
+            </div>
+            <div class="header_text"><a id="ht">我的资料</a></div>
+        </div>
+       <div class="page">
+
+
+    <!--网站菜单结束-->
+    <div class="mmenu">
+        <div class="mm_header">
+            <ul>
+                <li>填写信息</li>
+            </ul>
+            <div class="mm_exit" id="member_exit"></div>
+        </div>
+        <div class="mm_main">
+            <ul class="psd">
+                <div class="inputtwo">
+                    <input id="mem_oldpwd" name="" placeholder="输入旧密码" type="password" class="input_01" min="6" max="20">
+                    <ul id="txmm1">
+                        <i></i>
+                        <a>旧密码不能为空</a>
+                    </ul>
+                    <input id="mem_newpwd" name="" placeholder="输入新密码" type="password" class="input_01" min="6" max="20">
+                    <ul id="txmm2">
+                        <i></i>
+                        <a>新密码不能为空</a>
+                    </ul>
+                    <input id="mem_newpwdto" name="" placeholder="确认密码" type="password" class="input_01" min="6" max="20">
+                    <ul id="txmm3">
+                        <i></i>
+                        <a>密码不一致请重新输入</a>
+                    </ul>
+
+                    <input id="mem_que" name="" placeholder="安保问题" type="text" class="input_01" value="" readonly="readonly">
+                    <ul id="txmm4">
+                        <i></i>
+                        <a>安保问题不能为空</a>
+                    </ul>
+                    <input id="mem_anse" name="" placeholder="安保答案" type="text" class="input_01">
+                    <ul id="txmm5">
+                        <i></i>
+                        <a>安保答案不能为空</a>
+                    </ul>
+
+                    <div class="login_btn" id="btn_UpdataPwd"><a>确定</a></div>
+                </div>
+            </ul>
+            <ul class="name">
+                <div class="inputtwo">
+                    <input id="xm" name="" placeholder="输入真实姓名" type="text" class="input_01" value="">
+                    <ul id="tsxm">
+                        <i></i>
+                        <a>请输入您的真实姓名</a>
+                    </ul>
+                    <div class="login_btn" id="btn_Name"><a>确定</a></div>
+                </div>
+            </ul>
+            <ul class="birthday">
+                <div class="inputtwo">
+                    <input id="brd" name="" placeholder="选择出生年月日" type="date" class="input_01">
+                    <ul id="txsr">
+                        <i></i>
+                        <a>出生年月日格式不正确（格式：1990-06-10）</a>
+                    </ul>
+                    <div class="login_btn" id="btn_Birthday"><a>确定</a></div>
+                </div>
+            </ul>
+            <ul class="sex">
+                <li>男<i></i></li>
+                <li>女<i></i></li>
+                <div class="input">
+                    <ul id="tssex">
+                        <i></i>
+                        <a>请选择些别</a>
+                    </ul>
+
+                </div>
+
+            </ul>
+            <ul class="phone">
+                <div class="inputtwo">
+                    <input name="" id="ph" placeholder="输入手机号码" type="tel" class="input_01" min="11" max="11" value="">
+                    <ul id="tsph">
+                        <i></i>
+                        <a>请输入11位手机号码</a>
+                    </ul>
+                    <div class="login_btn" id="btn_Tel"><a>确定</a></div>
+                </div>
+            </ul>
+            <ul class="email">
+                <div class="inputtwo">
+                    <input name="" id="em" placeholder="输入邮箱" type="email" class="input_01" value="dam*****@gmail.com">
+                    <ul id="tsem">
+                        <i></i>
+                        <a>邮箱格式不正确</a>
+                    </ul>
+                    <div class="login_btn" id="btn_email"><a>确定</a></div>
+                </div>
+            </ul>
+            <ul class="address">
+                <div class="inputtwo">
+                    <input id="ad1" name="" placeholder="省" type="text" class="input_01" value="">
+                    <ul id="tsad1">
+                        <i></i>
+                        <a>省不能为空</a>
+                    </ul>
+                    <input id="ad2" name="" placeholder="市" type="text" class="input_01" value="">
+                    <ul id="tsad2">
+                        <i></i>
+                        <a>市不能为空</a>
+                    </ul>
+                    <input id="Area" name="" placeholder="县/区（没有不用填写）" type="text" class="input_01" value="">
+
+                    <input id="ad3" name="" placeholder="街道详细地址" type="text" class="input_01" value="">
+                    <ul id="tsad3">
+                        <i></i>
+                        <a>地址不能为空</a>
+                    </ul>
+                    <input id="ad4" name="" placeholder="收货人姓名" type="text" class="input_01" value="">
+                    <ul id="tsad4">
+                        <i></i>
+                        <a>收货人姓名不能为空</a>
+                    </ul>
+                    <input id="ad5" name="" placeholder="联系电话" type="tel" class="input_01" min="11" max="11" value="">
+                    <ul id="tsad5">
+                        <i></i>
+                        <a>联系电话不能为空</a>
+                    </ul>
+                    <input id="ad6" name="" placeholder="邮政编号" type="tel" class="input_01" min="11" max="11" value="">
+                    <ul id="tsad6">
+                        <i></i>
+                        <a>邮政编号不能为空</a>
+                    </ul>
+                    <div class="login_btn" id="btn_addr"><a>确定</a></div>
+                </div>
+            </ul>
+
+        </div>
+    </div>
+    <div class="home" style="background: #f2f2f2">
+        <div class="member" style="margin-top: 60px;">
+            <ul>
+                <li><i>用户名：</i>dtest123</li>
+                <li style="border: 0;"><i>密码：</i><a id="psd" class="xlmenu">修改密码</a></li>
+
+            </ul>
+        </div>
+        <div class="member">
+            <ul>
+                <li><i>真实姓名：</i><p id="xmm"><a id="name" class="xlmenu">未绑定，立即填写？</a></p>
+                </li>
+                <li><i>性别：</i><p id="sexx"><a id="sex" class="xlmenu">未填写，立即填写？</a></p>
+                </li>
+                <li style="border: 0;"><i>出生日期：</i><p id="brsd"><a id="birthday" class="xlmenu">未填写，立即填写?</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="member">
+            <ul>
+                <li><i>手机号码：</i><p id="phee"><a id="phone" class="xlmenu">未绑定，立即填写？</a></p>
+                </li>
+                <li><i>邮箱：</i><p id="emm">dam*****@gmail.com</p>
+                </li>
+                <li style="border: 0;"><i>收货地址：</i><a id="address" class="xlmenu">未填写，立即填写?</a></li>
+            </ul>
+        </div>
+        <div class="member">
+            <div class="login_btn">
+                <li url="index.html" id="btn_exit">退出登录</li>
+            </div>
+        </div>
+        <!--底部-->
+        <div class="bottom">
+                <div class="bottom_icon">
+                    <ul>
+                        <li>
+                            <img src="images/zx_logo.png"></li>
+                        <li>
+                            <img src="images/gicc_logo.png"></li>
+                        <li style="margin-right: 0px;">
+                            <img src="images/18_logo.png"></li>
+                    </ul>
+                </div>
+                <li>新橙娱乐由菲律宾牌照委员会GICC颁发合法执照</li>
+                <li>在进行注册前，请确保您已年满18周岁并遵循当地法律法规</li>
+                <div class="bottom_text">
+                    <ul>
+                        <a href="http://www.xc33.com" target="_blank">访问电脑版</a>
+                    </ul>
+                </div>
+                <p>© 2014-2016 www.xc10.com All Rights Reserved</p>
+            </div>
+        </div>
+
+        <div class="quickButtonBar">
+            <a href="javascript:void(0);" onclick="document.location='http://m.xc33.com/'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/iframe_promos'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="http://player.xc33.com/pub/live_chat_link/chn" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center2/deposit'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/menu'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>
+        <!--底部-->
+    </div>
+    <script>
+        var textbox = document.getElementById('brd')
+        textbox.onfocus = function (event) {
+            this.type = 'date';
+            this.focus();
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+
+                //下拉菜单
+                $(".xlmenu").click(function () {
+                    var xlmenu = ".mmenu";
+                    var xlmovie = "mmenu_movie";
+                    $(xlmenu).addClass(xlmovie);
+                    var mmenu = $(this).attr("id");
+                    if (mmenu == "psd") {
+                        $(".psd").show();
+                        $("#mem_oldpwd").val("");
+                        $("#mem_newpwd").val("");
+                        $("#mem_newpwdto").val("");
+                        $("#mem_anse").val("");
+                    }
+                    if (mmenu == "name") {
+                        $(".name").show();
+                    }
+                    if (mmenu == "sex") {
+                        $(".sex").show();
+                        choicemenu();
+                    }
+                    if (mmenu == "phone") {
+                        $(".phone").show();
+                    }
+                    if (mmenu == "email") {
+                        $(".email").show();
+                    }
+                    if (mmenu == "address") {
+                        $(".address").show();
+                    }
+                    if (mmenu == "birthday") {
+
+                        $(".birthday").show();
+                    }
+
+                    $(".mm_exit").click(function () {
+                        $(xlmenu).removeClass(xlmovie);
+                        clossmenu()
+                    });
+
+
+                    function choicemenu() {
+                        $(".mm_main li").unbind("click");
+                        $(".mm_main li").click(function () {
+                            $(".mm_main li i").removeClass("border");
+                            $(this).find("i").addClass("border");
+                            var title = $(this).text();
+                            if (mmenu == "sex") {
+                                UpdateMemberInfo("sexx", "sex", title);
+                                setTimeout("$('.sex').hide()", 300);
+                            }
+                            $(xlmenu).removeClass(xlmovie);
+                        });
+                    };
+
+                });
+                function clossmenu() {
+
+                    $(".mmenu").removeClass("mmenu_movie");
+                    setTimeout("$('.psd,.name,.sex,.phone,.email,.address,.birthday').hide()", 300);
+                };
+                $("#btn_UpdataPwd").click(function () {
+                    updatepwd();
+                });
+                $("#btn_Name").click(function () {
+                    UpdateName();
+                });
+                $("#btn_Birthday").click(function () {
+                    UpdateBirthDay();
+                });
+                $("#btn_Tel").click(function () {
+                    UpdateTel();
+                });
+                $("#btn_email").click(function () {
+                    UpdateEmail();
+                });
+                $("#btn_addr").click(function () {
+                    SaveDevyAddress();
+                });
+                $("#btn_exit").click(function () {
+                    if (confirm("您确定退出吗？")) {
+                        $("#loading").show();
+
+                    }
+                });
+
+                function updatepwd() {
+                    var oldpwd = $.trim($("#mem_oldpwd").val());
+                    var newpwd = $.trim($("#mem_newpwd").val());
+                    var newpwdto = $.trim($("#mem_newpwdto").val());
+                    if (oldpwd.length == 0) {
+                        $("#txmm1").html("<i></i><a>旧密码不能为空</a>");
+                        $("#txmm1").show();
+                        return false;
+                    }
+                    else {
+                        $("#txmm1").hide();
+                    }
+                    if (oldpwd.length < 6 || oldpwd.length > 20) {
+                        $("#txmm1").html("<i></i><a>密码最少为6个字符，最多20个字符</a>");
+                        $("#txmm1").show();
+                        return false;
+                    }
+                    else {
+                        $("#txmm1").hide();
+                    }
+                    if (newpwd.length == 0) {
+                        $("#txmm2").html("<i></i><a>请输入新密码</a>");
+                        $("#txmm2").show();
+                        return false;
+                    }
+                    else {
+                        $("#txmm2").hide();
+                    }
+                    if (newpwd.length < 6 || newpwd.length > 20) {
+                        $("#txmm2").html("<i></i><a>新密码由6-20个字母、数字或组合组成，区分大小写</a>");
+                        $("#txmm2").show();
+                        return false;
+                    }
+                    else {
+                        $("#txmm2").hide();
+                    }
+                    if (newpwd != newpwdto) {
+                        $("#txmm3").html("<i></i><a>输入的两次密码不一致</a>");
+                        $("#txmm3").show();
+                        return false;
+                    }
+                    else {
+                        $("#txmm3").hide();
+                    }
+
+                    var que = $.trim($("#mem_que").val());
+                    var anse = $.trim($("#mem_anse").val());
+                    if (que.length > 0 && anse.length == 0) {
+                        $("#txmm5").html("<i></i><a>请输入安保答案</a>");
+                        $("#txmm5").show();
+                        return false;
+                    }
+                    else {
+                        $("#txmm5").hide();
+                    }
+
+
+                    if (confirm("您确定要修改密码吗？")) {
+                        $("#loading").show();
+                        $.ajax({
+                            type: "post",
+                            data: { oldpwd: oldpwd, newpwd: newpwd, act: "safset", c: "upwd", que: que, anse: anse, t: Math.random() },
+                            timeout: 30000,
+                            success: function (data) {
+                                if (data == "success") {
+                                    alert('密码修改成功，请牢记。');
+
+                                    clossmenu();
+                                }
+                                else {
+                                    if (data.indexOf("原始密码错误") != -1) {
+                                        $("#txmm1").html("<i></i><a>旧密码错误</a>");
+                                        $("#txmm1").show();
+                                    }
+                                    else {
+                                        alert(data);
+                                    }
+                                }
+                            },
+                            complete: function (XMLHttpRequest, status) {
+                                $("#loading").hide();
+                                if (status == 'timeout') {
+                                    alert("加载超时");
+                                }
+                            }
+                        });
+                    }
+                    return false;
+             }
+
+    function UpdateName() {
+        var name = $("#xm").val();
+        if (name.length < 2 || name.length > 10) {
+            $("#tsxm").show();
+            return;
+        }
+        else {
+            $("#tsxm").hide();
+        }
+        UpdateMemberInfo("xmm", "name", name);
+    }
+
+    function UpdateBirthDay() {
+        var birthday = $("#brd").val();
+        if (birthday.length == 0) {
+            $("#txsr").show();
+            return false;
+        }
+        else {
+            $("#txsr").hide();
+        }
+        if (birthday.indexOf("*") == -1) {
+            if (!verifyDate(birthday)) {
+                $("#txsr").show();
+                return false;
+            }
+            else {
+                $("#txsr").hide();
+            }
+        }
+        UpdateMemberInfo("brsd", "bd", birthday);
+    }
+
+    function UpdateTel() {
+        var tel = $("#ph").val();
+        if (tel.length != 11) {
+            $("#tsph").show();
+            return;
+        }
+        else {
+            $("#tsph").hide();
+        }
+        UpdateMemberInfo("phee", "tel", tel);
+    }
+
+    function UpdateEmail() {
+        var email = $("#em").val();
+        if (email.indexOf("*") == -1) {
+            if (!verifyEmail(email)) {
+                $("#tsem").show();
+                return false;
+            } else {
+                $("#tsem").hide();
+            }
+        }
+        UpdateMemberInfo("emm", "email", email);
+    }
+
+    function UpdateMemberInfo(d, p, v) {
+        if (confirm("您确定提交吗？")) {
+            $("#loading").show();
+
+
+        }
+    }
+
+    function SaveDevyAddress() {
+        var prov = $.trim($("#ad1").val());
+        if (prov.length == 0) {
+            $("#tsad1").show();
+            return false;
+        }
+        else {
+            $("#tsad1").hide();
+        }
+
+        var city = $.trim($("#ad2").val());
+        if (city.length == 0) {
+            $("#tsad2").show();
+            return false;
+        }
+        else {
+            $("#tsad2").hide();
+        }
+
+
+
+        var stdd = $.trim($("#ad3").val());
+        if (stdd.length == 0) {
+            $("#tsad3").show();
+            return false;
+        }
+        else {
+            $("#tsad3").hide();
+        }
+
+
+        var dn = $.trim($("#ad4").val());
+        if (dn.length == 0) {
+            $("#tsad4").show();
+            return false;
+        }
+        else {
+            $("#tsad4").hide();
+        }
+
+        var tel = $.trim($("#ad5").val());
+        if (tel.length == 0) {
+
+            $("#tsad5").show();
+            return false;
+        }
+        else {
+            $("#tsad5").hide();
+        }
+        var code = $.trim($("#ad6").val());
+        if (code.length == 0) {
+            $("#tsad6").show();
+            return false;
+        }
+        else {
+            $("#tsad6").hide();
+        }
+        var dist = $.trim($("#Area").val());
+
+        if (confirm("您确定保存吗？")) {
+            $("#loading").show();
+
+        }
+
+        return false;
+    }
+});
+
+
+
+    </script>
+</div>

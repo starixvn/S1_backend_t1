@@ -1,0 +1,628 @@
+.b-icon {
+    display: inline-block;
+    height: 40px;
+    width: auto;
+    text-indent: 40px;
+    position: relative;
+    color: #505050;
+    text-decoration: none;
+}
+
+.zggsyh:before, .ICBC:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -15px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zgyh:before, .BOC:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -67px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zgjsyh:before, .CCB:before{
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -116px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zgnyyh:before, .ABC:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -165px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.yzcx:before, .PSBC:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -212px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zsyh:before, .CMB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -15px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.xyyh:before, .CIB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -69px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.gfyh:before, .GDB:before, .CGB:before{
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -117px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.payh:before, .PAB:before, .PINGAN:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -167px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zhesyh:before, .CMB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -212px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bhyh:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -15px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zxyh:before, .ECITIC:before, .CITIC:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -67px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.yxyh:before, .HXBC:before, .HXB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -117px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.shyh:before, .BOS:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -164px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.jtyh:before, .BOCOM:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -211px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.hzyh:before, .BOH:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -18px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.szfzyh:before, .SDB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -67px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bjyh:before, .BOBJ:before, .BCCB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -115px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.dyyh:before, .BOEA:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -167px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.gdyh:before, .CEB:before, .CEBBANK:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -219px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.njyh:before, .NJCB:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -16px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.msyh:before, .CMBC:before, .CMBCS:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -68px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.nbyh:before .BON:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -119px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.zjtlsyyh:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -166px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.noimage:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -166px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.b-icon label {
+    margin-left: 20px;
+    margin-top: 15px;
+    display: block;
+}
+
+.b-icon label.lbl_bank {
+    margin-left: 20px;
+    margin-top: 5px;
+    display: block;
+}
+
+.bank_1:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -15px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_2:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -15px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_3:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -116px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_4:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -165px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_5:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -211px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_6:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -67px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_7:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -67px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_8:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -117px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_9:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -67px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_10:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -68px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_11:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -68px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_12:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -212px -4px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_13:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -69px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_14:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -117px -107px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_15:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -167px -56px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_18:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -16px -213px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.bank_20:before {
+    background-image: url(../images/bank.jpg);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -219px -161px;
+    position: absolute;
+    top:6px;
+    left: 6px;
+}
+
+.BRCB:before {
+    background-image: url(../images/bank_icon_list.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -246px -207px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.SRCB:before {
+    background-image: url(../images/bank_img.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -585px -244px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.SPDB:before {
+    background-image: url(../images/bank_icon_list.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -449px -107px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.TCCB:before {
+    background-image: url(../images/bank_img.png);
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    display: block;
+    content: '';
+    background-position: -138px -242px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+#selectedBank label, #my_bank label{
+    position: absolute;
+}
+
+
+
+
+

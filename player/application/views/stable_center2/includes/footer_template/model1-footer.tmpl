@@ -1,0 +1,45 @@
+<div id="tmpl_footer">
+<footer>
+    <div class="footer-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-xs-12">
+                    <div class="footer-logo">
+                        <img class="responsive-img tc-logo pt5" src="{{ url }}/includes/assets/images/T1-footer-logo.png">
+                        <img class="responsive-img t1-logo pt5" src="{{ url }}/includes/assets/images/totbet_cn-gray.png?v=0.0.2">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-xs-12">
+                    <ul class="pull-right footer-links">
+                        <li class="center-align inline-block"><a href="{{ url }}/aboutus.html">About Us</a></li>
+                        <li class="center-align inline-block"><a href="{{ url }}/terms-and-conditions.html">Terms &amp; Condition</a></li>
+                        <li class="center-align inline-block"><a href="{{ url }}/privacy-policy.html">Privacy &amp; Policy</a></li>
+                        <li class="center-align inline-block"><a href="{{ url }}/responsible-gaming.html">Responsible Gaming</a></li>
+                        <li class="center-align inline-block"><a href="{{ url }}/game-rules.html">Game Rules</a></li>
+                        <li class="center-align inline-block"><a href="{{ url }}/affiliates.html">Affiliates</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="disclaimer">
+                <p>© Copyright Reserved 2018 | Powered by Tripleone Technology</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript">
+if ($(".cstm-mod").hasClass("login-mod")) {
+        $("header").hide();
+        $("footer").hide();
+        $(".login-mod").append("<div class='bg-playercenter' style='position: fixed;top: 0;left: 0;width: 100%;height:100%;'></div>");
+        $(".login-mod").append("<a href='{{ url }}' class='logo-home'><img src='{{ url }}/includes/assets/images/logo-log-reg.png' alt='' /></a>");
+    }
+if(location.pathname == "/player_center/iframe_register") {
+        $("header").hide();
+        $("footer").hide();
+        $(".cstm-mod").append("<div class='bg-playercenter' style='position: fixed;top: 0;left: 0;width: 100%;height:100%;'></div>");
+        $(".registration-mod").append("<a href='{{ url }}' class='logo-home'><img src='{{ url }}/includes/assets/images/logo-log-reg.png' alt='' /></a>");
+        $("#registration_form").append("<p class='ahac'>Already have an account?</p><a href='{{ url }}/iframe/auth/login' class='back-btn'>Log In Here</a>");
+    }
+
+</script>
+</div>

@@ -1,0 +1,2 @@
+
+* * * * *     vagrant   /bin/bash /home/vagrant/Code/og/admin/shell/deploy_all.sh bitbucket master  >> /var/log/og/deploy_all.log 2>&1

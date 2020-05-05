@@ -1,0 +1,50 @@
+/*-------------------
+    Media
+-------------------*/
+@media (min-width: 769px) {
+}
+@media (max-width: 768px) {
+}
+
+/*-------------------
+        Promotions
+-------------------*/
+@media (max-width: 768px) {
+  #promotion-list{
+    width: 98%;
+    background: #3a2417;
+    border: 1px solid #f7edc3;
+    border-radius: 4px;
+  }
+  #promotion-list li{
+    margin: 0 4px;
+  }
+  #promotion-banner-container{
+    padding: 10px 0 20px;
+  }
+  #promotion-banner-container .panel-default{
+    width: 97%;
+    margin: 0 auto 5px;
+  }
+}
+
+/*-------------------
+        forgot password
+-------------------*/
+@media (max-width: 768px) {
+  .fp-box{
+    width: 98%;
+    margin: 10% auto 10%;
+  }
+  .fp-box .logo{
+    float: none;
+    width: 60%;
+    margin: 0 auto 5px;
+    text-align: center;
+  }
+  .fp-box form{
+    float: none;
+    width: 98%;
+    margin: 0 auto 0;
+  }
+}

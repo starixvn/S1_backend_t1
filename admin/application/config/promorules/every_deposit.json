@@ -1,0 +1,40 @@
+{
+    "template_name": "Every deposit",
+    "template_parameters": [
+        { "name": "nonfixedDepositMinAmount", "type": "float_amount", "label_lang": "Min Deposit Amount", "value": 100 },
+        { "name": "depositPercentage", "type": "float_amount", "label_lang": "Bonus Percentage", "value": 50 },
+        { "name": "bonusReleaseToPlayer", "type": "checkbox", "label_lang": "Manual", "value": true },
+        { "name": "withdrawRequirementBetCntCondition", "type": "float_amount", "label_lang": "A multiple of Bet Amount", "value":20 }
+    ],
+    "json_info": {
+		"applicationPeriodStart" : "2016-01-01 00:00:00",
+		"bonusAmount" : false,
+		"bonusApplicationLimitRule" : "0",
+		"bonusApplicationLimitRuleCnt" : false,
+		"bonusReleaseRule" : "1",
+		"bonusReleaseToPlayer" : "1",
+		"depositConditionNonFixedDepositAmount" : "0",
+		"depositPercentage" : "50",
+		"depositSuccesionCnt" : false,
+		"depositSuccesionPeriod" : "4",
+		"depositSuccesionType" : "4",
+		"gameRecordEndDate" : false,
+		"gameRecordStartDate" : false,
+		"gameRequiredBet" : false,
+		"hide_date" : "2099-01-01 00:00:00",
+		"maxBonusAmount" : "999999",
+		"noEndDateFlag" : 0,
+		"nonDepositPromoType" : "0",
+		"nonfixedDepositMaxAmount" : "999999",
+		"nonfixedDepositMinAmount" : "100",
+		"promoType" : "0",
+		"withdrawRequirementBetAmount" : false,
+		"withdrawRequirementBetCntCondition" : "20",
+		"withdrawRequirementConditionType" : "1"
+	},
+    "formula": {
+        "bonus_condition": "",
+        "bonus_release": null,
+        "withdraw_condition": null
+    }
+}

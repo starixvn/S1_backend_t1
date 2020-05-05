@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Orion.Contracts.Achievements.DataStructures" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.Achievements.DataStructures" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="GetServerAchievementsRequest">
+    <xs:sequence>
+      <xs:element name="ServerId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetServerAchievementsRequest" nillable="true" type="tns:GetServerAchievementsRequest" />
+  <xs:complexType name="ArrayOfGetAchievementsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GetAchievementsResponse" nillable="true" type="tns:GetAchievementsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGetAchievementsResponse" nillable="true" type="tns:ArrayOfGetAchievementsResponse" />
+  <xs:complexType name="GetAchievementsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+      <xs:element minOccurs="0" name="UserId" type="xs:int" />
+      <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModuleId" type="xs:int" />
+      <xs:element minOccurs="0" name="ClientId" type="xs:int" />
+      <xs:element minOccurs="0" name="GameClientName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AchievementId" type="xs:int" />
+      <xs:element minOccurs="0" name="AchievementName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransNumberAcquired" type="xs:long" />
+      <xs:element minOccurs="0" name="DateAwarded" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GetAchievementsResponse" nillable="true" type="tns:GetAchievementsResponse" />
+</xs:schema>

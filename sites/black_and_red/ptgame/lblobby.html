@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/resources/js/jquery-2.1.4.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/underscore-min.js"></script>
+
+        <!-- mglobby -->
+        <script src="/resources/js/lblobby.js"></script>
+        <link href="/resources/css/lblobby.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div class="container">
+          <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#keno" id="lbkeno_btn">Keno Game</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="keno" class="tab-pane fade in active">
+              <br/>
+              <div class="row" id="game-list_39"></div>
+            </div>
+          </div>
+        </div>
+
+        <script type="text/template" id="game-template">
+            <% _.each( l, function(value) { %>
+                <div class="game-item col-lg-2 col-md-3 col-sm-4 col-xs-6">
+
+                    <div class="game-details">
+                        <div class="game-name"><%= value.n %></div>
+                        <img class="game-image" src="<%- p %>/<%- value.i %>"/>
+                    </div>
+
+                    <div class="game-action text-center">
+                        <a class="btn btn-xs btn-block btn-primary" href="/iframe_module/goto_lbgame/<%- value.g%>" target='_mggame'>进入游戏</a>
+                    </div>
+
+                </div>
+            <% }); %>
+        </script>
+        
+
+    </body>
+</html>

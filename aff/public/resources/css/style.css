@@ -1,0 +1,21 @@
+/* ========================================== */
+/* Account Information <editor-fold>{{{         */
+/* ========================================== */
+.diling-code-field>.btn-default{
+    border: 1px solid #dce4ec;
+    background: #FFFFFF;
+    font-size: 13px;
+    height: 35px;
+    color: black;
+}
+
+.mobile_dialing_code, .phone_dialing_code{
+    float: left;
+    width: 25%;
+}
+
+.mobile_num, .phone_num{
+    float: right;
+    width: 70%;
+}
+/* }}}</editor-fold> */

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://mgsops.net/AdminAPI_Freegame" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://mgsops.net/AdminAPI_Freegame" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mgsops.net/AdminAPI_Freegame/Imports">
+      <xsd:import namespace="http://mgsops.net/AdminAPI_Freegame" schemaLocation="mgsops.net.AdminAPI_Freegame.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Common" schemaLocation="Orion.Common.xsd" />
+      <xsd:import namespace="http://tempuri.org/" schemaLocation="tempuri.org.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" schemaLocation="schemas.microsoft.com.2003.10.Serialization.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" schemaLocation="Orion.Contracts.VanguardAdmin.DataStructures.xsd" />
+      <xsd:import namespace="http://mgsops.net/AdminAPI_Admin" schemaLocation="mgsops.net.AdminAPI_Admin.xsd" />
+      <xsd:import namespace="http://mgsops.net/AdminAPI_Gaming/" schemaLocation="mgsops.net.AdminAPI_Gaming.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" schemaLocation="Orion.Contracts.PlayerAdmin.DataStructures.xsd" />
+      <xsd:import namespace="http://mgsops.net/AdminAPI_ItalyPlayer" schemaLocation="mgsops.net.AdminAPI_ItalyPlayer.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" schemaLocation="Orion.Contracts.Italy.PlayerAdmin.DataStructures.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" schemaLocation="Orion.Contracts.FreegameAdmin.DataStructures.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFreegameAdmin_GetPlayersByFreegame_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersByFreegame" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetPlayersByFreegame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayersByFreegameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetPlayersByFreegame_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q1:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegames" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegames_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q2:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_AddPlayersToFreegame_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayersToFreegame" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_AddPlayersToFreegame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlayersToFreegameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_AddPlayersToFreegame_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q3:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_RemovePlayersFromFreegame_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePlayersFromFreegame" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_RemovePlayersFromFreegame_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePlayersFromFreegameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_RemovePlayersFromFreegame_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q4:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesByPlayer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesByPlayer" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesByPlayer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesByPlayerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesByPlayer_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q5:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesByPlayerOfferStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesByPlayerOfferStatus" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesByPlayerOfferStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesByPlayerOfferStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesByPlayerOfferStatus_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q6:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesPlayerDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesPlayerDetails" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesPlayerDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFreegamesPlayerDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFreegameAdmin_GetFreegamesPlayerDetails_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q7:CustomFault" />
+  </wsdl:message>
+  <wsdl:portType name="IFreegameAdmin">
+    <wsdl:operation name="GetPlayersByFreegame">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetPlayersByFreegame" message="tns:IFreegameAdmin_GetPlayersByFreegame_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetPlayersByFreegameResponse" message="tns:IFreegameAdmin_GetPlayersByFreegame_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetPlayersByFreegameCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_GetPlayersByFreegame_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegames">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegames" message="tns:IFreegameAdmin_GetFreegames_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesResponse" message="tns:IFreegameAdmin_GetFreegames_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_GetFreegames_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlayersToFreegame">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/AddPlayersToFreegame" message="tns:IFreegameAdmin_AddPlayersToFreegame_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/AddPlayersToFreegameResponse" message="tns:IFreegameAdmin_AddPlayersToFreegame_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/AddPlayersToFreegameCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_AddPlayersToFreegame_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePlayersFromFreegame">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/RemovePlayersFromFreegame" message="tns:IFreegameAdmin_RemovePlayersFromFreegame_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/RemovePlayersFromFreegameResponse" message="tns:IFreegameAdmin_RemovePlayersFromFreegame_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/RemovePlayersFromFreegameCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_RemovePlayersFromFreegame_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegamesByPlayer">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayer" message="tns:IFreegameAdmin_GetFreegamesByPlayer_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayerResponse" message="tns:IFreegameAdmin_GetFreegamesByPlayer_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayerCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_GetFreegamesByPlayer_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegamesByPlayerOfferStatus">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayerOfferStatus" message="tns:IFreegameAdmin_GetFreegamesByPlayerOfferStatus_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayerOfferStatusResponse" message="tns:IFreegameAdmin_GetFreegamesByPlayerOfferStatus_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesByPlayerOfferStatusCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_GetFreegamesByPlayerOfferStatus_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFreegamesPlayerDetails">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesPlayerDetails" message="tns:IFreegameAdmin_GetFreegamesPlayerDetails_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesPlayerDetailsResponse" message="tns:IFreegameAdmin_GetFreegamesPlayerDetails_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_Freegame/IFreegameAdmin/GetFreegamesPlayerDetailsCustomFaultFault" name="CustomFaultFault" message="tns:IFreegameAdmin_GetFreegamesPlayerDetails_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

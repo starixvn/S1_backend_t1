@@ -1,0 +1,13 @@
+
+
+#* * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh scheduler  >> /var/log/og/scheduler.log 2>&1
+
+* * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/clear_scheduler_lockfile.sh  >> /var/log/og/clear_scheduler_lockfile.log 2>&1
+
+#* * * * *	root	php /home/vagrant/Code/og_sync/api/artisan schedule:run >> /var/log/og/api_scheduler.log 2>&1
+
+10 2 * * *     root   geoipupdate
+
+* * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh generate_admin_dashboard  >> /var/log/og/generate_admin_dashboard.log 2>&1
+
+#0 5 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/delete_old_files.sh  >> /var/log/og/delete_old_files.log 2>&1

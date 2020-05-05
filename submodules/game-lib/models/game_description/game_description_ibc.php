@@ -1,0 +1,710 @@
+<?php
+trait game_description_ibc {
+
+    public function sync_game_description_ibc($type = 'new'){
+        $api_id= IBC_API;
+        $db_true=1;
+        $db_false=0;
+        $now=$this->utils->getNowForMysql();
+
+        $game_type_code_sports  = SYNC::TAG_CODE_SPORTS;
+        $game_type_code_unknown = SYNC::TAG_CODE_UNKNOWN_GAME;
+
+
+        //sync game type first
+        //use game_type_code as key
+        $game_types = [
+            $game_type_code_sports => [
+                'game_platform_id' => $api_id,
+                'game_type' => '_json:{"1":"Sports","2":"街机游戏","3":"Sports","4":"Sports","5":"Sports"}',
+                'game_type_code' => $game_type_code_sports,
+                'game_tag_code' => $game_type_code_sports,
+            ],
+            $game_type_code_unknown => [
+                'game_platform_id' => $api_id,
+                'game_type' => '_json:{"1":"Unknown","2":"不明","3":"Unknown","4":"Unknown","5":"Unknown"}',
+                'game_type_code' => $game_type_code_unknown,
+                'game_tag_code' => $game_type_code_unknown,
+            ]
+        ];
+
+        echo "<pre>";
+        $this->load->model(['game_type_model']);
+        $gameTypeCodeMaps=$this->game_type_model->syncGameTypes($game_types);
+
+        $this->utils->debug_log('gameTypeCodeMaps', $gameTypeCodeMaps);
+
+        $game_descriptions=[
+            [
+                'game_platform_id' => $api_id,
+                'game_code' => '0',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_name' => '_json:{"1":"Combo Parlay","2":"Combo Parlay","3":"Combo Parlay","4":"Combo Parlay","5":"Combo Parlay"}',
+                "english_name" => "Combo Parlay",
+                'external_game_id' => '0',
+                'status'=> $db_true,
+                'flag_show_in_site'=>$db_false,
+                'updated_at'=>$now,
+            ],
+            [
+                'game_name' => '_json:{"1":"Soccer","2":"Soccer","3":"Soccer","4":"Soccer","5":"Soccer"}',
+                'english_name' => 'Soccer',
+                'external_game_id' => '1',
+                'game_code' => '1',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Basketball","2":"Basketball","3":"Basketball","4":"Basketball","5":"Basketball"}',
+                'english_name' => 'Basketball',
+                'external_game_id' => '2',
+                'game_code' => '2',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Football","2":"Football","3":"Football","4":"Football","5":"Football"}',
+                'english_name' => 'Football',
+                'external_game_id' => '3',
+                'game_code' => '3',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Ice Hockey","2":"Ice Hockey","3":"Ice Hockey","4":"Ice Hockey","5":"Ice Hockey"}',
+                'english_name' => 'Ice Hockey',
+                'external_game_id' => '4',
+                'game_code' => '4',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Tennis","2":"Tennis","3":"Tennis","4":"Tennis","5":"Tennis"}',
+                'english_name' => 'Tennis',
+                'external_game_id' => '5',
+                'game_code' => '5',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Volleyball","2":"Volleyball","3":"Volleyball","4":"Volleyball","5":"Volleyball"}',
+                'english_name' => 'Volleyball',
+                'external_game_id' => '6',
+                'game_code' => '6',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Billiards","2":"Billiards","3":"Billiards","4":"Billiards","5":"Billiards"}',
+                'english_name' => 'Billiards',
+                'external_game_id' => '7',
+                'game_code' => '7',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Baseball","2":"Baseball","3":"Baseball","4":"Baseball","5":"Baseball"}',
+                'english_name' => 'Baseball',
+                'external_game_id' => '8',
+                'game_code' => '8',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Badminton","2":"Badminton","3":"Badminton","4":"Badminton","5":"Badminton"}',
+                'english_name' => 'Badminton',
+                'external_game_id' => '9',
+                'game_code' => '9',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Golf","2":"Golf","3":"Golf","4":"Golf","5":"Golf"}',
+                'english_name' => 'Golf',
+                'external_game_id' => '10',
+                'game_code' => '10',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Motorsports","2":"Motorsports","3":"Motorsports","4":"Motorsports","5":"Motorsports"}',
+                'english_name' => 'Motorsports',
+                'external_game_id' => '11',
+                'game_code' => '11',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Swimming","2":"Swimming","3":"Swimming","4":"Swimming","5":"Swimming"}',
+                'english_name' => 'Swimming',
+                'external_game_id' => '12',
+                'game_code' => '12',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Politics","2":"Politics","3":"Politics","4":"Politics","5":"Politics"}',
+                'english_name' => 'Politics',
+                'external_game_id' => '13',
+                'game_code' => '13',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Water Polo","2":"Water Polo","3":"Water Polo","4":"Water Polo","5":"Water Polo"}',
+                'english_name' => 'Water Polo',
+                'external_game_id' => '14',
+                'game_code' => '14',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Diving","2":"Diving","3":"Diving","4":"Diving","5":"Diving"}',
+                'english_name' => 'Diving',
+                'external_game_id' => '15',
+                'game_code' => '15',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Boxing","2":"Boxing","3":"Boxing","4":"Boxing","5":"Boxing"}',
+                'english_name' => 'Boxing',
+                'external_game_id' => '16',
+                'game_code' => '16',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Archery","2":"Archery","3":"Archery","4":"Archery","5":"Archery"}',
+                'english_name' => 'Archery',
+                'external_game_id' => '17',
+                'game_code' => '17',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Table Tennis","2":"Table Tennis","3":"Table Tennis","4":"Table Tennis","5":"Table Tennis"}',
+                'english_name' => 'Table Tennis',
+                'external_game_id' => '18',
+                'game_code' => '18',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Weightlifting","2":"Weightlifting","3":"Weightlifting","4":"Weightlifting","5":"Weightlifting"}',
+                'english_name' => 'Weightlifting',
+                'external_game_id' => '19',
+                'game_code' => '19',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Canoeing","2":"Canoeing","3":"Canoeing","4":"Canoeing","5":"Canoeing"}',
+                'english_name' => 'Canoeing',
+                'external_game_id' => '20',
+                'game_code' => '20',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Gymnastics","2":"Gymnastics","3":"Gymnastics","4":"Gymnastics","5":"Gymnastics"}',
+                'english_name' => 'Gymnastics',
+                'external_game_id' => '21',
+                'game_code' => '21',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Athletics","2":"Athletics","3":"Athletics","4":"Athletics","5":"Athletics"}',
+                'english_name' => 'Athletics',
+                'external_game_id' => '22',
+                'game_code' => '22',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Equestrian","2":"Equestrian","3":"Equestrian","4":"Equestrian","5":"Equestrian"}',
+                'english_name' => 'Equestrian',
+                'external_game_id' => '23',
+                'game_code' => '23',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Handball","2":"Handball","3":"Handball","4":"Handball","5":"Handball"}',
+                'english_name' => 'Handball',
+                'external_game_id' => '24',
+                'game_code' => '24',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Darts","2":"Darts","3":"Darts","4":"Darts","5":"Darts"}',
+                'english_name' => 'Darts',
+                'external_game_id' => '25',
+                'game_code' => '25',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Rugby","2":"Rugby","3":"Rugby","4":"Rugby","5":"Rugby"}',
+                'english_name' => 'Rugby',
+                'external_game_id' => '26',
+                'game_code' => '26',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Cricket","2":"Cricket","3":"Cricket","4":"Cricket","5":"Cricket"}',
+                'english_name' => 'Cricket',
+                'external_game_id' => '27',
+                'game_code' => '27',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Field Hockey","2":"Field Hockey","3":"Field Hockey","4":"Field Hockey","5":"Field Hockey"}',
+                'english_name' => 'Field Hockey',
+                'external_game_id' => '28',
+                'game_code' => '28',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Winter Sport","2":"Winter Sport","3":"Winter Sport","4":"Winter Sport","5":"Winter Sport"}',
+                'english_name' => 'Winter Sport',
+                'external_game_id' => '29',
+                'game_code' => '29',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Squash","2":"Squash","3":"Squash","4":"Squash","5":"Squash"}',
+                'english_name' => 'Squash',
+                'external_game_id' => '30',
+                'game_code' => '30',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Entertainment","2":"Entertainment","3":"Entertainment","4":"Entertainment","5":"Entertainment"}',
+                'english_name' => 'Entertainment',
+                'external_game_id' => '31',
+                'game_code' => '31',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Net Ball","2":"Net Ball","3":"Net Ball","4":"Net Ball","5":"Net Ball"}',
+                'english_name' => 'Net Ball',
+                'external_game_id' => '32',
+                'game_code' => '32',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Cycling","2":"Cycling","3":"Cycling","4":"Cycling","5":"Cycling"}',
+                'english_name' => 'Cycling',
+                'external_game_id' => '33',
+                'game_code' => '33',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Fencing","2":"Fencing","3":"Fencing","4":"Fencing","5":"Fencing"}',
+                'english_name' => 'Fencing',
+                'external_game_id' => '34',
+                'game_code' => '34',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Judo","2":"Judo","3":"Judo","4":"Judo","5":"Judo"}',
+                'english_name' => 'Judo',
+                'external_game_id' => '35',
+                'game_code' => '35',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"M. Pentathlon","2":"M. Pentathlon","3":"M. Pentathlon","4":"M. Pentathlon","5":"M. Pentathlon"}',
+                'english_name' => 'M. Pentathlon',
+                'external_game_id' => '36',
+                'game_code' => '36',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Rowing","2":"Rowing","3":"Rowing","4":"Rowing","5":"Rowing"}',
+                'english_name' => 'Rowing',
+                'external_game_id' => '37',
+                'game_code' => '37',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Sailing","2":"Sailing","3":"Sailing","4":"Sailing","5":"Sailing"}',
+                'english_name' => 'Sailing',
+                'external_game_id' => '38',
+                'game_code' => '38',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Shooting","2":"Shooting","3":"Shooting","4":"Shooting","5":"Shooting"}',
+                'english_name' => 'Shooting',
+                'external_game_id' => '39',
+                'game_code' => '39',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Taekwondo","2":"Taekwondo","3":"Taekwondo","4":"Taekwondo","5":"Taekwondo"}',
+                'english_name' => 'Taekwondo',
+                'external_game_id' => '40',
+                'game_code' => '40',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Triathlon","2":"Triathlon","3":"Triathlon","4":"Triathlon","5":"Triathlon"}',
+                'english_name' => 'Triathlon',
+                'external_game_id' => '41',
+                'game_code' => '41',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Wrestling","2":"Wrestling","3":"Wrestling","4":"Wrestling","5":"Wrestling"}',
+                'english_name' => 'Wrestling',
+                'external_game_id' => '42',
+                'game_code' => '42',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"E Sports ","2":"E Sports ","3":"E Sports ","4":"E Sports ","5":"E Sports "}',
+                'english_name' => 'E Sports ',
+                'external_game_id' => '43',
+                'game_code' => '43',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"E Sports ","2":"E Sports ","3":"E Sports ","4":"E Sports ","5":"E Sports "}',
+                'english_name' => 'E Sports ',
+                'external_game_id' => '44',
+                'game_code' => '44',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Other Sports","2":"Other Sports","3":"Other Sports","4":"Other Sports","5":"Other Sports"}',
+                'english_name' => 'Other Sports',
+                'external_game_id' => '99',
+                'game_code' => '99',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Horse Racing","2":"Horse Racing","3":"Horse Racing","4":"Horse Racing","5":"Horse Racing"}',
+                'english_name' => 'Horse Racing',
+                'external_game_id' => '151',
+                'game_code' => '151',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Greyhounds","2":"Greyhounds","3":"Greyhounds","4":"Greyhounds","5":"Greyhounds"}',
+                'english_name' => 'Greyhounds',
+                'external_game_id' => '152',
+                'game_code' => '152',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Harness","2":"Harness","3":"Harness","4":"Harness","5":"Harness"}',
+                'english_name' => 'Harness',
+                'external_game_id' => '153',
+                'game_code' => '153',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Horse Racing Fixed Odds","2":"Horse Racing Fixed Odds","3":"Horse Racing Fixed Odds","4":"Horse Racing Fixed Odds","5":"Horse Racing Fixed Odds"}',
+                'english_name' => 'Horse Racing Fixed Odds',
+                'external_game_id' => '154',
+                'game_code' => '154',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Number Game","2":"Number Game","3":"Number Game","4":"Number Game","5":"Number Game"}',
+                'english_name' => 'Number Game',
+                'external_game_id' => '161',
+                'game_code' => '161',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Live Casino","2":"Live Casino","3":"Live Casino","4":"Live Casino","5":"Live Casino"}',
+                'english_name' => 'Live Casino',
+                'external_game_id' => '162',
+                'game_code' => '162',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual Soccer","2":"Virtual Soccer","3":"Virtual Soccer","4":"Virtual Soccer","5":"Virtual Soccer"}',
+                'english_name' => 'Virtual Soccer',
+                'external_game_id' => '180',
+                'game_code' => '180',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual Horse Racing","2":"Virtual Horse Racing","3":"Virtual Horse Racing","4":"Virtual Horse Racing","5":"Virtual Horse Racing"}',
+                'english_name' => 'Virtual Horse Racing',
+                'external_game_id' => '181',
+                'game_code' => '181',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual Greyhound","2":"Virtual Greyhound","3":"Virtual Greyhound","4":"Virtual Greyhound","5":"Virtual Greyhound"}',
+                'english_name' => 'Virtual Greyhound',
+                'external_game_id' => '182',
+                'game_code' => '182',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual Speedway","2":"Virtual Speedway","3":"Virtual Speedway","4":"Virtual Speedway","5":"Virtual Speedway"}',
+                'english_name' => 'Virtual Speedway',
+                'external_game_id' => '183',
+                'game_code' => '183',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual F1","2":"Virtual F1","3":"Virtual F1","4":"Virtual F1","5":"Virtual F1"}',
+                'english_name' => 'Virtual F1',
+                'external_game_id' => '184',
+                'game_code' => '184',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual Cycling","2":"Virtual Cycling","3":"Virtual Cycling","4":"Virtual Cycling","5":"Virtual Cycling"}',
+                'english_name' => 'Virtual Cycling',
+                'external_game_id' => '185',
+                'game_code' => '185',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Virtual Tennis","2":"Virtual Tennis","3":"Virtual Tennis","4":"Virtual Tennis","5":"Virtual Tennis"}',
+                'english_name' => 'Virtual Tennis',
+                'external_game_id' => '186',
+                'game_code' => '186',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Keno","2":"Keno","3":"Keno","4":"Keno","5":"Keno"}',
+                'english_name' => 'Keno',
+                'external_game_id' => '202',
+                'game_code' => '202',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_name' => '_json:{"1":"Casino","2":"Casino","3":"Casino","4":"Casino","5":"Casino"}',
+                'english_name' => 'Casino',
+                'external_game_id' => '251',
+                'game_code' => '251',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_sports],
+                'game_platform_id' => $api_id,
+                'html_five_enabled' => $db_true,
+                'flash_enabled' => $db_false,
+            ],
+            [
+                'game_platform_id' => $api_id,
+                'game_code' => 'unknown',
+                'game_type_id' => $gameTypeCodeMaps[$game_type_code_unknown],
+                'game_name' => '_json:{"1":"Unknown","2":"不明","3":"Unknown","4":"Unknown","5":"Unknown"}',
+                "english_name" => "Unknown",
+                'external_game_id' => 'unknown',
+                'status'=> $db_true,
+                'flag_show_in_site'=>$db_false,
+                'updated_at'=>$now,
+            ],
+        ];
+        $this->load->model(['game_description_model']);
+
+        // $success=$this->game_description_model->syncGameDescription($game_descriptions);
+
+        $data = array();
+        $cntInsert = 0;
+        $cntUpdate = 0;
+        foreach ($game_descriptions as $game_list) {
+
+
+            if($type == 'new'){
+                $game_code_exist = $this->db->select('COUNT(id) as count')
+                                ->where('game_code', $game_list['game_code'])
+                                ->where('game_platform_id', $api_id)
+                                ->get('game_description')
+                                ->row();
+            } else {
+                $game_code_exist = $this->db->select('COUNT(id) as count')
+                                ->where('game_code',"ibc.games." .  $game_list['game_code'])
+                                ->where('game_platform_id', $api_id)
+                                ->get('game_description')
+                                ->row();
+            }
+
+            if( $game_code_exist->count <= 0 ){
+                echo "==============================================>Insert<===========================================";
+                $game_list['created_on']= $now;
+                $this->db->insert('game_description', $game_list);
+                $cntInsert++;
+            }else{
+                echo "==============================================>Update<===========================================";
+                $game_list['updated_at']= $now;
+                if($type == 'new'){
+                    $this->db->where('game_code', $game_list['game_code']);
+                }else{
+                    $this->db->where('game_code', "ibc.games.".$game_list['game_code']);
+                }
+                $this->db->where('game_platform_id', $api_id);
+                $this->db->update('game_description', $game_list);
+                $cntUpdate++;
+            }
+            print_r($game_list);
+            // $cnt++;
+        }
+
+        echo "Total Inserted Games: " . $cntInsert;
+        echo "Total Updated Games: " . $cntUpdate;
+    }
+
+}

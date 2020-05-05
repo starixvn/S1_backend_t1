@@ -1,0 +1,73 @@
+<script src="scripts/jquery.js"></script>
+<style>
+.notice .notice-wrap {
+  position: relative;
+  width: 1060px;
+  height: 38px;
+  overflow: hidden;
+}
+.notice ul {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1060px;
+}
+.notice li {
+  position: relative;
+  padding-left: 28px;
+}
+.notice li .icon {
+  left: 5px;
+  top: 12px;
+}
+.notice span {
+  font-weight: bold;
+}
+</style>
+
+<div class="notice">
+    <div class="wrap">
+        <div class="notice-wrap">
+            <ul class="J-notice"><li class="fn-clear">
+                    <div class="notice-cont fn-left">
+                        <i class="icon icon-dialogue"></i>
+                        <span class="">最新公告:</span>
+                        为庆祝佳宝娱乐官方网站正式上线，与2015年04月14日至2015年05月01日开启充值返利活动！！！
+                    </div>
+                    <div class="notice-date fn-right">2015/05/01  星期五</div>
+                </li>
+                <li class="fn-clear">
+                    <div class="notice-cont fn-left">
+                        <i class="icon icon-dialogue"></i>
+                        <span class="">最新公告:</span>
+                        为庆祝佳宝娱乐官方网站正式上线，与2015年04月14日至2015年05月01日开启充值返利活动！！！
+                    </div>
+                    <div class="notice-date fn-right">2015/05/01  星期五</div>
+                </li>
+            </ul></div>
+    </div>
+</div>
+
+<script>
+function doNotice() {
+    var container = $(".J-notice");        
+    container.html(container.html() + container.html());
+    
+    var aLi = container.find("li"),
+        aLih = aLi.eq(0).height();
+
+    container.css({ height: aLi.length * aLih + "px", top: "0px" });
+
+    timer = setInterval(function () {
+
+        if (parseInt(container.css("top")) < -container.height() / 2) {
+            container.css({ top: -aLih + "px" });
+        }
+
+        container.animate({top:parseInt(container.css("top"))-aLih+"px"},500);
+    },3000);
+}
+$(function () {
+    doNotice();
+});
+</script>

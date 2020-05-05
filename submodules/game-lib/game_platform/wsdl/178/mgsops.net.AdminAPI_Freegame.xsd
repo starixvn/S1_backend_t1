@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mgsops.net/AdminAPI_Freegame" elementFormDefault="qualified" targetNamespace="http://mgsops.net/AdminAPI_Freegame" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" schemaLocation="Orion.Contracts.FreegameAdmin.DataStructures.xsd" />
+  <xs:element name="GetPlayersByFreegame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q1:GetPlayersByOfferRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayersByFreegameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="GetPlayersByFreegameResult" nillable="true" type="q2:GetPlayersByOfferResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q3:GetOffersRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="GetFreegamesResult" nillable="true" type="q4:GetOffersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlayersToFreegame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q5:AddPlayersToOfferRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlayersToFreegameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="AddPlayersToFreegameResult" nillable="true" type="q6:AddPlayersToOfferResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePlayersFromFreegame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q7:RemovePlayersFromOfferRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePlayersFromFreegameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="RemovePlayersFromFreegameResult" nillable="true" type="q8:RemovePlayersFromOfferResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesByPlayer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q9:GetOffersByPlayerRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesByPlayerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="GetFreegamesByPlayerResult" nillable="true" type="q10:GetOffersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesByPlayerOfferStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q11:GetOffersByPlayerOfferStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesByPlayerOfferStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="GetFreegamesByPlayerOfferStatusResult" nillable="true" type="q12:GetOffersResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesPlayerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="request" nillable="true" type="q13:GetOffersPlayerDetailsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFreegamesPlayerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Orion.Contracts.FreegameAdmin.DataStructures" minOccurs="0" name="GetFreegamesPlayerDetailsResult" nillable="true" type="q14:GetOffersPlayerDetailsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

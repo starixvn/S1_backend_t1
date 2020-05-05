@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>test player</title>
+
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+
+<style type="text/css">
+	.red_box{
+		border: 1px solid #ff0000;
+	}
+</style>
+</head>
+<body>
+<div id="_player_login_area" class="red_box"></div>
+
+<div id="_player_info_area" class="red_box"></div>
+
+<div><button data-callapi='query_balance' data-callapi-params='[1]'>async query balance</button></div>
+<script data-main="//og.local/pub/default/player_main" src="//og.local/resources/player/require.js" async='true'></script>
+<!-- <script src="//og.local/resources/js/player/jquery-1.11.3.min.js"></script> -->
+<script type="text/javascript">
+	// function asyncQueryBalance(){
+	// 	var url='async/query_balance/1';
+	// 	$.getJSON(url, function(data){
+	// 		//return token
+
+	// 	});
+	// }
+</script>
+</body>
+</html>

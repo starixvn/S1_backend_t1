@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.3.min.js"></script>
+<script>
+function OpenInNewTab() {
+ var url = window.location.href + $('#r_path').val();
+ var win = window.open(url, '_blank');
+ win.focus();
+}
+//var new_path = "/response_results/";
+</script>
+</head>
+<body>
+<form id="path_form">
+Path: <input id="r_path" type="text" name="fname" size="100"><br>
+<button type="submit" value="Submit">open</button>
+</form>
+<script>
+// $('#r_path').on('input', function () {
+//  new_path = window.location.href + $(this).val();
+// });
+// $("#r_path").keyup(function(event){
+//  if(event.keyCode == 13){
+//    $("#open_t").click();
+//  }
+// });
+
+$("#path_form").submit(function(e){
+	e.preventDefault();
+	OpenInNewTab();
+});
+</script>
+</body>
+</html>

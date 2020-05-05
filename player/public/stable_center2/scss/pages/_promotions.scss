@@ -1,0 +1,278 @@
+.promotion-content {
+  @extend .shop-content;
+}
+.promotion-header {
+  @extend .shop-header;
+}
+
+.promotion-body {
+  @extend .shop-body;
+  p {
+    span {
+      color: lighten($promotion-text-color,33); //#9a9a9a
+      font-size: 12px;
+    }
+  }
+}
+
+.promo-modal {
+  @extend .shop-modal;
+  .badge-new {
+    border-radius: 6px;
+    height: 26px;
+    line-height: 26px;
+    margin-top: 10px;
+    width: 64px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    background-color: $shop-badge-new-bg;
+    color: $white;
+  }
+  p {
+    span {
+      color: lighten($promotion-text-color,33);
+    }
+  }
+}
+#promotions .tab-content {
+	border: 1px solid #e0e0e0;
+	min-height: 500px;
+}
+#promotions .promotions-section .tab-content {
+	border: 0;
+}
+
+.promotions-section {
+	padding-top: 25px;
+}
+.promotions-section .col-sm-6 {
+	margin-bottom: 15px;
+}
+.promotions-section .nav-pills {
+  padding: 0 15px 20px;
+}
+.promotions-section .nav-pills li {
+	margin-right: 8px;
+	max-width: 140px;
+	width: 100%;
+}
+.promotions-section .nav-pills a {
+  border-radius: 90px;
+	background: $promotion-navigation-tab-pill-bg;
+  color: $white;
+}
+.promotions-section .nav-pills .active a {
+	background: $promotion-navigation-tab-pill-active-bg;
+}
+.promotions-section .nav-pills a:hover,
+.promotions-section .nav-pills a:focus,
+.promotions-section .nav-pills .active a:hover,
+.promotions-section .nav-pills .active a:focus {
+  background: $promotion-navigation-tab-pill-active-bg;
+}
+.promotions-section .nav-pills img {
+	max-width: 18px;
+	width: 100%;
+}
+
+.hi-icon-effect-5 {
+	overflow: hidden;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.hi-icon-effect-5:hover img {
+	-webkit-animation: toRightFromLeft 0.3s forwards;
+	-moz-animation: toRightFromLeft 0.3s forwards;
+	animation: toRightFromLeft 0.3s forwards;
+}
+
+@-webkit-keyframes toRightFromLeft {
+	49% {
+		-webkit-transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes toRightFromLeft {
+	49% {
+		-moz-transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		-moz-transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@keyframes toRightFromLeft {
+	49% {
+		transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+
+// #promotions .table-responsive{
+// 	margin: 0;
+// }
+// #promotions .table th,
+// #promotions .table td{
+// 	border: 0;
+// }
+// #promotions .pro-content {
+// 	cursor: pointer;
+// }
+// #promotions .table tr:nth-child(even){
+// 	background: #f5f5f5;
+// }
+// #promotions .table .table-title{
+// 	font-size: 10px;
+// 	color: #c2c2c2;
+// }
+// #promotions .table .pro-content{
+// 	line-height: 60px;
+// 	color: #8a8a8a;
+// }
+// #promotions .table .pro-name{
+// 	color: #353535;
+// 	font-size: 14px;
+// 	position: relative;
+// }
+//
+// #promotions .table .pro-name.new:before{
+// 	content: 'NEW';
+// 	position: absolute;
+// 	top: 5px;
+// 	left: 8px;
+// 	background: #ca0000;
+// 	color: #fff;
+// 	line-height: 16px;
+// 	font-size: 10px;
+// 	padding: 0 2px;
+// }
+// #promotions .table .pro-name.applied:before{
+// 	content: 'APPLIED';
+// 	position: absolute;
+// 	top: 5px;
+// 	left: 8px;
+// 	background: #6ab400;
+// 	color: #fff;
+// 	line-height: 16px;
+// 	font-size: 10px;
+// 	padding: 0 2px;
+// }
+// #promotions .fm-ul {
+// 	background-color: #f3f3f3;
+//   padding: 0;
+//   margin-top: 20px;
+// }
+// #promotions .tab-content {
+// 	border: 1px solid #e0e0e0;
+// 	min-height: 500px;
+// }
+// .promo-modal .modal-header {
+// 	padding-top: 0;
+// }
+// .promo-modal .modal-header .close {
+// 	color: #fff;
+// 	position: absolute;
+// 	opacity: 1;
+// 	right: 0;
+// 	top: -25px;
+// }
+// .promo-modal .modal-header p {
+// 	font-size: 12px;
+//   margin-bottom: 4px;
+// }
+// .promo-modal .modal-header .row {
+// 	margin-left: -15px;
+// 	margin-right: -15px;
+// }
+// .promo-modal .modal-header .status {
+// 	display: inline-block;
+// 	font-size: 12px;
+// 	margin-top: 15px;
+// 	padding: 4px 10px;
+//   background: #ca0000;
+//   color: #fff;
+//   border-radius: 4px;
+//   text-transform: uppercase;
+//   font-weight: bold;
+// }
+// .promo-modal .modal-title {
+// 	font-size: 18px;
+// 	margin-left: -15px;
+// 	margin-right: -15px;
+// 	padding-top: 0;
+// 	position: relative;
+// }
+// .promo-modal .modal-title h4 {
+// 	color: #fff;
+// 	position: absolute;
+// 	bottom: 0;
+// 	width: 100%;
+// 	margin: 0;
+// 	padding: 15px;
+// 	background: rgba(0, 0, 0,0.6);
+// 	background: -moz-linear-gradient(270deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+// 	background: -webkit-linear-gradient(270deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+// 	background: -o-linear-gradient(270deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+// 	background: -ms-linear-gradient(270deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+// 	background: linear-gradient(0deg, rgba(0, 0, 0,1) 0%, rgba(0, 0, 0,0) 100%);
+// }
+// .promo-modal .modal-header .bonus-content {
+// 	margin-top: 30px;
+// }
+// .promo-modal .modal-header .bonus-amount {
+// 	border-radius: 6px;
+// 	height: 40px;
+// 	line-height: 40px;
+// 	margin-top: 10px;
+// 	min-width: 160px;
+// 	padding: 0 20px;
+// 	display: inline-block;
+// 	font-size: 18px;
+// 	font-weight: bold;
+// 	text-align: center;
+// 	background: #ff7200;
+// 	color: #fff;
+// }
+// .promo-modal .modal-title img {
+// 	max-width: 100%;
+// }
+// .promo-modal .modal-body h4 {
+// 	font-size: 14px;
+// 	font-weight: 600;
+// 	margin-top: 0;
+// 	padding-top: 0;
+// }
+// .promo-modal .modal-body p {
+// 	font-size: 12px;
+// }
+// .promo-modal .modal-footer {
+// 	text-align: left;
+// }
+// .promo-modal .modal-footer button {
+// 	max-width: 150px;
+// 	width: 100%;
+// 	background: #353535;
+// 	color: #fff;
+// 	text-transform: uppercase;
+// 	height: 40px;
+// }
+// .promo-modal .modal-footer .submit-btn {
+//   background: #ff7200;
+// }

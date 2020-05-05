@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>添加银行卡 - 新橙娱乐</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="pagetwo" class="left move">
+        <div class="header">
+            <div class="head_back">
+                <div class="back_btnPT" onclick="history.go(-1);"></div>
+            </div>
+            <div class="header_text"><a id="ht2">添加提款银行卡</a></div>
+        </div>
+       <div class="page">
+  <div class="mmenu">
+  <div class="mm_header">
+    <ul>
+      <li>选择银行</li>
+    </ul>
+    <div class="mm_exit"></div>
+  </div>
+  <div class="mm_main">
+    <ul>
+      <li>工商银行<i></i></li>
+      <li>建设银行<i></i></li>
+      <li>招商银行<i></i></li>
+      <li>农业银行<i></i></li>
+      <li>中国银行<i></i></li>
+      <li>交通银行<i></i></li>
+      <li>浦发银行<i></i></li>
+      <li>兴业银行<i></i></li>
+      <li>民生银行<i></i></li>
+      <li>广发银行<i></i></li>
+      <li>光大银行<i></i></li>
+      <li>邮政储蓄银行<i></i></li>
+      <li>平安银行<i></i></li>
+      <li>中信银行<i></i></li>
+      <li>农村信用社<i></i></li>
+      <li style="margin-bottom:20px;">其他银行<i></i></li>
+    </ul>
+  </div>
+</div>
+<div class="home">
+  <div class="input">
+    <div id="addtkc" class="input_01 xlmenu" style="margin-top:80px;"><a id="bankicon">请选择银行</a> </div>
+    <ul id="bktx1">
+      <li><i></i>银行不能为空</li>
+    </ul>
+    <input id="bc_name" name="" placeholder="持卡人姓名" type="text" class="input_01" value="" readonly="readonly">
+    <ul id="adtext1">
+       <li><i></i>持卡人姓名不能为空</li>
+    </ul>
+    <input id="bc_number" name="" placeholder="银行卡号" type="tel" class="input_01">
+    <ul id="adtext2">
+       <li><i></i>银行卡号不能为空</li>
+    </ul>
+    <input id="bc_oper" name="" placeholder="开户网点" type="text" class="input_01">
+    <ul id="adtext3">
+       <li><i></i>开户网点不能为空</li>
+    </ul>
+    <input id="bc_answer" name="" placeholder="安保答案" type="text" class="input_01">
+    <ul id="adtext4">
+       <li><i></i>答案不能为空</li>
+    </ul>
+    <div id="btn_bindcard" class="login_btn">确定</div>
+  </div>
+
+    <div class="blank3"></div>
+</div>
+<div class="quickButtonBar">
+            <a href="javascript:void(0);" onclick="document.location='http://m.xc33.com/'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/iframe_promos'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="http://player.xc33.com/pub/live_chat_link/chn" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center2/deposit'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/menu'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>
+<!-- <script type="text/javascript" src="/js/account/bankcard/jquery.withdrawal_card.js"></script> -->
+<script>
+    $(document).ready(function () {
+    var btn = $(".user_btn,.menu_btn,.menu_btn_two");
+    var pageone = $("#pageone");
+    var pagetwo = $("#pagetwo");
+    var pagethree = $("#pagethree");
+    var pagefour = $("#pagefour");
+    var pagefive = $("#pagefive");
+    var menu = $(".menu_right,.menu_left");
+    var leftmove = "left_move";
+    var mmove = "menu_move";
+    var leftm = $(".menu_left");
+    var rightm = $(".menu_right");
+
+    $("#btn_bindcard").click(function () {
+
+        var bic = $("#bankicon").text();
+        if (bic.indexOf("请选择银行") != -1) {
+            $("#bktx1").show();
+            return false;
+        }
+        else {
+            $("#bktx1").hide();
+        }
+
+        var bank = bic;
+        var name = $.trim($("#bc_name").val());
+        if (name.length == 0) {
+            $("#adtext1 li").html("<i></i>持卡人姓名不能为空");
+            $("#adtext1").show();
+            return false;
+        } else {
+            $("#adtext1").hide();
+        }
+
+        if (name.length < 2) {
+            $("#adtext1 li").html("<i></i>请填写正确的持卡人姓名");
+            $("#adtext1").show();
+            return false;
+        } else {
+            $("#adtext1").hide();
+        }
+
+        var number = $.trim($("#bc_number").val());
+        if (number.length == 0) {
+            $("#adtext2 li").html("<i></i>银行卡号不能为空");
+            $("#adtext2").show();
+            return false;
+        } else {
+            $("#adtext2").hide();
+        }
+
+        if (number.length < 15) {
+            $("#adtext2 li").html("<i></i>请填写正确的银行卡号");
+            $("#adtext2").show();
+            return false;
+        } else {
+            $("#adtext2").hide();
+        }
+
+        var oper = $.trim($("#bc_oper").val());
+        if (oper.length == 0) {
+            $("#adtext3").show();
+            return false;
+        } else {
+            $("#adtext3").hide();
+        }
+
+        var anse = $.trim($("#bc_answer").val());
+        if (anse.length == 0) {
+            $("#adtext4").show();
+            return false;
+        } else {
+            $("#adtext4").hide();
+        }
+
+        if (confirm("您确定提交吗？")) {
+            $("#loading").show();
+            $.ajax({
+                type: "post",
+                url: "Ajaxweb/AjaxMemberFunds_Cs.aspx",
+                data: { act: "draw", c: "bc", bank: bank, number: number, oper: oper, anse: anse, t: Math.random() },
+                timeout: 30000,
+                success: function (data) {
+                    alert(data);
+                    if (data.indexOf('成功') != -1) {
+                        $("#bankicon").html("请选择银行");
+                        $("#bc_number").val("");
+                        $("#bc_oper").val("");
+                        $("#bc_answer").val("");
+                    }
+                },
+                complete: function (XMLHttpRequest, status) {
+                    $("#loading").hide();
+                    if (status == 'timeout') {
+                        alert("超时");
+                    }
+                }
+            });
+
+
+        }
+
+
+        return false;
+
+
+    });
+
+    $(".xlmenu").click(function () {
+
+        var xlmenu = ".mmenu";
+
+        var xlmovie = "mmenu_movie";
+
+        $(xlmenu).addClass(xlmovie);
+
+        $(".mm_exit").click(function () {
+
+            $(xlmenu).removeClass(xlmovie);
+
+        });
+
+
+
+        $(".mm_main li").click(function () {
+
+            $(".mm_main li i").removeClass("border");
+
+            $(this).find("i").addClass("border");
+
+            $(xlmenu).removeClass(xlmovie);
+
+            var title = $(this).text();
+
+            $("#bankicon").text(title);
+
+        });
+
+
+
+    });
+});
+</script>
+
+</div>
+</body>
+</html>

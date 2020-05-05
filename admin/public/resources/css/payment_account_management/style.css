@@ -1,0 +1,5 @@
+/*table { table-layout: fixed; }*/
+table td { word-wrap: break-word; }
+.actionPaymentAccountGroup a:link{
+	color: #333;
+}

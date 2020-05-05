@@ -1,0 +1,13 @@
+<div class="login-member fn-left">
+	<i class="icon icon-member"></i><a href="/player_center/iframe_viewCashier" class='player_username'><%- default_prefix_for_username+playerName %></a>
+</div>
+<div class="login-menu fn-left fn-clear">
+	<a href="/player_center/iframe_playerSettings" class='player_information'><%- langText.header_information %></a>
+	<a href="/player_center/iframe_makeDeposit" class='player_deposit'><%- langText.header_deposit %></a>
+	<a href="/player_center/iframe_viewWithdraw" class='player_withdrawal'><%- langText.header_withdrawal %></a>
+	<a href="/player_center/iframe_viewCashier" class='player_memcashier'><%- langText.header_memcashier %></a>
+	<a href="/player_center2/report" class='player_report'><%- langText.header_report %></a>
+	<a href="/player_center/iframe_messages" class='player_messages'><%- langText.header_messages %> (<%- ui.messageCount %>)</a>
+</div>
+<a class="ui-btn ui-btn-logout fn-left" href="<%- ui.logoutUrl %>" target="<%- ui.logoutIframeName %>"><%- langText.button_logout %></a>
+<iframe name="<%- ui.logoutIframeName %>" id="<%- ui.logoutIframeName %>" width="0" height="0" border="0" style="display:none;border:0px;width:0px;height:0px;"></iframe>

@@ -1,0 +1,20 @@
+{
+	"sEmptyTable":   "ไม่มีข้อมูลในรายการ",
+	"sLengthMenu":   "แสดง _MENU_ รายการ",
+	"sInfoEmpty":      "แสดง 0 ถึง 1 รายการ",
+	"sInfo":           "แสดง _START_ ถึง _END_ รายการ",
+	"sSearch":         "ค้นหา:",
+	"oPaginate": {
+		"sNext":     "ถัดไป",
+		"sPrevious": "ก่อนหน้า"
+	},
+	"search": "ค้นหา:",
+	"lengthMenu": "แสดง _MENU_ รายการ",
+	"emptyTable":     "ไม่มีข้อมูลในรายการ",
+    "info":           "แสดง _START_ ถึง _END_  _TOTAL_ รายการ",
+    "infoEmpty":      "แสดง 0 ถึง 0  0 รายการ",
+	"paginate": {
+        "next":       "ถัดไป",
+        "previous":   "ก่อนหน้า"
+	}
+}

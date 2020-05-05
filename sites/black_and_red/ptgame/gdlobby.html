@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <link href="/resources/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/resources/js/jquery-2.1.4.min.js"></script>
+        <script src="/resources/js/bootstrap.min.js"></script>
+        <script src="/resources/js/underscore-min.js"></script>
+
+        <!-- ptlobby -->
+        <script src="http://og.local/resources/js/gdlobby.js"></script>
+        <link href="/resources/css/gsptlobby.css" rel="stylesheet">
+        
+    </head>
+    <body>
+        <div id="container">
+
+            <ul class="nav nav-tabs nav-justified" id="category-list">
+               <!--  <li class="category active" id="1"><a href="javascript:void(0);">热门游戏</a></li>
+                <li class="category" id="2"><a href="javascript:void(0);">最新游戏</a></li>
+                <li class="category" id="3"><a href="javascript:void(0);">特色游戏</a></li>
+                <li class="category" id="4"><a href="javascript:void(0);">累计奖金池</a></li>
+                <li class="category" id="5"><a href="javascript:void(0);">街机游戏</a></li>
+                <li class="category" id="6"><a href="javascript:void(0);">刮刮乐</a></li>
+                <li class="category" id="7"><a href="javascript:void(0);">老虎机</a></li>
+                <li class="category" id="8"><a href="javascript:void(0);">桌面&amp;卡牌</a></li>
+                <li class="category" id="9"><a href="javascript:void(0);">视频扑克</a></li> -->
+                <li class="category active" id="151"><a href="javascript:void(0);">Video Slots</a></li>
+                <li class="category" id="152"><a href="javascript:void(0);">Video Pokers</a></li>
+                <li class="category" id="153"><a href="javascript:void(0);">Table Games</a></li>
+                <li class="category" id="154"><a href="javascript:void(0);">Slot Games</a></li>
+                <li class="category" id="155"><a href="javascript:void(0);">Gamble</a></li>
+               <li class="category" id="156"><a href="javascript:void(0);">Arcade</a></li>
+               
+            </ul>
+
+            <br/>
+
+            <div class="container">
+
+               
+
+
+
+                <div class="row" id="game-list"></div>
+
+            </div>
+
+        </div>
+
+        <!-- TEMPLATES -->
+        <script type="text/template" id="game-template">
+            <% _.each( l, function(value) { %>
+                <div class="game-item col-lg-2 col-md-3 col-sm-4 col-xs-6" game-type-id="<%= value.g %>"
+                    <% _.map( value.a, function(attributeKey, attributeValue) { %>
+                        data-<%- attributeValue %>="[<%- attributeKey %>]"
+                    <% }); %>
+                >
+                     
+                    <div class="game-details">
+                        <div class="game-name"><%= value.n %></div>
+                        <img class="game-image" src="<%- p %>/<%- value.i %>" />
+                         <!--  <img class="game-image" src="<%- p %>/<%- value.i %>" /> -->
+                        
+                    </div>
+
+                    <div class="game-action text-center">
+                        <a class="btn btn-xs btn-block btn-primary" href="/iframe_module/goto_gsptgame/<%- value.c%>" target='_blank'>进入游戏</a>
+                        <% if (value.r) { %>
+                        <a class="btn btn-xs btn-block btn-default" href="/iframe_module/goto_gsptgame/<%- value.c%>" target='_blank'>免费试玩</a>
+                        <% } %>
+                    </div>
+
+                </div>
+            <% }); %>
+        </script>
+
+    </body>
+</html>

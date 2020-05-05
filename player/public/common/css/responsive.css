@@ -1,0 +1,55 @@
+/* ========================================
+
+Applied Style
+
+Table of Content
+
+01 Large Devices, Wide Screens 
+02 Medium Devices, Desktops 
+03 Small Devices, Tablets 
+04 Extra Small Devices, Phones 
+
+======================================== */
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* 01 Large Devices, Wide Screens 
+===================== */
+@media all and (max-width: 1199px) and (min-width: 991px){
+
+}
+
+/* 02 Medium Devices, Desktops 
+===================== */
+@media all and (max-width: 991px) and (min-width: 767px){
+
+}
+
+/* 03 Small Devices, Tablets 
+===================== */
+@media all and (max-width: 767px) and (min-width: 480px){
+
+	/* 05 Modals
+	===================== */
+	.modal-backdrop.in{
+		filter: alpha(opacity=70);
+		opacity: .7;
+	}
+
+	/* Login */
+	.login-mod{
+		width: 100%;
+	}
+
+}
+
+@media all and (max-width: 650px) and (min-width: 480px){
+
+
+}
+
+/* 04 Extra Small Devices, Phones 
+===================== */
+@media only screen and (max-width : 480px) {
+
+}

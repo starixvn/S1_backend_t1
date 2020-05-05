@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	    <script type="text/javascript" src="http://cache.download.banner.greatfortune88.com/integrationjs.php"></script>￼
+
+	    <script type="text/javascript" src="/resources/player/jquery-1.11.3.min.js"></script>
+	    <style type="text/css">
+			body {
+				background-color:#FF0000;
+			}
+			.bonus{
+				background-image:url('../images/promo/hongbao_bg.jpg');
+			    background-repeat: no-repeat;
+			    /*background-attachment: fixed;*/
+			    background-position: center;
+			    text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="row bonus">
+			<div class="col-md-12">
+				<img src="../images/promo/hongbao_bgtop.png">
+			</div>
+			<div class="col-md-12">
+				<h3><span id="messages"></span></h3>
+			</div>
+			<div class="col-md-12" style="margin-top: -20px;">
+				<img src="../images/promo/hongbao.png"></a>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript">
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+		vars[key] = value;
+		});
+		return vars;
+	}
+
+	if(getUrlVars()["msgcode"] == 0){
+		$('#messages').text("No available bonus!");	
+	}else{
+		$('#messages').text(getUrlVars()["msgcode"]);
+	}
+</script>

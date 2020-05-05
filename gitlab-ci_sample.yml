@@ -1,0 +1,78 @@
+stages:
+  - build
+  - staging
+  - production
+  - og_sync
+  - shadow
+
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+  GOOGLE_EM_PROJECT_NAME: "sc001-em"
+  GOOGLE_EM_LIVE_K8S_NAME: "emog"
+  GOOGLE_EM_STAGING_K8S_NAME: "emog"
+  GOOGLE_EM_LIVE_K8S_ZONE: "asia-east1-b"
+  GOOGLE_EM_STAGING_K8S_ZONE: "asia-east1-b"
+
+build_system:
+  stage: build
+  script:
+    - ./create_links.sh
+    - admin/shell/check_php_syntax.sh
+
+# -----------for em config ----------------------
+
+em-staging:
+  variables:
+    CLIENT_NAME: "emstaging"
+  stage: staging
+  script:
+    - bash mattermost.sh $GITLAB_USER_LOGIN $CLIENT_NAME $CI_COMMIT_REF_NAME $CI_JOB_ID $CI_COMMIT_SHA
+    - echo "$GITLAB_USER_EMAIL generate image in $GOOGLE_EM_STAGING_K8S_NAME"
+    # generate image in live
+    - bash run_cli.sh generate_image -D -c $CLIENT_NAME -a $GOOGLE_ACCOUNT -p $GOOGLE_EM_PROJECT_NAME -k $GOOGLE_EM_LIVE_K8S_NAME -z $GOOGLE_EM_LIVE_K8S_ZONE -b $CI_COMMIT_REF_NAME -s $CI_COMMIT_SHA
+    - echo "$GITLAB_USER_EMAIL deploy image in $GOOGLE_EM_STAGING_K8S_NAME"
+    # do action in staging
+    - bash run_cli.sh deploy_image -D -c $CLIENT_NAME -a $GOOGLE_ACCOUNT -p $GOOGLE_EM_PROJECT_NAME -k $GOOGLE_EM_STAGING_K8S_NAME -z $GOOGLE_EM_STAGING_K8S_ZONE -b $CI_COMMIT_REF_NAME -s $CI_COMMIT_SHA
+  when: manual
+
+em:
+  variables:
+    CLIENT_NAME: "em"
+  stage: production
+  script:
+    - bash check_deploy_permission.sh
+    - bash mattermost.sh $GITLAB_USER_LOGIN $CLIENT_NAME $CI_COMMIT_REF_NAME $CI_JOB_ID $CI_COMMIT_SHA
+    - echo "$GITLAB_USER_EMAIL generate image in $GOOGLE_EM_LIVE_K8S_NAME"
+    # generate image in live
+    - bash run_cli.sh generate_image -D -c $CLIENT_NAME -a $GOOGLE_ACCOUNT -p $GOOGLE_EM_PROJECT_NAME -k $GOOGLE_EM_LIVE_K8S_NAME -z $GOOGLE_EM_LIVE_K8S_ZONE -b $CI_COMMIT_REF_NAME -s $CI_COMMIT_SHA
+    - echo "$GITLAB_USER_EMAIL deploy image in $GOOGLE_EM_STAGING_K8S_NAME"
+    # do action in staging
+    - bash run_cli.sh deploy_image -D -c $CLIENT_NAME -a $GOOGLE_ACCOUNT -p $GOOGLE_EM_PROJECT_NAME -k $GOOGLE_EM_LIVE_K8S_NAME -z $GOOGLE_EM_LIVE_K8S_ZONE -b $CI_COMMIT_REF_NAME -s $CI_COMMIT_SHA
+  when: manual
+
+em-shadow:
+  variables:
+    CLIENT_NAME: "em-shadow"
+  stage: shadow
+  script:
+    - bash mattermost.sh $GITLAB_USER_LOGIN $CLIENT_NAME $CI_COMMIT_REF_NAME $CI_JOB_ID $CI_COMMIT_SHA
+    - echo "$GITLAB_USER_EMAIL generate image in $GOOGLE_EM_LIVE_K8S_NAME"
+    # generate image in live
+    - bash run_cli.sh generate_image -D -c $CLIENT_NAME -a $GOOGLE_ACCOUNT -p $GOOGLE_EM_PROJECT_NAME -k $GOOGLE_EM_LIVE_K8S_NAME -z $GOOGLE_EM_LIVE_K8S_ZONE -b $CI_COMMIT_REF_NAME -s $CI_COMMIT_SHA
+    - echo "$GITLAB_USER_EMAIL deploy image in $GOOGLE_EM_STAGING_K8S_NAME"
+    # do action in staging
+    - bash run_cli.sh deploy_image -D -c $CLIENT_NAME -a $GOOGLE_ACCOUNT -p $GOOGLE_EM_PROJECT_NAME -k $GOOGLE_EM_LIVE_K8S_NAME -z $GOOGLE_EM_LIVE_K8S_ZONE -b $CI_COMMIT_REF_NAME -s $CI_COMMIT_SHA
+  when: manual
+
+em-og_sync:
+  variables:
+    CLIENT_NAME: ""
+    APISYNC_SERVER: "emapisync"
+  stage: og_sync
+  script:
+    - pwd
+    - echo deploy em og_sync to $APISYNC_SERVER
+    - bash check_deploy_permission.sh
+    - bash deploy_og_sync.sh
+  when: manual

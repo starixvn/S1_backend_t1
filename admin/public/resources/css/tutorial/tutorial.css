@@ -1,0 +1,130 @@
+  .mt20 {
+    margin-top: 20px !important;
+  }
+  .tour-backdrop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    opacity: .6;
+    filter: alpha(opacity=80);
+  }
+  .overview.profile-section {
+    margin: 0;
+    padding-top: 60px;
+  }
+  .overview.profile-section .popover.tour-tour {
+    display: block;
+    position: relative;
+  }
+  .overview.profile-section a,
+  .overview.profile-section button  {
+    pointer-events: none;
+  }
+  .overview.points-section  {
+    margin: 0;
+    min-height: 345px;
+    padding-top: 35px;
+  }
+  .overview.points-section a,
+  .overview.points-section button  {
+    pointer-events: none;
+  }
+  .overview.points-section .popover.tour-tour {
+    display: block;
+    position: relative;
+  }
+  .modal-body .popover.tour-tour .popover-navigation {
+    padding: 15px;
+  }
+  .overview.vip-reward-section {
+    margin: 0;
+    min-height: 345px;
+    padding-top: 35px;
+  }
+  .overview.vip-reward-section a,
+  .overview.vip-reward-section button {
+    pointer-events: none;
+  }
+  .overview.vip-reward-section .popover.tour-tour {
+    display: block;
+    position: relative;
+  }
+  .modal-body.mc-content {
+    padding: 20px;
+  }
+  .modal-body.mc-content .popover.tour-tour {
+    display: block;
+    position: relative;
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .modal-body.mc-content .cashier-center-header a.btn,
+  .modal-body.mc-content button {
+    pointer-events: none;
+  }
+  .modal-body .main-content.tab-pane {
+    background-color: #fff;
+    padding: 20px;
+  }
+  .fm-ul li a {
+    text-decoration: none;
+    pointer-events: none;
+  }
+  .sub-wallet-container a {
+    pointer-events: none;
+  }
+  .cashier-center-modal-container {
+    width: 1200px;
+  }
+  .cashier-center-modal-container .col-md-8 {
+    width: 75%;
+  }
+   .modal-dialog {
+    width: 785px;
+  }
+  .modal-body .popover.tour-tour {
+    color: #222222;
+  }
+  #modal2 .modal-dialog {
+    width: 940px;
+  }
+  #modal4 .modal-dialog {
+    width: 1228px;
+  }
+  .tour-content {
+    min-width: auto;
+    word-break: break-all;
+  }
+.btn-file:hover {
+    color: #fff;
+  }
+  .btn-file input[type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      font-size: 100px;
+      text-align: right;
+      filter: alpha(opacity=0);
+      opacity: 0;
+      outline: none;
+      background: white;
+      cursor: inherit;
+      display: block;
+  }
+  .select-language-container {
+        max-width: 503px;
+    margin-left: 310px;
+    margin-top: 30px;
+  }
+  .select-language-container label {
+    line-height: 35px;
+    margin-bottom: 0;
+  }
+  .tutorial-action-buttons a:last-of-type {
+    margin-left: 285px;
+  }

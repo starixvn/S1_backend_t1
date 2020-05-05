@@ -1,0 +1,11 @@
+/* 改变主题色变量 */
+$--color-primary: #0297C2;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '/resources/fonts';
+
+$--main-padding: 10px !default;
+
+$--card-padding: 10px !default;
+
+@import "~element-ui/packages/theme-chalk/src/index";

@@ -1,0 +1,60 @@
+# /etc/cron.d/global_cronjob: crontab fragment for global
+#
+#
+
+10 2     * * *     root   geoipupdate
+
+# clear sessions from db
+0 9 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/clear_sessions.sh  >> /var/log/og/clear_sessions.log 2>&1
+
+0 * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh calculateAndPayCashback  >> /var/log/og/calc_and_pay_cashback.log 2>&1
+
+#30 12 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh totalCashbackDaily  >> /var/log/og/calc_cashback.log 2>&1
+
+#00 14 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh payCashback  >> /var/log/og/pay_cashback.log 2>&1
+
+0 0 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh checkPromoForHiding >> /var/log/og/hide_promo_checker.log 2>&1
+
+0 0 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh resetApprovedWithdrawAmount >> /var/log/og/approved_withdrawal_amount_resetter.log 2>&1
+
+#monthly earnings by daily
+5 1 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh calculate_monthly_earnings  >> /var/log/og/calculate_monthly_earnings.log 2>&1
+
+#0 0 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh export_transaction_excel_daily  >> /var/log/og/export_transaction_excel_daily.log 2>&1
+
+5 13 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh checkReferral  >> /var/log/og/checkReferral.log 2>&1
+
+5 1 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/upload_to_rackspace.sh /home/vagrant/Code/sites/live site_name >> /var/log/og/upload_rackspace.log 2>&1
+
+#fix hour
+#1 0 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh fix_yesterday_hour_totals >> /var/log/og/fix_yesterday_hour_totals.log 2>&1
+
+#sync hour
+0 7,19 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh sync_all_total_hours >> /var/log/og/sync_all_total_hours.log 2>&1
+
+#rebuild day
+0 6 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh rebuild_totals >> /var/log/og/rebuild_totals.log 2>&1
+
+#rebuild game logs
+1 22 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh rebuild_game_logs_by_timelimit 24 >> /var/log/og/rebuild_game_logs_by_timelimit.log 2>&1
+
+#rebuild totalDepositAmount
+0 5 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh updatePlayersTotalDepositAmount  >> /var/log/og/updatePlayersTotalDepositAmount.log 2>&1
+
+#hour
+#0 6,18 * * * root /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh sync_all_game_platform_with_total_hours  >> /var/log/og/sync_all_game_platform_with_total_hours.log 2>&1
+
+#fix affiliates
+0 5 * * * root /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh fix_affiliate_count >> /var/log/og/fix_affiliate_count.log 2>&1
+
+#monthly total
+0 5 1 * * root /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh sync_long_total_info >> /var/log/og/sync_long_total_info.log 2>&1
+
+#daily clear_small_negative
+0 5 * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh clear_small_negative >> /var/log/og/clear_small_negative.log 2>&1
+
+#hourly batch_sync_balance_all
+0 * * * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh batch_sync_balance_all >> /var/log/og/batch_sync_balance_all.log 2>&1
+
+#monthly up/down level
+0 6 1 * *     root   /bin/bash /home/vagrant/Code/og_sync/admin/shell/command.sh adjust_level >> /var/log/og/adjust_level.log 2>&1

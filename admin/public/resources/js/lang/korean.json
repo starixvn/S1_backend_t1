@@ -1,0 +1,23 @@
+{
+	"sEmptyTable":     "표시할 데이터가 없습니다",
+	"sInfo":           "표시 _START_ 행 _END_ 의 _TOTAL_ 항목",
+	"sInfoEmpty":      "표시 0 행 0 의 0 항목",
+	"sInfoFiltered":   "(총 _MAX_ total항목 중 필터되었습니다)",
+	"sInfoPostFix":    "",
+	"sInfoThousands":  ",",
+	"sLengthMenu":     "표시 _MENU_ 항목",
+	"sLoadingRecords": "업로드 중 ...",
+	"sProcessing":     "처리 중 ...",
+	"sSearch":         "검색:",
+	"sZeroRecords":    "조건에 맞는 기록이 없습니다",
+	"oPaginate": {
+		"sFirst":    "처음",
+		"sLast":     "마지막",
+		"sNext":     "다음",
+		"sPrevious": "이전"
+	},
+	"oAria": {
+		"sSortAscending":  ": 오름차순으로 정렬 활성",
+		"sSortDescending": ": 내림차순으로 정렬 활성"
+	}
+}

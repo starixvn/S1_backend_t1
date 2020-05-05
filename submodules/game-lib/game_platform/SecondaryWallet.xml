@@ -1,0 +1,1880 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://secondarywallet.connect.omega.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="SecondaryWalletServiceImplService" targetNamespace="http://secondarywallet.connect.omega.com/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://secondarywallet.connect.omega.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://secondarywallet.connect.omega.com/">
+  <xs:complexType name="RemovePlayerWagerLimitReq">
+    <xs:complexContent>
+      <xs:extension base="tns:playerBaseReq">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="playerBaseReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="secondaryWalletBaseReq">
+    <xs:sequence>
+      <xs:element name="brandId" type="xs:int"/>
+      <xs:element minOccurs="0" name="brandPassword" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="removePlayerWagerLimitResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="GetPlayerGamePlaySummaryReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="startTime" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="endTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPlayerGamePlaySummaryResp">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="summary" nillable="true" type="tns:gamePlaySummaryDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gamePlaySummaryDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="betPerGame" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="gameName" type="xs:string"/>
+      <xs:element minOccurs="0" name="handle" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="hold" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="holdPercent" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="numberOfBets" type="xs:int"/>
+      <xs:element minOccurs="0" name="numberOfGames" type="xs:int"/>
+      <xs:element minOccurs="0" name="platformName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TriggerDepositBonusReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="amount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="iso3Currency" type="xs:string"/>
+          <xs:element minOccurs="0" name="platformTranId" type="xs:string"/>
+          <xs:element minOccurs="0" name="depositTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="triggerDepositBonusResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bonus" type="tns:bonusDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="bonusDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="amountWagered" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="amountWithdrawn" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="bonusId" type="xs:int"/>
+      <xs:element minOccurs="0" name="expiryDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="playableBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="playableBonusWinnings" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="playableTotal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="releaseDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="releasedBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="releasedBonusWinnings" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="releasedTotal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="status" type="tns:bonusStatus"/>
+      <xs:element minOccurs="0" name="triggerDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="wagerRequirement" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RedeemBonusReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="codeOrCoupon" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="redeemBonusResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bonus" type="tns:bonusDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdateVipStatusReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="newStatusCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updateVipStatusResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="DoesPlayerExistReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="doesPlayerExistResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="exists" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CreatePlayerReq">
+    <xs:complexContent>
+      <xs:extension base="tns:basePlayerRequest">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType abstract="true" name="basePlayerRequest">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="address" type="xs:string"/>
+          <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="city" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="xs:string"/>
+          <xs:element minOccurs="0" name="email" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="gender" type="xs:string"/>
+          <xs:element minOccurs="0" name="homePhone" type="xs:string"/>
+          <xs:element minOccurs="0" name="iso3CurrencyCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="language" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="loginName" type="xs:string"/>
+          <xs:element minOccurs="0" name="mobilePhone" type="xs:string"/>
+          <xs:element minOccurs="0" name="postalCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="region" type="xs:string"/>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="createPlayerResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="partyId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdatePlayerWagerLimitReq">
+    <xs:complexContent>
+      <xs:extension base="tns:updatePlayerLimitReq">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updatePlayerLimitReq">
+    <xs:complexContent>
+      <xs:extension base="tns:playerBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="limit" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updatePlayerWagerLimitResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="RemovePlayerLossLimitReq">
+    <xs:complexContent>
+      <xs:extension base="tns:playerBaseReq">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="removePlayerLossLimitResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="GetPlayerLimitsReq">
+    <xs:complexContent>
+      <xs:extension base="tns:playerBaseReq">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPlayerLimitsResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="playerLimitDto" type="tns:playerLimitDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="playerLimitDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amountLossLimit" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="amountWagerLimit" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdatePlayerLossLimitReq">
+    <xs:complexContent>
+      <xs:extension base="tns:updatePlayerLimitReq">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updatePlayerLossLimitResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="IsPlayerSessionAliveReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionKey" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="isPlayerSessionAliveResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="isAlive" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UpdatePlayerStatusReq">
+    <xs:complexContent>
+      <xs:extension base="tns:playerBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="newStatus" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="updatePlayerStatusResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="Transfer2ndReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="amount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="iso3Currency" type="xs:string"/>
+          <xs:element minOccurs="0" name="platformTranId" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="transferResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="balancePlayableBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceReal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceReleasedBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceSecondary" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceTotal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceWithdrawable" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="transaction" type="tns:transactionDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="transactionDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amountPlayableBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="amountReal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="amountReleasedBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balancePlayableBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceReal" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="balanceReleasedBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="dateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="gameId" type="xs:string"/>
+      <xs:element minOccurs="0" name="gameTranId" type="xs:string"/>
+      <xs:element minOccurs="0" name="platformCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="platformTranId" type="xs:string"/>
+      <xs:element minOccurs="0" name="tranType" type="xs:string"/>
+      <xs:element minOccurs="0" name="transactionId" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetPlayerCommentsReq">
+    <xs:complexContent>
+      <xs:extension base="tns:playerBaseReq">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPlayerCommentsResp">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="playerComments" nillable="true" type="tns:playerCommentDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="playerCommentDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comment" type="xs:string"/>
+      <xs:element minOccurs="0" name="commentId" type="xs:int"/>
+      <xs:element minOccurs="0" name="date" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="staffName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTransactionReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element name="transactionId" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getTransactionResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="transaction" type="tns:transactionDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LoginPlayerReq">
+    <xs:complexContent>
+      <xs:extension base="tns:basePlayerRequest">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="loginPlayerResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="partyId" type="xs:int"/>
+      <xs:element minOccurs="0" name="sessionKey" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LogoutSessionReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sessionKey" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="logoutSessionResp">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="GetGameStatisticsReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="startTime" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="endTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getGameStatisticsResp">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="gameStatistics" nillable="true" type="tns:gameStatisticsDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="gameStatisticsDto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="bet" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="currency" type="xs:string"/>
+      <xs:element minOccurs="0" name="gameId" type="xs:string"/>
+      <xs:element minOccurs="0" name="partyId" type="xs:int"/>
+      <xs:element minOccurs="0" name="round" type="xs:int"/>
+      <xs:element minOccurs="0" name="username" type="xs:string"/>
+      <xs:element minOccurs="0" name="win" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetRevenueReportReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="startDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="endDate" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="generateRevenueReportResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="csvData" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetBalanceReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getBalanceResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="playableBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="real" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="releasedBonus" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="secondaryBalance" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="total" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="withdrawable" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TransferReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="amount" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="iso3Currency" type="xs:string"/>
+          <xs:element minOccurs="0" name="platformTranId" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="GetBonusInfoReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getBonusInfoResp">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="activeBonus" type="tns:bonusDto"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="allBonuses" nillable="true" type="tns:bonusDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="GetTransactionsReq">
+    <xs:complexContent>
+      <xs:extension base="tns:secondaryWalletBaseReq">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="uuid" type="xs:string"/>
+          <xs:element minOccurs="0" name="startTime" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="endTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="getPlayerTransactionsResp">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="transactions" nillable="true" type="tns:transactionDto"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="bonusStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EXPIRED"/>
+      <xs:enumeration value="QUEUED"/>
+      <xs:enumeration value="RELEASED"/>
+      <xs:enumeration value="CANCELED"/>
+      <xs:enumeration value="ACTIVE"/>
+      <xs:enumeration value="SPENT"/>
+      <xs:enumeration value="SPENT_ACTIVE"/>
+      <xs:enumeration value="QUALIFIED"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SecondaryWalletAuthorizationFailedException" type="tns:SecondaryWalletAuthorizationFailedException"/>
+  <xs:complexType name="SecondaryWalletAuthorizationFailedException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletMissingFieldException" type="tns:SecondaryWalletMissingFieldException"/>
+  <xs:complexType name="SecondaryWalletMissingFieldException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletPlayerNotFoundException" type="tns:SecondaryWalletPlayerNotFoundException"/>
+  <xs:complexType name="SecondaryWalletPlayerNotFoundException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInsufficientFundsException" type="tns:SecondaryWalletInsufficientFundsException"/>
+  <xs:complexType name="SecondaryWalletInsufficientFundsException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletUnknownErrorException" type="tns:SecondaryWalletUnknownErrorException"/>
+  <xs:complexType name="SecondaryWalletUnknownErrorException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletBonusMaxTriggeredException" type="tns:SecondaryWalletBonusMaxTriggeredException"/>
+  <xs:complexType name="SecondaryWalletBonusMaxTriggeredException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletBonusNotFoundException" type="tns:SecondaryWalletBonusNotFoundException"/>
+  <xs:complexType name="SecondaryWalletBonusNotFoundException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidCurrencyException" type="tns:SecondaryWalletInvalidCurrencyException"/>
+  <xs:complexType name="SecondaryWalletInvalidCurrencyException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletIllegalArgumentException" type="tns:SecondaryWalletIllegalArgumentException"/>
+  <xs:complexType name="SecondaryWalletIllegalArgumentException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletBonusRecurringConditionNotMetException" type="tns:SecondaryWalletBonusRecurringConditionNotMetException"/>
+  <xs:complexType name="SecondaryWalletBonusRecurringConditionNotMetException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletAlreadyProcessedException" type="tns:SecondaryWalletAlreadyProcessedException"/>
+  <xs:complexType name="SecondaryWalletAlreadyProcessedException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletCouponUsedException" type="tns:SecondaryWalletCouponUsedException"/>
+  <xs:complexType name="SecondaryWalletCouponUsedException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidVipStatusException" type="tns:SecondaryWalletInvalidVipStatusException"/>
+  <xs:complexType name="SecondaryWalletInvalidVipStatusException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidCountryException" type="tns:SecondaryWalletInvalidCountryException"/>
+  <xs:complexType name="SecondaryWalletInvalidCountryException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidEmailException" type="tns:SecondaryWalletInvalidEmailException"/>
+  <xs:complexType name="SecondaryWalletInvalidEmailException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidLanguageException" type="tns:SecondaryWalletInvalidLanguageException"/>
+  <xs:complexType name="SecondaryWalletInvalidLanguageException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletPlayerExistsException" type="tns:SecondaryWalletPlayerExistsException"/>
+  <xs:complexType name="SecondaryWalletPlayerExistsException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidDateException" type="tns:SecondaryWalletInvalidDateException"/>
+  <xs:complexType name="SecondaryWalletInvalidDateException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidPlayerLimitException" type="tns:SecondaryWalletInvalidPlayerLimitException"/>
+  <xs:complexType name="SecondaryWalletInvalidPlayerLimitException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidPlayerStatusException" type="tns:SecondaryWalletInvalidPlayerStatusException"/>
+  <xs:complexType name="SecondaryWalletInvalidPlayerStatusException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidTxnIdException" type="tns:SecondaryWalletInvalidTxnIdException"/>
+  <xs:complexType name="SecondaryWalletInvalidTxnIdException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletDuplicateEmailException" type="tns:SecondaryWalletDuplicateEmailException"/>
+  <xs:complexType name="SecondaryWalletDuplicateEmailException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletInvalidDataUpdateException" type="tns:SecondaryWalletInvalidDataUpdateException"/>
+  <xs:complexType name="SecondaryWalletInvalidDataUpdateException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecondaryWalletTooManyRecordException" type="tns:SecondaryWalletTooManyRecordException"/>
+  <xs:complexType name="SecondaryWalletTooManyRecordException">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="removePlayerWagerLimit" nillable="true" type="tns:RemovePlayerWagerLimitReq"/>
+  <xs:element name="removePlayerWagerLimitResponse" nillable="true" type="tns:removePlayerWagerLimitResp"/>
+  <xs:element name="getPlayerGamePlaySummaryReq" nillable="true" type="tns:GetPlayerGamePlaySummaryReq"/>
+  <xs:element name="getPlayerGamePlaySummaryResponse" nillable="true" type="tns:getPlayerGamePlaySummaryResp"/>
+  <xs:element name="triggerDepositBonusReq" nillable="true" type="tns:TriggerDepositBonusReq"/>
+  <xs:element name="triggerDepositBonusResponse" nillable="true" type="tns:triggerDepositBonusResp"/>
+  <xs:element name="redeemBonusReq" nillable="true" type="tns:RedeemBonusReq"/>
+  <xs:element name="redeemCouponOrCodedBonusResponse" nillable="true" type="tns:redeemBonusResp"/>
+  <xs:element name="updateVipStatusReq" nillable="true" type="tns:UpdateVipStatusReq"/>
+  <xs:element name="updateVipStatusResponse" nillable="true" type="tns:updateVipStatusResp"/>
+  <xs:element name="doesPlayerExistReq" nillable="true" type="tns:DoesPlayerExistReq"/>
+  <xs:element name="doesPlayerExistResponse" nillable="true" type="tns:doesPlayerExistResp"/>
+  <xs:element name="createPlayerReq" nillable="true" type="tns:CreatePlayerReq"/>
+  <xs:element name="createPlayerResponse" nillable="true" type="tns:createPlayerResp"/>
+  <xs:element name="updatePlayerWagerLimitReq" nillable="true" type="tns:UpdatePlayerWagerLimitReq"/>
+  <xs:element name="updatePlayerWagerLimitResponse" nillable="true" type="tns:updatePlayerWagerLimitResp"/>
+  <xs:element name="removePlayerLossLimit" nillable="true" type="tns:RemovePlayerLossLimitReq"/>
+  <xs:element name="removePlayerLossLimitResponse" nillable="true" type="tns:removePlayerLossLimitResp"/>
+  <xs:element name="getPlayerLimitsReq" nillable="true" type="tns:GetPlayerLimitsReq"/>
+  <xs:element name="getPlayerLimitsResponse" nillable="true" type="tns:getPlayerLimitsResp"/>
+  <xs:element name="updatePlayerLossLimitReq" nillable="true" type="tns:UpdatePlayerLossLimitReq"/>
+  <xs:element name="updatePlayerLossLimitResponse" nillable="true" type="tns:updatePlayerLossLimitResp"/>
+  <xs:element name="isPlayerSessionAliveReq" nillable="true" type="tns:IsPlayerSessionAliveReq"/>
+  <xs:element name="isPlayerSessionAliveResponse" nillable="true" type="tns:isPlayerSessionAliveResp"/>
+  <xs:element name="updatePlayerStatusReq" nillable="true" type="tns:UpdatePlayerStatusReq"/>
+  <xs:element name="updatePlayerStatusResponse" nillable="true" type="tns:updatePlayerStatusResp"/>
+  <xs:element name="transfer2ndReq" nillable="true" type="tns:Transfer2ndReq"/>
+  <xs:element name="transfer2ndResponse" nillable="true" type="tns:transferResp"/>
+  <xs:element name="getPlayerCommentsReq" nillable="true" type="tns:GetPlayerCommentsReq"/>
+  <xs:element name="getPlayerCommentsResponse" nillable="true" type="tns:getPlayerCommentsResp"/>
+  <xs:element name="getTransactionReq" nillable="true" type="tns:GetTransactionReq"/>
+  <xs:element name="getTransactionResponse" nillable="true" type="tns:getTransactionResp"/>
+  <xs:element name="loginPlayerReq" nillable="true" type="tns:LoginPlayerReq"/>
+  <xs:element name="loginPlayerResponse" nillable="true" type="tns:loginPlayerResp"/>
+  <xs:element name="logoutSessionReq" nillable="true" type="tns:LogoutSessionReq"/>
+  <xs:element name="logoutSessionResponse" nillable="true" type="tns:logoutSessionResp"/>
+  <xs:element name="getGameStatistics" nillable="true" type="tns:GetGameStatisticsReq"/>
+  <xs:element name="getGameStatisticsResponse" nillable="true" type="tns:getGameStatisticsResp"/>
+  <xs:element name="generateRevenueReportReq" nillable="true" type="tns:GetRevenueReportReq"/>
+  <xs:element name="generateRevenueReportResponse" nillable="true" type="tns:generateRevenueReportResp"/>
+  <xs:element name="getBalanceReq" nillable="true" type="tns:GetBalanceReq"/>
+  <xs:element name="getBalanceResponse" nillable="true" type="tns:getBalanceResp"/>
+  <xs:element name="transferReq" nillable="true" type="tns:TransferReq"/>
+  <xs:element name="transferResponse" nillable="true" type="tns:transferResp"/>
+  <xs:element name="getBonusInfoReq" nillable="true" type="tns:GetBonusInfoReq"/>
+  <xs:element name="getBonusInfoResponse" nillable="true" type="tns:getBonusInfoResp"/>
+  <xs:element name="getTransactionsReq" nillable="true" type="tns:GetTransactionsReq"/>
+  <xs:element name="getPlayerTransactionsOldResponse" nillable="true" type="tns:getPlayerTransactionsResp"/>
+  <xs:element name="getPlayerTransactionsResponse" nillable="true" type="tns:getPlayerTransactionsResp"/>
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="removePlayerWagerLimit">
+    <wsdl:part element="tns:removePlayerWagerLimit" name="removePlayerWagerLimit">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransactionResponse">
+    <wsdl:part element="tns:getTransactionResponse" name="getTransactionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerTransactionsOldResponse">
+    <wsdl:part element="tns:getPlayerTransactionsOldResponse" name="getPlayerTransactionsOldResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerGamePlaySummary">
+    <wsdl:part element="tns:getPlayerGamePlaySummaryReq" name="getPlayerGamePlaySummaryReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ping">
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletBonusNotFoundException">
+    <wsdl:part element="tns:SecondaryWalletBonusNotFoundException" name="SecondaryWalletBonusNotFoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="triggerDepositBonus">
+    <wsdl:part element="tns:triggerDepositBonusReq" name="triggerDepositBonusReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletAuthorizationFailedException">
+    <wsdl:part element="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doesPlayerExist">
+    <wsdl:part element="tns:doesPlayerExistReq" name="doesPlayerExistReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateRevenueReportResponse">
+    <wsdl:part element="tns:generateRevenueReportResponse" name="generateRevenueReportResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createPlayerResponse">
+    <wsdl:part element="tns:createPlayerResponse" name="createPlayerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePlayerLossLimit">
+    <wsdl:part element="tns:updatePlayerLossLimitReq" name="updatePlayerLossLimitReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePlayerStatusResponse">
+    <wsdl:part element="tns:updatePlayerStatusResponse" name="updatePlayerStatusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerTransactionsResponse">
+    <wsdl:part element="tns:getPlayerTransactionsResponse" name="getPlayerTransactionsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="transferResponse">
+    <wsdl:part element="tns:transferResponse" name="transferResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePlayerLossLimitResponse">
+    <wsdl:part element="tns:removePlayerLossLimitResponse" name="removePlayerLossLimitResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerLimitsResponse">
+    <wsdl:part element="tns:getPlayerLimitsResponse" name="getPlayerLimitsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidPlayerLimitException">
+    <wsdl:part element="tns:SecondaryWalletInvalidPlayerLimitException" name="SecondaryWalletInvalidPlayerLimitException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="transfer2nd">
+    <wsdl:part element="tns:transfer2ndReq" name="transfer2ndReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerComments">
+    <wsdl:part element="tns:getPlayerCommentsReq" name="getPlayerCommentsReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getTransaction">
+    <wsdl:part element="tns:getTransactionReq" name="getTransactionReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidVipStatusException">
+    <wsdl:part element="tns:SecondaryWalletInvalidVipStatusException" name="SecondaryWalletInvalidVipStatusException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginPlayer">
+    <wsdl:part element="tns:loginPlayerReq" name="loginPlayerReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePlayerWagerLimitResponse">
+    <wsdl:part element="tns:removePlayerWagerLimitResponse" name="removePlayerWagerLimitResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletMissingFieldException">
+    <wsdl:part element="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="redeemCouponOrCodedBonusResponse">
+    <wsdl:part element="tns:redeemCouponOrCodedBonusResponse" name="redeemCouponOrCodedBonusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBonusInfoResponse">
+    <wsdl:part element="tns:getBonusInfoResponse" name="getBonusInfoResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGameStatisticsResponse">
+    <wsdl:part element="tns:getGameStatisticsResponse" name="getGameStatisticsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidCountryException">
+    <wsdl:part element="tns:SecondaryWalletInvalidCountryException" name="SecondaryWalletInvalidCountryException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePlayerLossLimitResponse">
+    <wsdl:part element="tns:updatePlayerLossLimitResponse" name="updatePlayerLossLimitResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletDuplicateEmailException">
+    <wsdl:part element="tns:SecondaryWalletDuplicateEmailException" name="SecondaryWalletDuplicateEmailException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletCouponUsedException">
+    <wsdl:part element="tns:SecondaryWalletCouponUsedException" name="SecondaryWalletCouponUsedException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="doesPlayerExistResponse">
+    <wsdl:part element="tns:doesPlayerExistResponse" name="doesPlayerExistResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletIllegalArgumentException">
+    <wsdl:part element="tns:SecondaryWalletIllegalArgumentException" name="SecondaryWalletIllegalArgumentException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBonusInfo">
+    <wsdl:part element="tns:getBonusInfoReq" name="getBonusInfoReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerTransactionsOld">
+    <wsdl:part element="tns:getTransactionsReq" name="getTransactionsReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateVipStatusResponse">
+    <wsdl:part element="tns:updateVipStatusResponse" name="updateVipStatusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingResponse">
+  </wsdl:message>
+  <wsdl:message name="getPlayerGamePlaySummaryResponse">
+    <wsdl:part element="tns:getPlayerGamePlaySummaryResponse" name="getPlayerGamePlaySummaryResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInsufficientFundsException">
+    <wsdl:part element="tns:SecondaryWalletInsufficientFundsException" name="SecondaryWalletInsufficientFundsException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidEmailException">
+    <wsdl:part element="tns:SecondaryWalletInvalidEmailException" name="SecondaryWalletInvalidEmailException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="transfer2ndResponse">
+    <wsdl:part element="tns:transfer2ndResponse" name="transfer2ndResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="redeemCouponOrCodedBonus">
+    <wsdl:part element="tns:redeemBonusReq" name="redeemBonusReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateVipStatus">
+    <wsdl:part element="tns:updateVipStatusReq" name="updateVipStatusReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletBonusRecurringConditionNotMetException">
+    <wsdl:part element="tns:SecondaryWalletBonusRecurringConditionNotMetException" name="SecondaryWalletBonusRecurringConditionNotMetException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createPlayer">
+    <wsdl:part element="tns:createPlayerReq" name="createPlayerReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePlayerWagerLimit">
+    <wsdl:part element="tns:updatePlayerWagerLimitReq" name="updatePlayerWagerLimitReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidLanguageException">
+    <wsdl:part element="tns:SecondaryWalletInvalidLanguageException" name="SecondaryWalletInvalidLanguageException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidPlayerStatusException">
+    <wsdl:part element="tns:SecondaryWalletInvalidPlayerStatusException" name="SecondaryWalletInvalidPlayerStatusException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletUnknownErrorException">
+    <wsdl:part element="tns:SecondaryWalletUnknownErrorException" name="SecondaryWalletUnknownErrorException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerCommentsResponse">
+    <wsdl:part element="tns:getPlayerCommentsResponse" name="getPlayerCommentsResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="loginPlayerResponse">
+    <wsdl:part element="tns:loginPlayerResponse" name="loginPlayerResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletBonusMaxTriggeredException">
+    <wsdl:part element="tns:SecondaryWalletBonusMaxTriggeredException" name="SecondaryWalletBonusMaxTriggeredException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removePlayerLossLimit">
+    <wsdl:part element="tns:removePlayerLossLimit" name="removePlayerLossLimit">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerLimits">
+    <wsdl:part element="tns:getPlayerLimitsReq" name="getPlayerLimitsReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidCurrencyException">
+    <wsdl:part element="tns:SecondaryWalletInvalidCurrencyException" name="SecondaryWalletInvalidCurrencyException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isPlayerSessionAliveResponse">
+    <wsdl:part element="tns:isPlayerSessionAliveResponse" name="isPlayerSessionAliveResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="isPlayerSessionAlive">
+    <wsdl:part element="tns:isPlayerSessionAliveReq" name="isPlayerSessionAliveReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePlayerStatus">
+    <wsdl:part element="tns:updatePlayerStatusReq" name="updatePlayerStatusReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletTooManyRecordException">
+    <wsdl:part element="tns:SecondaryWalletTooManyRecordException" name="SecondaryWalletTooManyRecordException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutSessionResponse">
+    <wsdl:part element="tns:logoutSessionResponse" name="logoutSessionResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidDataUpdateException">
+    <wsdl:part element="tns:SecondaryWalletInvalidDataUpdateException" name="SecondaryWalletInvalidDataUpdateException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidTxnIdException">
+    <wsdl:part element="tns:SecondaryWalletInvalidTxnIdException" name="SecondaryWalletInvalidTxnIdException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutSession">
+    <wsdl:part element="tns:logoutSessionReq" name="logoutSessionReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getGameStatistics">
+    <wsdl:part element="tns:getGameStatistics" name="getGameStatistics">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletPlayerNotFoundException">
+    <wsdl:part element="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletInvalidDateException">
+    <wsdl:part element="tns:SecondaryWalletInvalidDateException" name="SecondaryWalletInvalidDateException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="generateRevenueReport">
+    <wsdl:part element="tns:generateRevenueReportReq" name="generateRevenueReportReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalance">
+    <wsdl:part element="tns:getBalanceReq" name="getBalanceReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="transfer">
+    <wsdl:part element="tns:transferReq" name="transferReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="triggerDepositBonusResponse">
+    <wsdl:part element="tns:triggerDepositBonusResponse" name="triggerDepositBonusResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updatePlayerWagerLimitResponse">
+    <wsdl:part element="tns:updatePlayerWagerLimitResponse" name="updatePlayerWagerLimitResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getBalanceResponse">
+    <wsdl:part element="tns:getBalanceResponse" name="getBalanceResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPlayerTransactions">
+    <wsdl:part element="tns:getTransactionsReq" name="getTransactionsReq">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletAlreadyProcessedException">
+    <wsdl:part element="tns:SecondaryWalletAlreadyProcessedException" name="SecondaryWalletAlreadyProcessedException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SecondaryWalletPlayerExistsException">
+    <wsdl:part element="tns:SecondaryWalletPlayerExistsException" name="SecondaryWalletPlayerExistsException">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SecondaryWalletService">
+    <wsdl:operation name="removePlayerWagerLimit">
+      <wsdl:input message="tns:removePlayerWagerLimit" name="removePlayerWagerLimit">
+    </wsdl:input>
+      <wsdl:output message="tns:removePlayerWagerLimitResponse" name="removePlayerWagerLimitResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerGamePlaySummary">
+      <wsdl:input message="tns:getPlayerGamePlaySummary" name="getPlayerGamePlaySummary">
+    </wsdl:input>
+      <wsdl:output message="tns:getPlayerGamePlaySummaryResponse" name="getPlayerGamePlaySummaryResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:input message="tns:ping" name="ping">
+    </wsdl:input>
+      <wsdl:output message="tns:pingResponse" name="pingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="triggerDepositBonus">
+      <wsdl:input message="tns:triggerDepositBonus" name="triggerDepositBonus">
+    </wsdl:input>
+      <wsdl:output message="tns:triggerDepositBonusResponse" name="triggerDepositBonusResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInsufficientFundsException" name="SecondaryWalletInsufficientFundsException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletUnknownErrorException" name="SecondaryWalletUnknownErrorException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletBonusMaxTriggeredException" name="SecondaryWalletBonusMaxTriggeredException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletBonusNotFoundException" name="SecondaryWalletBonusNotFoundException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCurrencyException" name="SecondaryWalletInvalidCurrencyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletIllegalArgumentException" name="SecondaryWalletIllegalArgumentException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletBonusRecurringConditionNotMetException" name="SecondaryWalletBonusRecurringConditionNotMetException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAlreadyProcessedException" name="SecondaryWalletAlreadyProcessedException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="redeemCouponOrCodedBonus">
+      <wsdl:input message="tns:redeemCouponOrCodedBonus" name="redeemCouponOrCodedBonus">
+    </wsdl:input>
+      <wsdl:output message="tns:redeemCouponOrCodedBonusResponse" name="redeemCouponOrCodedBonusResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletCouponUsedException" name="SecondaryWalletCouponUsedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletBonusMaxTriggeredException" name="SecondaryWalletBonusMaxTriggeredException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletBonusNotFoundException" name="SecondaryWalletBonusNotFoundException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletBonusRecurringConditionNotMetException" name="SecondaryWalletBonusRecurringConditionNotMetException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateVipStatus">
+      <wsdl:input message="tns:updateVipStatus" name="updateVipStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:updateVipStatusResponse" name="updateVipStatusResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInvalidVipStatusException" name="SecondaryWalletInvalidVipStatusException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doesPlayerExist">
+      <wsdl:input message="tns:doesPlayerExist" name="doesPlayerExist">
+    </wsdl:input>
+      <wsdl:output message="tns:doesPlayerExistResponse" name="doesPlayerExistResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPlayer">
+      <wsdl:input message="tns:createPlayer" name="createPlayer">
+    </wsdl:input>
+      <wsdl:output message="tns:createPlayerResponse" name="createPlayerResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCountryException" name="SecondaryWalletInvalidCountryException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletUnknownErrorException" name="SecondaryWalletUnknownErrorException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidEmailException" name="SecondaryWalletInvalidEmailException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCurrencyException" name="SecondaryWalletInvalidCurrencyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidLanguageException" name="SecondaryWalletInvalidLanguageException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerExistsException" name="SecondaryWalletPlayerExistsException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidDateException" name="SecondaryWalletInvalidDateException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerWagerLimit">
+      <wsdl:input message="tns:updatePlayerWagerLimit" name="updatePlayerWagerLimit">
+    </wsdl:input>
+      <wsdl:output message="tns:updatePlayerWagerLimitResponse" name="updatePlayerWagerLimitResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidPlayerLimitException" name="SecondaryWalletInvalidPlayerLimitException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePlayerLossLimit">
+      <wsdl:input message="tns:removePlayerLossLimit" name="removePlayerLossLimit">
+    </wsdl:input>
+      <wsdl:output message="tns:removePlayerLossLimitResponse" name="removePlayerLossLimitResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerLimits">
+      <wsdl:input message="tns:getPlayerLimits" name="getPlayerLimits">
+    </wsdl:input>
+      <wsdl:output message="tns:getPlayerLimitsResponse" name="getPlayerLimitsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerLossLimit">
+      <wsdl:input message="tns:updatePlayerLossLimit" name="updatePlayerLossLimit">
+    </wsdl:input>
+      <wsdl:output message="tns:updatePlayerLossLimitResponse" name="updatePlayerLossLimitResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidPlayerLimitException" name="SecondaryWalletInvalidPlayerLimitException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isPlayerSessionAlive">
+      <wsdl:input message="tns:isPlayerSessionAlive" name="isPlayerSessionAlive">
+    </wsdl:input>
+      <wsdl:output message="tns:isPlayerSessionAliveResponse" name="isPlayerSessionAliveResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerStatus">
+      <wsdl:input message="tns:updatePlayerStatus" name="updatePlayerStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:updatePlayerStatusResponse" name="updatePlayerStatusResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInvalidPlayerStatusException" name="SecondaryWalletInvalidPlayerStatusException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer2nd">
+      <wsdl:input message="tns:transfer2nd" name="transfer2nd">
+    </wsdl:input>
+      <wsdl:output message="tns:transfer2ndResponse" name="transfer2ndResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInsufficientFundsException" name="SecondaryWalletInsufficientFundsException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCurrencyException" name="SecondaryWalletInvalidCurrencyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletIllegalArgumentException" name="SecondaryWalletIllegalArgumentException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerComments">
+      <wsdl:input message="tns:getPlayerComments" name="getPlayerComments">
+    </wsdl:input>
+      <wsdl:output message="tns:getPlayerCommentsResponse" name="getPlayerCommentsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransaction">
+      <wsdl:input message="tns:getTransaction" name="getTransaction">
+    </wsdl:input>
+      <wsdl:output message="tns:getTransactionResponse" name="getTransactionResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInvalidTxnIdException" name="SecondaryWalletInvalidTxnIdException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loginPlayer">
+      <wsdl:input message="tns:loginPlayer" name="loginPlayer">
+    </wsdl:input>
+      <wsdl:output message="tns:loginPlayerResponse" name="loginPlayerResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCountryException" name="SecondaryWalletInvalidCountryException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletUnknownErrorException" name="SecondaryWalletUnknownErrorException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletDuplicateEmailException" name="SecondaryWalletDuplicateEmailException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidEmailException" name="SecondaryWalletInvalidEmailException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCurrencyException" name="SecondaryWalletInvalidCurrencyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidDataUpdateException" name="SecondaryWalletInvalidDataUpdateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidLanguageException" name="SecondaryWalletInvalidLanguageException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidDateException" name="SecondaryWalletInvalidDateException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerExistsException" name="SecondaryWalletPlayerExistsException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="logoutSession">
+      <wsdl:input message="tns:logoutSession" name="logoutSession">
+    </wsdl:input>
+      <wsdl:output message="tns:logoutSessionResponse" name="logoutSessionResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getGameStatistics">
+      <wsdl:input message="tns:getGameStatistics" name="getGameStatistics">
+    </wsdl:input>
+      <wsdl:output message="tns:getGameStatisticsResponse" name="getGameStatisticsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletIllegalArgumentException" name="SecondaryWalletIllegalArgumentException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidDateException" name="SecondaryWalletInvalidDateException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="generateRevenueReport">
+      <wsdl:input message="tns:generateRevenueReport" name="generateRevenueReport">
+    </wsdl:input>
+      <wsdl:output message="tns:generateRevenueReportResponse" name="generateRevenueReportResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidDateException" name="SecondaryWalletInvalidDateException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBalance">
+      <wsdl:input message="tns:getBalance" name="getBalance">
+    </wsdl:input>
+      <wsdl:output message="tns:getBalanceResponse" name="getBalanceResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <wsdl:input message="tns:transfer" name="transfer">
+    </wsdl:input>
+      <wsdl:output message="tns:transferResponse" name="transferResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletInsufficientFundsException" name="SecondaryWalletInsufficientFundsException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletInvalidCurrencyException" name="SecondaryWalletInvalidCurrencyException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletIllegalArgumentException" name="SecondaryWalletIllegalArgumentException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBonusInfo">
+      <wsdl:input message="tns:getBonusInfo" name="getBonusInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getBonusInfoResponse" name="getBonusInfoResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletMissingFieldException" name="SecondaryWalletMissingFieldException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletPlayerNotFoundException" name="SecondaryWalletPlayerNotFoundException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerTransactionsOld">
+      <wsdl:input message="tns:getPlayerTransactionsOld" name="getPlayerTransactionsOld">
+    </wsdl:input>
+      <wsdl:output message="tns:getPlayerTransactionsOldResponse" name="getPlayerTransactionsOldResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletTooManyRecordException" name="SecondaryWalletTooManyRecordException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerTransactions">
+      <wsdl:input message="tns:getPlayerTransactions" name="getPlayerTransactions">
+    </wsdl:input>
+      <wsdl:output message="tns:getPlayerTransactionsResponse" name="getPlayerTransactionsResponse">
+    </wsdl:output>
+      <wsdl:fault message="tns:SecondaryWalletTooManyRecordException" name="SecondaryWalletTooManyRecordException">
+    </wsdl:fault>
+      <wsdl:fault message="tns:SecondaryWalletAuthorizationFailedException" name="SecondaryWalletAuthorizationFailedException">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SecondaryWalletServiceImplServiceSoapBinding" type="tns:SecondaryWalletService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="removePlayerWagerLimit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removePlayerWagerLimit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removePlayerWagerLimitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerGamePlaySummary">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPlayerGamePlaySummary">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPlayerGamePlaySummaryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ping">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="triggerDepositBonus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="triggerDepositBonus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="triggerDepositBonusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInsufficientFundsException">
+        <soap:fault name="SecondaryWalletInsufficientFundsException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletUnknownErrorException">
+        <soap:fault name="SecondaryWalletUnknownErrorException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletBonusMaxTriggeredException">
+        <soap:fault name="SecondaryWalletBonusMaxTriggeredException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletBonusNotFoundException">
+        <soap:fault name="SecondaryWalletBonusNotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidCurrencyException">
+        <soap:fault name="SecondaryWalletInvalidCurrencyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletIllegalArgumentException">
+        <soap:fault name="SecondaryWalletIllegalArgumentException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletBonusRecurringConditionNotMetException">
+        <soap:fault name="SecondaryWalletBonusRecurringConditionNotMetException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAlreadyProcessedException">
+        <soap:fault name="SecondaryWalletAlreadyProcessedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="redeemCouponOrCodedBonus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="redeemCouponOrCodedBonus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="redeemCouponOrCodedBonusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletCouponUsedException">
+        <soap:fault name="SecondaryWalletCouponUsedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletBonusMaxTriggeredException">
+        <soap:fault name="SecondaryWalletBonusMaxTriggeredException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletBonusNotFoundException">
+        <soap:fault name="SecondaryWalletBonusNotFoundException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletBonusRecurringConditionNotMetException">
+        <soap:fault name="SecondaryWalletBonusRecurringConditionNotMetException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updateVipStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateVipStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateVipStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInvalidVipStatusException">
+        <soap:fault name="SecondaryWalletInvalidVipStatusException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="doesPlayerExist">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="doesPlayerExist">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="doesPlayerExistResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerWagerLimit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updatePlayerWagerLimit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePlayerWagerLimitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidPlayerLimitException">
+        <soap:fault name="SecondaryWalletInvalidPlayerLimitException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createPlayer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createPlayer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createPlayerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInvalidCountryException">
+        <soap:fault name="SecondaryWalletInvalidCountryException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletUnknownErrorException">
+        <soap:fault name="SecondaryWalletUnknownErrorException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidEmailException">
+        <soap:fault name="SecondaryWalletInvalidEmailException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidCurrencyException">
+        <soap:fault name="SecondaryWalletInvalidCurrencyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidLanguageException">
+        <soap:fault name="SecondaryWalletInvalidLanguageException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerExistsException">
+        <soap:fault name="SecondaryWalletPlayerExistsException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidDateException">
+        <soap:fault name="SecondaryWalletInvalidDateException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="removePlayerLossLimit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removePlayerLossLimit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removePlayerLossLimitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerLimits">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPlayerLimits">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPlayerLimitsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerLossLimit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updatePlayerLossLimit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePlayerLossLimitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidPlayerLimitException">
+        <soap:fault name="SecondaryWalletInvalidPlayerLimitException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="isPlayerSessionAlive">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="isPlayerSessionAlive">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="isPlayerSessionAliveResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="updatePlayerStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updatePlayerStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updatePlayerStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInvalidPlayerStatusException">
+        <soap:fault name="SecondaryWalletInvalidPlayerStatusException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer2nd">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="transfer2nd">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transfer2ndResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInsufficientFundsException">
+        <soap:fault name="SecondaryWalletInsufficientFundsException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidCurrencyException">
+        <soap:fault name="SecondaryWalletInvalidCurrencyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletIllegalArgumentException">
+        <soap:fault name="SecondaryWalletIllegalArgumentException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerComments">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPlayerComments">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPlayerCommentsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTransaction">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getTransaction">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getTransactionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInvalidTxnIdException">
+        <soap:fault name="SecondaryWalletInvalidTxnIdException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="loginPlayer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="loginPlayer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="loginPlayerResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInvalidCountryException">
+        <soap:fault name="SecondaryWalletInvalidCountryException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletUnknownErrorException">
+        <soap:fault name="SecondaryWalletUnknownErrorException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletDuplicateEmailException">
+        <soap:fault name="SecondaryWalletDuplicateEmailException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidEmailException">
+        <soap:fault name="SecondaryWalletInvalidEmailException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidCurrencyException">
+        <soap:fault name="SecondaryWalletInvalidCurrencyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidDataUpdateException">
+        <soap:fault name="SecondaryWalletInvalidDataUpdateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidLanguageException">
+        <soap:fault name="SecondaryWalletInvalidLanguageException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidDateException">
+        <soap:fault name="SecondaryWalletInvalidDateException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerExistsException">
+        <soap:fault name="SecondaryWalletPlayerExistsException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="logoutSession">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="logoutSession">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="logoutSessionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getGameStatistics">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getGameStatistics">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getGameStatisticsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletIllegalArgumentException">
+        <soap:fault name="SecondaryWalletIllegalArgumentException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidDateException">
+        <soap:fault name="SecondaryWalletInvalidDateException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="generateRevenueReport">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="generateRevenueReport">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="generateRevenueReportResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidDateException">
+        <soap:fault name="SecondaryWalletInvalidDateException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBalance">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getBalance">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBalanceResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="transfer">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="transfer">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="transferResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletInsufficientFundsException">
+        <soap:fault name="SecondaryWalletInsufficientFundsException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletInvalidCurrencyException">
+        <soap:fault name="SecondaryWalletInvalidCurrencyException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletIllegalArgumentException">
+        <soap:fault name="SecondaryWalletIllegalArgumentException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getBonusInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getBonusInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getBonusInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletMissingFieldException">
+        <soap:fault name="SecondaryWalletMissingFieldException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletPlayerNotFoundException">
+        <soap:fault name="SecondaryWalletPlayerNotFoundException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerTransactionsOld">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPlayerTransactionsOld">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPlayerTransactionsOldResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletTooManyRecordException">
+        <soap:fault name="SecondaryWalletTooManyRecordException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPlayerTransactions">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPlayerTransactions">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPlayerTransactionsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SecondaryWalletTooManyRecordException">
+        <soap:fault name="SecondaryWalletTooManyRecordException" use="literal"/>
+      </wsdl:fault>
+      <wsdl:fault name="SecondaryWalletAuthorizationFailedException">
+        <soap:fault name="SecondaryWalletAuthorizationFailedException" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SecondaryWalletServiceImplService">
+    <wsdl:port binding="tns:SecondaryWalletServiceImplServiceSoapBinding" name="SecondaryWalletServiceImplPort">
+      <soap:address location="https://connect.adminfg.com/omegaconnect/cxf/SecondaryWallet"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

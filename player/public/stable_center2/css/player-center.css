@@ -1,0 +1,209 @@
+/* Player Center Navigation */
+.main-navigation .navbar.navbar-inverse .player-center{
+	background: rgba(0,0,0,0.8);
+	color: #fff;
+	min-height: 40px;
+}
+
+	.main-navigation .navbar.navbar-inverse .player-center ul{
+		margin-right: -10px;
+	}
+
+	.main-navigation .navbar.navbar-inverse .player-center ul li{
+		padding: 0 10px;
+	}
+
+	.main-navigation .navbar.navbar-inverse .player-center ul li.obg{
+		background: #ff9600;
+	}
+
+	.main-navigation .navbar.navbar-inverse .player-center ul li a{
+		color: #fff;
+		display: block;
+		font-size: 12px;
+		line-height: 40px;
+	}
+/* End of Player Center Navigation */
+
+/* ==============================================================================================================================
+Player Center 
+============================================================================================================================== */
+.overview{
+	background: #fff;
+}
+	.overview .profile{
+		background: #f5f5f5;
+		max-height: 100%;
+	}
+
+	.overview .player-name{
+		border-bottom: 1px solid rgba(0,0,0,0.04);
+		font-size: 20px;
+		height: 60px;
+		line-height: 60px;
+	}
+
+.overview .points p{
+	font-size: 12px;
+	margin-bottom: 0;
+}
+
+	.overview .points .pts-overview{
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		height: 60px;
+		margin-bottom: 10px;
+	}
+
+	.overview .points .pts-overview p{
+		line-height: 60px;
+	}
+
+	.overview .points .vip-status{
+		color: #ff9600;
+		font-size: 35px;
+		font-weight: 700;
+		line-height: 35px;
+	}
+
+	.overview .points .vip-status span{
+		color: #1c1c1c;
+		font-weight: normal;
+	}
+
+.overview .privilege{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	height: 60px;
+}
+
+.overview .privilege p{
+	font-size: 12px;
+	line-height: 60px;	
+}
+
+.overview .privilege-icon{
+
+}
+
+	.overview .privilege-icon i{
+		cursor: pointer;
+	}
+
+
+
+/* 05 Modals
+===================== */
+.modal-backdrop.in{
+	filter: alpha(opacity=70);
+	opacity: .7;
+}
+
+.cstm-mod .modal-content{
+	border-radius: 3px;
+}
+
+.cstm-mod .modal-content .modal-header{
+	border-bottom: none;
+}
+
+.cstm-mod .modal-content .modal-header .close{
+	position: absolute;
+	right: 15px;
+	top: 15px;
+}
+
+.cstm-mod .modal-content .modal-header .modal-title{
+	color: #ff9600;
+}
+
+.cstm-mod .modal-content .modal-body .form-group{
+	min-height: 34px;
+	margin-bottom: 20px;
+}
+
+.cstm-mod .forgot-pass{
+	background: #949494;
+	border-radius: 3px;
+	color: #fff;
+	font-size: 12px;
+	position: absolute;
+	z-index: 1;
+	padding: 5px;
+	right: 0;
+	top: 2px;
+	-webkit-transition: all linear 0.3s; /* Safari */
+	transition: all linear 0.3s;		
+}
+
+.cstm-mod .forgot-pass:hover{
+	background: #ccc;
+}
+
+.cstm-mod .modal-content .modal-body input[type="text"], .cstm-mod .modal-content .modal-body input[type="password"]{
+	border-top: 0;
+	border-left: 0 !important;
+	border-right: 0;
+	box-shadow: none;
+	border-radius: 0;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	background: transparent;
+	text-indent: 20px;
+}	
+
+.cstm-mod .modal-content .modal-body .btn-primary{
+	background: #ff9600;
+	border: #ff9600;
+	color: #fff;
+	font-size: 18px;
+	padding: 10px 0;
+	width: 100%;
+	-webkit-transition: all linear 0.3s; /* Safari */
+	transition: all linear 0.3s;
+}
+
+.cstm-mod .modal-content .modal-body .btn-primary:hover{
+	background: #949494;
+	border: #949494;
+	color: #fff;
+}
+
+.cstm-mod .modal-content .modal-body .form-group label{
+	color: #949494;
+	left: 10px;
+	margin: 0;
+	position: relative;
+	top: 8px;
+}
+
+/* ==============================================================================================================================
+Login 
+============================================================================================================================== */
+.login-mod{
+	margin: 20px auto;
+	width: 350px;
+}
+
+/* ============================================================================================================================== 
+Registration 
+============================================================================================================================== */
+.registration-mod{
+	margin: 20px auto;
+	width: 450px;
+}
+
+.error-class{
+	background: rgb(255, 245, 169);
+    border-bottom: 1px solid #f70e0e !important;
+}
+
+.error-message {
+    color: #f70e0e;
+    padding: 10px;
+}
+
+.captcha{
+	float: right;
+    position: relative;
+    bottom: 10px;
+}

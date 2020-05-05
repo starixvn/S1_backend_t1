@@ -1,0 +1,411 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://mgsops.net/AdminAPI_ItalyPlayer" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" targetNamespace="http://mgsops.net/AdminAPI_ItalyPlayer" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mgsops.net/AdminAPI_ItalyPlayer/Imports">
+      <xsd:import namespace="http://mgsops.net/AdminAPI_ItalyPlayer" schemaLocation="mgsops.net.AdminAPI_ItalyPlayer.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Common" schemaLocation="Orion.Common.xsd" />
+      <xsd:import namespace="http://tempuri.org/" schemaLocation="tempuri.org.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" schemaLocation="schemas.microsoft.com.2003.10.Serialization.xsd" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" schemaLocation="Orion.Contracts.VanguardAdmin.DataStructures.xsd" />
+      <xsd:import namespace="http://mgsops.net/AdminAPI_Admin" schemaLocation="mgsops.net.AdminAPI_Admin.xsd" />
+      <xsd:import namespace="http://mgsops.net/AdminAPI_Gaming/" schemaLocation="mgsops.net.AdminAPI_Gaming.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" schemaLocation="Orion.Contracts.PlayerAdmin.DataStructures.xsd" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" schemaLocation="Orion.Contracts.Italy.PlayerAdmin.DataStructures.xsd" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPlayerAdmin_GetSingleGamingGroupLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleGamingGroupLimit" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetSingleGamingGroupLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSingleGamingGroupLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetSingleGamingGroupLimit_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q1:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetUserAccountStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetUserAccountStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserAccountStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetUserAccountStatus_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q2:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionSystemSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProtectionSystemSetting" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionSystemSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProtectionSystemSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionSystemSetting_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q3:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionUserSetting_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProtectionUserSetting" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionUserSetting_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProtectionUserSettingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionUserSetting_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q4:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionActivityStatement_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProtectionActivityStatement" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionActivityStatement_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerProtectionActivityStatementResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerProtectionActivityStatement_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q5:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetGamePlayExclusionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamePlayExclusionTypes" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetGamePlayExclusionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGamePlayExclusionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetGamePlayExclusionTypes_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q6:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPeriodTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeriodTypes" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPeriodTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPeriodTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPeriodTypes_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q7:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetSettingTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingTypes" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetSettingTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetSettingTypes_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q8:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerPurchaseLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerPurchaseLimit" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerPurchaseLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerPurchaseLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerPurchaseLimit_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q9:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_SetPlayerPurchaseLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPlayerPurchaseLimit" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_SetPlayerPurchaseLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPlayerPurchaseLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_SetPlayerPurchaseLimit_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q10:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetValidatedUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidatedUserId" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetValidatedUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetValidatedUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetValidatedUserId_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q11:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerDataBasic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerDataBasic" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerDataBasic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerDataBasicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerDataBasic_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q12:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetUserIdFromSigninNameOrLoginName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdFromSigninNameOrLoginName" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetUserIdFromSigninNameOrLoginName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserIdFromSigninNameOrLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetUserIdFromSigninNameOrLoginName_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q13:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_UpdateUserTokenStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserTokenStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_UpdateUserTokenStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserTokenStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_UpdateUserTokenStatus_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q14:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerLimits_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerLimits" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerLimits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlayerLimitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetPlayerLimits_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q15:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_SetPlayerLimits_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetPlayerLimits" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_SetPlayerLimits_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetPlayerLimitsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_SetPlayerLimits_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q16:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_UpdateGamePlayExclusion_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGamePlayExclusion" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_UpdateGamePlayExclusion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateGamePlayExclusionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_UpdateGamePlayExclusion_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q17:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_AddGamePlayExclusion_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddGamePlayExclusion" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_AddGamePlayExclusion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddGamePlayExclusionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_AddGamePlayExclusion_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q18:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_IsPlayerExcluded_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPlayerExcluded" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_IsPlayerExcluded_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPlayerExcludedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_IsPlayerExcluded_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q19:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetCurrencyDisplayFormat_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyDisplayFormat" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetCurrencyDisplayFormat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyDisplayFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetCurrencyDisplayFormat_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q20:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetCurrencyForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyForUser" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetCurrencyForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCurrencyForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetCurrencyForUser_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q21:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetResponsibleGamingTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponsibleGamingTest" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetResponsibleGamingTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetResponsibleGamingTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetResponsibleGamingTest_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q22:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_AnswerResponsibleGamingTest_InputMessage">
+    <wsdl:part name="parameters" element="tns:AnswerResponsibleGamingTest" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_AnswerResponsibleGamingTest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AnswerResponsibleGamingTestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_AnswerResponsibleGamingTest_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q23:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetLinkedAccountsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinkedAccountsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetLinkedAccountsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLinkedAccountsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetLinkedAccountsForUser_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q24:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetLastLimitsIncreaseAndCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastLimitsIncreaseAndCount" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetLastLimitsIncreaseAndCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLastLimitsIncreaseAndCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_GetLastLimitsIncreaseAndCount_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q25:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_RemovePendingPurchaseDWMLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePendingPurchaseDWMLimit" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_RemovePendingPurchaseDWMLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePendingPurchaseDWMLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_RemovePendingPurchaseDWMLimit_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q26:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_FlushPendingPurchaseDWMLimitPerUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:FlushPendingPurchaseDWMLimitPerUser" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_FlushPendingPurchaseDWMLimitPerUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FlushPendingPurchaseDWMLimitPerUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_FlushPendingPurchaseDWMLimitPerUser_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q27:CustomFault" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_RGLLimitsNotification_InputMessage">
+    <wsdl:part name="parameters" element="tns:RGLLimitsNotification" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_RGLLimitsNotification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RGLLimitsNotificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlayerAdmin_RGLLimitsNotification_CustomFaultFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/Orion.Common" name="detail" element="q28:CustomFault" />
+  </wsdl:message>
+  <wsdl:portType name="IPlayerAdmin">
+    <wsdl:operation name="GetSingleGamingGroupLimit">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSingleGamingGroupLimit" message="tns:IPlayerAdmin_GetSingleGamingGroupLimit_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSingleGamingGroupLimitResponse" message="tns:IPlayerAdmin_GetSingleGamingGroupLimit_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSingleGamingGroupLimitCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetSingleGamingGroupLimit_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAccountStatus">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserAccountStatus" message="tns:IPlayerAdmin_GetUserAccountStatus_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserAccountStatusResponse" message="tns:IPlayerAdmin_GetUserAccountStatus_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserAccountStatusCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetUserAccountStatus_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProtectionSystemSetting">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionSystemSetting" message="tns:IPlayerAdmin_GetPlayerProtectionSystemSetting_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionSystemSettingResponse" message="tns:IPlayerAdmin_GetPlayerProtectionSystemSetting_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionSystemSettingCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPlayerProtectionSystemSetting_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProtectionUserSetting">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionUserSetting" message="tns:IPlayerAdmin_GetPlayerProtectionUserSetting_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionUserSettingResponse" message="tns:IPlayerAdmin_GetPlayerProtectionUserSetting_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionUserSettingCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPlayerProtectionUserSetting_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerProtectionActivityStatement">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionActivityStatement" message="tns:IPlayerAdmin_GetPlayerProtectionActivityStatement_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionActivityStatementResponse" message="tns:IPlayerAdmin_GetPlayerProtectionActivityStatement_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerProtectionActivityStatementCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPlayerProtectionActivityStatement_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGamePlayExclusionTypes">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetGamePlayExclusionTypes" message="tns:IPlayerAdmin_GetGamePlayExclusionTypes_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetGamePlayExclusionTypesResponse" message="tns:IPlayerAdmin_GetGamePlayExclusionTypes_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetGamePlayExclusionTypesCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetGamePlayExclusionTypes_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPeriodTypes">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPeriodTypes" message="tns:IPlayerAdmin_GetPeriodTypes_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPeriodTypesResponse" message="tns:IPlayerAdmin_GetPeriodTypes_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPeriodTypesCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPeriodTypes_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettingTypes">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSettingTypes" message="tns:IPlayerAdmin_GetSettingTypes_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSettingTypesResponse" message="tns:IPlayerAdmin_GetSettingTypes_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetSettingTypesCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetSettingTypes_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerPurchaseLimit">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerPurchaseLimit" message="tns:IPlayerAdmin_GetPlayerPurchaseLimit_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerPurchaseLimitResponse" message="tns:IPlayerAdmin_GetPlayerPurchaseLimit_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerPurchaseLimitCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPlayerPurchaseLimit_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerPurchaseLimit">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerPurchaseLimit" message="tns:IPlayerAdmin_SetPlayerPurchaseLimit_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerPurchaseLimitResponse" message="tns:IPlayerAdmin_SetPlayerPurchaseLimit_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerPurchaseLimitCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_SetPlayerPurchaseLimit_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValidatedUserId">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetValidatedUserId" message="tns:IPlayerAdmin_GetValidatedUserId_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetValidatedUserIdResponse" message="tns:IPlayerAdmin_GetValidatedUserId_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetValidatedUserIdCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetValidatedUserId_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerDataBasic">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerDataBasic" message="tns:IPlayerAdmin_GetPlayerDataBasic_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerDataBasicResponse" message="tns:IPlayerAdmin_GetPlayerDataBasic_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerDataBasicCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPlayerDataBasic_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserIdFromSigninNameOrLoginName">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserIdFromSigninNameOrLoginName" message="tns:IPlayerAdmin_GetUserIdFromSigninNameOrLoginName_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserIdFromSigninNameOrLoginNameResponse" message="tns:IPlayerAdmin_GetUserIdFromSigninNameOrLoginName_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetUserIdFromSigninNameOrLoginNameCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetUserIdFromSigninNameOrLoginName_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUserTokenStatus">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateUserTokenStatus" message="tns:IPlayerAdmin_UpdateUserTokenStatus_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateUserTokenStatusResponse" message="tns:IPlayerAdmin_UpdateUserTokenStatus_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateUserTokenStatusCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_UpdateUserTokenStatus_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerLimits">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerLimits" message="tns:IPlayerAdmin_GetPlayerLimits_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerLimitsResponse" message="tns:IPlayerAdmin_GetPlayerLimits_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetPlayerLimitsCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetPlayerLimits_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetPlayerLimits">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerLimits" message="tns:IPlayerAdmin_SetPlayerLimits_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerLimitsResponse" message="tns:IPlayerAdmin_SetPlayerLimits_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/SetPlayerLimitsCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_SetPlayerLimits_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateGamePlayExclusion">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateGamePlayExclusion" message="tns:IPlayerAdmin_UpdateGamePlayExclusion_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateGamePlayExclusionResponse" message="tns:IPlayerAdmin_UpdateGamePlayExclusion_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/UpdateGamePlayExclusionCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_UpdateGamePlayExclusion_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddGamePlayExclusion">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AddGamePlayExclusion" message="tns:IPlayerAdmin_AddGamePlayExclusion_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AddGamePlayExclusionResponse" message="tns:IPlayerAdmin_AddGamePlayExclusion_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AddGamePlayExclusionCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_AddGamePlayExclusion_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPlayerExcluded">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/IsPlayerExcluded" message="tns:IPlayerAdmin_IsPlayerExcluded_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/IsPlayerExcludedResponse" message="tns:IPlayerAdmin_IsPlayerExcluded_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/IsPlayerExcludedCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_IsPlayerExcluded_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyDisplayFormat">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyDisplayFormat" message="tns:IPlayerAdmin_GetCurrencyDisplayFormat_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyDisplayFormatResponse" message="tns:IPlayerAdmin_GetCurrencyDisplayFormat_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyDisplayFormatCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetCurrencyDisplayFormat_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrencyForUser">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyForUser" message="tns:IPlayerAdmin_GetCurrencyForUser_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyForUserResponse" message="tns:IPlayerAdmin_GetCurrencyForUser_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetCurrencyForUserCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetCurrencyForUser_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetResponsibleGamingTest">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetResponsibleGamingTest" message="tns:IPlayerAdmin_GetResponsibleGamingTest_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetResponsibleGamingTestResponse" message="tns:IPlayerAdmin_GetResponsibleGamingTest_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetResponsibleGamingTestCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetResponsibleGamingTest_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AnswerResponsibleGamingTest">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AnswerResponsibleGamingTest" message="tns:IPlayerAdmin_AnswerResponsibleGamingTest_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AnswerResponsibleGamingTestResponse" message="tns:IPlayerAdmin_AnswerResponsibleGamingTest_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/AnswerResponsibleGamingTestCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_AnswerResponsibleGamingTest_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLinkedAccountsForUser">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLinkedAccountsForUser" message="tns:IPlayerAdmin_GetLinkedAccountsForUser_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLinkedAccountsForUserResponse" message="tns:IPlayerAdmin_GetLinkedAccountsForUser_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLinkedAccountsForUserCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetLinkedAccountsForUser_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLastLimitsIncreaseAndCount">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLastLimitsIncreaseAndCount" message="tns:IPlayerAdmin_GetLastLimitsIncreaseAndCount_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLastLimitsIncreaseAndCountResponse" message="tns:IPlayerAdmin_GetLastLimitsIncreaseAndCount_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/GetLastLimitsIncreaseAndCountCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_GetLastLimitsIncreaseAndCount_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePendingPurchaseDWMLimit">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RemovePendingPurchaseDWMLimit" message="tns:IPlayerAdmin_RemovePendingPurchaseDWMLimit_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RemovePendingPurchaseDWMLimitResponse" message="tns:IPlayerAdmin_RemovePendingPurchaseDWMLimit_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RemovePendingPurchaseDWMLimitCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_RemovePendingPurchaseDWMLimit_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FlushPendingPurchaseDWMLimitPerUser">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/FlushPendingPurchaseDWMLimitPerUser" message="tns:IPlayerAdmin_FlushPendingPurchaseDWMLimitPerUser_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/FlushPendingPurchaseDWMLimitPerUserResponse" message="tns:IPlayerAdmin_FlushPendingPurchaseDWMLimitPerUser_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/FlushPendingPurchaseDWMLimitPerUserCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_FlushPendingPurchaseDWMLimitPerUser_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RGLLimitsNotification">
+      <wsdl:input wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RGLLimitsNotification" message="tns:IPlayerAdmin_RGLLimitsNotification_InputMessage" />
+      <wsdl:output wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RGLLimitsNotificationResponse" message="tns:IPlayerAdmin_RGLLimitsNotification_OutputMessage" />
+      <wsdl:fault wsam:Action="http://mgsops.net/AdminAPI_ItalyPlayer/IPlayerAdmin/RGLLimitsNotificationCustomFaultFault" name="CustomFaultFault" message="tns:IPlayerAdmin_RGLLimitsNotification_CustomFaultFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

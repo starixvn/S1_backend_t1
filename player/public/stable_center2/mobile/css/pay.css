@@ -1,0 +1,309 @@
+﻿li {
+    list-style: none;
+}
+
+.none {
+    display: none;
+}
+
+.ova {
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.gonghangInfoText .gl_info_n {
+    padding-left: 0;
+}
+
+.y_gonghangInfo {
+    width: 510px;
+    margin-top: 30px;
+}
+
+.y_gonghangInfoText {
+    width: 460px;
+    padding-left: 0;
+}
+
+    .y_gonghangInfoText strong {
+        color: #505050;
+    }
+
+.y_zj_cont_input_num {
+    width: 220px;
+}
+
+    .y_zj_cont_input_num select {
+        width: 100%;
+    }
+
+.gl_pay_box {
+    font-family: "微软雅黑";
+    padding-bottom: 6px;
+}
+
+    .gl_pay_box .gl_pay_add {
+        float: left;
+        width: 220px;
+        margin-left: -6px;
+        display: inline;
+        padding: 5px 5px 10px;
+        box-shadow: 0px 0px 4px 0px rgba(4,0,0,0.2);
+        margin-right: 5px;
+    }
+
+        .gl_pay_box .gl_pay_add .gl_pay_ipt {
+            box-sizing: border-box;
+            width: 100%;
+            height: 36px;
+            border: 1px solid #d2d2d2;
+            margin-bottom: 15px;
+            padding: 0 0 0 13px;
+            line-height: 34px;
+            color: #8c8c8c;
+            border-radius: 3px;
+        }
+
+            .gl_pay_box .gl_pay_add .gl_pay_ipt:-webkit-input-placeholder {
+                color: #8c8c8c;
+            }
+
+        .gl_pay_box .gl_pay_add .gl_pay_i {
+            padding-left: 33px;
+            background: url(../images/gl_pay.jpg) 7px 7px no-repeat;
+        }
+
+        .gl_pay_box .gl_pay_add .gl_pay_txt {
+            margin-left: 5px;
+            margin-top: -10px;
+            position: relative;
+            z-index: 5;
+            color: #cd232d;
+        }
+
+    .gl_pay_box .gl_ipt_add {
+        float: left;
+        width: 218px;
+        height: 86px;
+        margin-top: 5px;
+        border: 1px solid #e8e8e8;
+        text-align: center;
+        line-height: 86px;
+        font-size: 14px;
+        color: #8c8c8c;
+        background-color: #fff;
+        border-radius: 3px;
+    }
+
+        .gl_pay_box .gl_ipt_add span {
+            position: relative;
+            top: 3px;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+            background: url(../images/gl_add.jpg) left top no-repeat;
+        }
+
+    .gl_pay_box .gl_pay_add select {
+        width: 100%;
+        font-size: 14px;
+        font-family: "微软雅黑", "黑体";
+        color: #8c8c8c;
+    }
+
+    .gl_pay_box .gl_pay {
+        position: relative;
+        float: left;
+        width: 220px;
+        height: 61px;
+        margin: 4px 8px 0 -1px;
+        padding-top: 25px;
+        background: #fff;
+        border-radius: 3px;
+        border: 1px solid #e8e8e8;
+    }
+
+        .gl_pay_box .gl_pay span {
+            position: absolute;
+            left: 36px;
+            top: 25px;
+            width: 44px;
+            height: 44px;
+            background: url(../images/gl_pay_b.jpg) left top no-repeat;
+        }
+
+        .gl_pay_box .gl_pay p {
+            padding: 0 0 0 86px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .gl_pay_box .gl_pay .gl_ids {
+            width: 120px;
+            height: 16px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #8c8c8c;
+            word-wrap: break-word;
+        }
+
+    .gl_pay_box .gl_pay_cur {
+        position: relative;
+        float: left;
+        width: 220px;
+        height: 61px;
+        margin: 4px 8px 0 -1px;
+        padding-top: 25px;
+        background: url(../images/gl_pay_i.jpg) right bottom no-repeat #fff;
+        border-radius: 3px;
+        border: 1px solid #cd232d;
+    }
+
+        .gl_pay_box .gl_pay_cur span {
+            position: absolute;
+            left: 36px;
+            top: 25px;
+            width: 44px;
+            height: 44px;
+            background: url(../images/gl_pay_b.jpg) left top no-repeat;
+        }
+
+        .gl_pay_box .gl_pay_cur p {
+            padding: 0 0 0 86px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .gl_pay_box .gl_pay_cur .gl_ids {
+            width: 120px;
+            height: 16px;
+            overflow: hidden;
+            font-size: 12px;
+            color: #8c8c8c;
+            word-wrap: break-word;
+        }
+
+.gl_info_text {
+    clear: both;
+    font-size: 12px;
+    color: #8c8c8c;
+    line-height: 14px;
+    padding-top: 8px;
+}
+
+    .gl_info_text a {
+        color: #2d98f3;
+        text-decoration: underline;
+    }
+
+.gl_alt_01 {
+    position: relative;
+    width: 700px;
+    height: 490px;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: center;
+    font-family: "微软雅黑";
+}
+
+    .gl_alt_01 a {
+        color: #2d98f3;
+        text-decoration: underline;
+    }
+
+        .gl_alt_01 a:hover {
+            color: #cd232d;
+            text-decoration: none;
+        }
+
+    .gl_alt_01 .gl_close {
+        position: absolute;
+        right: 26px;
+        top: 26px;
+        width: 32px;
+        height: 32px;
+        float: left;
+        background: url(../images/btnclosepopup.png);
+        cursor: pointer;
+        transition: 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+        .gl_alt_01 .gl_close:hover {
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+
+    .gl_alt_01 img {
+        margin-top: 60px;
+        vertical-align: top;
+    }
+
+    .gl_alt_01 p {
+        padding: 16px 0 38px;
+        font-size: 14px;
+        color: #505050;
+    }
+
+    .gl_alt_01 .gl_ipt_close {
+        display: block;
+        margin: 0 auto;
+        width: 284px;
+        height: 34px;
+        border: 1px solid #bc010c;
+        border-radius: 3px;
+        background-color: #cd232d;
+        text-align: center;
+        line-height: 34px;
+        color: #fff;
+        font-size: 14px;
+    }
+
+.y_zjck_butt {
+    padding-top: 13px;
+}
+
+.deposit_failstate {
+    width: 1200px;
+    height: 480px;
+    background: url(../images/deposit_failstate_bg.png) no-repeat;
+}
+
+    .deposit_failstate a {
+        display: block;
+        width: 125px;
+        height: 40px;
+    }
+
+    .deposit_failstate .btn_reflash {
+        position: relative;
+        left: 470px;
+        top: 375px;
+        background: url(../images/deposit_failstate_btn.png) no-repeat;
+    }
+
+    .deposit_failstate .btn_customer {
+        position: relative;
+        left: 610px;
+        top: 335px;
+        background: url(../images/deposit_failstate_btn.png) -137px 0px no-repeat;
+    }
+
+    .deposit_failstate span {
+        margin: 0px;
+        width: 380px;
+        display: block;
+        font-size: 16px;
+        line-height: 30px;
+        color: #8c8c8c;
+        position: relative;
+        top: 300px;
+        left: 410px;
+        text-align: center;
+    }

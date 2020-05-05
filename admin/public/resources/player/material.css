@@ -1,0 +1,1274 @@
+/* =============================================== */
+/* MessageBox */
+/* =============================================== */
+.t1t-ui.t1t-message-box.modal {
+    z-index: 10000050;
+}
+
+.t1t-ui.t1t-message-box.modal .modal-content {
+    padding: 0;
+}
+
+.t1t-ui.t1t-message-box.modal .modal-body {
+    color: #000;
+}
+
+.t1t-ui.t1t-message-box.modal-backdrop {
+    z-index: 10000000;
+}
+
+/* =============================================== */
+/* Notify */
+/* =============================================== */
+.t1t-notify {
+    width: 30vw;
+}
+
+.t1t-notify .t1t-notify-body {
+    position: relative;
+}
+
+.t1t-notify .t1t-notify-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    padding-right: 5px;
+}
+
+.t1t-notify .t1t-notify-title {
+    padding-left: 3rem;
+    font-weight: bold;
+    font-style: oblique;
+    font-size: 1.2em;
+}
+
+.t1t-notify .t1t-notify-message {
+    padding-left: 3rem;
+    word-break: break-all;
+}
+
+.t1t-notify .progress {
+    height: 0.5em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+}
+
+@media only screen and (max-width: 960px) {
+    .t1t-notify {
+        width: calc(100vw - 40px);
+    }
+}
+
+/* =============================================== */
+/* Loader */
+/* =============================================== */
+.loader_parent_absolute {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.loader_parent_relative {
+    position: relative;
+}
+
+.loader {
+    display: table;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 65535;
+}
+
+.loader_vertical_helper {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.loader_content {
+    display: inline-block;
+    width: 100%;
+    min-height: 20vw;
+    text-align: center;
+}
+
+.loader_animation {
+    box-sizing: content-box;
+    border: 3vw solid #f3f3f3;
+    border-top: 3vw solid #666;
+    border-bottom: 3vw solid #666;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto;
+    animation: loader_rotating 2s linear infinite;
+}
+
+.loader_text {
+    width: 100%;
+    height: 10vw;
+    font-size: 5vw;
+    line-height: 10vw;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+@media (min-width: 576px) {
+    .loader_content {
+        min-height: 20vw;
+    }
+
+    .loader_animation {
+        border-width: 3vw;
+        border-top-width: 3vw;
+        border-bottom-width: 3vw;
+        width: 10vw;
+        height: 10vw;
+    }
+
+    .loader_text {
+        height: 10vw;
+        font-size: 5vw;
+        line-height: 10vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .loader_content {
+        min-height: 15vw;
+    }
+
+    .loader_animation {
+        border-width: 1.75vw;
+        border-top-width: 1.75vw;
+        border-bottom-width: 1.75vw;
+        width: 7.5vw;
+        height: 7.5vw;
+    }
+
+    .loader_text {
+        height: 7.5vw;
+        font-size: 3.75vw;
+        line-height: 7.5vw;
+    }
+}
+
+@media (min-width: 992px) {
+    .loader_content {
+        min-height: 10vw;
+    }
+
+    .loader_animation {
+        border-width: 1.25vw;
+        border-top-width: 1.25vw;
+        border-bottom-width: 1.25vw;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .loader_text {
+        height: 5vw;
+        font-size: 2.5vw;
+        line-height: 5vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .loader_content {
+        min-height: 5vw;
+    }
+
+    .loader_animation {
+        border-width: 0.75vw;
+        border-top-width: 0.75vw;
+        border-bottom-width: 0.75vw;
+        width: 2.5vw;
+        height: 2.5vw;
+    }
+
+    .loader_text {
+        height: 2.5vw;
+        font-size: 1.25vw;
+        line-height: 2.5vw;
+    }
+}
+
+@-webkit-keyframes loader_rotating {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+/* =============================================== */
+/* Game preloader */
+/* =============================================== */
+.t1t_game_preloader_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+
+    display: none;
+    overflow: hidden;
+
+    background-color: #FFF;
+
+    z-index: 10000;
+}
+
+.t1t_game_preloader_container.active {
+    display: block;
+}
+
+.t1t_game_preloader {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+
+    background-color: #FFF;
+}
+.t1t_game_preloader_loader_wrapper {
+    position: absolute;
+    margin: 5em auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 16em;
+    height: 16em;
+}
+.t1t_game_preloader_loader .ball {
+    position: absolute;
+    /* background: rgba(0,0,255,.5); */
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.t1t_game_preloader_loader .ball span {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #C00;
+    color: #FFF;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    font-size: 30px;
+    line-height: 80px;
+    text-align: center;
+    font-weight: bold;
+}
+.t1t_game_preloader_loader .ball span:before {
+    content: "";
+    position: absolute;
+    background: radial-gradient(circle at 50% 120%,  rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0) 70%);
+    border-radius: 50%;
+    bottom: 2.5%;
+    left: 5%;
+    opacity: 0.6;
+    height: 100%;
+    width: 90%;
+    -webkit-filter: blur(5px);
+    z-index: 2;
+}
+.t1t_game_preloader_loader .ball span:after {
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%,  rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    -webkit-transform: translateX(-25%) translateY(-30%) skewX(-20deg);
+    -moz-transform: translateX(-25%) translateY(-30%) skewX(-20deg);
+    -ms-transform: translateX(-25%) translateY(-30%) skewX(-20deg);
+    -o-transform: translateX(-25%) translateY(-30%) skewX(-20deg);
+    transform: translateX(-25%) translateY(-30%) skewX(-20deg);
+    -webkit-filter: blur(10px);
+}
+.t1t_game_preloader_loader .ball-1 {
+    animation: t1t_game_preloader_loader_zindex 1.5s 0.75s infinite steps(2, end);
+}
+.t1t_game_preloader_loader .ball-2 {
+    transform: rotate(120deg);
+    animation: t1t_game_preloader_loader_zindex 1.5s -0.25s infinite steps(2, end);
+}
+.t1t_game_preloader_loader .ball-3 {
+    transform: rotate(240deg);
+    animation: t1t_game_preloader_loader_zindex 1.5s 0.25s infinite steps(2, end);
+}
+.t1t_game_preloader_loader .ball-4 {
+    transform: rotate(60deg);
+    animation: t1t_game_preloader_loader_zindex 1.5s 0.5s infinite steps(2, end);
+}
+.t1t_game_preloader_loader .ball-5 {
+    transform: rotate(160deg);
+    animation: t1t_game_preloader_loader_zindex 1.5s -0.5s infinite steps(2, end);
+}
+.t1t_game_preloader_loader .ball-6 {
+    transform: rotate(280deg);
+    animation: t1t_game_preloader_loader_zindex 1.5s -0.75s infinite steps(2, end);
+}
+.t1t_game_preloader_loader .ball-1 span {
+    transform: rotate(0);
+    animation: t1t_game_preloader_loader_position 1.5s infinite ease, t1t_game_preloader_loader_size 1.5s -1.25s infinite ease;
+}
+.t1t_game_preloader_loader .ball-2 span {
+    animation: t1t_game_preloader_loader_position 1.5s -0.25s infinite ease, t1t_game_preloader_loader_size 1.5s -1s infinite ease;
+}
+.t1t_game_preloader_loader .ball-3 span {
+    animation: t1t_game_preloader_loader_position 1.5s -0.5s infinite ease, t1t_game_preloader_loader_size 1.5s -0.75s infinite ease;
+}
+.t1t_game_preloader_loader .ball-4 span {
+    animation: t1t_game_preloader_loader_position 1.5s -0.75s infinite ease, t1t_game_preloader_loader_size 1.5s -0.5s infinite ease;
+}
+.t1t_game_preloader_loader .ball-5 span {
+    animation: t1t_game_preloader_loader_position 1.5s -1s infinite ease, t1t_game_preloader_loader_size 1.5s -0.25s infinite ease;
+}
+.t1t_game_preloader_loader .ball-6 span {
+    animation: t1t_game_preloader_loader_position 1.5s -1.25s infinite ease, t1t_game_preloader_loader_size 1.5s -0.125s infinite ease;
+}
+@keyframes t1t_game_preloader_loader_position {
+    50% {
+        top: 100px;
+        left: 100px;
+    }
+}
+@keyframes t1t_game_preloader_loader_size {
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+}
+@keyframes t1t_game_preloader_loader_zindex {
+    100% {
+        z-index: 10;
+    }
+}
+/* =============================================== */
+/* Announcement Popup */
+/* =============================================== */
+.player_announcement_popup_container.modal {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.player_announcement_popup_container.modal .modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    margin: 0 auto;
+
+    width: 50vw;
+    max-width: unset;
+    height: 550px;
+    min-height: 550px;
+}
+
+.player_announcement_popup_container.modal .modal-content {
+    position: relative;
+
+    background-color: #FFF;
+
+    width: 100%;
+    height: 100%;
+
+    box-sizing: border-box;
+}
+
+.player_announcement_popup_container.modal .modal-heading {
+    padding: 0 15px;
+
+    font-size: 16px;
+
+    position: relative;
+
+    width: 100%;
+
+    box-sizing: border-box;
+}
+
+.player_announcement_popup_container.modal .modal-heading .modal-title {
+    font-size: 1.5em;
+    line-height: 200%;
+}
+
+.player_announcement_popup_container.modal .modal-heading .close {
+    float: right;
+
+    font-size: 1.5em;
+    line-height: 200%;
+
+    top: 0;
+    position: absolute;
+    right: 0;
+    padding-right: inherit;
+}
+
+.player_announcement_popup_container.modal .modal-body {
+    padding: 0;
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.player_announcement_popup_container.modal iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+}
+
+@media only screen and (max-width: 960px) {
+    .player_announcement_popup_container.modal .modal-dialog {
+        transform: unset;
+        top: 0;
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        max-height: 100vh;
+        min-height: unset;
+        margin: 0;
+    }
+
+    .player_announcement_popup_container.modal .modal-content {
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+}
+
+/* =============================================== */
+/* Wallet */
+/* =============================================== */
+.t1t-ui .t1t_currency {
+    display: inline-block;
+
+    overflow: hidden;
+    text-overflow : ellipsis;
+    white-space : nowrap;
+    vertical-align: bottom;
+}
+
+.t1t-ui .t1t_currency .currency_name,
+.t1t-ui .t1t_currency .currency_short_name,
+.t1t-ui .t1t_currency .currency_code,
+.t1t-ui .t1t_currency .currency_symbol {
+    color: #c2272e;
+    font-weight: bold;
+    padding-right: 3px;
+}
+
+.t1t-ui .t1t_currency .currency_number {
+    padding-right: 3px;
+}
+
+.t1t-ui .t1t_currency .currency_short_name {
+    padding-right: 0;
+}
+
+._player_wallet_list .dropdown-menu .subwallet_container .currency_name,
+._player_wallet_list .dropdown-menu .subwallet_container .currency_short_name,
+._player_wallet_list .dropdown-menu .subwallet_container .currency_code,
+._player_wallet_list .dropdown-menu .subwallet_container .currency_symbol {
+    color: #c25427;
+    font-weight: normal;
+}
+
+.t1t-ui._player_wallet_list .dropdown-menu {
+    width: 350px;
+    left: auto;
+    right: 0;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    font-size: 18px;
+    line-height: 2em;
+
+    color: #333;
+
+    overflow: hidden;
+}
+
+._player_wallet_list .dropdown-menu .wallet-item,
+._player_wallet_list .dropdown-menu .subwallet_list_container {
+    width: 100%;
+    display: table;
+}
+
+._player_wallet_list .dropdown-menu .wallet-item .wallet-item-row::after {
+    content: "";
+    clear: both;
+}
+
+._player_wallet_list .dropdown-menu .wallet-item .wallet_name {
+    width: 40%;
+    display: inline-block;
+    float: left;
+}
+
+._player_wallet_list .dropdown-menu .wallet-item .wallet_balance {
+    width: 50%;
+    display: inline-block;
+    float: left;
+}
+
+._player_wallet_list .dropdown-menu .wallet-item .wallet_action {
+    width: 10%;
+    display: inline-block;
+    float: left;
+}
+
+._player_wallet_list .dropdown-menu .wallet-item .wallet_action .wallet_transfer {
+    border: 0;
+    background: unset;
+    padding: 0;
+    color: #c73b42;
+    text-shadow: 1px 2px 2px rgba(0,0,0,.4);
+}
+
+._player_wallet_list .dropdown-menu .subwallet_container {
+    margin: 0 -15px;
+
+    border-top: 1px solid #333;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #333;
+
+    padding: 0 15px 10px 15px;
+
+    color: #666;
+}
+
+._player_wallet_list .dropdown-menu .subwallet_container .wallet_symbol {
+    color: #c25427;
+    font-weight: normal;
+}
+
+._player_wallet_list .dropdown-menu .subwallet_container legend {
+    width: auto;
+    margin-left: -5px;
+    margin-bottom: 0;
+    padding: 0 5px;
+    border-bottom: 0;
+    font-size: inherit;
+}
+
+._player_transfer_wallet_modal {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+._player_transfer_wallet_modal .modal-dialog {
+    -webkit-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+    top: 50%;
+    margin: 0 auto;
+
+    width: 750px;
+    max-width: unset;
+    height: 90vh;
+    max-height: 500px;
+    min-width: 750px;
+    min-height: 500px;
+}
+
+._player_transfer_wallet_modal.mode_quick .modal-dialog {
+    max-height: 500px;
+}
+
+._player_transfer_wallet_modal.mode_pro .modal-dialog {
+    height: 90vh;
+    max-height: 90vh;
+}
+
+._player_transfer_wallet_modal .modal-content {
+    position: relative;
+
+    background-color: #FFF;
+
+    width: 100%;
+    height: 100%;
+}
+
+._player_transfer_wallet_modal .modal-heading {
+    padding: 0 15px;
+
+    font-size: 16px;
+
+    position: relative;
+
+    width: 100%;
+}
+
+._player_transfer_wallet_modal .modal-heading .modal-title {
+    font-size: 1.5em;
+    line-height: 200%;
+}
+
+._player_transfer_wallet_modal .modal-heading .close {
+    float: right;
+
+    font-size: 1.5em;
+    line-height: 200%;
+
+    top: 0;
+    position: absolute;
+    right: 0;
+    padding-right: inherit;
+}
+
+._player_transfer_wallet_modal .modal-body {
+    padding: 0 15px;
+    box-sizing: border-box;
+
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header {
+    white-space: nowrap;
+    padding-right: 15px;
+
+    display: block;
+    width: 100%;
+    height: 115px;
+
+    position: absolute;
+    top: 0;
+    left: 15px;
+
+    z-index: 100;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header::after {
+    content: " ";
+    clear: both;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container {
+    width: 50%;
+    float: left;
+    white-space: normal;
+    padding-right: 15px;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .info_item {
+    border-radius: 6px;
+    border: 1px solid #e6e6e6;
+
+    padding: 14px 15px;
+
+    box-sizing: border-box;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container span {
+    display: inline-block;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .info_item .info_item_header_text {
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.2em;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .wallet_balance {
+    float: right;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .wallet_balance::after {
+    clear: both;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .wallet_balance span {
+    font-size: 1.2em;
+    line-height: 1em;
+    font-weight: bold;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container.pending_balance_item,
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container.total_balance_item,
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container.wallet_total_item,
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container.transfer_wallet_actions {
+    margin-top: 15px;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container.transfer_wallet_actions:after {
+    content: ' ';
+    clear: both;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .action_item {
+    width: 50%;
+    float: left;
+    padding: 0 3.75px;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .action_item button {
+    width: 100%;
+
+
+    padding: 14px 15px;
+
+    box-sizing: border-box;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .action_item button.btn-refresh-balance {
+    margin-left: -3.75px;
+}
+
+._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .action_item button.btn-transfer-all-to-main {
+    margin-left: 3.75px;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body {
+    position: absolute;
+    width: 100%;
+    /* top: 0; */
+    left: 0;
+    bottom: 0;
+    padding: 130px 0 15px 0;
+    height: 100%;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .btn.disabled {
+    cursor: not-allowed;
+    pointer-events: initial;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .nav.nav-tabs {
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .tab-content {
+    height: 100%;
+    padding: 15px 15px 34px 15px;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .tab-content>.tab-pane {
+    padding: 15px;
+
+    height: 100%;
+    background: #eee;
+
+    overflow-y: auto;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .transfer_help_block .unlimited {
+    color: #c2272e;
+    padding-right: 3px;
+    font-weight: bold;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .transfer_help_block .transfer_allow_float_icon {
+    font-weight: bold;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .transfer_help_block .transfer_allow_float_icon.allow::before {
+    content: '✔';
+    color: #00CC00;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .transfer_help_block .transfer_allow_float_icon.disallow::before {
+    content: '✖';
+    color: #CC0000;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .player_transfer_modal_quick_mode>form {
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+
+    position: relative;
+}
+
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .transfer_help_block_container {
+    margin-right: -10%;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    top: 0;
+
+    padding: 0 15px;
+    display: table;
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .transfer_help_block_container .transfer_help_block {
+    display: table-cell;
+    vertical-align: top;
+}
+
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .transfer_help_block_container .transfer_help_block .transfer_input_invalid_text {
+    color: red;
+    font-weight: bold;
+}
+
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .form-group-container {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .form-group {
+    text-align: center;
+}
+
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .transfer_button,
+._player_transfer_wallet_modal .player_transfer_modal_quick_mode .transfer_all_button {
+    width: 50%;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .subwallet_entry_container {
+    margin-bottom: 5px;
+    padding: 15px;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    background-color: #FFF;
+}
+
+._player_transfer_wallet_modal .transfer_wallet_body .subwallet_entry_container:last-child {
+    margin-bottom: 0;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry {
+    display: table-row;
+
+    font-size: 14px;
+    line-height: 30px;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry::after {
+    content: " ";
+    clear: both;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field {
+    float: left;
+    border-bottom: #ccc solid 1px;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_name {
+    width: 100%;
+
+    padding: 0 0 5px 0;
+    margin-bottom: 5px;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_balance {
+    width: 25%;
+
+    padding: 5px 15px 10px 0;
+    margin-bottom: 5px;
+
+    text-align: right;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_transfer_balance_field {
+    width: 25%;
+
+    padding: 5px 15px 10px 0;
+    margin-bottom: 5px;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_transfer_balance_field .form-control {
+    line-height: 16px;
+    height: auto;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_actions {
+    width: 50%;
+
+    padding: 5px 15px 10px 0;
+    margin-bottom: 5px;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_actions .btn {
+    padding: 0 15px;
+
+    vertical-align: bottom;
+    font-size: 14px;
+    line-height: 28px;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_note {
+    display: table;
+    width: 100%;
+    padding: 5px 0 0 0;
+}
+
+._player_transfer_wallet_modal .subwallet_entry_container .subwallet_note .transfer_help_block {
+    display: table-row;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_min_hint {
+    position: relative;
+    display: table-cell;
+    width: 33.33%;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_min_hint .transfer_min_hint_text,
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_min_hint .transfer_min_amount {
+    display: inline-block;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_max_hint {
+    position: relative;
+    display: table-cell;
+    width: 33.33%;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_max_hint .transfer_max_hint_text,
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_max_hint .transfer_max_amount {
+    display: inline-block;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_allow_float {
+    display: table-cell;
+    width: 33.33%;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_allow_float .transfer_allow_float_text,
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_allow_float .transfer_allow_float_icon {
+    display: inline-block;
+}
+
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_min_hint::after,
+._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_max_hint::after {
+    content: '/';
+    position: absolute;
+    right: 0;
+}
+
+.t1t-ui.modal.game_converted_currency_modal {
+    z-index: 100050;
+}
+
+.t1t-ui.modal-backdrop.game_converted_currency_modal {
+    z-index: 100000;
+}
+
+@media only screen and (max-width: 960px) {
+    .mobile._player_transfer_wallet_modal .modal-dialog {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        width: 100vw;
+        height: 100vh;
+        min-width: 100vw;
+        min-height: 100vh;
+        max-width: unset;
+        max-height: unset;
+        transform: unset;
+
+        padding: 0;
+        margin: 0;
+
+        color: #000;
+    }
+
+    ._player_transfer_wallet_modal .modal-dialog span {
+        color: #000;
+    }
+
+    .mobile._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container {
+        width: 100%;
+
+        margin-top: 5px;
+    }
+
+    .mobile._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container .info_item {
+        padding: 9px 15px;
+    }
+
+    .mobile._player_transfer_wallet_modal .player_transfer_wallet_info_header .info_item_container:first-child {
+        margin-top: 0;
+    }
+
+    .mobile._player_transfer_wallet_modal .player_transfer_wallet_info_header {
+        height: 175px;
+    }
+    
+    .mobile._player_transfer_wallet_modal .transfer_wallet_body {
+        padding-top: 190px;
+    }
+
+    .mobile._player_transfer_wallet_modal .transfer_wallet_body .player_transfer_modal_quick_mode>form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mobile._player_transfer_wallet_modal .player_transfer_modal_quick_mode .transfer_help_block_container {
+        width: 100%;
+        height: unset;
+        display: block;
+        position: relative;
+        order: 2;
+    }
+
+    .mobile._player_transfer_wallet_modal .player_transfer_modal_quick_mode .form-group-container {
+        width: 100%;
+        height: unset;
+        display: block;
+        position: relative;
+        order: 1;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_balance {
+        width: 50%;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_transfer_balance_field {
+        width: 50%;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_entry_container .subwallet_entry_field.game_actions {
+        width: 100%;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_entry_container .subwallet_note {
+        display: block;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_entry_container .subwallet_note .transfer_help_block {
+        display: block;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_min_hint {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_max_hint {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_allow_float {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_min_hint::after,
+    .mobile._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_max_hint::after {
+        content: '';
+    }
+
+    .mobile._player_transfer_wallet_modal .subwallet_note .transfer_help_block .transfer_input_invalid_text {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* =============================================== */
+/* Player Message */
+/* =============================================== */
+._player_message_reply_modal .modal-dialog {
+    max-height: 45rem;
+    height: 90vh;
+    position: relative;
+}
+
+._player_message_reply_modal .modal-content {
+    height: 100%;
+}
+
+._player_message_reply_modal .modal-header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+._player_message_reply_modal .modal-body {
+    position: absolute;
+    padding-top: 46px;
+    padding-bottom: 54px;
+    padding-left: 0;
+    padding-right: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+._player_message_reply_modal .message-list {
+    height: 80%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    position: relative;
+
+    margin: 0;
+    padding: 1rem 1rem 0 1rem;
+}
+
+._player_message_reply_modal.is_disabled_reply .message-list {
+    height: 100%;
+}
+
+._player_message_reply_modal .message-reply-container {
+    padding: 1rem;
+    height: 20%;
+}
+
+._player_message_reply_modal .message-reply-container textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    resize: none;
+}
+
+._player_message_reply_modal .message-entry {
+    width: 100%;
+
+    color: #000;
+}
+
+._player_message_reply_modal .message-entry:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+._player_message_reply_modal .message-entry .message-detail {
+    background-color: lightgreen;
+    position: relative;
+    border-radius: 15px;
+
+    padding: 5px 10px;
+
+    display: inline-block;
+
+    clear: both;
+
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: break-all;
+}
+
+._player_message_reply_modal .message-author-admin {
+}
+
+._player_message_reply_modal .message-author-admin .message-author {
+    float: left;
+    clear: both;
+}
+
+._player_message_reply_modal .message-author-admin .message-datetime {
+    float: left;
+}
+
+._player_message_reply_modal .message-author-admin .message-datetime:before {
+    content: '@';
+    margin: 0 5px;
+}
+
+._player_message_reply_modal .message-author-admin .message-detail {
+    text-align: left;
+    float: left;
+}
+
+._player_message_reply_modal .message-author-player {
+}
+
+._player_message_reply_modal .message-author-player .message-author {
+    float: right;
+    clear: both;
+}
+
+._player_message_reply_modal .message-author-player .message-datetime {
+    float: right;
+}
+
+._player_message_reply_modal .message-author-player .message-datetime:after {
+    content: '@';
+    margin: 0 5px;
+}
+
+._player_message_reply_modal .message-author-player .message-detail {
+    text-align: left;
+    float: right;
+}
+
+._player_message_reply_modal .modal-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* =============================================== */
+/* Player Message - Request Form */
+/* =============================================== */
+.request-form-floating-button-sets {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+}
+
+.request-form-floating-button-sets button {
+    display: inline-block;
+    border: none;
+
+    border-radius: 50%;
+    padding: 1.5rem;
+
+    font-size: 3rem;
+    line-height: 1em;
+}
+
+._player_message_request_form_modal .label-required {
+    color: red;
+    font-weight: bold;
+}

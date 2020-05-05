@@ -1,0 +1,99 @@
+/*
+ * template.css
+ * created by:		kaiser.dapar;
+ * created date:	2015-02-23;
+ * order by:		alphabetically;
+ /
+
+/* 	background:
+	background-color
+	background-image
+	background-repeat
+	background-attachment
+	background-position;
+*/
+
+/*****************************************************************
+ * FONTS 
+ *****************************************************************/
+@font-face { font-family: 'Charlie Brown M54'; src: url('../fonts/charlie brown m54.ttf'); }
+@font-face { font-family: 'Coolvetica'; src: url('../fonts/coolvetica.ttf'); }
+@font-face { font-family: 'Ebrima'; src: url('../fonts/ebrima.ttf'); }
+@font-face { font-family: 'Euphemia'; src: url('../fonts/euphemia.ttf'); }
+@font-face { font-family: 'Gautami'; src: url('../fonts/gautami.ttf'); }
+
+/*****************************************************************
+ * BOOTSTRAP CUSTOM HELPER 
+ *****************************************************************/
+.form-group.required>.control-label:after { color: #ff6666; content: " *"; font-style: italic; }
+
+/*****************************************************************
+ * FHI STYLE 
+ *****************************************************************/
+.panel-green { 
+	/* panel
+	 * margin-bottom: 20px;
+	 * background-color: #fff;
+	 * border: 1px solid transparent;
+	 * border-radius: 4px;
+	 * -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	 * box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	 */
+	border-color: #337ab7; 
+ }
+
+.panel-green>.panel-heading {
+	/* panel-heading
+	 * padding: 10px 15px;
+	 * border-bottom: 1px solid transparent;
+	 * border-top-left-radius: 3px;
+	 * border-top-right-radius: 3px;
+	 */
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #337ab7;
+	/* custom
+	 */
+	background: url('../images/panel-heading-black.png') no-repeat no-repeat;
+	background-size: 100%
+}
+
+.panel-green>.panel-body {
+	/* panel-heading
+	 * padding: 15px;
+	 */
+}
+
+.panel-black { 
+	/* panel
+	 * margin-bottom: 20px;
+	 * background-color: #fff;
+	 * border: 1px solid transparent;
+	 * border-radius: 4px;
+	 * -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	 * box-shadow: 0 1px 1px rgba(0,0,0,.05);
+	 */
+	border-color: #337ab7; 
+ }
+
+.panel-black>.panel-heading {
+	/* panel-heading
+	 * padding: 10px 15px;
+	 * border-bottom: 1px solid transparent;
+	 * border-top-left-radius: 3px;
+	 * border-top-right-radius: 3px;
+	 */
+	color: #fff;
+	background-color: #337ab7;
+	border-color: #337ab7;
+	/* custom
+	 */
+	background: url('../images/panel-heading-green.png') no-repeat no-repeat;
+	background-size: 100%
+}
+
+.panel-black>.panel-body {
+	/* panel-heading
+	 * padding: 15px;
+	 */
+}

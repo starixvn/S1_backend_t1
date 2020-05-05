@@ -1,0 +1,2109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="https://entservices.totalegame.net" xmlns:s1="http://microsoft.com/wsdl/types/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="https://entservices.totalegame.net" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="https://entservices.totalegame.net">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:element name="AddAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currency" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSendGame" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="BettingProfileId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rngBettingProfileId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="moblieGameLanguageId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isProgressive" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAccountResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccountResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="CustomerId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="LockAccountStatus" type="tns:CustomerAccountStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="SuspendAccountStatus" type="tns:SuspendedAccountStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="CasinoId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PinCode" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NickName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MobileNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProfileId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsProgressive" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="RngBettingProfileId" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Result">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSucceed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ErrorId" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CustomerAccountStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Open" />
+          <s:enumeration value="Lock" />
+          <s:enumeration value="PendingToDelete" />
+          <s:enumeration value="Deleted" />
+          <s:enumeration value="CHANetWinBalanceLock" />
+          <s:enumeration value="Suspended" />
+          <s:enumeration value="LockedByDatacash" />
+          <s:enumeration value="NetworkLock" />
+          <s:enumeration value="PendingToNetworkLock" />
+          <s:enumeration value="NetworkSuspend" />
+          <s:enumeration value="PendingToNetworkSuspend" />
+          <s:enumeration value="PendingToNetworkOpen" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="SuspendedAccountStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unknown" />
+          <s:enumeration value="Open" />
+          <s:enumeration value="Suspended" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="AgentSession" type="tns:AgentSession" />
+      <s:complexType name="AgentSession">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SessionGUID" type="s1:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="ErrorCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IPAddress" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsExtendSession" type="s:boolean" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="AddStationAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isGeneratePassword" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nickName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currency" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="bettingProfileId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rngBettingProfileId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isProgressive" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddStationAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddStationAccountResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProgressiveAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="casinoAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="progressiveAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddProgressiveAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddProgressiveAccountResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPokerAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="casinoAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pokerAccountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="alias" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isAutoAlias" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddPokerAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddPokerAccountResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAccountEx">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="currency" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isSendGame" nillable="true" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="operatorId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="BettingProfileId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="rngBettingProfileId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="moblieGameLanguageId" nillable="true" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="isProgressive" nillable="true" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAccountExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAccountExResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Deposit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="currency" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionReferenceNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DepositResult" type="tns:BalanceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="BalanceResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionReferenceNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TransactionAmount" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="TransactionCreditAmount" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="TransactionId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreditBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="IsAuthenticate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="loginName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pinCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAuthenticateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsAuthenticateResult" type="tns:IsAuthenticateResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IsAuthenticateResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:AgentSession">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorMessage" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="IsSucceed" type="s:boolean" />
+              <s:element minOccurs="0" maxOccurs="1" name="ErrorId" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetCurrenciesForAddAccount">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrenciesForAddAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrenciesForAddAccountResult" type="tns:ArrayOfCurrency" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCurrency">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Currency" nillable="true" type="tns:Currency" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Currency">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:BaseObject">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IsDefaultProduct" type="s:boolean" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProductType" type="tns:RelatedProductType" />
+              <s:element minOccurs="1" maxOccurs="1" name="CurrencyId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsoName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="IsoCode" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="BaseObject" abstract="true" />
+      <s:simpleType name="RelatedProductType">
+        <s:restriction base="s:string">
+          <s:enumeration value="All" />
+          <s:enumeration value="Casino" />
+          <s:enumeration value="Progressive" />
+          <s:enumeration value="Poker" />
+          <s:enumeration value="Sports" />
+          <s:enumeration value="Count" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="EditAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="firstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bettingProfileId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="rngBettingProfileId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eMail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EditAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EditAccountResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCurrenciesForDeposit">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCurrenciesForDepositResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCurrenciesForDepositResult" type="tns:ArrayOfCurrency" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Withdrawal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionReferenceNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithdrawalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WithdrawalResult" type="tns:BalanceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithdrawalAll">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="allRelatedAccounts" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="transactionReferenceNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WithdrawalAllResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WithdrawalAllResult" type="tns:BalanceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LockAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAccounts" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="bLock" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="LockAccountResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetAccountBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="delimitedAccountNumbers" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountBalanceResult" type="tns:ArrayOfBalanceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfBalanceResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="BalanceResult" nillable="true" type="tns:BalanceResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ChangeSuspendAccountStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="suspendAccountStatus" type="tns:SuspendedAccountStatus" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChangeSuspendAccountStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChangeSuspendAccountStatusResult" type="tns:AccountResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetLoginAttempts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumbers" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ResetLoginAttemptsResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTransactionDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTransactionDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTransactionDetailResult" type="tns:TransactionDetailResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="TransactionDetailResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="TransactionReferenceNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="TransactionId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:TransactionStatuses" />
+              <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+              <s:element minOccurs="0" maxOccurs="1" name="CurrencyIsoCode" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreatedDate" type="s:dateTime" />
+              <s:element minOccurs="1" maxOccurs="1" name="UpdatedDate" type="s:dateTime" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="TransactionStatuses">
+        <s:restriction base="s:string">
+          <s:enumeration value="UnKnown" />
+          <s:enumeration value="Pending" />
+          <s:enumeration value="Succeed" />
+          <s:enumeration value="Rejected" />
+          <s:enumeration value="Cancelled" />
+          <s:enumeration value="New" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetBettingProfileList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBettingProfileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBettingProfileListResult" type="tns:ArrayOfProfile" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfProfile">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Profile" nillable="true" type="tns:Profile" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Profile">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetBetInfoDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateTo" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxNumRowsPage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBetInfoDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBetInfoDetailsResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPokerEarningsReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="dateTo" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="summaryLevel" type="tns:SummaryLevel" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxNumRowsPage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="SummaryLevel">
+        <s:restriction base="s:string">
+          <s:enumeration value="Detailed" />
+          <s:enumeration value="Daily" />
+          <s:enumeration value="DateRange" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPokerEarningsReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetPokerEarningsReportResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GameplayDetailedReport">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="dateFrom" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxNumRowsPage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GameplayDetailedReportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GameplayDetailedReportResult" type="s1:guid" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameters" type="tns:GenericReportParameter" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxNumRowsPage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="GenericReportParameter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="item" type="tns:GenericReportItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GenericReportItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ParameterName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ParameterValue" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetReportByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportByNameResult" type="tns:ReportResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReportResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="SourceStatus" type="tns:SourceReportStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="ErrorValue" type="tns:ErrorValue" />
+              <s:element minOccurs="0" maxOccurs="1" name="ReportName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Paging" type="tns:Paging" />
+              <s:element minOccurs="0" maxOccurs="unbounded" name="CurrentPageData">
+                <s:complexType>
+                  <s:sequence>
+                    <s:element ref="s:schema" />
+                    <s:any />
+                  </s:sequence>
+                </s:complexType>
+              </s:element>
+              <s:element minOccurs="1" maxOccurs="1" name="Status" type="tns:ReportStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="Id" type="s1:guid" />
+              <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:simpleType name="SourceReportStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Normal" />
+          <s:enumeration value="NotInCache" />
+          <s:enumeration value="GeneralError" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ErrorValue">
+        <s:restriction base="s:string">
+          <s:enumeration value="ON_GENERALEXCEPTION" />
+          <s:enumeration value="SUCCESS" />
+          <s:enumeration value="MEMBER_IS_LOCKED" />
+          <s:enumeration value="MEMBER_DOES_NOT_EXISTS" />
+          <s:enumeration value="CARD_DOES_NOT_EXISTS" />
+          <s:enumeration value="CASINO_MISMATCH" />
+          <s:enumeration value="INVALID_PIN" />
+          <s:enumeration value="MAXIMUM_INVALID_LOGIN_COUNT_EXCEEDED" />
+          <s:enumeration value="SYSTEMPERMISSIONSDENIED" />
+          <s:enumeration value="MEMBER_ALREDY_EXISTS" />
+          <s:enumeration value="GENERAL_EXCEPTION" />
+          <s:enumeration value="MEMBER_IS_NOT_REFERRED" />
+          <s:enumeration value="PERMISSION_NAME_IS_WRONG" />
+          <s:enumeration value="INVALID_PERMISSION_VALUE" />
+          <s:enumeration value="FINANCIAL_SETTING_VALLUE_IS_OVER_LIMIT" />
+          <s:enumeration value="INVALID_MEMBER_STATUS" />
+          <s:enumeration value="MEMBER_IS_NOT_LOGGED_IN" />
+          <s:enumeration value="CUSTOMER_DOES_NOT_BELONGS_TO_MEMBER" />
+          <s:enumeration value="DEPOSIT_DAILY_LIMIT_EXCEEDS" />
+          <s:enumeration value="DEPOSIT_TRANSACTION_LIMIT_EXCEEDS" />
+          <s:enumeration value="WITHDRAWAL_TRANSACTION_LIMIT_EXCEEDS" />
+          <s:enumeration value="WITHDRAWAL_TRANSACTION_REQUEST_EXPIRED" />
+          <s:enumeration value="INVALID_DEPOSIT_TRANSACTION" />
+          <s:enumeration value="INVALID_SYSTEM_SETTING_NAME" />
+          <s:enumeration value="INVALID_SYSTEM_SETTING_VALUE" />
+          <s:enumeration value="CUSTOMERDOESNOTEXISTS" />
+          <s:enumeration value="NOACTIVEREQUESTS" />
+          <s:enumeration value="INVALIDWITHDRAWALAMOUNT" />
+          <s:enumeration value="CUSTOMERALREADYEXISTS" />
+          <s:enumeration value="WITHDRAWALREQUESTALREADYEXISTS" />
+          <s:enumeration value="MEMBERHASALREADYACTIVECARD" />
+          <s:enumeration value="CARDALREADYEXISTS" />
+          <s:enumeration value="NICKNAMEALREADYEXISTS" />
+          <s:enumeration value="CUSTOMERCANTIDENTIFIEDBYPHONE" />
+          <s:enumeration value="LOGINDOESNOTEXISTS" />
+          <s:enumeration value="LOGINISLOCKED" />
+          <s:enumeration value="LOGINISNOTLOGGEDIN" />
+          <s:enumeration value="SESSIONGUIDNOTBELONGTOLOGIN" />
+          <s:enumeration value="LASTTRANSACTONINCORRECT" />
+          <s:enumeration value="PASSWORDINCORRECT" />
+          <s:enumeration value="MEMBERHASNOCREDITSTOINCREASE" />
+          <s:enumeration value="MEMBERHASNOCREDITSTODECREASE" />
+          <s:enumeration value="OPERATORNOTSUPPORTED" />
+          <s:enumeration value="LOGINISDELETED" />
+          <s:enumeration value="MEMBERHASNOCREDITSTODEPOSITE" />
+          <s:enumeration value="CUSOMEREXTRAPARAMETERMISSING" />
+          <s:enumeration value="CANNOT_DEPOSIT_WITHDRAW_FROM_LOCKED_ACCOUNT" />
+          <s:enumeration value="CUSTOMERACCOUNTDOESNOTEXISTS" />
+          <s:enumeration value="CANNOTASSIGNMEMBERCURRENCY" />
+          <s:enumeration value="AGENTDEPOSITLIMITEXCEED" />
+          <s:enumeration value="CASHIERDEPOSITLIMITEXCEED" />
+          <s:enumeration value="POKERBALANCEONHOLD" />
+          <s:enumeration value="NOTIMPLEMENTED" />
+          <s:enumeration value="GASIAN_BALANCE_WAS_NOT_TRANSFERRED" />
+          <s:enumeration value="NETCASHNEGATIVEBALANCENOTALLOWEDFORMEMBER" />
+          <s:enumeration value="NETCASHUPDATESEVERALRECORDS" />
+          <s:enumeration value="MEMBERCHBTRANSFERONLYTOHO" />
+          <s:enumeration value="AGENTPOKERDEPOSITLIMITEXCEED" />
+          <s:enumeration value="POKERDEPOSITLIMITISTOOSMALL" />
+          <s:enumeration value="DEPOSITSDISABLEDDUETOLOWNETWORKPOKERCREDITLINE" />
+          <s:enumeration value="NOT_ALLOWED_FINANCIAL_OPERATIONS_FOR_LIVE_ACCOUNTS" />
+          <s:enumeration value="TIMEOUT" />
+          <s:enumeration value="SESSIONEXPIRED" />
+          <s:enumeration value="LOCATIONEXISTS" />
+          <s:enumeration value="MOBILENUMBERISNOTSUPPORTED" />
+          <s:enumeration value="INPUTARGUMENTISWRONG" />
+          <s:enumeration value="CUSTOMERACCOUNTALREADYEXISTS" />
+          <s:enumeration value="INPUTCURRENCYISWRONG" />
+          <s:enumeration value="INPUTPROFILEISWRONG" />
+          <s:enumeration value="POKERISNOTSUPPORTED" />
+          <s:enumeration value="PROGRESSIVEISNOTSUPPORTED" />
+          <s:enumeration value="DEPOSITTOACCOUNTISNOTALLOWED" />
+          <s:enumeration value="DEPOSITTONONDEFAULTACCOUNTISNOTALLOWED" />
+          <s:enumeration value="TRANSACTIONDOESNOTEXISTS" />
+          <s:enumeration value="ADDSTATIONISNOTSUPPORTED" />
+          <s:enumeration value="POKERISDISABLED" />
+          <s:enumeration value="POKERALREADYEXISTFORCUSTOMER" />
+          <s:enumeration value="PROGRESSIVEALREADYEXISTFORCUSTOMER" />
+          <s:enumeration value="MEMBERCANNOTSENDSMS" />
+          <s:enumeration value="WITHDRAWALONPROGRESSIVEWIN" />
+          <s:enumeration value="SPORTISNOTSUPPORTED" />
+          <s:enumeration value="PRODUCTISNOTSUPPORTED" />
+          <s:enumeration value="WITHDRAWALFROMNONDEFAULTACCOUNTISNOTALLOWED" />
+          <s:enumeration value="MG_GENERAL_ERROR" />
+          <s:enumeration value="MG_PLAYER_NOT_FOUND_AT_MGS" />
+          <s:enumeration value="CANNOT_GET_PLAYER_BALANCE_FROM_MG" />
+          <s:enumeration value="MG_PLAYER_INVALID_PINCODE_LENGTH" />
+          <s:enumeration value="MG_INVALID_BTAG_OR_NOT_EXIST" />
+          <s:enumeration value="MG_CANNOT_GET_PLAYER_INFO" />
+          <s:enumeration value="CANNOT_GET_PLAYER_BALANCE_INFO_FROM_MG" />
+          <s:enumeration value="IS_PLAYER_LOGIN_DETAILS_VALID_FROM_MG" />
+          <s:enumeration value="CANNOT_LOGIN_PLAYER_MG" />
+          <s:enumeration value="CANNOT_LOGIN_PLAYER_LOCKED_MG" />
+          <s:enumeration value="CANNOT_LOGIN_PLAYER_WRONG_PLAYER_OR_PASSWORD_MG" />
+          <s:enumeration value="CANNOT_USE_PROFANE_WORD_FOR_ALIAS" />
+          <s:enumeration value="ALIASALREADYEXISTS" />
+          <s:enumeration value="ACTIVATEPOKERACCOUNTFAILED" />
+          <s:enumeration value="CANNOT_ESTABLISH_CONNECTION_TO_LIVECASINO" />
+          <s:enumeration value="CANNOT_PERFORM_WITHDRAW_UPDATEBALANCE_FAILED" />
+          <s:enumeration value="CANNOT_REGISTER_PLAYER_AT_MGS" />
+          <s:enumeration value="CANNOTGETUSERPROFILE" />
+          <s:enumeration value="CANNOTREMOVEUSERPROFILE" />
+          <s:enumeration value="CANNOTADDUSERPROFILE" />
+          <s:enumeration value="CANNOT_GET_FUNDS_IN_PLAYER_DETAIL" />
+          <s:enumeration value="AGENT_CANNOT_PARSE_AGENT_CHARACTERISTICS" />
+          <s:enumeration value="AGENT_PLAYER_CASINO_ID_DIFFER_THEN_AGENT_CAISNO_ID" />
+          <s:enumeration value="AGENT_COMPONENTS_INVALID" />
+          <s:enumeration value="CANNOT_REMOVE_PROGRESSIVE" />
+          <s:enumeration value="BANKING_CANNOT_DEPOSIT_AMOUNT_LESS_OR_EQUAL_TO_ZERO" />
+          <s:enumeration value="BANKING_WITHDRAWREQUEST_GENERAL_ERROR" />
+          <s:enumeration value="BANKING_BALANCE_IS_BIGGER_THAN_CURRENT_BALANCE" />
+          <s:enumeration value="BANKING_WITHDRAWREQUEST_NOT_EXISTS" />
+          <s:enumeration value="BANKING_NO_EXCHANGE_RATE_FOUND" />
+          <s:enumeration value="BANKING_CANNOT_MAKE_DEPOSIT_ON_PROGRESSIVE_STATION_BALANCE_NOT_ZERO" />
+          <s:enumeration value="DEPOSITSDISABLEDCAUSECHANETWINBALANCENOTALLOWED" />
+          <s:enumeration value="NETWINNEGATIVEBALANCENOTALLOWEDFORMEMBER" />
+          <s:enumeration value="CL_NO_OTA_SETTINGS_AVAILABLE" />
+          <s:enumeration value="CL_PLAYER_DOES_NOT_SUPPORT_MOBILE" />
+          <s:enumeration value="CL_UNKNOWN_TRANSACTION_TYPE" />
+          <s:enumeration value="CL_UNKNOWN_PATTERN_FOUND_IN_CASINO_TEXTS" />
+          <s:enumeration value="CL_SMS_SERVER_DELIVERY_EXCEPTION" />
+          <s:enumeration value="CL_PLAYER_MISSING_MANDATORY_FIELDS" />
+          <s:enumeration value="CL_AGENT_NO_DEFAULT_CURRENCY_ID" />
+          <s:enumeration value="CL_INPUT_PARAMETERS_INVALID" />
+          <s:enumeration value="CL_AGENT_TRANSACTION_IS_OPEN" />
+          <s:enumeration value="CL_BULK_ADD_PLAYER_STATUS_NOT_EXISTS" />
+          <s:enumeration value="CL_BULK_ADD_PLAYER_ERROR_DURING_RUNTIME_MAX_ERROR_REACHED" />
+          <s:enumeration value="CANNOT_CREATE_PLAYER_DOWNLOAD_LINKS" />
+          <s:enumeration value="CL_BULK_DELETE_ENTITY_STATUS_NOT_EXISTS" />
+          <s:enumeration value="OC_FAILED_CHANGING_ENTITY_STATUS" />
+          <s:enumeration value="GWURL_NOT_EXISTS_FOR_GIVEN_GAME_SETTING" />
+          <s:enumeration value="PLAYER_CREATED_BUT_ERRORS_OCCURED_DURING_CREATION" />
+          <s:enumeration value="PLAYER_HAVE_CREDITS_CANNOT_MAKE_TRANSACTION" />
+          <s:enumeration value="DEPOSITSDISABLEDCAUSEPOKERFORCEBLOCKED" />
+          <s:enumeration value="WL_GENERAL_ERROR" />
+          <s:enumeration value="WL_CANNOT_AUTHENTICATE_ACCESS" />
+          <s:enumeration value="WL_NOT_WELL_FORMATTED_FLASH_URL" />
+          <s:enumeration value="EXCEEDWITHDRAWALAMOUNTLIMIT" />
+          <s:enumeration value="EXCEEDWITHDRAWALPERIODLIMIT" />
+          <s:enumeration value="WITHDRAWALAMOUNTBIGGERTHANBALANCE" />
+          <s:enumeration value="BANKINGGENERALERROR" />
+          <s:enumeration value="WITHDRAWALWHENBALANCEISZERO" />
+          <s:enumeration value="CANNOTOBTAINLOGINTYPE" />
+          <s:enumeration value="VALIDATIONFAILED" />
+          <s:enumeration value="DICTIONARYNOTCONTAINSDATA" />
+          <s:enumeration value="STATUSNOTALLOWED" />
+          <s:enumeration value="GAMINGTECHSPORTSSERVICE_PLAYERLOCKFAILED" />
+          <s:enumeration value="UNKNOWNLANGUAGEISOCODE" />
+          <s:enumeration value="SESSIONISEMPTY" />
+          <s:enumeration value="PHPEXCEPTION" />
+          <s:enumeration value="NETWORKCHANGEINPROGRESS" />
+          <s:enumeration value="NETWORKSUSPENDINPROGRESS" />
+          <s:enumeration value="NETWORKLOCKINPROGRESS" />
+          <s:enumeration value="NETWORKOPENINPROGRESS" />
+          <s:enumeration value="NETWORKISSUSPENDED" />
+          <s:enumeration value="INVALIDPOKERSHAREVALUE" />
+          <s:enumeration value="INVALIDCASINOCOMISSIONVALUE" />
+          <s:enumeration value="NETWORKISLOCKED" />
+          <s:enumeration value="LIVECASINOPOOLOVERFLOW" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Paging">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RowsPerPage" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalPage" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalRow" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RowsInCurrentPage" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ReportStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="Error" />
+          <s:enumeration value="Pending" />
+          <s:enumeration value="Complete" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetReportResult">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="id" type="s1:guid" />
+            <s:element minOccurs="1" maxOccurs="1" name="nPage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReportResultResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReportResultResult" type="tns:ReportResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMobileGame">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="languageId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMobileGameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendMobileGameResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMobileLink">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="languageId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mobileNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendMobileLinkResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SendMobileLinkResult" type="tns:SendMobileLinkResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SendMobileLinkResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="GameId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="DownloadUrl" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetLanguageList">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLanguageListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLanguageListResult" type="tns:ArrayOfLanguage" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfLanguage">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Language" nillable="true" type="tns:Language" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Language">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="LanguageId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsDefault" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsoCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetMyBalance">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetMyBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMyBalanceResult" type="tns:MemberBalanceResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MemberBalanceResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="MemberBalances" type="tns:ArrayOfMemberBalance" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfMemberBalance">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MemberBalance" nillable="true" type="tns:MemberBalance" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MemberBalance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="CurrencyId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsoCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductStatus" type="tns:ProductStatus" />
+          <s:element minOccurs="1" maxOccurs="1" name="ProductType" type="tns:RelatedProductType" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ProductStatus">
+        <s:restriction base="s:string">
+          <s:enumeration value="UnKnown" />
+          <s:enumeration value="No" />
+          <s:enumeration value="Yes" />
+          <s:enumeration value="ThresholdAlerted" />
+          <s:enumeration value="ThresholdBlocked" />
+          <s:enumeration value="ForceBlocked" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPlaycheckUrl">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="playCheckType" type="tns:PlayCheckType" />
+            <s:element minOccurs="0" maxOccurs="1" name="language" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="transactionId" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="PlayCheckType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Station" />
+          <s:enumeration value="Player" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetPlaycheckUrlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlaycheckUrlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountDetailsResult" type="tns:AccountDetailsResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AccountDetailsResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="NickName" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="PokerAlias" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="MobileNumber" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="RelatedProduct" type="tns:RelatedProductType" />
+              <s:element minOccurs="1" maxOccurs="1" name="AccountStatus" type="tns:CustomerAccountStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="SuspendAccountStatus" type="tns:SuspendedAccountStatus" />
+              <s:element minOccurs="1" maxOccurs="1" name="LastEditDate" type="s:dateTime" />
+              <s:element minOccurs="0" maxOccurs="1" name="EMail" type="s:string" />
+              <s:element minOccurs="1" maxOccurs="1" name="CreditBalance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Balance" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="ProfileId" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="RngBettingProfileId" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="RngBettingProfileStatus" type="s:string" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetVersion">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetVersionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetVersionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAccountAvailable">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsAccountAvailableResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IsAccountAvailableResult" type="tns:IsAccountAvailableResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="IsAccountAvailableResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="IsAccountAvailable" type="s:boolean" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetPlayerFundsInPlayDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="accountNumber" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPlayerFundsInPlayDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPlayerFundsInPlayDetailsResult" type="tns:FundsInPlayDetailResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FundsInPlayDetailResult">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:Result">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="AccountNumber" type="s:string" />
+              <s:element minOccurs="0" maxOccurs="1" name="Funds" type="tns:ArrayOfFundsInPlayDetail" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfFundsInPlayDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FundsInPlayDetail" nillable="true" type="tns:FundsInPlayDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="FundsInPlayDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="GameName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BetsOnTable" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="PayoutsOnTable" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="ModuleId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ClientId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="AddStationAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddStationAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddStationAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddStationAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddStationAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="AddProgressiveAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProgressiveAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddProgressiveAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProgressiveAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddProgressiveAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="AddPokerAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddPokerAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddPokerAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddPokerAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddPokerAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountExSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAccountEx" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountExSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAccountExResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountExAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="DepositSoapIn">
+    <wsdl:part name="parameters" element="tns:Deposit" />
+  </wsdl:message>
+  <wsdl:message name="DepositSoapOut">
+    <wsdl:part name="parameters" element="tns:DepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="DepositAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="IsAuthenticateSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAuthenticate" />
+  </wsdl:message>
+  <wsdl:message name="IsAuthenticateSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesForAddAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesForAddAccount" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesForAddAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesForAddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesForAddAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="EditAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:EditAccount" />
+  </wsdl:message>
+  <wsdl:message name="EditAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:EditAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="EditAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesForDepositSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesForDeposit" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesForDepositSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCurrenciesForDepositResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCurrenciesForDepositAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawalSoapIn">
+    <wsdl:part name="parameters" element="tns:Withdrawal" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawalSoapOut">
+    <wsdl:part name="parameters" element="tns:WithdrawalResponse" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawalAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawalAllSoapIn">
+    <wsdl:part name="parameters" element="tns:WithdrawalAll" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawalAllSoapOut">
+    <wsdl:part name="parameters" element="tns:WithdrawalAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="WithdrawalAllAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="LockAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:LockAccount" />
+  </wsdl:message>
+  <wsdl:message name="LockAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:LockAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="LockAccountAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="ChangeSuspendAccountStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:ChangeSuspendAccountStatus" />
+  </wsdl:message>
+  <wsdl:message name="ChangeSuspendAccountStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:ChangeSuspendAccountStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChangeSuspendAccountStatusAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="ResetLoginAttemptsSoapIn">
+    <wsdl:part name="parameters" element="tns:ResetLoginAttempts" />
+  </wsdl:message>
+  <wsdl:message name="ResetLoginAttemptsSoapOut">
+    <wsdl:part name="parameters" element="tns:ResetLoginAttemptsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ResetLoginAttemptsAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTransactionDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTransactionDetailAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetBettingProfileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBettingProfileList" />
+  </wsdl:message>
+  <wsdl:message name="GetBettingProfileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBettingProfileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBettingProfileListAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetBetInfoDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBetInfoDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetBetInfoDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBetInfoDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBetInfoDetailsAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetPokerEarningsReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPokerEarningsReport" />
+  </wsdl:message>
+  <wsdl:message name="GetPokerEarningsReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPokerEarningsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPokerEarningsReportAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GameplayDetailedReportSoapIn">
+    <wsdl:part name="parameters" element="tns:GameplayDetailedReport" />
+  </wsdl:message>
+  <wsdl:message name="GameplayDetailedReportSoapOut">
+    <wsdl:part name="parameters" element="tns:GameplayDetailedReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GameplayDetailedReportAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetReportByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportByName" />
+  </wsdl:message>
+  <wsdl:message name="GetReportByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportByNameAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetReportResultSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReportResult" />
+  </wsdl:message>
+  <wsdl:message name="GetReportResultSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReportResultResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReportResultAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="SendMobileGameSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMobileGame" />
+  </wsdl:message>
+  <wsdl:message name="SendMobileGameSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMobileGameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMobileGameAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="SendMobileLinkSoapIn">
+    <wsdl:part name="parameters" element="tns:SendMobileLink" />
+  </wsdl:message>
+  <wsdl:message name="SendMobileLinkSoapOut">
+    <wsdl:part name="parameters" element="tns:SendMobileLinkResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendMobileLinkAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLanguageList" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLanguageListResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLanguageListAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetMyBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMyBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetMyBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMyBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMyBalanceAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetPlaycheckUrlSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlaycheckUrl" />
+  </wsdl:message>
+  <wsdl:message name="GetPlaycheckUrlSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlaycheckUrlResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlaycheckUrlAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountDetailsAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetVersion" />
+  </wsdl:message>
+  <wsdl:message name="GetVersionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAccountAvailableSoapIn">
+    <wsdl:part name="parameters" element="tns:IsAccountAvailable" />
+  </wsdl:message>
+  <wsdl:message name="IsAccountAvailableSoapOut">
+    <wsdl:part name="parameters" element="tns:IsAccountAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsAccountAvailableAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerFundsInPlayDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPlayerFundsInPlayDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerFundsInPlayDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPlayerFundsInPlayDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPlayerFundsInPlayDetailsAgentSession">
+    <wsdl:part name="AgentSession" element="tns:AgentSession" />
+  </wsdl:message>
+  <wsdl:portType name="EntServicesSoap">
+    <wsdl:operation name="AddAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add Account to Vendor</wsdl:documentation>
+      <wsdl:input message="tns:AddAccountSoapIn" />
+      <wsdl:output message="tns:AddAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddStationAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add Station to Vendor</wsdl:documentation>
+      <wsdl:input message="tns:AddStationAccountSoapIn" />
+      <wsdl:output message="tns:AddStationAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddProgressiveAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add Progressive Account to Vendor</wsdl:documentation>
+      <wsdl:input message="tns:AddProgressiveAccountSoapIn" />
+      <wsdl:output message="tns:AddProgressiveAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPokerAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add Progressive Account to Vendor</wsdl:documentation>
+      <wsdl:input message="tns:AddPokerAccountSoapIn" />
+      <wsdl:output message="tns:AddPokerAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountEx">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Add Extended Account to Vendor</wsdl:documentation>
+      <wsdl:input message="tns:AddAccountExSoapIn" />
+      <wsdl:output message="tns:AddAccountExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Deposit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Increase account balance</wsdl:documentation>
+      <wsdl:input message="tns:DepositSoapIn" />
+      <wsdl:output message="tns:DepositSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticate">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Authenticate Agent by loginName, PinCode</wsdl:documentation>
+      <wsdl:input message="tns:IsAuthenticateSoapIn" />
+      <wsdl:output message="tns:IsAuthenticateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrenciesForAddAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Agent currencies for adding new account</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrenciesForAddAccountSoapIn" />
+      <wsdl:output message="tns:GetCurrenciesForAddAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Edit Account</wsdl:documentation>
+      <wsdl:input message="tns:EditAccountSoapIn" />
+      <wsdl:output message="tns:EditAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrenciesForDeposit">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Agent currencies for deposit</wsdl:documentation>
+      <wsdl:input message="tns:GetCurrenciesForDepositSoapIn" />
+      <wsdl:output message="tns:GetCurrenciesForDepositSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Withdrawal">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Decrease account balance for a specified amount</wsdl:documentation>
+      <wsdl:input message="tns:WithdrawalSoapIn" />
+      <wsdl:output message="tns:WithdrawalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawalAll">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Decrease account balance to zero</wsdl:documentation>
+      <wsdl:input message="tns:WithdrawalAllSoapIn" />
+      <wsdl:output message="tns:WithdrawalAllSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LockAccount">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Lock account</wsdl:documentation>
+      <wsdl:input message="tns:LockAccountSoapIn" />
+      <wsdl:output message="tns:LockAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get accounts balance</wsdl:documentation>
+      <wsdl:input message="tns:GetAccountBalanceSoapIn" />
+      <wsdl:output message="tns:GetAccountBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSuspendAccountStatus">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Change SuspendAccountStatus</wsdl:documentation>
+      <wsdl:input message="tns:ChangeSuspendAccountStatusSoapIn" />
+      <wsdl:output message="tns:ChangeSuspendAccountStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ResetLoginAttempts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Reset login attempts</wsdl:documentation>
+      <wsdl:input message="tns:ResetLoginAttemptsSoapIn" />
+      <wsdl:output message="tns:ResetLoginAttemptsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Transaction Detail</wsdl:documentation>
+      <wsdl:input message="tns:GetTransactionDetailSoapIn" />
+      <wsdl:output message="tns:GetTransactionDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBettingProfileList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Betting Profile List</wsdl:documentation>
+      <wsdl:input message="tns:GetBettingProfileListSoapIn" />
+      <wsdl:output message="tns:GetBettingProfileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBetInfoDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get betifno details report</wsdl:documentation>
+      <wsdl:input message="tns:GetBetInfoDetailsSoapIn" />
+      <wsdl:output message="tns:GetBetInfoDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPokerEarningsReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get poker earnings report</wsdl:documentation>
+      <wsdl:input message="tns:GetPokerEarningsReportSoapIn" />
+      <wsdl:output message="tns:GetPokerEarningsReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GameplayDetailedReport">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get game details report</wsdl:documentation>
+      <wsdl:input message="tns:GameplayDetailedReportSoapIn" />
+      <wsdl:output message="tns:GameplayDetailedReportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportByName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Generic Report. Please, run getReportResult method with current GUID to get the report data!</wsdl:documentation>
+      <wsdl:input message="tns:GetReportByNameSoapIn" />
+      <wsdl:output message="tns:GetReportByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportResult">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get result of report</wsdl:documentation>
+      <wsdl:input message="tns:GetReportResultSoapIn" />
+      <wsdl:output message="tns:GetReportResultSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMobileGame">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send mobile game</wsdl:documentation>
+      <wsdl:input message="tns:SendMobileGameSoapIn" />
+      <wsdl:output message="tns:SendMobileGameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMobileLink">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Send link for mobile game to specified email/phone number</wsdl:documentation>
+      <wsdl:input message="tns:SendMobileLinkSoapIn" />
+      <wsdl:output message="tns:SendMobileLinkSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageList">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get available languages by casinoid</wsdl:documentation>
+      <wsdl:input message="tns:GetLanguageListSoapIn" />
+      <wsdl:output message="tns:GetLanguageListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMyBalance">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get member balance</wsdl:documentation>
+      <wsdl:input message="tns:GetMyBalanceSoapIn" />
+      <wsdl:output message="tns:GetMyBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaycheckUrl">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns URL to see PlayCheck for incoming player's account number and password, according to type of playchek and incoming language</wsdl:documentation>
+      <wsdl:input message="tns:GetPlaycheckUrlSoapIn" />
+      <wsdl:output message="tns:GetPlaycheckUrlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns details for AccountNumber</wsdl:documentation>
+      <wsdl:input message="tns:GetAccountDetailsSoapIn" />
+      <wsdl:output message="tns:GetAccountDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return version of web-service</wsdl:documentation>
+      <wsdl:input message="tns:GetVersionSoapIn" />
+      <wsdl:output message="tns:GetVersionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAccountAvailable">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Check if Account Name is free and can be used for adding new account</wsdl:documentation>
+      <wsdl:input message="tns:IsAccountAvailableSoapIn" />
+      <wsdl:output message="tns:IsAccountAvailableSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFundsInPlayDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get bets and payouts of the player</wsdl:documentation>
+      <wsdl:input message="tns:GetPlayerFundsInPlayDetailsSoapIn" />
+      <wsdl:output message="tns:GetPlayerFundsInPlayDetailsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EntServicesSoap" type="tns:EntServicesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStationAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/AddStationAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddStationAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProgressiveAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/AddProgressiveAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddProgressiveAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPokerAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/AddPokerAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddPokerAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountEx">
+      <soap:operation soapAction="https://entservices.totalegame.net/AddAccountEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:AddAccountExAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deposit">
+      <soap:operation soapAction="https://entservices.totalegame.net/Deposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DepositAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticate">
+      <soap:operation soapAction="https://entservices.totalegame.net/IsAuthenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrenciesForAddAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetCurrenciesForAddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCurrenciesForAddAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/EditAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:EditAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrenciesForDeposit">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetCurrenciesForDeposit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCurrenciesForDepositAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Withdrawal">
+      <soap:operation soapAction="https://entservices.totalegame.net/Withdrawal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:WithdrawalAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawalAll">
+      <soap:operation soapAction="https://entservices.totalegame.net/WithdrawalAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:WithdrawalAllAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockAccount">
+      <soap:operation soapAction="https://entservices.totalegame.net/LockAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:LockAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetAccountBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAccountBalanceAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSuspendAccountStatus">
+      <soap:operation soapAction="https://entservices.totalegame.net/ChangeSuspendAccountStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ChangeSuspendAccountStatusAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetLoginAttempts">
+      <soap:operation soapAction="https://entservices.totalegame.net/ResetLoginAttempts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ResetLoginAttemptsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetail">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetTransactionDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetTransactionDetailAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBettingProfileList">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetBettingProfileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBettingProfileListAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBetInfoDetails">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetBetInfoDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetBetInfoDetailsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPokerEarningsReport">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetPokerEarningsReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPokerEarningsReportAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GameplayDetailedReport">
+      <soap:operation soapAction="https://entservices.totalegame.net/GameplayDetailedReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GameplayDetailedReportAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportByName">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetReportByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetReportByNameAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportResult">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetReportResult" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetReportResultAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMobileGame">
+      <soap:operation soapAction="https://entservices.totalegame.net/SendMobileGame" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendMobileGameAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMobileLink">
+      <soap:operation soapAction="https://entservices.totalegame.net/SendMobileLink" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:SendMobileLinkAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageList">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetLanguageList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetLanguageListAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyBalance">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetMyBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetMyBalanceAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaycheckUrl">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetPlaycheckUrl" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPlaycheckUrlAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetAccountDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetAccountDetailsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetVersion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAccountAvailable">
+      <soap:operation soapAction="https://entservices.totalegame.net/IsAccountAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:IsAccountAvailableAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFundsInPlayDetails">
+      <soap:operation soapAction="https://entservices.totalegame.net/GetPlayerFundsInPlayDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetPlayerFundsInPlayDetailsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EntServicesSoap12" type="tns:EntServicesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/AddAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddStationAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/AddStationAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddStationAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddProgressiveAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/AddProgressiveAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddProgressiveAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPokerAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/AddPokerAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddPokerAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountEx">
+      <soap12:operation soapAction="https://entservices.totalegame.net/AddAccountEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:AddAccountExAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Deposit">
+      <soap12:operation soapAction="https://entservices.totalegame.net/Deposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DepositAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthenticate">
+      <soap12:operation soapAction="https://entservices.totalegame.net/IsAuthenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrenciesForAddAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetCurrenciesForAddAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCurrenciesForAddAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/EditAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:EditAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCurrenciesForDeposit">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetCurrenciesForDeposit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCurrenciesForDepositAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Withdrawal">
+      <soap12:operation soapAction="https://entservices.totalegame.net/Withdrawal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:WithdrawalAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WithdrawalAll">
+      <soap12:operation soapAction="https://entservices.totalegame.net/WithdrawalAll" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:WithdrawalAllAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LockAccount">
+      <soap12:operation soapAction="https://entservices.totalegame.net/LockAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:LockAccountAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetAccountBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAccountBalanceAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangeSuspendAccountStatus">
+      <soap12:operation soapAction="https://entservices.totalegame.net/ChangeSuspendAccountStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ChangeSuspendAccountStatusAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ResetLoginAttempts">
+      <soap12:operation soapAction="https://entservices.totalegame.net/ResetLoginAttempts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ResetLoginAttemptsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTransactionDetail">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetTransactionDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetTransactionDetailAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBettingProfileList">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetBettingProfileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBettingProfileListAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBetInfoDetails">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetBetInfoDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetBetInfoDetailsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPokerEarningsReport">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetPokerEarningsReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPokerEarningsReportAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GameplayDetailedReport">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GameplayDetailedReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GameplayDetailedReportAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportByName">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetReportByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetReportByNameAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReportResult">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetReportResult" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetReportResultAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMobileGame">
+      <soap12:operation soapAction="https://entservices.totalegame.net/SendMobileGame" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendMobileGameAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMobileLink">
+      <soap12:operation soapAction="https://entservices.totalegame.net/SendMobileLink" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:SendMobileLinkAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLanguageList">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetLanguageList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetLanguageListAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMyBalance">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetMyBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetMyBalanceAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlaycheckUrl">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetPlaycheckUrl" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPlaycheckUrlAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountDetails">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetAccountDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetAccountDetailsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVersion">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAccountAvailable">
+      <soap12:operation soapAction="https://entservices.totalegame.net/IsAccountAvailable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:IsAccountAvailableAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlayerFundsInPlayDetails">
+      <soap12:operation soapAction="https://entservices.totalegame.net/GetPlayerFundsInPlayDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetPlayerFundsInPlayDetailsAgentSession" part="AgentSession" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="EntServices">
+    <wsdl:port name="EntServicesSoap" binding="tns:EntServicesSoap">
+      <soap:address location="https://entservices.totalegame.net/EntServices.asmx" />
+    </wsdl:port>
+    <wsdl:port name="EntServicesSoap12" binding="tns:EntServicesSoap12">
+      <soap12:address location="https://entservices.totalegame.net/EntServices.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

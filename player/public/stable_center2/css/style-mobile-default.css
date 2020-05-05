@@ -1,0 +1,1780 @@
+/**
+ * Don't let the designer change this file. Designer only need to modify www to apply new style.
+ *
+ * @authr Elvis Chen<elvis.php.tw@tripleonetech.net>
+ */
+@charset "utf-8";
+
+@import "/common/css/common.css?v=7";
+@import "/common/css/responsive.css?v=7";
+@import "/common/css/c-icon.css?v=7";
+@import "/common/css/bank.css?v=7";
+
+/* ========================================== */
+/* HTML Layout <editor-fold>{{{               */
+/* ========================================== */
+hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+select option:disabled {
+    color: silver;
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Common Layout  <editor-fold>{{{            */
+/* ========================================== */
+.container-fluid {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 100%;
+}
+
+.panel {
+    margin-bottom: 0;
+}
+
+.modal-body .row,
+.panel-body .row {
+    margin: 0px;
+}
+
+.modal-content * {
+    box-sizing: border-box;
+}
+
+.nopadding {
+    padding: 0;
+}
+
+.message-box.in .modal-dialog .modal-content,
+#waiting-modal .modal-dialog .modal-content,
+#summaryModal .modal-dialog .modal-content,
+#alertModal .modal-dialog .modal-content,
+#deposit-confirmation.submit-deposit-modal.in .modal-dialog .modal-content{
+    padding: 0;
+}
+
+.dropdown-menu li[disabled=disabled],
+.dropdown-menu li[disabled=disabled] a{
+    color: silver;
+    cursor: not-allowed;
+}
+
+.overlay,
+.loader-container {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay a {
+    padding: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 20px;
+}
+
+.overlay .img_container img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 80%;
+    transform: translate(-50%, -50%);
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Modal <editor-fold>{{{                     */
+/* ========================================== */
+#modal_confirmation .modal-dialog{
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#modal_confirmation .modal-dialog .modal-content{
+    border-radius: 0;
+    height: 100%;
+    background: #eee;
+}
+#modal_confirmation .modal-dialog .modal-content .modal-footer{
+    border: 0;
+    background: rgba(0,0,0,0.1);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    padding: 0;
+}
+
+#modal_confirmation .modal-content .modal-body{
+    position: relative;
+}
+
+#modal_confirmation .modal-content .modal-body:after{
+    content: "\f1c5";
+    font-family: Font Awesome\ 5 Free;
+    font-size: 110px;
+
+    position: absolute;
+    color: #c1c1c1;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    top: 130px;
+}
+#modal_confirmation .modal-content .modal-body:before{
+    content: "\f071";
+    font-family: Font Awesome\ 5 Free;
+    font-weight: 900;
+    font-size: 30px;
+
+    position: absolute;
+    color: #ffa200;
+    width: 100%;
+    left: 40px;
+    text-align: center;
+    top: 140px;
+    z-index: 1;
+}
+
+#modal_confirmation .modal-content .modal-body center{
+    color: #333 !important;
+    position: absolute;
+    top: 270px;
+    font-size: 18px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#modal_confirmation .modal-content .modal-footer .confirmation_btn{
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #6E9200;
+    color: #fff !important;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#modal_confirmation .modal-content .modal-footer .confirmation_btn.no{
+    padding: 0;
+    width: 40%;
+    height: 40px;
+    background: #8B8B8B;
+    color: #fff;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    float: none !important;
+}
+
+#alertModal .modal-dialog .modal-content .modal-header .close{
+    width: 20px;
+    height: 20px;
+    float: right;
+    background: url(../mobile/images/x-icon.png) no-repeat;
+    background-size: 100%;
+    margin-top: 14px;
+    margin-right: 0;
+    display: block;
+    overflow: hidden;
+    text-indent: 50px;
+}
+
+.modal .modal-dialog {
+    box-sizing: border-box;
+    margin: 0px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Mobile Navigation Menu <editor-fold>{{{    */
+/* ========================================== */
+.mmenu .mm_main ul.nav li a,
+.mmenu .be_main ul.nav li a {
+    padding: inherit;
+    display: block;
+    float: none;
+
+    top: 0;
+    left: 0;
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Player Center Layout <editor-fold>{{{      */
+/* ========================================== */
+.container .header,
+.container-fluid .header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 99;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.container .header .head_back,
+.container-fluid .header .head_back {
+    position: absolute;
+    padding: 15px;
+    left: 0;
+    z-index: 10;
+
+    width: 60px;
+    height: 60px;
+}
+
+.container .header .header_title,
+.container-fluid .header .header_title {
+    box-sizing: border-box;
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0 60px;
+    overflow: hidden;
+
+    width: 100%;
+
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.5em;
+
+    z-index: 9;
+}
+
+.header .header_title .header_title_text {
+    display: inline-block;
+
+    width: 100%;
+    overflow: hidden;
+
+    color: #FFF;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.header .header_title .header_title_img {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.header .header_title .header_title_img img {
+    display: inline-block;
+    height: 70%;
+    width: auto;
+    line-height: 100%;
+}
+
+.container .quickButtonBar,
+.container-fluid .quickButtonBar {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 99;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0.17, 0.04, 0.03, 0.94);
+}
+
+.container.kbactive .quickButtonBar,
+.container-fluid.kbactive .quickButtonBar {
+    bottom: -55px;
+}
+
+.container-fluid .row.content {
+    box-sizing: border-box;
+
+    padding-top: 60px;
+    padding-bottom: 55px;
+}
+
+.container .act_menu th,
+.container .act_menu td,
+.container-fluid .act_menu th,
+.container-fluid .act_menu td {
+    border: 1px solid #e5e5e5;
+}
+
+.update-panel .input_hint {
+    color: red;
+    letter-spacing: 1px;
+    font-style: oblique;
+    font-weight: bold;
+    font-size: 5px;
+}
+
+.qrcode-img-hint {
+  font-size: 14px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Login <editor-fold>{{{                     */
+/* ========================================== */
+#frm_login .login-banner {
+    height: 80px;
+}
+
+#frm_login .remember-password-container {
+    float: left;
+}
+
+#frm_login .forgot-password-container {
+    float: right;
+}
+
+#frm_login #remember_me {
+    margin: 0;
+    height: 1em;
+    vertical-align: middle;
+}
+
+#frm_login .contact-customer-service-container {
+    float: left;
+}
+
+#frm_login .register-container {
+    float: right;
+}
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Mobile Transfer <editor-fold>{{{           */
+/* ========================================== */
+.player-transfer-summary .main-summary {
+    margin-top: 1rem;
+    padding: 1rem 0;
+}
+
+.player-transfer-summary .balance-entry {
+    margin-bottom: 1rem;
+}
+
+.player-transfer-summary .balance-entry:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.player-transfer-summary .balance-entry .platform {
+    float: left;
+    text-align: left;
+}
+
+.player-transfer-summary .balance-entry .credit {
+    float: right;
+}
+
+.player-transfer-summary .main-summary .main-actions,
+.player-transfer-summary .main-summary .main-links {
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.player-transfer-summary .main-summary .main-links {
+    padding-bottom: 0;
+}
+
+.player-transfer-summary .main-summary .main-actions:after,
+.player-transfer-summary .main-summary .main-links:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.player-transfer-summary .main-summary .main-actions .btn,
+.player-transfer-summary .main-summary .main-links .btn {
+    width: 50%;
+}
+
+.player-transfer-summary .main-summary .main-actions .btn:first-child,
+.player-transfer-summary .main-summary .main-links .btn:first-child {
+    margin-left: -0.5rem;
+    float: left;
+}
+
+.player-transfer-summary .main-summary .main-actions .btn:last-child,
+.player-transfer-summary .main-summary .main-links .btn:last-child {
+    margin-right: -0.5rem;
+    float: right;
+}
+
+.player-transfer-summary .sup-summary-all {
+    display:inline-block;
+    vertical-align:top;
+    min-width:100%;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary {
+    border-bottom:1px solid #ddd;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-info {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-info:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-info .platform {
+    float: left;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-info .credit {
+    float: right;
+    word-break:break-all;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-actions {
+    padding: 0 1rem;
+    text-align: center;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-actions .btn {
+    width: 70%;
+    margin-bottom: 1rem;
+}
+
+.player-transfer-summary .sup-summary-all .sup-summary .subwallet-actions .btn:last-child {
+    margin-bottom: 0;
+}
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Deposit <editor-fold>{{{                   */
+/* ========================================== */
+.hide_deposit_form {
+    display: none; !important;
+}
+
+.see-deposit-btn {
+    border-radius: 90px;
+    cursor: pointer;
+    height: 34px;
+    line-height: 32px;
+    margin: auto;
+    max-width: 180px;
+    padding: 2px 5px;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #b2b2b2;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+#deposit-tab-content-manual .panel {
+    text-align: left;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 40px;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover,
+.deposit-process-mode-2.select-payment-account button.bank-entry:focus {
+    background-color: rgba(0.7, 0.7, 0.7, 0.6);
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry .active-payment-account-info {
+    display: inline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding-right: 40px;
+    box-sizing: border-box;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry .active-payment-account-info span {
+    width: 210px;
+    vertical-align: baseline;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry i.fa-caret-down {
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.deposit-process-mode-2.select-payment-account button.bank-entry:hover i.fa-caret-down {
+    background-color: #ff9600;
+}
+
+.deposit-process-mode-2.select-payment-account .form-group {
+    position: relative;
+    display: inline-block;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list {
+    display: none;
+    position: absolute;
+    padding: 0px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list li {
+    padding: 0px;
+    width: 300px;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list li span {
+    width: 235px;
+}
+
+.deposit-process-mode-2.select-payment-account .bank-list.dropdown-show {
+    display:block;
+    background-color: #FFF;
+    height: 160px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 300px;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail {
+    display: table;
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail>div{
+    display: table-cell;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail .btn.btn-copy {
+    margin: 0;
+    width: auto;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail p {
+    position: relative;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail .tooltip.top {
+    top: -30px !important;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail #active-payment-account-image {
+    width: 100%;
+    display: block;
+}
+
+.deposit-process-mode-2.select-payment-account .payment-account-detail #active-payment-account-image img {
+    width: 150px;
+}
+
+.setup-deposit-secure_id input {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+.setup-deposit-secure_id button.btn.btn-copy {
+    margin: 0px 0px 0px 15px;
+    float: right;
+}
+.setup-deposit-secure_id button.btn.btn-copy:after {
+    clear: both;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content,
+.select-player-withdrawal-bank-account .player-withdrawal-bank-account-content {
+    display: table;
+    width: 100%;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content .other-deposit-bank,
+.select-player-withdrawal-bank-account .player-withdrawal-bank-account-content .other-withdrawal-bank {
+    display: table-header-group;
+    float: none;
+    text-align: center;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content .other-deposit-bank .btn-container,
+.select-player-withdrawal-bank-account .player-withdrawal-bank-account-content .other-withdrawal-bank .btn-container {
+    display: inline;
+}
+
+.select-player-deposit-bank-account .player-deposit-bank-account-content .current-deposit-bank,
+.select-player-withdrawal-bank-account .player-withdrawal-bank-account-content .current-withdrawal-bank {
+    display: table-footer-group;
+    float: none;
+}
+
+.submit-deposit-order {
+    text-align: center;
+}
+
+#submit-done-deposit .deposit-payment-account-detail {
+    position: relative;
+}
+
+.submit-deposit-modal .deposit-payment-account-detail div.row,
+.submit-deposit-modal .deposit-payment-account-detail p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.submit-deposit-modal deposit-payment-account-detail div.row:first-of-type strong,
+.submit-deposit-modal deposit-payment-account-detail p:first-of-type strong {
+    text-transform: uppercase;
+}
+.submit-deposit-modal deposit-payment-account-detail [class*="col-xs"] {
+    padding: 0;
+}
+
+#submit-done-deposit .deposit-payment-account-detail .account-image {
+    text-align: center;
+}
+
+#submit-done-deposit .deposit-payment-account-detail .account-image img {
+    width: 200px;
+}
+
+#submit-done-deposit .helper-content {
+    margin-top: 15px;
+}
+
+
+#form-deposit .dropdown-toggle {
+    width: 260px;
+    font-size: 12px;
+    height: 40px;
+    border-radius: 2px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+}
+
+#form-deposit .dropdown-toggle span {
+    color: #000;
+}
+
+#form-deposit .dropdown-menu {
+    width: 260px;
+}
+
+#form-deposit .dropdown-menu.playerbank {
+    width: 360px;
+}
+
+.step .step_hint {
+    color: red;
+    font-size: 5px;
+}
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Withdraw <editor-fold>{{{                  */
+/* ========================================== */
+
+/* }}}</editor-fold> */
+
+/* ========================================== */
+/* Bank <editor-fold>{{{                      */
+/* ========================================== */
+.step .step-icon {
+    background: #737373;
+    padding: 0;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: bold;
+    line-height: 30px;
+    margin-right: 5px;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    text-align: center;
+}
+
+.select-payment-account .bank-list,
+.fmd-step1 .bank-list {
+    height: 15vh;
+    overflow: hidden;
+}
+
+#player-deposit-banks .bank-list {
+    height: 40vh;
+}
+
+.hide-btn,
+.show-btn {
+    border-radius: 90px;
+    cursor: pointer;
+    height: 34px;
+    line-height: 32px;
+    margin: auto;
+    max-width: 180px;
+    padding: 2px 5px;
+    width: 100%;
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #b2b2b2;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.hide-btn:hover,
+.show-btn:hover {
+    background: #8c8c8c;
+}
+
+#view-bank-acc .bank-list,
+#edit-bank-acc .bank-list,
+#add-bank-acc .bank-list {
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Bank Account <editor-fold>{{{              */
+/* ========================================== */
+.bank_account_container {
+    box-sizing: border-box;
+}
+
+.bank_account_tab_content .tab-pane.active {
+    display: inline-block;
+
+    width: 100%;
+}
+.bank_account_tab_content .bank_account_info {
+    box-sizing: border-box;
+    background-color: #f3f3f3;
+    border: 2px solid #e0e0e0;
+    box-shadow: 3px 3px 5px hsl(0,0%,85%);
+    border-radius: 5%;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.bank_account_tab_content .bank_account_info .bank_name,
+.bank_account_tab_content .bank_account_info .bank_account_name,
+.bank_account_tab_content .bank_account_info .bank_account_number {
+    font-size: 100%;
+    line-height: 200%;
+    text-shadow: 0 1px hsl(0,0%,95%), 0 2px hsl(0,0%,85%);
+}
+
+.bank_account_info.empty {
+    position: relative;
+}
+
+.bank_account_info.empty .btn-info {
+    visibility: hidden;
+}
+
+.bank_account_info.empty .add-bank-account {
+    position: absolute;
+    background-color: inherit;
+    border-width: 0;
+
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+}
+
+.bank_account_info.empty .add-bank-account:hover,
+.bank_account_info.empty .add-bank-account:active {
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 0%, 10%);
+
+    outline: none;
+}
+
+#bank_account_deposit .bank_account_info.empty .add-bank-account,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account {
+    font-size: 150%;
+    line-height: 40px;
+    height: 33%;
+}
+#bank_account_deposit .bank_account_info.empty .add-bank-account .fa,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account .fa {
+    line-height: 40px;
+    vertical-align: top;
+}
+#bank_account_deposit .bank_account_info.empty .add-bank-account.alipay,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account.alipay{
+    top: 33%;
+}
+#bank_account_deposit .bank_account_info.empty .add-bank-account.wechat,
+#bank_account_withdrawal .bank_account_info.empty .add-bank-account.wechat{
+    top: 66%;
+}
+
+.player_bank_account_modal .fmd-step1.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.player_bank_account_modal .fmd-step1.disabled * {
+    pointer-events: none;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Report Layout <editor-fold>{{{             */
+/* ========================================== */
+.report .report_nav {
+    position: static; /* override in the m site defined. */
+
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 767px){
+    .report .table-responsive {
+        border: none;
+    }
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Media Screen <editor-fold>{{{              */
+/* ========================================== */
+@media screen and (max-width: 414px) {
+    .mm_main.attach-docu-modal .file {
+        height: 92px;
+    }
+
+    .upload-container {
+        height: 92px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .mm_main.attach-docu-modal .file {
+        height: 86px;
+    }
+
+    .upload-container {
+        height: 86px;
+    }
+}
+
+
+@media screen and (max-width: 360px) {
+    .mm_main.attach-docu-modal .file {
+        height: 82px;
+    }
+
+    .upload-container {
+        height: 82px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mm_main.attach-docu-modal .file {
+        height: 71px;
+    }
+
+    .upload-container {
+        height: 71px;
+    }
+
+    .upload-container .custom-file-upload i{
+        height: 72px;
+    }
+}
+
+.wallet{
+  padding: 10px 10px;
+  border-top: 1px solid #888;
+}
+.wallet .text{
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #fff;
+  line-height: 30px;
+}
+.wallet .money{
+  font-size: 20px;
+  margin-left: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+.wallet .btn{
+  background: rgba(255, 255, 255, 0.8);
+  border-color: #fff;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding: 0;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Register page <editor-fold>{{{             */
+/* ========================================== */
+#registration_form label {
+    display: none;
+}
+#send_sms_verification {
+    border-radius: 0 5px 5px 0;
+    right: 16px;
+    z-index: 1000;
+    width: 40%;
+    height: 40px;
+    top: 0px;
+}
+
+.cstm-mod .modal-body .contact-number.show-dialing-code div:first-child {
+}
+
+.cstm-mod .modal-body .contact-number.show-dialing-code #dialing_code {
+    width: 40%;
+    padding-left: 15px;
+    display: inline-block;
+    float: left;
+}
+
+.cstm-mod .modal-body .contact-number.show-dialing-code #contactNumber {
+    width: 58%;
+    padding-right: 15px;
+    display: inline-block;
+    float: right;
+}
+
+.cstm-mod .modal-body #registration_form .sms-verification-code input[name="sms_verification_code"] {
+    width: 40%;
+    padding-left: 15px;
+    display: inline-block;
+    float: left;
+}
+
+.cstm-mod .modal-body #registration_form .sms-verification-code #send_sms_verification {
+    width: 58%;
+    padding-right: 15px;
+    display: inline-block;
+    float: right;
+}
+
+.red {
+    color: #a80000;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Cashback <editor-fold>{{{                  */
+/* ========================================== */
+
+.cb-mob .leading
+    { width: 100%; height: 200px; background-color: #444; border-bottom-left-radius: 50% 6%; border-bottom-right-radius: 50% 6%; }
+.cb-mob .leading .avail-cb.figure
+   { font-size: 58px; padding-top: 16px; padding-bottom: 5px;text-align: center; color: #fff; }
+.cb-mob .leading .avail-cb.title
+    { font-size: 18px; text-align: center; color: #fff; }
+.cb-mob .bets-frame
+    { position:relative; width: 285px; height: 65px; top: 25px; margin: 0 auto; z-index: 100; padding: 25px; border-radius: 24px; background-color: #fff; box-shadow: #9999992a 3px 3px 15px 15px; }
+.cb-mob .bets-frame .bets
+   { display: inline-block; width: 137px; text-align: center; }
+.cb-mob .bets-frame .bets:last-child
+    { border-left: 1px solid #777; }
+.cb-mob .bets .figure
+    { font-size: 20px; margin-top: 5px; margin-bottom: 5px; }
+.cb-mob .bets .title
+    { font-size: 14px; color: #555; }
+.cb-mob .following
+    { position: relative; padding-top: 75px;  text-align: center; background-color: #f8f8f8; }
+.cb-mob .following .cb-period
+    { font-size: 14px; font-weight: bold; margin: 2px 0; color: #555; }
+.cb-mob .following .cb-period .req-row  { width: 80%; margin: 0 auto; text-align: left; }
+.cb-mob .following .cb-period .req { display: inline-block; }
+.following .cb-period .req.title { width: 25%; }
+.cb-mob .following .cb-button   { margin: -24px 0 -24px 0; }
+.cb-mob .following .cb-hist-frame
+    { width: 295px; height: 370px; margin: 10px auto 0 auto; padding: 15px 20px; font-size: 14px; text-align:left; background-color: #fff; color: #555; box-shadow: #9999992a 3px 3px 15px 15px; }
+.following .cb-button button.disabled
+    { background-color: #ccc; border: none; pointer-events: none; }
+.following .cb-hist-frame .title
+    { margin: 5px 0 10px 0; font-size: 13px; }
+.cb-hist-frame .entries .row    { height: 50px; }
+.cb-hist-frame .entries .row.empty  { color: #111; text-align: center; }
+.cb-hist-frame .entries .row div
+    { display: inline-block; font-size: 18px; }
+.cb-hist-frame .entries .row .vline { position: relative; height: 42px;top: 16px; left: 17px; z-index: 100; border-right: 2px dotted #f6b410; }
+.cb-hist-frame .entries .row:last-child .vline { border-right: 2px dotted #ffffff00; }
+.cb-hist-frame .entries .row .dot   { position: relative; top: -2px; left: 8px; font-size: 14px; color: #f6b410; }
+.cb-hist-frame .entries .row .symbols
+    { width: 36px; text-align: right;  }
+.cb-hist-frame .entries .row .amount
+    { width: 80px; text-align: right;  }
+.cb-hist-frame .entries .row .stat
+    { font-size: 13px; margin-right: 40px; float: right;  }
+.cb-hist-frame .entries .row .recv
+    { display: block; font-size: 13px; position: relative; top: -20px; left: 50px;}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Promotion <editor-fold>{{{                 */
+/* ========================================== */
+.select-promo-category-dropdown {
+    float: right;
+
+    margin: 10px 15px;
+}
+
+.select-promo-category-dropdown .dropdown-toggle {
+    width: 200px;
+}
+
+.select-promo-category-dropdown .dropdown-menu {
+    width: 200px;
+
+    left: auto;
+    right: 0;
+    float: right;
+}
+
+.select-promo-category-dropdown:after {
+    clear: both;
+}
+
+.promotions .pr_show {
+    display: block;
+    cursor: pointer;
+    padding: 10px;
+    margin-bottom: 0
+}
+
+.promotions .pr_show .primage {
+    width: 25%;
+}
+
+.promotions .pr_show .primage img {
+    width: 71px; min-height: 53px;
+}
+
+.promotions .pr_show .title {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #333;
+    width: 65%;
+    text-indent: 10px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0 5px;
+
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.promotions .pr_show .description {
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-indent: 10px;
+    margin-top: 5px;
+    text-align: center;
+    padding: 0 5px;
+
+    width: 65%;
+    color: #e50000;
+    font-size: 14px;
+}
+
+.promotions .pr_show .actions {
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: center;
+    padding: 0 5px;
+
+    width: 65%;
+    color: #e50000;
+    font-size: 14px;
+}
+
+.promotions .collapse {
+    background-color: #fff;
+}
+
+.promotions .collapse .panel-body {
+    border-top: 1px solid #ddd;
+}
+
+.promotions .collapse .panel-body .action {
+    padding-top: 10px;
+    padding-right: 30px;
+    text-align: right;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Security <editor-fold>{{{                  */
+/* ========================================== */
+#security .security-list > div > .se-content {
+    height: 100px;
+    margin-top: -100px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+#security .security-list > div > .se-content.completed {
+    background: none;
+}
+
+#security .se-content p {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+
+    color: #000;
+}
+
+#security .se-content i {
+    color: #cecece;
+    font-size: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+#security .se-content.completed i {
+    color: #6E9200;
+}
+
+#security .se-content button,
+#security .se-content button:focus {
+    border: 0;
+    width: 144px;
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+    color: #fff;
+    font-size: 12px;
+    outline: 0;
+    transition: all .3s ease;
+}
+
+#security .se-content.completed button {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+}
+
+#security .se-content button:hover {
+    background: linear-gradient(to top, #ce4858 0%, #f96175 100%);
+    color: #fff;
+}
+
+#security .se-content.completed .verified-btn {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+    border: 0;
+    width: 120px;
+    font-size: 12px;
+    outline: 0;
+    padding: 6px 12px;
+    cursor: default;
+}
+
+#security .se-content .link-btn {
+    color: #db374f;
+    font-size: 12px;
+    border-left: 1px solid #cecece;
+    padding-left: 8px;
+    margin-left: 5px;
+}
+
+#security .se-content .link-btn:focus {
+    outline: 0;
+    color: #ff9600;
+}
+
+.security-modal,
+.security-modal p,
+.security-modal span {
+    color: #000;
+}
+
+.security-modal .btn-file {
+    margin-top: 15px;
+    border: 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+    color: #fff;
+}
+
+.security-modal .btn-file:hover {
+    background: linear-gradient(to top, #ce4858 0%, #f96175 100%);
+    color: #fff;
+}
+
+.security-modal .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.security-modal label {
+    font-weight: 400;
+}
+
+.security-modal input {
+    margin-bottom: 15px;
+}
+
+.security-modal select {
+    margin-bottom: 15px;
+}
+
+.security-modal .modal-title {
+    color: #db374f;
+}
+
+.security-modal .modal-footer {
+    text-align: left;
+}
+
+.security-modal .modal-footer .submit-btn {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.security-modal .modal-footer .submit-btn:hover {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+}
+
+.security-modal .modal-footer button {
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+    color: #fff;
+    border: 0;
+    max-width: 150px;
+    transition: all .3s ease;
+}
+.security-modal .modal-footer button:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.security-modal .modal-footer button:hover {
+    background: linear-gradient(to top, #d85464 0%, #ff7587 100%);
+}
+
+#security-withdrawal .withrawal_pass_notification {
+    color: red;
+    margin-top: -10px;
+}
+
+.security-contact-number-field-note .green{
+    color: #79ba1b;
+}
+
+.security-contact-number-field-note .red{
+    color: #a80000;
+}
+
+
+.image-upload-container {
+    position: relative;
+}
+.image-upload-entry > label {
+    border: 2px dashed #ccc;
+    width:100%;
+    height:400px
+}
+
+.image-upload-confirm.show-confirm {
+    position: absolute;
+    display: block !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    border: 2px dashed #ccc;
+}
+.image-upload-entry > label > .title {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 100px;
+    color:#888888
+}
+
+.image-upload-entry > label > .confirm-error {
+    /* display: none; */
+    color: #ff0000;
+    text-align: center;
+    margin-top: 100px;
+}
+.image-upload-entry > label > .confirm-error ul{
+    display: inline-block;
+    text-align: left;
+    margin: auto 10px;
+}
+/* .image-upload-entry > label > .confirm-error.show-error {
+    display: block !important;
+} */
+
+.image-upload-entry > label > .upload-btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-confirm-display > img {
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    width: 80%;
+    height: 300px;
+}
+
+.image-confirm-display > .confirm-check-btn{
+    top: 340px;
+    position: absolute;
+    left: 100px;
+    font-size: 15px !important;
+}
+
+.image-confirm-display > .confirm-cancel-btn{
+    top: 340px;
+    position: absolute;
+    right: 100px;
+    font-size: 15px !important;
+}
+.image-confirm-display > .compressing {
+    position: absolute;
+    top: 15px;
+    left: 10%;
+    width: 80%;
+    height: 300px;
+    z-index: 9;
+    /* padding-top: 20px; */
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+}
+.image-confirm-display > .compressing p{
+    font-weight: normal;
+}
+.image-confirm-display > .compressing .progress-num{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 182px;
+}
+.image-confirm-display > .compressing .progress-num span{
+    font-size: 26px;
+}
+.uploaded-file-container {
+    position: relative;
+    border:2px dashed #ccc;
+    top:7px;
+    width:100%;
+    height:400px;
+    overflow: scroll;
+}
+
+.uploaded-file-container > .overlay {
+    position: absolute;
+}
+
+.image-uploaded-file {
+    position: absolute;
+    width: 100%;
+}
+
+.image-uploaded-file > .img-area {
+    position: relative;
+    width: 25%;
+    height: 75px;
+    margin: 8px;
+    border: 1px solid #ccc;
+    float: left;
+}
+
+.image-uploaded-file > .img-area > .image-close {
+    position: absolute;
+    right: 6px;
+    top: -4px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.image-uploaded-file > .img-area > .show-uploaded-image {
+    width: 100%;
+    height: 100%;
+}
+
+.image-uploaded-file-prompt {
+    padding: 18px 0px 1px 0px;
+    line-height: 12px;
+    font-size: 12px;
+}
+
+.image-uploaded-file-prompt .prompt_txt {
+    color: red;
+}
+
+.nav-tabs.image-upload {
+    border-bottom: 0px !important;
+}
+
+.nav-tabs.image-upload > li > a {
+    border:2px dashed #ccc;
+    border-bottom: 0px !important;
+}
+
+.nav-tabs.image-upload > li > a:hover {
+    border:2px dashed #ccc;
+    border-bottom: 0px !important;
+}
+
+.uploaded-btn {
+    background: linear-gradient(to top, #a7010b 0%, #db374f 100%);
+    color: #fff;
+    max-width:150px;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Message <editor-fold>{{{                   */
+/* ========================================== */
+#messages {
+    box-sizing: content-box;
+}
+
+#messages>.panel-heading {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#messages .msg-tool-bar button.form-control {
+    width: 10vw;
+    height: 10vw;
+    background: linear-gradient(to top, #212121 0%, #6b6b6b 100%);
+    color: #fff;
+    padding: 0;
+    margin-left: 5px;
+    border: 0;
+}
+#messages .msg-tool-bar button.form-control:hover {
+    background: linear-gradient(to top, #0059B1 0%, #2693ff 100%);
+}
+
+#messages .msg-tool-bar .form-control img {
+    max-width: 26px;
+}
+
+#messages form.form-inline {
+    display: flex;
+}
+
+#messages form.form-inline > div:first-child {
+    display: flex;
+    flex: 80%;
+}
+
+#messages form.form-inline .form-group input.form-control {
+    flex: 80%;
+}
+
+#messages form.form-inline .form-group button.scarch-btn {
+    height: 40px;
+}
+
+#messages form.form-inline .form-group button.msg-btn {
+    height: 40px;
+}
+
+#messages-list .msg-title {
+    position: relative;
+    max-width: 150px;
+}
+
+#messages-list .msg-title .flags {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+}
+
+#messages-list .msg-title .flags .flag-entry {
+    top: 5px;
+    right: 8px;
+    line-height: 16px;
+    font-size: 10px;
+    padding: 0 2px;
+}
+
+#messages-list .msg-title .flags .flag-entry.flag-new {
+    background: #6ab400;
+    color: #fff;
+}
+
+#messages-list .msg-title .flags .flag-entry.flag-unread {
+    background: lightcoral;
+    color: #fff;
+}
+
+#messages-list .msg-text {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#messages .msg-btn {
+    position: relative;
+}
+
+#messages .msg-btn .tip-top {
+    display: none;
+}
+
+#messages .msg-btn:hover .tip-top {
+    display: block;
+}
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Announcements <editor-fold>{{{             */
+/* ========================================== */
+.all_announcement .marquee {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.announcements_nav_list {
+    font-family: "Microsoft YaHei";
+}
+.announcements_nav_list .nav-tabs {
+    padding-bottom:  5px;
+}
+.announcements_nav_list .nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+}
+.announcements_nav_list .nav-tabs > li > a {
+    display: block;
+    margin-right: 2px;color:#000; font-weight:700;
+}
+.announcements_nav_list .nav-tabs > li > a:hover {
+    display: block;
+    cursor: default;
+    background-color: #fd8e0b;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+    border-color: #eee #eee #ddd; color:#FFF;
+}
+.announcements_nav_list .nav-tabs > li.active > a,
+.announcements_nav_list .nav-tabs > li.active > a:hover,
+.announcements_nav_list .nav-tabs > li.active > a:focus {
+    color: #fff;
+    display: block;
+    cursor: default;
+    background-color: #fd8e0b;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+.announcements_nav_list .Tabli {
+    width: 25%;
+    text-align: center;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.announcements_nav_list .acontentUL {
+    list-style: none;
+    width: 96%;
+    margin: 10px auto;
+}
+
+.announcements_nav_list .acontentUL li {
+    padding: 20px 10px;
+    color: #000;
+    background: #FFF;
+    margin-bottom: 15px;
+}
+
+.announcements_nav_list .tab-content {
+    background: #f2f2f2;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 60px;
+}
+
+.announcements_nav_list ul, li {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+}
+
+._select_currecny_on_login, ._select_currecny_on_logged{
+    width: 100%;
+    padding: 0px 5px;
+    height: 40px;
+    line-height: normal;
+    border: 0;
+    color: #fff !important;
+    border-radius: 5px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #000 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAYAAADEUlfTAAAAG0lEQVR42mNgwAfKy8v/48I4FeA0AacVDFQBAP9wJkE/KhUMAAAAAElFTkSuQmCC);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: no-repeat;
+    background-position: 96% 54%;
+}
+
+._overlay_screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999;
+    background-color: #000;
+
+    font-size: 24px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+/* Password Recovery <editor-fold>{{{         */
+/* ========================================== */
+.password_recovery_email_wrapper {
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.password_recovery_email_wrapper .panel {
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+    border: 0;
+}
+
+.password_recovery_email_wrapper .panel-heading {
+    border: 0;
+}
+
+.password_recovery_email_wrapper .panel-heading .title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.password_recovery_email_wrapper .panel-body #username {
+    padding: 19px 7px;
+    border-radius: 0;
+    margin-bottom: 15px !important;
+}
+
+.password_recovery_email_wrapper .panel-body #email {
+    padding: 19px 7px;
+    border-radius: 0;
+    margin-bottom: 15px !important;
+}
+
+.password_recovery_email_wrapper .panel-body #captcha {
+    width: 60%;
+    float: left;
+}
+
+.password_recovery_email_wrapper .panel-body #nextButton {
+    clear: both;
+    display: block;
+    width: 100%;
+    background: #d5d5d5;
+    color: #000;
+    border: 1px #a4a4a4 solid;
+    border-radius: 0;
+}
+
+/* }}}</editor-fold> */
+/* ========================================== */
+
+/* Profile <editor-fold>{{{                   */
+/* ========================================== */
+.member .profile-tab {
+    display:flex;
+}
+/* }}}</editor-fold>                          */

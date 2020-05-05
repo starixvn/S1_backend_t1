@@ -1,0 +1,397 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mgsops.net/AdminAPI_ItalyPlayer" elementFormDefault="qualified" targetNamespace="http://mgsops.net/AdminAPI_ItalyPlayer" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" schemaLocation="Orion.Contracts.Italy.PlayerAdmin.DataStructures.xsd" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" schemaLocation="Orion.Contracts.PlayerAdmin.DataStructures.xsd" />
+  <xs:element name="GetSingleGamingGroupLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q1:ArrayOfGetSingleGamingGroupLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSingleGamingGroupLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetSingleGamingGroupLimitResult" nillable="true" type="q2:ArrayOfGetSingleGamingGroupLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccountStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q3:ArrayOfGetUserAccountStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserAccountStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetUserAccountStatusResult" nillable="true" type="q4:ArrayOfGetUserAccountStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerProtectionSystemSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q5:ArrayOfGetPlayerProtectionSystemSettingRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerProtectionSystemSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPlayerProtectionSystemSettingResult" nillable="true" type="q6:ArrayOfGetPlayerProtectionSystemSettingResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerProtectionUserSetting">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q7:ArrayOfGetPlayerProtectionUserSettingRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerProtectionUserSettingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPlayerProtectionUserSettingResult" nillable="true" type="q8:ArrayOfGetPlayerProtectionUserSettingResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerProtectionActivityStatement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q9:ArrayOfGetPlayerProtectionActivityStatementRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerProtectionActivityStatementResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPlayerProtectionActivityStatementResult" nillable="true" type="q10:ArrayOfGetPlayerProtectionActivityStatementResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGamePlayExclusionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q11:ArrayOfGetGamePlayExclusionTypeRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGamePlayExclusionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetGamePlayExclusionTypesResult" nillable="true" type="q12:ArrayOfGetGamePlayExclusionTypeResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPeriodTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q13:ArrayOfGetPeriodTypesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPeriodTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPeriodTypesResult" nillable="true" type="q14:ArrayOfGetPeriodTypesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q15:ArrayOfGetSettingTypesRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSettingTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetSettingTypesResult" nillable="true" type="q16:ArrayOfGetSettingTypesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerPurchaseLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q17:ArrayOfGetPlayerPurchaseLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerPurchaseLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPlayerPurchaseLimitResult" nillable="true" type="q18:ArrayOfGetPlayerPurchaseLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPlayerPurchaseLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q19:ArrayOfSetPlayerPurchaseLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPlayerPurchaseLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="SetPlayerPurchaseLimitResult" nillable="true" type="q20:ArrayOfSetPlayerPurchaseLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidatedUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q21:ArrayOfGetValidatedUserIdRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetValidatedUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetValidatedUserIdResult" nillable="true" type="q22:ArrayOfGetValidatedUserIdResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerDataBasic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q23:ArrayOfGetPlayerDataBasicRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerDataBasicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPlayerDataBasicResult" nillable="true" type="q24:ArrayOfGetPlayerDataBasicResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserIdFromSigninNameOrLoginName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q25:ArrayOfGetUserIdFromSigninNameOrLoginNameRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserIdFromSigninNameOrLoginNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetUserIdFromSigninNameOrLoginNameResult" nillable="true" type="q26:ArrayOfGetUserIdFromSigninNameOrLoginNameResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserTokenStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q27:ArrayOfUpdateUserTokenStatusRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserTokenStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="UpdateUserTokenStatusResult" nillable="true" type="q28:ArrayOfUpdateUserTokenStatusResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerLimits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q29:ArrayOfGetPlayerLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlayerLimitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetPlayerLimitsResult" nillable="true" type="q30:ArrayOfGetPlayerLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPlayerLimits">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q31:ArrayOfSetPlayerLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetPlayerLimitsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="SetPlayerLimitsResult" nillable="true" type="q32:ArrayOfSetPlayerLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGamePlayExclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q33:ArrayOfUpdateGamePlayExclusionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateGamePlayExclusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="UpdateGamePlayExclusionResult" nillable="true" type="q34:ArrayOfUpdateGamePlayExclusionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGamePlayExclusion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q35:ArrayOfAddGamePlayExclusionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddGamePlayExclusionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="AddGamePlayExclusionResult" nillable="true" type="q36:ArrayOfAddGamePlayExclusionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPlayerExcluded">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q37:ArrayOfIsPlayerExcludedRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPlayerExcludedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="IsPlayerExcludedResult" nillable="true" type="q38:ArrayOfIsPlayerExcludedResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyDisplayFormat">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q39:ArrayOfGetCurrencyDisplayFormatRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyDisplayFormatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetCurrencyDisplayFormatResult" nillable="true" type="q40:ArrayOfGetCurrencyDisplayFormatResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q41:ArrayOfGetCurrencyForUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCurrencyForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetCurrencyForUserResult" nillable="true" type="q42:ArrayOfGetCurrencyForUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResponsibleGamingTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q43:ArrayOfGetResponsibleGamingTestRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResponsibleGamingTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="GetResponsibleGamingTestResult" nillable="true" type="q44:ArrayOfGetResponsibleGamingTestResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnswerResponsibleGamingTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q45:ArrayOfAnswerResponsibleGamingTestRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AnswerResponsibleGamingTestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="AnswerResponsibleGamingTestResult" nillable="true" type="q46:ArrayOfAnswerResponsibleGamingTestResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLinkedAccountsForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q47:ArrayOfGetLinkedAccountsForUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLinkedAccountsForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" minOccurs="0" name="GetLinkedAccountsForUserResult" nillable="true" type="q48:ArrayOfGetLinkedAccountsForUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastLimitsIncreaseAndCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q49:ArrayOfGetLastLimitsIncreaseAndCountRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLastLimitsIncreaseAndCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" minOccurs="0" name="GetLastLimitsIncreaseAndCountResult" nillable="true" type="q50:ArrayOfGetLastLimitsIncreaseAndCountResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePendingPurchaseDWMLimit">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q51:ArrayOfRemovePendingPurchaseDWMLimitRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemovePendingPurchaseDWMLimitResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Orion.Contracts.PlayerAdmin.DataStructures" minOccurs="0" name="RemovePendingPurchaseDWMLimitResult" nillable="true" type="q52:ArrayOfRemovePendingPurchaseDWMLimitResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlushPendingPurchaseDWMLimitPerUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q53:ArrayOfFlushPendingPurchaseDWMLimitPerUserRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlushPendingPurchaseDWMLimitPerUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="FlushPendingPurchaseDWMLimitPerUserResult" nillable="true" type="q54:ArrayOfFlushPendingPurchaseDWMLimitPerUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RGLLimitsNotification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q55:ArrayOfRGLLimitsNotificationRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RGLLimitsNotificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Orion.Contracts.Italy.PlayerAdmin.DataStructures" minOccurs="0" name="RGLLimitsNotificationResult" nillable="true" type="q56:ArrayOfRGLLimitsNotificationResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

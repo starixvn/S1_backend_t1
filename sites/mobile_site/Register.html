@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link type="image/x-icon" rel="shortcut icon" href="/images/favicon.ico" />
+    <link rel="apple-touch-icon" href="images/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/touch-icon-ipad-retina.png">
+    <link rel="apple-touch-startup-image" href="images/milanoo_startup.png" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>PT老虎机 - 新橙娱乐</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+
+</head>
+<body onload="Captcha();">
+
+<div id="pagetwo" class="left move">
+        <div class="header">
+            <div class="head_back">
+                <div class="back_btnPT" onclick="history.go(-1);"></div>
+            </div>
+            <div class="header_text"><a id="ht">注册会员</a></div>
+        </div>
+        <div class="page">
+
+        <div class="home">
+        <div class="input" style="margin-top: 80px;">
+            <input id="reg1" name="" placeholder="用户名" type="text" class="input_01">
+            <ul id="retext1">
+                <i></i>用户名不能为空
+            </ul>
+            <input id="reg3" name="" placeholder="设置密码" type="password" class="input_01">
+            <ul id="retext3">
+                <i></i>密码不能为空
+            </ul>
+            <input id="reg4" name="" placeholder="确认密码" type="password" class="input_01">
+            <ul id="retext4">
+                <i></i>密码不一致
+            </ul>
+			<input id="reg2" name="" placeholder="手机" type="phone" class="input_01">
+            <ul id="retext2">
+                <i></i>手机不能为空
+            </ul>
+            <input id="reg5" name="" placeholder="验证码" type="tel" class="input_01">
+
+                <div class="vcode"><img alt="验证码" id="vCode" src="register_files/GetCode.aspx" style="vertical-align: middle; margin-left: 5px; width: 50px; height: 30px; cursor: pointer;"></div>
+
+            <ul id="retext5">
+                <i></i>验证码不能为空
+            </ul>
+            <div class="login_btn" id="register">立即注册</div>
+        </div>
+        <div class="lefttext">
+          已有账号？<a class="threepage" onclick="document.location='Login.html'" style="cursor:pointer;">点击登陆</a>账号。
+        </div>
+    </div>
+
+
+   <div class="quickButtonBar">
+            <a href="javascript:void(0);" onclick="document.location='http://m.xc33.com/'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_home.png">
+                <p>主页</p>
+            </a>
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/iframe_promos'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_gift.png">
+                <p>优惠</p>
+            </a>
+            <a href="http://player.xc33.com/pub/live_chat_link/chn" class="btn-kf">
+                <img src="images/QuickButtonBar/under_chat.png">
+                <p>在线客服</p>
+
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center2/deposit'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_bank.png">
+                <p>存款</p>
+            </a>
+
+            <a href="javascript:void(0);" onclick="document.location='http://player.xc33.com/player_center/menu'" style="cursor:pointer;">
+                <img src="images/QuickButtonBar/under_me.png">
+                <p>会员中心</p>
+            </a>
+        </div>
+
+            <script>
+                    $(document).ready(function () {
+
+                    //换页效果
+                    $("#register").click(function () {
+                        var retext1 = $("#reg1").val();
+                        var retext2 = $("#reg2").val();
+                        var retext3 = $("#reg3").val();
+                        var retext4 = $("#reg4").val();
+                        var retext5 = $("#reg5").val();
+
+                        var filter = /^\s*[.A-Za-z0-9_-]{4,15}\s*$/;
+                        if (retext1.length == 0 || !filter.test(retext1)) {
+                            $("#retext1").html("<i></i>帐户名由4-10个字符组成");
+                            $("#retext1").show()
+                            return false;
+                        }
+                        else {
+                            $("#retext1").hide()
+                        }
+
+                        if (retext2.length == 0 || !verifyEmail(retext2)) {
+                            $("#retext2").html("<i></i>邮箱格式不正确，请重新输入");
+                            $("#retext2").show()
+                            return false;
+                        } else {
+                            $("#retext2").hide()
+                        }
+
+
+                        if (retext3.length < 6 || retext3.length > 20) {
+                            $("#retext3").html("<i></i>密码为 6-20个字母、数字或组合组成，区分大小写");
+                            $("#retext3").show()
+                            return false;
+                        } else {
+                            $("#retext3").hide()
+                        }
+
+                        if (retext4 != retext3) {
+                            $("#retext4").show()
+                            return false;
+                        } else {
+                            $("#retext4").hide()
+                        }
+
+                        if (retext5.length != 4) {
+                            $("#retext5").html("<i></i>请输入四位验证码");
+                            $("#retext5").show()
+                            return false;
+                        } else {
+                            $("#retext5").hide()
+
+                        }
+                        $("#loading").show();
+
+
+
+                    });
+
+
+                    $("img[id$='vCode']").css({ "cursor": "pointer" }).click(function () { $(this).attr('src', 'register_files/GetCode.aspx' + Math.random()); });
+                });
+
+    </script>
+

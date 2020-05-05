@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mgsops.net/AdminAPI_Admin" elementFormDefault="qualified" targetNamespace="http://mgsops.net/AdminAPI_Admin" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" schemaLocation="schemas.microsoft.com.2003.10.Serialization.Arrays.xsd" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" schemaLocation="Orion.Contracts.VanguardAdmin.DataStructures.xsd" />
+  <xs:element name="GetCommitQueueData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="serverIds" nillable="true" type="q1:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommitQueueDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetCommitQueueDataResult" nillable="true" type="q2:ArrayOfQueueDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRollbackQueueData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="serverIds" nillable="true" type="q3:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRollbackQueueDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetRollbackQueueDataResult" nillable="true" type="q4:ArrayOfQueueDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManuallyValidateBet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="validateRequests" nillable="true" type="q5:ArrayOfValidteBetRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManuallyValidateBetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ManuallyValidateBetResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateApiUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateApiUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="ValidateApiUserResult" nillable="true" type="q6:ValidateApiUserResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateApiUserExtended">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidateApiUserExtendedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="ValidateApiUserExtendedResult" nillable="true" type="q7:ValidateApiUserExtendedResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVoidedFundsInPlay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="serverIds" nillable="true" type="q8:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVoidedFundsInPlayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetVoidedFundsInPlayResult" nillable="true" type="q9:ArrayOfGetVoidedFundsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsVoidedFundsEnabled">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="serverIds" nillable="true" type="q10:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsVoidedFundsEnabledResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetIsVoidedFundsEnabledResult" nillable="true" type="q11:ArrayOfGetIsVoidedFundsEnabledResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessVoidedFundsInPlay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q12:ArrayOfProcessVoidedFundsRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessVoidedFundsInPlayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="ProcessVoidedFundsInPlayResult" nillable="true" type="q13:ArrayOfProcessVoidedFundsResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenericQueueData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q14:ArrayOfGetGenericQueueDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGenericQueueDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetGenericQueueDataResult" nillable="true" type="q15:ArrayOfGetGenericQueueDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetryGenericQueueData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q16:ArrayOfRetryGenericQueueDataRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetryGenericQueueDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="RetryGenericQueueDataResult" nillable="true" type="q17:ArrayOfRetryGenericQueueDataResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFailedEndGameQueue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="serverIds" nillable="true" type="q18:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFailedEndGameQueueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetFailedEndGameQueueResult" nillable="true" type="q19:ArrayOfGetFailedGamesResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManuallyCompleteGame">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q20:ArrayOfCompleteGameRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ManuallyCompleteGameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="ManuallyCompleteGameResult" nillable="true" type="q21:ArrayOfCompleteGameResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApiVersion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q22:ArrayOfGetApiVersionRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApiVersionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetApiVersionResult" nillable="true" type="q23:ArrayOfGetApiVersionResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlushPendingCashin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q24:ArrayOfFlushPendingCashinRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FlushPendingCashinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="FlushPendingCashinResult" nillable="true" type="q25:ArrayOfFlushPendingCashinResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgressiveWinCashinReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q26:ArrayOfProgressiveWinCashinReportRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProgressiveWinCashinReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="GetProgressiveWinCashinReportResult" nillable="true" type="q27:ArrayOfProgressiveWinCashinReportResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveGameResultAfterReconcile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="requests" nillable="true" type="q28:ArrayOfRetrieveGameResultAfterReconcileRequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RetrieveGameResultAfterReconcileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Orion.Contracts.VanguardAdmin.DataStructures" minOccurs="0" name="RetrieveGameResultAfterReconcileResult" nillable="true" type="q29:ArrayOfRetrieveGameResultAfterReconcileResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,52 @@
+stages:
+  - build
+  - production
+
+variables:
+  GOOGLE_PROJECT_NAME: "acora-dev-262404"
+
+build_system:
+  stage: build
+  script:
+    - echo "test-20200202"
+    - ./create_links.sh
+    - admin/shell/check_php_syntax.sh
+
+.job_prod_template: &job_deploy_prod
+  stage: production
+  script:
+##    - bash check_deploy_permission.sh
+    - echo "$GITLAB_USER_EMAIL is deploying"
+    - echo "gcloud container clusters get-credentials dev-k8s --zone asia-east1-b --project acora-dev-262404"
+    - gcloud container clusters get-credentials dev-k8s --zone asia-east1-b --project acora-dev-262404
+    - echo "$GITLAB_USER_EMAIL build baseimage"
+    - docker build -t og-em:latest baseimage
+
+    - echo "$GITLAB_USER_EMAIL build $CI_COMMIT_REF_NAME on $GOOGLE_PROJECT_NAME"
+##    - docker tag twtest:og-em:latest
+    - echo -n $CI_COMMIT_SHA > admin/public/version
+##    - docker build -t og:$CI_COMMIT_REF_NAME .
+##    - docker tag og:$CI_COMMIT_REF_NAME twtest/$GOOGLE_PROJECT_NAME/og:$CI_COMMIT_REF_NAME
+##    - docker tag og:$CI_COMMIT_REF_NAME twtest/$GOOGLE_PROJECT_NAME/og:$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA
+##    - gcloud docker -- push twtest/$GOOGLE_PROJECT_NAME/og:$CI_COMMIT_REF_NAME
+##    - gcloud docker -- push twtest/$GOOGLE_PROJECT_NAME/og:$CI_COMMIT_REF_NAME-$CI_COMMIT_SHA
+
+#    - echo "gcloud container clusters get-credentials t1tog --zone asia-east1-a --project $GOOGLE_PROJECT_NAME"
+#    - gcloud container clusters get-credentials dev-k8s --zone asia-east1-b --project acora-dev-262404
+    - echo "deploy $CI_COMMIT_REF_NAME"
+    - echo "kubectl set image deployment/$CLIENT_NAME-og $CLIENT_NAME-og=twtest/$GOOGLE_PROJECT_NAME/og:$(echo Y | gcloud alpha container images list-tags twtest/$GOOGLE_PROJECT_NAME/og | grep $CI_COMMIT_REF_NAME,$CI_COMMIT_REF_NAME | awk '{print $2}' | awk -F, '{print $2}')"
+##    - kubectl set image deployment/$CLIENT_NAME-og $CLIENT_NAME-og=twtest/$GOOGLE_PROJECT_NAME/og:$(echo Y | gcloud alpha container images list-tags twtest/$GOOGLE_PROJECT_NAME/og | grep $CI_COMMIT_REF_NAME,$CI_COMMIT_REF_NAME | awk '{print $2}' | awk -F, '{print $2}')
+    - echo "waiting status deployment/$CLIENT_NAME-og"
+    - sleep 2
+##    - kubectl rollout status deployment/$CLIENT_NAME-og
+    - echo "running migrate.sh on $CLIENT_NAME"
+###    - gcloud container clusters get-credentials t1tog --zone asia-east1-a --project $GOOGLE_PROJECT_NAME
+##    - kubectl get pods | grep -v "\-sync\-" | grep $CLIENT_NAME-og- | tail -n 1 | awk '{print "kubectl exec -it "$1" -- bash -c \"cd /home/vagrant/Code/og; ./migrate.sh \""}'  | sh
+  when: manual
+
+
+em:
+  <<: *job_deploy_prod
+  variables:
+    CLIENT_NAME: "test"
+

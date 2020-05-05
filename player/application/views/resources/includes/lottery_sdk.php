@@ -1,0 +1,1 @@
+<script type="text/javascript" src="<?=$this->utils->getPlayerCmsUrl('/player_center2/lottery/sdk')?>"></script>

@@ -1,0 +1,1 @@
+* * * * * vagrant /home/vagrant/Code/og/admin/shell/encrypt.sh bitbucket /tmp/og_encrypt_occur /home/vagrant/Code/og_normal /home/vagrant/Code/og_encrypt admin/application/libraries,admin/application/models,admin/application/controllers,player/application/controllers/iframe >> /var/log/og_encrypt.log 2>&1
